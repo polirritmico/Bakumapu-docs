@@ -1,0 +1,55 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Árbol de directorios de i18n
+\documentclass{standalone}
+\usepackage{forest}
+\forestset{
+	declare dimen={fork sep}{0.5em},
+	forked edge'/.style={
+		edge={rotate/.option=!parent.grow},
+		edge path'={(!u.parent anchor) -- ++(\forestoption{fork sep},0) |- (.child anchor)},
+	},
+	forked edge/.style={
+		on invalid={fake}{!parent.parent anchor=children},
+		child anchor=parent,
+		forked edge',
+	},
+	forked edges/.style={for nodewalk={#1}{forked edge}},
+	forked edges/.default=tree,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{forest}
+	for tree={grow'=0, draw},
+	forked edges,
+	[Bakumapu
+	[locales
+	[es
+	[assets
+	[cutscenes]
+	[dialogs]
+	[journals]
+	[maps]
+	[quests
+	[quest\_id]
+	]
+	[tutorials]
+	[ui]
+	]
+	[docs]
+	[web]
+	]
+	[en
+	[assets
+	[cutscenes]
+	[etc.]
+	]
+	[web]
+	[docs]
+	]
+	[etc.]
+	]
+	[etc.]
+	]
+\end{forest}
+\end{document}

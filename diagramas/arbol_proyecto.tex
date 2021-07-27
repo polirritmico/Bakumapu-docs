@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Árbol de directorios de i18n
+\documentclass{standalone}
+\usepackage{forest}
+\forestset{
+	declare dimen={fork sep}{0.5em},
+	forked edge'/.style={
+		edge={rotate/.option=!parent.grow},
+		edge path'={(!u.parent anchor) -- ++(\forestoption{fork sep},0) |- (.child anchor)},
+	},
+	forked edge/.style={
+		on invalid={fake}{!parent.parent anchor=children},
+		child anchor=parent,
+		forked edge',
+	},
+	forked edges/.style={for nodewalk={#1}{forked edge}},
+	forked edges/.default=tree,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{forest}
+	for tree={grow'=0, draw},
+	forked edges,
+	[Bakumapu
+		[Design
+			[Locations]
+			[Music]
+			[References]
+			[Sounds]
+			[Sprites
+				[Characters]
+				[GUI]
+				[Maps]
+				[Misc]
+				[Props]
+			]
+			[Tilesets]
+		]
+		[docs]
+		[export]
+		[locales
+			[en
+				[assets
+					[etc.]
+				]
+				[docs]
+				[web]
+			]
+			[es
+				[assets
+					[cutscenes]
+					[dialogs]
+					[journals]
+					[maps]
+					[quests
+						[quest\_id1]
+						[quest\_id2]
+					]
+					[tutorials]
+					[ui]
+				]
+				[docs]
+				[web]
+			]
+			[etc.]
+		]
+		[scenes
+			[characters
+				[enemies]
+				[npc]
+				[fsm
+					[enemy\_states]
+					[npc\_states]
+					[player\_states]
+				]
+				[player]
+			]
+			[game]
+			[items
+				[armors]
+				[utility]
+				[weapons]
+			]
+			[levels
+				[demo]
+			]
+			[ui
+				[dialogue]
+				[gui]
+				[intro]
+				[main\_menu]
+				[options]
+			]
+		]
+		[shared
+			[fonts]
+			[music]
+			[tilesets]
+		]
+	]
+\end{forest}
+\end{document}

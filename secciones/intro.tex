@@ -1,0 +1,117 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Intro
+
+\section{Introducción.}\label{intro:introduccion}
+El presente documento tiene por objeto ser una herramienta de diseño y un mapa de ruta para la implementación del código en el motor de videojuegos \textbf{Godot}. Además, aquí se plantearán los lineamientos técnicos generales para un flujo de desarrollo acorde a los planes del diseño.
+
+Del mismo modo, el archivo pretende ser una ayuda y referencia para tener una visión general del funcionamiento interno del juego.
+
+\subsection{Lista de requerimientos.}\label{intro:lista-de-requerimientos}
+En primer lugar se presenta una lista con los requerimientos y consideraciones fundamentales para plantear el código. Se entiende que esta es una propuesta inicial y las distintas implementaciones quizás generen nuevos requisitos o hagan obsoletos otros.
+
+\begin{enumerate}
+	\item Enfoque en la facilidad de agregar y editar contenido.
+	\begin{enumerate}
+		\item Locaciones.
+		\item Quests.
+		\item Ítems.
+		\item Personajes.
+		\item Cutscenes.
+		\item GUI.
+	\end{enumerate}
+	\item Multiplataforma: Inicialmente PC y Android.
+	\item Multilenguaje: Español e inglés (en primera instancia).
+	\item Pixelart.
+	\item Isométrico 2:1.
+	\item Relación de aspecto 16:9.
+	\item Resolución ajustable a dispositivos Android (1080 y 720 en PC).
+	\item Ajuste dinámico de la velocidad del juego.
+	\item Ajuste de stats de ítems.
+	\item Mixes de audio (stereo):
+	\begin{enumerate}	
+		\item Master.
+		\item Música.
+		\item Ambiente.
+		\item SFX.
+		\item Ataques.
+		\item Props.
+		\item UI.
+	\end{enumerate}
+	\item Seguimiento de las decisiones en las quests (quests path).
+	\item States de guardado solo en locaciones del mapa.
+	\begin{enumerate}
+		\item Ítems.
+		\item EXP.
+		\item HP y mana.
+		\item Ubicación.
+		\item Active Quests.
+		\item Quest path.
+	\end{enumerate}
+	\item Tácticas y equipo de la party.
+	\item IA de tácticas de la party.
+	\item IA enemiga.
+	\item Pathfinding de \lsc{NPC}.
+	\item Sistema de magia y poderes.
+	\item Sistema de partículas para ataques y locaciones.
+	\item Sistema de iluminación.
+	\item Interacción con props.
+	\item Dificultad ajustable en menú.
+\end{enumerate}
+
+\subsection{Software y herramientas de producción.}\label{intro:software-y-herramientas}
+
+\subsubsection{Godot v3.3}
+Como herramienta principal de desarrollo se utilizará el motor de videojuegos multiplataforma opensource \textbf{Godot} en su rama 3.3 estable. Ante el lanzamiento de la versión 4.0 se estudiará la migración del proyecto.
+
+\begin{addmargin}[3em]{0pt}
+	\paragraph{GutT 7.1.0}
+	\noindent
+	Plugin de \textbf{Godot} para escribir y controlar las pruebas de los scripts. Instalable desde Godot (tutorial \href{https://www.youtube.com/watch?v=5DrhMiuLRl0}{aquí}). Más información en el apartado \nameref{principios:TDD}.
+\end{addmargin}
+
+\subsubsection{Trello}
+Se utilizará la plataforma \textbf{Trello} para coordinar todo el desarrollo y el flujo de trabajo del equipo siguiendo la metodología Kanban. Más información en el apartado \nameref{flujo:tablero-kanban}.
+
+\subsubsection{GIT y Github}
+El código estará alojado en un repositorio \lsc{GIT} en \textbf{Github} en la siguiente dirección:\\
+\url{https://github.com/polirritmico/Bakumapu}.\\
+Todos los participantes deben tener una cuenta con permisos.
+
+El control de versiones se explicará en detalle en el apartado \nameref{flujo:repositorio}.
+
+\subsubsection{Google Suite}
+Por conveniencia, tanto los archivos para la organización del proyecto así como los de diseño del juego se realizarán principalmente en la suite de Google. Más información en el apartado \nameref{flujo:google-drive}.
+
+\subsubsection{LaTeX}
+Para realizar el presente documento se ha utilizado \LaTeXe\ desde TeX Live 2021. Como alternativa se encuentra la plataforma online \href{https://www.overleaf.com/}{Overleaf} (requiere registro). En cualquier caso, un archivo \lsc{TEX} es simplemente archivo de texto plano, por lo que para su edición cualquier editor de textos sencillo debería funcionar sin inconvenientes.
+
+Para su conversión a \lsc{HTML} y a markdown, se ha utilizado Pandoc en su versión 2.10.1.
+
+\subsubsection{Aseprite}
+Se utilizará en su versión 1.2.25 para el trabajo en estilo pixel art de los sprites de tiles, props, animaciones, \lsc{GUI} y la gran mayoría de los elementos visuales del juego. Ejecutable compilado para Windows \href{https://drive.google.com/drive/folders/1DPhGeg7WzV9j81u3B5isgsXqoMtfd_Uv?usp=sharing}{aquí}.
+
+\subsubsection{Krita}
+En su versión 4.4.2 se utilizará principalmente como alternativa (no pixel art) para el diseño visual de los personajes, mapas, etc.
+
+\subsubsection{Inkscape}
+Se utilizará como herramienta de diseño vectorial en su versión 1.1.
+
+\subsubsection{Finale 2014}
+Se utilizará para toda la composición musical en formato \lsc{MIDI} y \lsc{MUSX}.
+
+\subsubsection{Ableton Live}
+Se utilizará la versión 10.1.4 para los \lsc{MIX}, masters y/o conversión de archivos \lsc{MIDI} a formato \lsc{WAV} estéreo y toda la producción de diseño sonoro del juego.
+
+\subsubsection{LAME 64bits}
+Conversor de \lsc{WAV} a \lsc{MP}{\footnotesize 3} en su \href{https://lame.sourceforge.io/download.php}{versión 3.100}. El formato para los archivos de música y sonido ambiente será el \lsc{MP}{\footnotesize 3} en stereo, con un bitrate de 192 kbps a 44.1 khz. Muy importante: conservar los archivos \lsc{WAV}.
+
+\begin{lstlisting}
+$ lame -b 192 -m s ARCHIVO.wav ARCHIVO.mp3
+\end{lstlisting}
+
+\subsubsection{FFmpeg}
+Se utilizará en su versión 4.3.2 para convertir archivos \lsc{WAV} a \lsc{OGG}.
+
+\begin{lstlisting}
+$ ffmpeg -i ARCHIVO.wav -acodec libvorbis ARCHIVO.ogg
+\end{lstlisting}
