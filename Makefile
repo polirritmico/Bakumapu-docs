@@ -3,7 +3,7 @@ VERS = 0.0.1
 
 #OTHER = README CHANGES
 INFILE = main
-OUTFILE = Diseño_técnico
+OUTFILE = index
 
 # Define some variables
 LATEX=latex
