@@ -12,10 +12,10 @@ PDFLATEX=pdflatex
 # The default targets
 #all: latex2html
 default:
-	@echo "Utilice 'make html' o 'make clean'."
+	@echo "Utilice 'make html', 'make clean' o 'make sync'."
 
 html:
-	@echo "Generando 'html/$(OUTFILE).html' a partir de '$(INFILE).tex'"
+	@echo "Generando 'docs/$(OUTFILE).html' a partir de '$(INFILE).tex'"
 	@mkdir -p build/configuración/style
 	@cp -r configuración/style/* build
 	@cp configuración/*.tex build/configuración/
@@ -30,7 +30,7 @@ html:
 	@rm build/$(OUTFILE).*
 	@mv build/export/* build/
 	@rm -r build/export
-	@mv build html
+	@mv build docs
 
 clean:
 	@mkdir -p temp
@@ -47,4 +47,10 @@ clear:
 	-@rm $(INFILE).*
 	@mv temp/* ./
 	@rm -r temp
-	@rm -r html
+	@rm -r docs
+
+sync:
+	@git add .
+	git status
+	@git commit -m "Uploaded repo by Makefile"
+	@git push
