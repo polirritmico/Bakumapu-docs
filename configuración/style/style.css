@@ -82,35 +82,24 @@
 /**************************************************************************/
 /******************************* GENERALES ********************************/
 /**************************************************************************/
-html {
-    background-color: #23241f;
-}
-html, body, input, textarea, select, button {
-    background-color: #23241f;
-}
-html, body, input, textarea, select, button {
-    border-color: #736b5e;
-    color: #ebebe5;
-}
+html, body, input, textarea, select, button {background-color: #23241f;}
+html, body, input, textarea, select, button {border-color: #736b5e; color: #ebebe5;}
+
+html {font-size: 2rem;}
+body {font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;}
+
 a {color: #fd9621;}
 table {border-color: #545b5e;}
 
-/**************************************************************************/
-/* PERSONALIZADOS */
+/* Encabezados */
+.underline{font-family: 'Computer Modern Typewriter';font-size: 1.2rem;}
+h3, h4, h5 {font-family: Helvetica, sans-serif;}
+h3 {color: #f92472; font-size: 1.6em;}
+h4 {color: #90da2b; font-size: 1.4em;}
+h5, h6 {color: #74705d; font-size: 1.1em;}
 
-html {font-size: 2rem;}
-body {
-    font-family: "Computer Modern Typewriter Variable",Helvetica,sans-serif;
-}
+/* Bloques de código */
+.lstlisting {border: solid 1px black; background-color: #4c4d47;}
 
-h3,h4,h5{font-family: Helvetica,sans-serif;}
-h3{color: #f92472; font-size:1.6em;}
-h4{color: #90da2b; font-size:1.4em;}
-h5,h6{color: #74705d; font-size:1.1em;}
-
-.lstlisting{
-    border:solid 1px black;
-    background-color: #4c4d47;
-}
-
+/* Imágenes no estiradas */
 img {max-width:100%; max-height:auto; width:auto; height:auto;}

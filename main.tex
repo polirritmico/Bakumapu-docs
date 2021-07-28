@@ -2,6 +2,9 @@
 %% Clase del documento
 \documentclass[11pt,titlepage]{article}
 
+%% Modo oscuro
+\newif\ifdark\darktrue % \darktrue \darkfalse
+
 %% Paquetes
 \input{configuración/paquetes}
 
@@ -10,6 +13,9 @@
 
 %% Macros
 %\input{configuración/macros}
+
+%% Version
+\newcommand{\docversion}{0.0.1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -30,7 +36,8 @@
 	
 		\vfill
 	
-		\normalsize Estudio {\large \sfrac{6}{8}} - 2021\_v0.0.1
+		\normalsize Estudio
+		{\large \sfrac{6}{8}} - 2021\_v\docversion
 	\end{flushright}
 \end{titlepage}
 

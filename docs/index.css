@@ -195,8 +195,6 @@ div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
 div.abstract p {margin-left:5%; margin-right:5%;}
 div.abstract {width:100%;}
 .abstracttitle{text-align:center;margin-bottom:1em;}
-.subsectionToc, .likesubsectionToc {margin-left:2em;}
-.subsubsectionToc, .likesubsubsectionToc {margin-left:4em;}
 figure.float, div.figure {margin-left: auto; margin-right: auto;}
 figure.float img, figure.figure img {display: block; margin-left: auto; margin-right: auto;}
 figure.figure {text-align:center;}

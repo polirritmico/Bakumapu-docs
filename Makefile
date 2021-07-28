@@ -1,5 +1,5 @@
 SHELL = /bin/sh
-VERS = 0.0.1
+VERSION = 0.0.1
 
 #OTHER = README CHANGES
 INFILE = main
@@ -21,6 +21,7 @@ html:
 	@cp configuración/*.tex build/configuración/
 	@cp -r imágenes build/
 	@cp -r secciones build/
+	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
 	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico.}}/{Diseño\ técnico.}/' <$(INFILE).tex >build/$(OUTFILE).tex
 	@cd build && \
 	make4ht -c custom.cfg -d export/ $(OUTFILE).tex "fn-in"
@@ -30,12 +31,14 @@ html:
 	@rm build/$(OUTFILE).*
 	@mv build/export/* build/
 	@rm -r build/export
-	@mv build docs
+	@rm -r docs && mv build docs
+	@echo "HTML generado en: file:///home/eduardo/Documentos/Bakumapu/Dise%C3%B1o%20t%C3%A9cnico/docs/index.html"
 
 clean:
 	@mkdir -p temp
 	@mv $(INFILE).tex temp/
 	@mv $(INFILE).pdf temp/
+	-@mv $(INFILE).synctex.gz temp/
 	-@rm $(INFILE).*
 	@mv temp/* ./
 	@rm -r temp
@@ -50,7 +53,9 @@ clear:
 	@rm -r docs
 
 sync:
+	@echo "Sincronizando GITHUB con la última versión de la documentación..."
 	@git add .
 	git status
 	@git commit -m "Uploaded repo by Makefile"
 	@git push
+	@echo "Version web en: https://polirritmico.github.io/Bakumapu-docs/"
