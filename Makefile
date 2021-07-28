@@ -21,8 +21,10 @@ html:
 	@cp configuración/*.tex build/configuración/
 	@cp -r imágenes build/
 	@cp -r secciones build/
-	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
-	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico.}}/{Diseño\ técnico.}/' <$(INFILE).tex >build/$(OUTFILE).tex
+	@echo -n "Ajustando versión y subtítulo: "
+	@sed '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' <$(INFILE).tex >build/$(OUTFILE).tex
+	@sed -i '/colorsubtitulo/s/{\\textsc{Diseño\ técnico.}}/{Diseño\ técnico.}/' build/$(OUTFILE).tex
+	@echo -e "OK\nIniciando conversión:\n.................................................."
 	@cd build && \
 	make4ht -c custom.cfg -d export/ $(OUTFILE).tex "fn-in"
 	@cd build && \
@@ -32,7 +34,10 @@ html:
 	@mv build/export/* build/
 	@rm -r build/export
 	@rm -r docs && mv build docs
-	@echo "HTML generado en: file:///home/eduardo/Documentos/Bakumapu/Dise%C3%B1o%20t%C3%A9cnico/docs/index.html"
+	@echo -en "Corrigiendo espacios a comandos con signos '\$$': "
+	@sed -i 's/$$<\/span><\/span>/$$ <\/span><\/span>/' docs/$(OUTFILE).html
+	@echo -e "OK\n.................................................."
+	@echo -e "HTML generado exitosamente.\nUsar 'make sync' para subir a GITHUB."
 
 clean:
 	@mkdir -p temp
