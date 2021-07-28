@@ -104,4 +104,4 @@ h5, h6 {color: #74705d; font-size: 1.1em;}
 /* Imágenes no estiradas */
 img {max-width: 100%; max-height: auto; width: auto; height: auto;}
 
-.likesubsectionHead{font-family: Helvetica,"Computer Modern Typewriter";font-syle:normal;font-size: 1.2em; color: #27aeae;}
+.likesubsectionHead{font-family: sans-serif;font-syle:normal;font-size: 1.2em; color: #27aeae;}
