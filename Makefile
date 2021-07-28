@@ -38,6 +38,8 @@ html:
 	@sed -i 's/$$<\/span><\/span>/$$ <\/span><\/span>/' build/export/$(OUTFILE).html
 	@echo -en "OK\nQuitando puntos a referencias: "
 	@sed -i '/<a /s/.<!-- tex4ht:/<!-- tex4ht:/' build/export/$(OUTFILE).html
+	@echo -en "Ok\nAgregando espacios a figuras: "
+	@sed -i '/<span class='\''id'\''>Figura/s/<\/span>/ <\/span>/' build/export/$(OUTFILE).html
 
 	@echo -en "OK\nLimpiando archivos de compilación: "
 	@cd build && \
