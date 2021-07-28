@@ -60,7 +60,9 @@ clear:
 sync:
 	@echo "Sincronizando GITHUB con la última versión de la documentación..."
 	@git add .
-	git status
-	@git commit -m "Uploaded repo by Makefile"
+	@git status
+	@echo "Subiendo el commit:"
+	@git commit -m "Uploaded repo to version $(VERSION) by Makefile"
 	@git push
+	@echo "Sincronización exitosa."
 	@echo "Version web en: https://polirritmico.github.io/Bakumapu-docs/"
