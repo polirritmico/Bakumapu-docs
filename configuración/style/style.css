@@ -92,7 +92,7 @@ a {color: #fd9621;}
 table {border-color: #545b5e;}
 
 /* Encabezados */
-.underline{font-family: 'Computer Modern Typewriter';font-size: 1.2rem;}
+.underline{font-family: "Computer Modern Typewriter";font-size: 1.2rem;}
 h3, h4, h5 {font-family: Helvetica, sans-serif;}
 h3 {color: #f92472; font-size: 1.6em;}
 h4 {color: #90da2b; font-size: 1.4em;}
@@ -102,4 +102,6 @@ h5, h6 {color: #74705d; font-size: 1.1em;}
 .lstlisting {border: solid 1px black; background-color: #4c4d47;}
 
 /* Imágenes no estiradas */
-img {max-width:100%; max-height:auto; width:auto; height:auto;}
+img {max-width: 100%; max-height: auto; width: auto; height: auto;}
+
+.likesubsectionHead{font-family: "Computer Modern Typewriter";font-syle:normal;font-size: 1.2em; color: #27aeae;}
