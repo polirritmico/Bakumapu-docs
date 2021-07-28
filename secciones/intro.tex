@@ -60,56 +60,51 @@ En primer lugar se presenta una lista con los requerimientos y consideraciones f
 
 \subsection{Software y herramientas de producción.}\label{intro:software-y-herramientas}
 
-\subsubsection{Godot v3.3}
+\subsubsection{Godot v3.3.}
 Como herramienta principal de desarrollo se utilizará el motor de videojuegos multiplataforma opensource \textbf{Godot} en su rama 3.3 estable. Ante el lanzamiento de la versión 4.0 se estudiará la migración del proyecto.
 
-\begin{addmargin}[3em]{0pt}
-	\paragraph{GutT 7.1.0}
-	\noindent
-	Plugin de \textbf{Godot} para escribir y controlar las pruebas de los scripts. Instalable desde Godot (tutorial \href{https://www.youtube.com/watch?v=5DrhMiuLRl0}{aquí}). Más información en el apartado \nameref{principios:TDD}.
-\end{addmargin}
+\subsubsection*{\small GUT 7.1.0.}
+Plugin de \textbf{Godot} para escribir y controlar las pruebas de los scripts. Instalable desde Godot (tutorial \href{https://www.youtube.com/watch?v=5DrhMiuLRl0}{aquí}). Más información en el apartado \nameref{principios:TDD}.
 
-\subsubsection{Trello}
+\subsubsection{Trello.}
 Se utilizará la plataforma \textbf{Trello} para coordinar todo el desarrollo y el flujo de trabajo del equipo siguiendo la metodología Kanban. Más información en el apartado \nameref{flujo:tablero-kanban}.
 
-\subsubsection{GIT y Github}
-El código estará alojado en un repositorio \lsc{GIT} en \textbf{Github} en la siguiente dirección:\\
-\url{https://github.com/polirritmico/Bakumapu}.\\
-Todos los participantes deben tener una cuenta con permisos.
+\subsubsection{GIT y Github.}
+El código estará alojado en un repositorio \lsc{GIT} en \textbf{Github} en la siguiente dirección: \url{https://github.com/polirritmico/Bakumapu}. Todos los participantes deben tener una cuenta con permisos.
 
 El control de versiones se explicará en detalle en el apartado \nameref{flujo:repositorio}.
 
-\subsubsection{Google Suite}
+\subsubsection{Google Suite.}
 Por conveniencia, tanto los archivos para la organización del proyecto así como los de diseño del juego se realizarán principalmente en la suite de Google. Más información en el apartado \nameref{flujo:google-drive}.
 
-\subsubsection{LaTeX}
+\subsubsection{LaTeX.}
 Para realizar el presente documento se ha utilizado \LaTeXe\ desde TeX Live 2021. Como alternativa se encuentra la plataforma online \href{https://www.overleaf.com/}{Overleaf} (requiere registro). En cualquier caso, un archivo \lsc{TEX} es simplemente archivo de texto plano, por lo que para su edición cualquier editor de textos sencillo debería funcionar sin inconvenientes.
 
 Para su conversión a \lsc{HTML} y a markdown, se ha utilizado Pandoc en su versión 2.10.1.
 
-\subsubsection{Aseprite}
+\subsubsection{Aseprite.}
 Se utilizará en su versión 1.2.25 para el trabajo en estilo pixel art de los sprites de tiles, props, animaciones, \lsc{GUI} y la gran mayoría de los elementos visuales del juego. Ejecutable compilado para Windows \href{https://drive.google.com/drive/folders/1DPhGeg7WzV9j81u3B5isgsXqoMtfd_Uv?usp=sharing}{aquí}.
 
-\subsubsection{Krita}
+\subsubsection{Krita.}
 En su versión 4.4.2 se utilizará principalmente como alternativa (no pixel art) para el diseño visual de los personajes, mapas, etc.
 
-\subsubsection{Inkscape}
+\subsubsection{Inkscape.}
 Se utilizará como herramienta de diseño vectorial en su versión 1.1.
 
-\subsubsection{Finale 2014}
+\subsubsection{Finale 2014.}
 Se utilizará para toda la composición musical en formato \lsc{MIDI} y \lsc{MUSX}.
 
-\subsubsection{Ableton Live}
+\subsubsection{Ableton Live.}
 Se utilizará la versión 10.1.4 para los \lsc{MIX}, masters y/o conversión de archivos \lsc{MIDI} a formato \lsc{WAV} estéreo y toda la producción de diseño sonoro del juego.
 
-\subsubsection{LAME 64bits}
+\subsubsection{LAME 64bits.}
 Conversor de \lsc{WAV} a \lsc{MP}{\footnotesize 3} en su \href{https://lame.sourceforge.io/download.php}{versión 3.100}. El formato para los archivos de música y sonido ambiente será el \lsc{MP}{\footnotesize 3} en stereo, con un bitrate de 192 kbps a 44.1 khz. Muy importante: conservar los archivos \lsc{WAV}.
 
 \begin{lstlisting}
 $ lame -b 192 -m s ARCHIVO.wav ARCHIVO.mp3
 \end{lstlisting}
 
-\subsubsection{FFmpeg}
+\subsubsection{FFmpeg.}
 Se utilizará en su versión 4.3.2 para convertir archivos \lsc{WAV} a \lsc{OGG}.
 
 \begin{lstlisting}

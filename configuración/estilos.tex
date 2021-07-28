@@ -95,27 +95,6 @@ breaklinks,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Salto de línea tras el título en sección paragraph
-\makeatletter
-\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}
-	{-3.25ex\@plus -1ex \@minus -.2ex}%
-	{1.5ex \@plus .2ex}%
-	{\normalfont\normalsize\bfseries}}
-\makeatother
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% emph a negrita
-%\makeatletter
-%\DeclareRobustCommand{\em}{%
-%	\@nomath\em \if b\expandafter\@car\f@series\@nil
-%	\normalfont \else \bfseries \fi}
-%\makeatother
-
-%\DeclareTextFontCommand{\emph}{\bfseries}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Bloques de código
 \lstset{
 	language=bash,
