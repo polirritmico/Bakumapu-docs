@@ -24,18 +24,29 @@ html:
 	@echo -n "Ajustando versión y subtítulo: "
 	@sed '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' <$(INFILE).tex >build/$(OUTFILE).tex
 	@sed -i '/colorsubtitulo/s/{\\textsc{Diseño\ técnico.}}/{Diseño\ técnico.}/' build/$(OUTFILE).tex
+
 	@echo -e "OK\nIniciando conversión:\n.................................................."
 	@cd build && \
-	make4ht -c custom.cfg -d export/ $(OUTFILE).tex "fn-in"
+	make4ht -c custom.conf -d export/ $(OUTFILE).tex "fn-in"
+
+	@echo -e "OK\nLimpiando html con tidy:"
+	@-cd build && \
+	tidy -config tidy.conf export/$(OUTFILE).html > export/temp-$(OUTFILE).html
+	@mv build/export/temp-$(OUTFILE).html build/export/$(OUTFILE).html
+
+	@echo -en "Corrigiendo espacios a comandos con signos '\$$': "
+	@sed -i 's/$$<\/span><\/span>/$$ <\/span><\/span>/' build/export/$(OUTFILE).html
+	@echo -en "OK\nQuitando puntos a referencias: "
+	@sed -i '/<a /s/.<!-- tex4ht:/<!-- tex4ht:/' build/export/$(OUTFILE).html
+
+	@echo -en "OK\nLimpiando archivos de compilación: "
 	@cd build && \
 	rm -rf configuración imágenes secciones
-	@rm build/custom.cfg build/$(OUTFILE).tex
+	@rm build/custom.conf build/tidy.conf build/$(OUTFILE).tex
 	@rm build/$(OUTFILE).*
 	@mv build/export/* build/
 	@rm -r build/export
-	@rm -r docs && mv build docs
-	@echo -en "Corrigiendo espacios a comandos con signos '\$$': "
-	@sed -i 's/$$<\/span><\/span>/$$ <\/span><\/span>/' docs/$(OUTFILE).html
+	@rm -rf docs && mv build docs
 	@echo -e "OK\n.................................................."
 	@echo -e "HTML generado exitosamente.\nUsar 'make sync' para subir a GITHUB."
 
@@ -49,9 +60,11 @@ clean:
 	@rm -r temp
 
 clear:
+	@rm -rf build
 	@mkdir -p temp
 	@mv $(INFILE).tex temp/
 	@mv $(INFILE).pdf temp/
+	-@mv $(INFILE).synctex.gz temp/
 	-@rm $(INFILE).*
 	@mv temp/* ./
 	@rm -r temp
@@ -61,8 +74,8 @@ sync:
 	@echo "Sincronizando GITHUB con la última versión de la documentación..."
 	@git add .
 	@git status
-	@echo "Subiendo el commit:"
+	@echo -e "..................................................\nSubiendo el commit:"
 	@git commit -m "Uploaded repo to version $(VERSION) by Makefile"
 	@git push
-	@echo "Sincronización exitosa."
+	@echo -e "..................................................\nSincronización exitosa."
 	@echo "Version web en: https://polirritmico.github.io/Bakumapu-docs/"
