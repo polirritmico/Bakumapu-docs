@@ -3,11 +3,11 @@
   <head>
     <title></title>
     <meta charset='utf-8'>
-    <meta name='generator' content='TeX4ht (https://tug.org/tex4ht/)'>
-    <meta name='viewport' content='width=device-width,initial-scale=1'>
-    <link href='index.css' rel='stylesheet' type='text/css'>
-    <meta name='src' content='index.tex'>
-    <link href='style.css' rel='stylesheet' type='text/css'>
+    <meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator'>
+    <meta content='width=device-width,initial-scale=1' name='viewport'>
+    <link href='index.css' type='text/css' rel='stylesheet'>
+    <meta content='index.tex' name='src'>
+    <link href='style.css' type='text/css' rel='stylesheet'>
   </head>
   <body>
     <!-- l. 28 -->
@@ -466,7 +466,7 @@
     <p class='noindent'>
       Conversor de <span class='eccc1095-'><span class='small-caps'>wav</span></span> a <span class='eccc1095-'><span class='small-caps'>mp</span></span><span class='ecrm-0900'>3</span> en su <a href='https://lame.sourceforge.io/download.php'>versión 3.100</a>. El formato para los archivos de música y sonido ambiente será el <span class='eccc1095-'><span class='small-caps'>mp</span></span><span class='ecrm-0900'>3</span> en estéreo, con un bitrate de 192 kbps a 44.1 khz. Muy importante: conservar los archivos <span class='eccc1095-'><span class='small-caps'>wav</span></span>.
     </p><!-- l. 105 -->
-    <div class='lstlisting' id='listing-1'>
+    <div id='listing-1' class='lstlisting'>
       <span class='label'><a id='x1-16001r1'></a></span><span id='textcolor2'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>lame -b 192 -m s ARCHIVO.wav ARCHIVO.mp3</span>
     </div>
     <p>
@@ -478,7 +478,7 @@
     <p class='noindent'>
       Se utilizará en su versión 4.4 para convertir archivos <span class='eccc1095-'><span class='small-caps'>wav</span></span> a <span class='eccc1095-'><span class='small-caps'>ogg</span></span>.
     </p><!-- l. 112 -->
-    <div class='lstlisting' id='listing-2'>
+    <div id='listing-2' class='lstlisting'>
       <span class='label'><a id='x1-17001r1'></a></span><span id='textcolor3'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>ffmpeg -i ARCHIVO.wav -acodec libvorbis ARCHIVO.ogg</span>
     </div>
     <p>
@@ -508,7 +508,7 @@
     <figure class='figure'>
       <a id='x1-20001r1'></a> <!-- l. 17 -->
       <p class='noindent'>
-        <img alt='PIC' width='270' src='im%C3%A1genes/tdd.png' height='270'>
+        <img width='270' alt='PIC' height='270' src='im%C3%A1genes/tdd.png'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 1: </span><span class='content'>Flujo de desarrollo TDD.</span>
@@ -624,7 +624,7 @@
     <figure class='figure'>
       <a id='x1-27001r2'></a> <!-- l. 28 -->
       <p class='noindent'>
-        <img alt='PIC' width='360' src='im%C3%A1genes/tablero01.png' height='360'>
+        <img width='360' alt='PIC' height='360' src='im%C3%A1genes/tablero01.png'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 2: </span><span class='content'>Tablero Kanban en Trello.</span>
@@ -650,7 +650,7 @@
       <figcaption class='caption'>
         <span class='id'>Figura 3: </span><span class='content'>Límites de trabajo en Trello.</span>
       </figcaption><!-- tex4ht:label?: x1-28001r3  -->
-      <img alt='PIC' width='360' src='im%C3%A1genes/tablero02.png' height='360'>
+      <img width='360' alt='PIC' height='360' src='im%C3%A1genes/tablero02.png'>
     </figure><!-- l. 45 -->
     <p class='indent'>
       Respetar los límites de cada columna, facilitará la distribución de trabajo en un modelo de entrega continua y nos permitirá tomar decisiones más acertadas y realistas al momento de la planificación. <a id='x1-28002r30'></a>
@@ -735,7 +735,7 @@
     <figure class='figure'>
       <a id='x1-33001r4'></a> <!-- l. 74 -->
       <p class='noindent'>
-        <img alt='PIC' width='360' src='im%C3%A1genes/git.png' height='360'>
+        <img width='360' alt='PIC' height='360' src='im%C3%A1genes/git.png'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 4: </span><span class='content'>Ramas en <span class='eccc1095-'><span class='small-caps'>git</span></span>.</span>
@@ -834,10 +834,10 @@
         <p class='noindent'>
           Configuración:
         </p><!-- l. 119 -->
-        <div class='lstlisting' id='listing-3'>
+        <div id='listing-3' class='lstlisting'>
           <span class='label'><a id='x1-37001r1'></a></span><span id='textcolor4'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>./config/git/config</span>
         </div><!-- l. 123 -->
-        <div class='lstlisting' id='listing-4'>
+        <div id='listing-4' class='lstlisting'>
           <span class='label'><a id='x1-37002r1'></a></span><span class='ectt-1000'>conf[user] </span><br>
           <span class='label'><a id='x1-37003r2'></a></span><span class='ectt-1000'>name = USUARIO </span><br>
           <span class='label'><a id='x1-37004r3'></a></span><span class='ectt-1000'>email = MAIL_REGISTRADO_EN_GITHUB </span><br>
@@ -858,7 +858,7 @@
         <p class='noindent'>
           Archivos y directorios ignorados por <span class='eccc1095-'><span class='small-caps'>git</span></span> (en .gitignore dentro de Bakumapu):
         </p><!-- l. 136 -->
-        <div class='lstlisting' id='listing-5'>
+        <div id='listing-5' class='lstlisting'>
           <span class='label'><a id='x1-37009r1'></a></span><span class='ectt-1000'># Godot-specific ignores </span><br>
           <span class='label'><a id='x1-37010r2'></a></span><span class='ectt-1000'>.import/ </span><br>
           <span class='label'><a id='x1-37011r3'></a></span><span class='ectt-1000'>export/ </span><br>
@@ -875,13 +875,13 @@
         <p class='noindent'>
           Evitar problemas de formato de archivo entre Windows y el resto de sistemas:
         </p><!-- l. 151 -->
-        <div class='lstlisting' id='listing-6'>
+        <div id='listing-6' class='lstlisting'>
           <span class='label'><a id='x1-37018r1'></a></span><span id='textcolor5'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>.gitattributes:</span>
         </div><!-- l. 154 -->
         <p class='noindent'></p>
         <div class='minipage'>
           <!-- l. 155 -->
-          <div class='lstlisting' id='listing-7'>
+          <div id='listing-7' class='lstlisting'>
             <span class='label'><a id='x1-37019r1'></a></span><span class='ectt-1000'># Set the default behavior, in </span><br>
             <span class='label'><a id='x1-37020r2'></a></span><span class='ectt-1000'># case people </span><br>
             <span class='label'><a id='x1-37021r3'></a></span><span class='ectt-1000'># don’t have core.autocrlf set </span><br>
@@ -917,7 +917,7 @@
         </div>
         <div class='minipage'>
           <!-- l. 190 -->
-          <div class='lstlisting' id='listing-8'>
+          <div id='listing-8' class='lstlisting'>
             <span class='label'><a id='x1-37050r1'></a></span><span class='ectt-1000'># images </span><br>
             <span class='label'><a id='x1-37051r2'></a></span><span class='ectt-1000'> </span><br>
             <span class='label'><a id='x1-37052r3'></a></span><span class='ectt-1000'>*.png binary </span><br>
@@ -957,7 +957,7 @@
         <p class='noindent'>
           Clonar el repositorio en el espacio de trabajo local:
         </p><!-- l. 226 -->
-        <div class='lstlisting' id='listing-9'>
+        <div id='listing-9' class='lstlisting'>
           <span class='label'><a id='x1-37081r1'></a></span><span id='textcolor6'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git clone https://github.com/polirritmico/Bakumapu</span>
         </div>
       </li>
@@ -966,7 +966,7 @@
         <p class='noindent'>
           - Ver el estado de la rama actual:
         </p><!-- l. 231 -->
-        <div class='lstlisting' id='listing-10'>
+        <div id='listing-10' class='lstlisting'>
           <span class='label'><a id='x1-37082r1'></a></span><span id='textcolor7'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git status</span>
         </div>
       </li>
@@ -975,7 +975,7 @@
         <p class='noindent'>
           Cambiar a una rama (por ejemplo develop):
         </p><!-- l. 236 -->
-        <div class='lstlisting' id='listing-11'>
+        <div id='listing-11' class='lstlisting'>
           <span class='label'><a id='x1-37083r1'></a></span><span id='textcolor8'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git checkout develop</span>
         </div>
       </li>
@@ -984,7 +984,7 @@
         <p class='noindent'>
           Crear una nueva rama en base a la rama actual (ejemplo “ft-01”:
         </p><!-- l. 241 -->
-        <div class='lstlisting' id='listing-12'>
+        <div id='listing-12' class='lstlisting'>
           <span class='label'><a id='x1-37084r1'></a></span><span id='textcolor9'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git checkout -b ft-01</span>
         </div>
       </li>
@@ -993,7 +993,7 @@
         <p class='noindent'>
           Enviar la rama local a Github (origin es un alias de la ruta al repo en github):
         </p><!-- l. 246 -->
-        <div class='lstlisting' id='listing-13'>
+        <div id='listing-13' class='lstlisting'>
           <span class='label'><a id='x1-37085r1'></a></span><span id='textcolor10'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git push -u origin ft-01</span>
         </div>
       </li>
@@ -1002,7 +1002,7 @@
         <p class='noindent'>
           Agrega todos los cambios al área de pruebas:
         </p><!-- l. 251 -->
-        <div class='lstlisting' id='listing-14'>
+        <div id='listing-14' class='lstlisting'>
           <span class='label'><a id='x1-37086r1'></a></span><span id='textcolor11'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git add .</span>
         </div>
       </li>
@@ -1011,7 +1011,7 @@
         <p class='noindent'>
           Agrega comentarios al commit:
         </p><!-- l. 256 -->
-        <div class='lstlisting' id='listing-15'>
+        <div id='listing-15' class='lstlisting'>
           <span class='label'><a id='x1-37087r1'></a></span><span id='textcolor12'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git commit -m descripcion</span>
         </div>
       </li>
@@ -1020,7 +1020,7 @@
         <p class='noindent'>
           Envía los cambios locales de la rama actual a Github:
         </p><!-- l. 261 -->
-        <div class='lstlisting' id='listing-16'>
+        <div id='listing-16' class='lstlisting'>
           <span class='label'><a id='x1-37088r1'></a></span><span id='textcolor13'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git push</span>
         </div>
       </li>
@@ -1029,7 +1029,7 @@
         <p class='noindent'>
           Actualizar el repositorio local desde Github:
         </p><!-- l. 266 -->
-        <div class='lstlisting' id='listing-17'>
+        <div id='listing-17' class='lstlisting'>
           <span class='label'><a id='x1-37089r1'></a></span><span id='textcolor14'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git pull</span>
         </div>
       </li>
@@ -1210,7 +1210,7 @@
     <figure class='figure'>
       <a id='x1-46001r5'></a> <!-- l. 58 -->
       <p class='noindent'>
-        <img alt='PIC' src='im%C3%A1genes/arbol_i18n.png'>
+        <img src='im%C3%A1genes/arbol_i18n.png' alt='PIC'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 5: </span><span class='content'>Organización de archivos de i18n.</span>
@@ -1331,7 +1331,7 @@
     <figure class='figure'>
       <a id='x1-52001r6'></a> <!-- l. 13 -->
       <p class='noindent'>
-        <img alt='PIC' width='216' src='im%C3%A1genes/arquitectura.png' height='216'>
+        <img width='216' alt='PIC' height='216' src='im%C3%A1genes/arquitectura.png'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 6: </span><span class='content'>Ejemplo de arquitectura ajustable.</span>
@@ -1372,109 +1372,109 @@
             <col id='TBL-1-2'>
           </colgroup>
           <tr id='TBL-1-1-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-1-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-1-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-2-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-2-1' class='td11'></td>
+            <td class='td11' id='TBL-1-2-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-3-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-3-1' class='td11'>
+            <td class='td11' id='TBL-1-3-1' style='white-space:normal; text-align:left;'>
               <!-- l. 38 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-4-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-4-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-4-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-5-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-5-1' class='td11'></td>
+            <td class='td11' id='TBL-1-5-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-6-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-6-1' class='td11'>
+            <td class='td11' id='TBL-1-6-1' style='white-space:normal; text-align:left;'>
               <!-- l. 38 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-7-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-7-1' class='td11'>
+            <td class='td11' id='TBL-1-7-1' style='white-space:normal; text-align:left;'>
               <!-- l. 38 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-8-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-8-1' class='td11'></td>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-8-2' class='td11'></td>
+            <td class='td11' id='TBL-1-8-1' style='white-space:normal; text-align:left;'></td>
+            <td class='td11' id='TBL-1-8-2' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-9-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:nowrap; text-align:left;' class='td11' id='TBL-1-9-1'>
-              <div class='multicolumn' style='white-space:nowrap; text-align:left;'>
+            <td colspan='2' class='td11' id='TBL-1-9-1' style='white-space:nowrap; text-align:left;'>
+              <div style='white-space:nowrap; text-align:left;' class='multicolumn'>
                 <span class='ecbx-1095'>GameManager</span>
               </div>
             </td>
           </tr>
           <tr id='TBL-1-10-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-10-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-10-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-11-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-11-1' class='td11'></td>
+            <td class='td11' id='TBL-1-11-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-12-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-12-1' class='td11'>
+            <td class='td11' id='TBL-1-12-1' style='white-space:normal; text-align:left;'>
               <!-- l. 41 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-13-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-13-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-13-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-14-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-14-1' class='td11'></td>
+            <td class='td11' id='TBL-1-14-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-15-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-15-1' class='td11'>
+            <td class='td11' id='TBL-1-15-1' style='white-space:normal; text-align:left;'>
               <!-- l. 41 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-16-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-16-1'>
-              <div class='multicolumn' style='white-space:normal; text-align:left;'>
+            <td colspan='2' class='td11' id='TBL-1-16-1' style='white-space:normal; text-align:left;'>
+              <div style='white-space:normal; text-align:left;' class='multicolumn'>
                 Manager principal a nivel de ejecución cuya función además de iniciar el juego será la de instanciar al resto de SubManagers. <span class='eccc1095-'><span class='small-caps'>gm</span></span> tendrá una clara tendencia a crecer en complejidad por lo que es muy importante que opere delegando funciones más que implementándolas. En esta misma línea si la interacción entre managers termina siendo demasiado compleja entonces será un síntoma de que es necesario un rediseño en cuanto a los in/outs de los submanagers implicados.
               </div>
             </td>
           </tr>
           <tr id='TBL-1-17-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-17-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-17-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-18-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-18-1' class='td11'></td>
+            <td class='td11' id='TBL-1-18-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-19-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-19-1' class='td11'>
+            <td class='td11' id='TBL-1-19-1' style='white-space:normal; text-align:left;'>
               <!-- l. 43 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-20-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-20-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-20-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-21-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-21-1' class='td11'></td>
+            <td class='td11' id='TBL-1-21-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-22-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-22-1' class='td11'>
+            <td class='td11' id='TBL-1-22-1' style='white-space:normal; text-align:left;'>
               <!-- l. 43 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-23-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-23-1' class='td11'>
+            <td class='td11' id='TBL-1-23-1' style='white-space:normal; text-align:left;'>
               <!-- l. 43 -->
               <p class='noindent'>
                 <span class='ecbx-1095'>SubManager</span>
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-23-2' class='td11'>
+            <td class='td11' id='TBL-1-23-2' style='white-space:normal; text-align:left;'>
               <!-- l. 43 -->
               <p class='noindent'>
                 <span class='ecbx-1095'>Dimensión</span>
@@ -1482,37 +1482,37 @@
             </td>
           </tr>
           <tr id='TBL-1-24-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-24-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-24-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-25-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-25-1' class='td11'></td>
+            <td class='td11' id='TBL-1-25-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-26-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-26-1' class='td11'>
+            <td class='td11' id='TBL-1-26-1' style='white-space:normal; text-align:left;'>
               <!-- l. 45 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-27-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-27-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-27-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-28-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-28-1' class='td11'></td>
+            <td class='td11' id='TBL-1-28-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-29-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-29-1' class='td11'>
+            <td class='td11' id='TBL-1-29-1' style='white-space:normal; text-align:left;'>
               <!-- l. 45 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-30-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-30-1' class='td11'>
+            <td class='td11' id='TBL-1-30-1' style='white-space:normal; text-align:left;'>
               <!-- l. 45 -->
               <p class='noindent'>
                 LevelManager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-30-2' class='td11'>
+            <td class='td11' id='TBL-1-30-2' style='white-space:normal; text-align:left;'>
               <!-- l. 45 -->
               <p class='noindent'>
                 Todo lo relativo a los niveles. Por ejemplo el conjunto de métodos que se encargan de toda la lógica relevante del nivel, una interfaz para que <span class='eccc1095-'><span class='small-caps'>gm</span></span> pueda conectar los distintos requerimientos del nivel, carga de locaciones, ubicación e inicio de subrutinas de Player y <span class='eccc1095-'><span class='small-caps'>npc</span></span>, señales de áreas para CutsceneManager, <span class='eccc1095-'><span class='small-caps'>ui</span></span> específicas, etc. Al igual que <span class='eccc1095-'><span class='small-caps'>gm</span></span> posiblemente tenderá a complejizarse por lo que es importante estar pendiente de posibles desacoplamientos.
@@ -1520,37 +1520,37 @@
             </td>
           </tr>
           <tr id='TBL-1-31-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-31-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-31-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-32-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-32-1' class='td11'></td>
+            <td class='td11' id='TBL-1-32-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-33-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-33-1' class='td11'>
+            <td class='td11' id='TBL-1-33-1' style='white-space:normal; text-align:left;'>
               <!-- l. 48 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-34-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-34-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-34-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-35-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-35-1' class='td11'></td>
+            <td class='td11' id='TBL-1-35-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-36-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-36-1' class='td11'>
+            <td class='td11' id='TBL-1-36-1' style='white-space:normal; text-align:left;'>
               <!-- l. 48 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-37-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-37-1' class='td11'>
+            <td class='td11' id='TBL-1-37-1' style='white-space:normal; text-align:left;'>
               <!-- l. 48 -->
               <p class='noindent'>
                 QuestManager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-37-2' class='td11'>
+            <td class='td11' id='TBL-1-37-2' style='white-space:normal; text-align:left;'>
               <!-- l. 48 -->
               <p class='noindent'>
                 Todo lo relevante a las misiones: Requerimientos, Objetivos, experiencia, ítems, cutscenes, niveles, etc.
@@ -1558,38 +1558,38 @@
             </td>
           </tr>
           <tr id='TBL-1-38-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-38-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-38-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-39-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-39-1' class='td11'></td>
+            <td class='td11' id='TBL-1-39-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-40-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-40-1' class='td11'>
+            <td class='td11' id='TBL-1-40-1' style='white-space:normal; text-align:left;'>
               <!-- l. 50 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-41-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-41-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-41-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-42-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-42-1' class='td11'></td>
+            <td class='td11' id='TBL-1-42-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-43-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-43-1' class='td11'>
+            <td class='td11' id='TBL-1-43-1' style='white-space:normal; text-align:left;'>
               <!-- l. 50 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-44-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-44-1' class='td11'>
+            <td class='td11' id='TBL-1-44-1' style='white-space:normal; text-align:left;'>
               <!-- l. 50 -->
               <p class='noindent'>
                 Cutscene<br class='newline'>
                 Manager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-44-2' class='td11'>
+            <td class='td11' id='TBL-1-44-2' style='white-space:normal; text-align:left;'>
               <!-- l. 50 -->
               <p class='noindent'>
                 Todo lo relativo a los momentos en el que el jugador no está interactuando con la <span class='eccc1095-'><span class='small-caps'>ui</span></span> ni tiene control del personaje, es decir animaciones dentro y fuera del gameplay. Incluye diálogos pero estudiar si es conveniente una separación.
@@ -1597,37 +1597,37 @@
             </td>
           </tr>
           <tr id='TBL-1-45-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-45-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-45-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-46-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-46-1' class='td11'></td>
+            <td class='td11' id='TBL-1-46-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-47-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-47-1' class='td11'>
+            <td class='td11' id='TBL-1-47-1' style='white-space:normal; text-align:left;'>
               <!-- l. 52 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-48-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-48-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-48-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-49-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-49-1' class='td11'></td>
+            <td class='td11' id='TBL-1-49-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-50-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-50-1' class='td11'>
+            <td class='td11' id='TBL-1-50-1' style='white-space:normal; text-align:left;'>
               <!-- l. 52 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-51-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-51-1' class='td11'>
+            <td class='td11' id='TBL-1-51-1' style='white-space:normal; text-align:left;'>
               <!-- l. 52 -->
               <p class='noindent'>
                 PlayerManager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-51-2' class='td11'>
+            <td class='td11' id='TBL-1-51-2' style='white-space:normal; text-align:left;'>
               <!-- l. 52 -->
               <p class='noindent'>
                 Todo lo relativo al jugador: estados, ítems, exp, estadísticas, estados de misiones, controles, path del árbol de decisiones, etc. Los sprites de player implementarán una state machine.
@@ -1635,37 +1635,37 @@
             </td>
           </tr>
           <tr id='TBL-1-52-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-52-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-52-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-53-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-53-1' class='td11'></td>
+            <td class='td11' id='TBL-1-53-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-54-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-54-1' class='td11'>
+            <td class='td11' id='TBL-1-54-1' style='white-space:normal; text-align:left;'>
               <!-- l. 54 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-55-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-55-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-55-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-56-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-56-1' class='td11'></td>
+            <td class='td11' id='TBL-1-56-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-57-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-57-1' class='td11'>
+            <td class='td11' id='TBL-1-57-1' style='white-space:normal; text-align:left;'>
               <!-- l. 54 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-58-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-58-1' class='td11'>
+            <td class='td11' id='TBL-1-58-1' style='white-space:normal; text-align:left;'>
               <!-- l. 54 -->
               <p class='noindent'>
                 IAManager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-58-2' class='td11'>
+            <td class='td11' id='TBL-1-58-2' style='white-space:normal; text-align:left;'>
               <!-- l. 54 -->
               <p class='noindent'>
                 Todo lo referente a IA: Rutas de <span class='eccc1095-'><span class='small-caps'>npc</span></span>, combate de <span class='eccc1095-'><span class='small-caps'>npc</span></span> aliados y enemigos y si compete, la generación procedural de niveles.
@@ -1673,37 +1673,37 @@
             </td>
           </tr>
           <tr id='TBL-1-59-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-59-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-59-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-60-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-60-1' class='td11'></td>
+            <td class='td11' id='TBL-1-60-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-61-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-61-1' class='td11'>
+            <td class='td11' id='TBL-1-61-1' style='white-space:normal; text-align:left;'>
               <!-- l. 56 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-62-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-62-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-62-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-63-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-63-1' class='td11'></td>
+            <td class='td11' id='TBL-1-63-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-64-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-64-1' class='td11'>
+            <td class='td11' id='TBL-1-64-1' style='white-space:normal; text-align:left;'>
               <!-- l. 56 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-65-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-65-1' class='td11'>
+            <td class='td11' id='TBL-1-65-1' style='white-space:normal; text-align:left;'>
               <!-- l. 56 -->
               <p class='noindent'>
                 UIManager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-65-2' class='td11'>
+            <td class='td11' id='TBL-1-65-2' style='white-space:normal; text-align:left;'>
               <!-- l. 56 -->
               <p class='noindent'>
                 Todo lo relativo a la interfaz gráfica: Barras de vida, visualización del mapa, menús, inventario, árbol de habilidades e interfaz de diálogo.
@@ -1711,37 +1711,37 @@
             </td>
           </tr>
           <tr id='TBL-1-66-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-66-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-66-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-67-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-67-1' class='td11'></td>
+            <td class='td11' id='TBL-1-67-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-68-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-68-1' class='td11'>
+            <td class='td11' id='TBL-1-68-1' style='white-space:normal; text-align:left;'>
               <!-- l. 58 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-69-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-69-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-69-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-70-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-70-1' class='td11'></td>
+            <td class='td11' id='TBL-1-70-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-71-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-71-1' class='td11'>
+            <td class='td11' id='TBL-1-71-1' style='white-space:normal; text-align:left;'>
               <!-- l. 58 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-72-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-72-1' class='td11'>
+            <td class='td11' id='TBL-1-72-1' style='white-space:normal; text-align:left;'>
               <!-- l. 58 -->
               <p class='noindent'>
                 AudioManager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-72-2' class='td11'>
+            <td class='td11' id='TBL-1-72-2' style='white-space:normal; text-align:left;'>
               <!-- l. 58 -->
               <p class='noindent'>
                 Control de la música, transiciones, volumen, etc.; y los sonidos de los distintos objetos, su paneo, volumen, efectos, etc.
@@ -1749,38 +1749,38 @@
             </td>
           </tr>
           <tr id='TBL-1-73-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-73-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-73-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-74-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-74-1' class='td11'></td>
+            <td class='td11' id='TBL-1-74-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-75-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-75-1' class='td11'>
+            <td class='td11' id='TBL-1-75-1' style='white-space:normal; text-align:left;'>
               <!-- l. 60 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-76-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-76-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-76-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-77-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-77-1' class='td11'></td>
+            <td class='td11' id='TBL-1-77-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-78-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-78-1' class='td11'>
+            <td class='td11' id='TBL-1-78-1' style='white-space:normal; text-align:left;'>
               <!-- l. 60 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-79-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-79-1' class='td11'>
+            <td class='td11' id='TBL-1-79-1' style='white-space:normal; text-align:left;'>
               <!-- l. 60 -->
               <p class='noindent'>
                 Debug<br class='newline'>
                 Manager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-79-2' class='td11'>
+            <td class='td11' id='TBL-1-79-2' style='white-space:normal; text-align:left;'>
               <!-- l. 60 -->
               <p class='noindent'>
                 Interfaz de debug que obtenga información relevante para el desarrollo sobre el funcionamiento de los distintos managers y objetos instanciados.
@@ -1788,49 +1788,49 @@
             </td>
           </tr>
           <tr id='TBL-1-80-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-80-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-80-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-81-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-81-1' class='td11'></td>
+            <td class='td11' id='TBL-1-81-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-82-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-82-1' class='td11'>
+            <td class='td11' id='TBL-1-82-1' style='white-space:normal; text-align:left;'>
               <!-- l. 62 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-83-' style='vertical-align:baseline;'>
-            <td colspan='2' style='white-space:normal; text-align:left;' class='td11' id='TBL-1-83-1'></td>
+            <td colspan='2' class='td11' id='TBL-1-83-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-84-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-84-1' class='td11'></td>
+            <td class='td11' id='TBL-1-84-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-85-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-85-1' class='td11'>
+            <td class='td11' id='TBL-1-85-1' style='white-space:normal; text-align:left;'>
               <!-- l. 62 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-86-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-86-1' class='td11'></td>
+            <td class='td11' id='TBL-1-86-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-87-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-87-1' class='td11'></td>
+            <td class='td11' id='TBL-1-87-1' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr id='TBL-1-88-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-88-1' class='td11'>
+            <td class='td11' id='TBL-1-88-1' style='white-space:normal; text-align:left;'>
               <!-- l. 62 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-89-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-89-1' class='td11'>
+            <td class='td11' id='TBL-1-89-1' style='white-space:normal; text-align:left;'>
               <!-- l. 62 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr id='TBL-1-90-' style='vertical-align:baseline;'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-90-1' class='td11'>
+            <td class='td11' id='TBL-1-90-1' style='white-space:normal; text-align:left;'>
               <!-- l. 62 -->
               <p class='noindent'></p>
             </td>
@@ -2355,7 +2355,7 @@
     <figure class='figure'>
       <!-- l. 45 -->
       <p class='noindent'>
-        <img alt='PIC' width='503' src='im%C3%A1genes/arbol_proyecto.png' height='503'>
+        <img width='503' alt='PIC' height='503' src='im%C3%A1genes/arbol_proyecto.png'>
       </p>
     </figure>
     <p>
