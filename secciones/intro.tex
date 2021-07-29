@@ -2,14 +2,14 @@
 %% Intro
 
 \section{Introducción.}\label{intro:introduccion}
-El presente documento busca ser una herramienta diseño, una especie de mapa de ruta que encamine al mismo tiempo, la implementación del código en el motor de juegos open source \textbf{Godot} y por otro lado el desarrollo técnico del software en general. Incluye información con respecto al flujo de trabajo (\nameref{flujo:metodologia-kanban}), descripción del \nameref{modelado:modelado-del-software}, lineamientos de uso de sistemas de control con \lsc{GIT} (\nameref{flujo:modelo-de-ramas}), consideraciones de \nameref{i18n:internacionalizacion} y los muchos otros detalles que involucra un programa de esta magnitud.
+El presente documento busca ser una herramienta diseño, una especie de mapa de ruta que encamine la implementación del código en el motor de juegos open source \textbf{Godot} y por otro lado el desarrollo técnico del software en general. Incluye información con respecto al flujo de trabajo (\nameref{flujo:metodologia-kanban}), descripción del \nameref{modelado:modelado-del-software}, lineamientos de uso de sistemas de control con \lsc{GIT} (\nameref{flujo:modelo-de-ramas}), consideraciones de \nameref{i18n:internacionalizacion} y los muchos otros detalles que involucra un programa de esta magnitud.
 
 Del mismo modo, el texto también pretende servir de ayuda o consulta para detalles específicos, y al mismo tiempo servir de referencia para facilitar una visión general del funcionamiento interno del juego. Sobretodo al momento de implementar secciones completamente nuevas de código.
 
-Esto se abordará con más detalle en el apartado \nameref{flujo:documento-de-diseno}.
+El funcionamiento de este documento se abordará con más detalle en el apartado \nameref{flujo:documento-de-diseno}.
 
 \subsection{Lista de requerimientos.}\label{intro:lista-de-requerimientos}
-En primer lugar se presenta una lista con los requerimientos y consideraciones iniciales para el planteamiento del código. Se entiende que esta es una propuesta inicial y las distintas implementaciones quizás generen nuevos requisitos o hagan obsoletos otros.
+Es relevante comenzar mostrando la lista de los requerimientos y consideraciones iniciales para el planteamiento del programa. Se entiende que esta es una propuesta inicial y las distintas implementaciones quizás generen nuevos requisitos o hagan obsoletos otros.
 
 \begin{enumerate}
 	\item Enfoque en la facilidad de agregar y editar contenido.
@@ -63,13 +63,13 @@ En primer lugar se presenta una lista con los requerimientos y consideraciones i
 \subsection{Software y herramientas de producción.}\label{intro:software-y-herramientas}
 
 \subsubsection{Godot v3.3.}
-Como herramienta principal de desarrollo se utilizará el motor de videojuegos multiplataforma opensource \textbf{Godot} en su rama 3.3 estable. Ante el lanzamiento de la versión 4.0 se estudiará la migración del proyecto.
+Se utilizará como herramienta principal de desarrollo el motor de videojuegos multiplataforma open source \textbf{Godot} en su rama 3.3 estable. Ante el lanzamiento de la versión 4.0 se estudiará la migración del proyecto.
 
 \subsubsection*{\small GUT 7.1.0.}
-Plugin de \textbf{Godot} para escribir y controlar las pruebas de los scripts. Instalable desde Godot (tutorial \href{https://www.youtube.com/watch?v=5DrhMiuLRl0}{aquí}). Más información en el apartado \nameref{principios:TDD}.
+Plugin de \textbf{Godot} para escribir y controlar las pruebas (test unitarios) de los scripts en Godot. Instalable desde el propio engine (tutorial \href{https://www.youtube.com/watch?v=5DrhMiuLRl0}{aquí}). Más información en el apartado \nameref{principios:TDD}.
 
 \subsubsection{Trello.}
-Se utilizará la plataforma \textbf{Trello} para coordinar todo el desarrollo y el flujo de trabajo del equipo siguiendo la metodología Kanban. Más información en el apartado \nameref{flujo:tablero-kanban}.
+Se utilizará la plataforma \textbf{Trello} para coordinar todo el desarrollo y el flujo de trabajo del equipo siguiendo la \emph{Metodología Kanban}. Más información en el apartado \nameref{flujo:tablero-kanban}.
 
 \subsubsection{GIT y Github.}
 El código estará alojado en un repositorio \lsc{GIT} en \textbf{Github} en la siguiente dirección: \url{https://github.com/polirritmico/Bakumapu}. Todos los participantes deben tener una cuenta con permisos.
@@ -77,18 +77,18 @@ El código estará alojado en un repositorio \lsc{GIT} en \textbf{Github} en la 
 El control de versiones se explicará en detalle en el apartado \nameref{flujo:repositorio}.
 
 \subsubsection{Google Suite.}
-Por conveniencia, tanto los archivos para la organización del proyecto así como los de diseño del juego se realizarán principalmente en la suite de Google. Más información en el apartado \nameref{flujo:google-drive}.
+Por conveniencia, tanto los archivos para la organización del proyecto así como los de diseño del juego, se realizarán principalmente en la suite de Google. Más información en el apartado \nameref{flujo:google-drive}.
 
 \subsubsection{LaTeX.}
-Para realizar el presente documento se ha utilizado \LaTeXe\ desde TeX Live 2021. Como alternativa se encuentra la plataforma online \href{https://www.overleaf.com/}{Overleaf} (requiere registro). En cualquier caso, un archivo \lsc{TEX} es simplemente archivo de texto plano, por lo que para su edición cualquier editor de textos sencillo debería funcionar sin inconvenientes.
+Para realizar el presente documento se ha utilizado \LaTeXe\ desde TeX Live 2021. Como alternativa se encuentra la plataforma online \href{https://www.overleaf.com/}{Overleaf} (requiere registro). En cualquier caso, un archivo \lsc{TEX} es simplemente un texto plano, por lo que para su edición cualquier editor de textos sencillo debería funcionar sin inconvenientes.
 
-Para su conversión a \lsc{HTML} y a markdown, se ha utilizado Pandoc en su versión 2.10.1.
+Para su conversión a \lsc{HTML} se utilizará \textbf{make4ht} en su versión 0.3g. Si es necesario convertirlo a Markdown se recomienda tomar el mismo \lsc{HTML} y transformarlo con Pandoc en su versión 2.10.1.
 
 \subsubsection{Aseprite.}
 Se utilizará en su versión 1.2.25 para el trabajo en estilo pixel art de los sprites de tiles, props, animaciones, \lsc{GUI} y la gran mayoría de los elementos visuales del juego. Ejecutable compilado para Windows \href{https://drive.google.com/drive/folders/1DPhGeg7WzV9j81u3B5isgsXqoMtfd_Uv?usp=sharing}{aquí}.
 
 \subsubsection{Krita.}
-En su versión 4.4.2 se utilizará principalmente como alternativa (no pixel art) para el diseño visual de los personajes, mapas, etc.
+En su rama 4.4 se utilizará principalmente como alternativa (no pixel art) para el diseño visual de los personajes, mapas, etc.
 
 \subsubsection{Inkscape.}
 Se utilizará como herramienta de diseño vectorial en su versión 1.1.
@@ -97,17 +97,17 @@ Se utilizará como herramienta de diseño vectorial en su versión 1.1.
 Se utilizará para toda la composición musical en formato \lsc{MIDI} y \lsc{MUSX}.
 
 \subsubsection{Ableton Live.}
-Se utilizará la versión 10.1.4 para los \lsc{MIX}, masters y/o conversión de archivos \lsc{MIDI} a formato \lsc{WAV} estéreo y toda la producción de diseño sonoro del juego.
+Se utilizará la versión 10.1.4 para los \lsc{MIX}, masters y/o conversión de archivos \lsc{MIDI} a formato \lsc{WAV} estéreo y toda la producción de diseño sonoro del juego. Tomar nota en caso de utilizar VST específicos.
 
 \subsubsection{LAME 64bits.}
-Conversor de \lsc{WAV} a \lsc{MP}{\footnotesize 3} en su \href{https://lame.sourceforge.io/download.php}{versión 3.100}. El formato para los archivos de música y sonido ambiente será el \lsc{MP}{\footnotesize 3} en stereo, con un bitrate de 192 kbps a 44.1 khz. Muy importante: conservar los archivos \lsc{WAV}.
+Conversor de \lsc{WAV} a \lsc{MP}{\footnotesize 3} en su \href{https://lame.sourceforge.io/download.php}{versión 3.100}. El formato para los archivos de música y sonido ambiente será el \lsc{MP}{\footnotesize 3} en estéreo, con un bitrate de 192 kbps a 44.1 khz. Muy importante: conservar los archivos \lsc{WAV}.
 
 \begin{lstlisting}
 $ lame -b 192 -m s ARCHIVO.wav ARCHIVO.mp3
 \end{lstlisting}
 
 \subsubsection{FFmpeg.}
-Se utilizará en su versión 4.3.2 para convertir archivos \lsc{WAV} a \lsc{OGG}.
+Se utilizará en su versión 4.4 para convertir archivos \lsc{WAV} a \lsc{OGG}.
 
 \begin{lstlisting}
 $ ffmpeg -i ARCHIVO.wav -acodec libvorbis ARCHIVO.ogg
