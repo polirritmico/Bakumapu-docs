@@ -3,20 +3,6 @@
 
 \section{Flujo de trabajo y control de versiones.}\label{flujo:flujo-de-trabajo}
 
-\subsection{El documento de Diseño técnico.}\label{flujo:documento-de-diseno}
-Como ya se ha mencionado, la idea de este documento es triple: servir de instrumento de desarrollo, dar toda la información relevante sobre el funcionamiento técnico del desarrollo para integrar a nuevos miembros del equipo, y finalmente para servir de referencia ante dudas técnicas o de diseño.
-
-Por su parte, el código en sí debe estar debidamente documentado por lo que para pequeñas modificaciones ---sobre todo en relación a funciones---, será suficiente con comentarlas dentro del código (revisar apartado \nameref{principios:documentacion-en-codigo}). No obstante, las modificaciones más importantes o que involucren cambiar o definir la interacción entre clases, deberán por lo menos estar mencionadas en este documento a modo de referencia técnica en el apartado \nameref{modelado:modelado-del-software}, para así mantener el sentido de este texto.
-
-\subsubsection{Cómo usar este documento.}\label{flujo:como-usar-documento}
-Lo ideal es una primera lectura para hacerse de una idea general del funcionamiento del software, o al menos tener una noción de lo que se pretende a nivel de diseño. Luego en esta primera etapa del desarrollo, la idea es usarlo a modo de referencia antes y durante la implementación de un área del código. Al finalizar ese trabajo, se debe actualizar el apartado correspondiente.
-
-Para facilitar el acceso a la información relevante, se agrupan los contenidos en secciones afines, se añade un completo índice de contenidos y se agregan referencias cruzadas a otras secciones dentro del texto.
-
-Cada modificación a este documento deberá aumentar la numeración de la subversión en 1 (v0.0.1 a v0.0.2). Los primeros 2 índices (v\textbf{0.0.}1) estarán en línea con la última rama \textbf{main} del repositorio. Cada vez que se suba una versión de la rama, se deberá chequear que el documento contenga los cambios relevantes a esa versión, incorporarlos si hace falta y actualizar la versión y volver la subversión a cero (v0.\textbf{5.36} a v0.\textbf{6.0}). El versionado de las ramas se discutirá más adelante en el apartado \nameref{flujo:versionado-y-nombres}.
-
-Dado que la instalación de \LaTeX\ puede ser engorrosa en ciertos contextos, no es necesario compilar una nueva versión con cada cambio, pero sí será conveniente para los cambios de versiones menores.
-
 \subsection{Metodología Kanban.}\label{flujo:metodologia-kanban}
 \subsubsection{El Tablero Kanban.}\label{flujo:tablero-kanban}
 Trello será la herramienta principal para mantener la coordinación del flujo de trabajo a través de un \textbf{Tablero Kanban}. Para el desarrollo del proyecto dividiremos el trabajo en tareas y las iremos incorporando a este tablero dentro de columnas que vienen a representar nuestros procesos de producción.
@@ -111,7 +97,7 @@ Esta nomenclatura se debe aplicar en las ramas \textbf{main} y \textbf{release}.
 \subsubsection{Alternativas al modelo de ramas de función.}\label{flujo:alternativas-al-branching}
 Si el flujo bajo el sistema de ramas de función resulta demasiado tedioso o la visualización general del código se pierde con mucha facilidad, ya sea por merges muy complejos o espaciados, se propone como alternativa la metodología de \href{https://es.wikipedia.org/wiki/Entrega_continua}{Entrega continua}.
 
-\subsubsection{Comandos de {\small GIT}.}\label{flujo:comandos-de-git}
+\subsubsection{Comandos de GIT.}\label{flujo:comandos-de-git}
 Este apartado es una referencia rápida a los comandos y configuraciones más comunes en el trabajo con \lsc{GIT}.
 
 \begin{itemize}[label=-]
@@ -147,12 +133,12 @@ data_*/
 	
 	\Needspace{7\baselineskip}
 	
-	\item	Evitar problemas de formato de archivo entre Windows y el resto de sistemas:
-\begin{lstlisting}
+	\item Evitar problemas de formato de archivo entre Windows y el resto de sistemas:
+	\begin{lstlisting}
 $ .gitattributes:
-\end{lstlisting}
-\noindent\begin{minipage}{.45\textwidth}
-\begin{lstlisting}
+	\end{lstlisting}
+	\noindent\begin{minipage}{.45\textwidth}
+	\begin{lstlisting}
 # Set the default behavior, in
 # case people
 # don't have core.autocrlf set
@@ -184,10 +170,10 @@ $ .gitattributes:
 # fonts
 *.ttf binary
 *.otf binary
-\end{lstlisting}
-\end{minipage}\hfill
-\begin{minipage}{.45\textwidth}
-\begin{lstlisting}[escapechar=\%]
+	\end{lstlisting}
+	\end{minipage}\hfill
+	\begin{minipage}{.45\textwidth}
+	\begin{lstlisting}[escapechar=\%]
 # images
 
 *.png binary
@@ -219,14 +205,14 @@ $ .gitattributes:
 
 
 %
-\end{lstlisting}
-\end{minipage}
+	\end{lstlisting}
+	\end{minipage}
 
 	\item Clonar el repositorio en el espacio de trabajo local:
 	\begin{lstlisting}
 $ git clone https://github.com/polirritmico/Bakumapu
 	\end{lstlisting}
-	
+
 	\item - Ver el estado de la rama actual:
 	\begin{lstlisting}
 $ git status
@@ -283,4 +269,45 @@ Se manejará la \href{https://drive.google.com/open?id=1p8u-1UpXts8OHGRHEZLSIiQr
 		
 		Más información de estas herramientas en los apartados \nameref{kit:cutscenes-y-dialogos} y \nameref{kit:quests}. Además estos archivos deberán seguir la convención de nombres detallada en el apartado \nameref{organizacion:nombres-de-archivos}.
 	\end{itemize}
+\end{itemize}
+
+\subsection{Documentación.}\label{flujo:documentacion}
+
+\subsubsection{Diseño técnico.}\label{flujo:diseno-tecnico}
+Como ya se ha mencionado, la función de este documento es triple:
+
+\begin{enumerate}
+	\item Usarse como referencia ante dudas técnicas o de modelado.
+	\item Entregar toda la información relevante acerca del flujo de trabajo y del funcionamiento del software para integrar a nuevos miembros del equipo.
+	\item Servir de instrumento de diseño.
+\end{enumerate}
+
+\paragraph*{¿Qué se documenta?}
+En términos generales, el código debe estar debidamente comentado dentro de los archivos correspondientes (revisar apartado \nameref{principios:documentacion-en-codigo}). Para pequeñas modificaciones o adiciones ---sobre todo en relación a funciones y variables---, será suficiente con ajustar estos comentarios en el código. No obstante, para las modificaciones más importantes que involucren cambiar o definir la interacción entre clases o elementos de un ámbito más grande, se deberán mencionar en este documento a modo de referencia técnica en el apartado \nameref{modelado:modelado-del-software}.
+
+\subsubsection{Modificando el documento.}
+Como ya se ha mencionado el texto debe modificarse utilizando \LaTeX en cualquier editor de textos. 
+
+Cada modificación a este documento deberá aumentar la numeración de la subversión en 1 (v0.0.1 a v0.0.2). Los primeros 2 índices (v\textbf{0.0.}1) estarán en línea con la última rama \textbf{main} del repositorio. Cada vez que se suba una versión de la rama, se deberá chequear que el documento contenga los cambios relevantes a esa versión, incorporarlos si hace falta y actualizar la versión y volver la subversión a cero (v0.\textbf{5.36} a v0.\textbf{6.0}). El versionado de las ramas se discutirá más adelante en el apartado \nameref{flujo:versionado-y-nombres}.
+
+Dado que la instalación de \LaTeX\ puede ser engorrosa en ciertos contextos, no es necesario compilar una nueva versión con cada cambio de subversión, pero sí será conveniente para los cambios de versiones menores.
+
+Al finalizar las secciones más grandes del código, se debe actualizar el apartado correspondiente.
+
+Es importante aclarar que el objetivo no es una explicación línea a línea de cómo funciona el código, sino una noción general de ámbitos o lógicas más globales. Con señalar el sentido de estas entidades dentro del sistema y su interacción con el resto es suficiente.
+
+
+\subsection{LaTeX}
+
+\subsection{Documentación dentro del código.}\label{principios:documentacion-en-codigo}
+La búsqueda de simplicidad en el diseño también aplica a la documentación del código. Idealmente éste debe estar “autodocumentado”, es decir que los nombres de las variables, métodos y clases den cuenta de manera transparente e intuitiva su rol dentro de la lógica del algoritmo. En los casos más complejos, es de vital importancia añadir comentarios no solo para facilitar la comprensión de líneas más complejas, sino para ayudar al futuro proceso de refactorización y debbuging. \emph{Los nombres largos no lastran la eficiencia del código}.
+
+En cuanto al formato del código dado que \lsc{GDS}cript está basado en Python, además de las propias sugerencias de Godot se recomienda seguir la \href{https://www.python.org/dev/peps/pep-0008/}{guía de estilo PEP-8}.
+
+En especial las siguientes indicaciones:
+\begin{itemize}
+	\item Límite horizontal de 79 caracteres. 
+	\item Separación de 1 línea en blanco entre funciones y 2 entre clases.
+	\item Indentación por 4 espacios
+	\item Operadores y variables separados por un espacio:\\\small \texttt{var ejemplo = Vector2(2, 5 + PI.get(2))}.
 \end{itemize}

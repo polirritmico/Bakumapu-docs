@@ -3,10 +3,10 @@
 
 \section{Visión general del desarrollo y principios del diseño técnico.}\label{principios:vision-general-desarrollo}
 
-\subsection{Principios de diseño TDD.}\label{principios:principios-de-diseno}
-Se pretende generar un código sólido, flexible y eficiente. El énfasis en esta primera etapa de desarrollo será hacia la \emph{flexibilidad}. En principio, la idea original de diseño es solo eso, una idea; a medida que se vaya obteniendo más información y \emph{aprendamos más del proceso de desarrollo y los requerimientos del diseño}, deberemos ir refactorizando el código\footnote{Reestructurar su estructura interna sin alterar su comportamiento externo.} para obtener unidades más definidas y alineadas a los requerimientos. En especial buscando que estas unidades sean fáciles de mantener.
+\subsection{Principios de diseño.}\label{principios:principios-de-diseno}
+Se pretende generar un código sólido, flexible y eficiente, pero el énfasis en esta primera etapa de desarrollo será hacia la \emph{flexibilidad}. En principio, la idea original de diseño es solo eso, una idea; a medida que se vaya obteniendo más información y \emph{aprendamos más del proceso de desarrollo y los requerimientos del diseño}, deberemos ir refactorizando el código\footnote{Reestructurar su estructura interna sin alterar su comportamiento externo.} para obtener unidades más definidas, mejor alineadas a los requerimientos y particularmente, que sean unidades fáciles de mantener.
 
-Para esto se deberá implementar un sistema de pruebas para cada feature que se trabaje. Esto implica invertir el proceso de desarrollo escribiendo primero el test, dejar que falle y a continuación implementar la funcionalidad. El principio es concentrarse en las pruebas no en el \foreignlanguage{english}{debugging}; aunque es ineludible, \emph{no queremos estar arreglando bugs, sino que queremos evitarlos}.
+Para ello, se deberá implementar un sistema de pruebas por cada feature que se trabaje. Esto implica invertir el proceso de desarrollo escribiendo primero el test, dejar que falle y a continuación implementar la funcionalidad. El principio es concentrarse en las pruebas no en el \foreignlanguage{english}{debugging}; aunque es ineludible, \emph{no queremos estar arreglando bugs, sino que queremos evitarlos}.
 
 Se simplifica el diseño para agilizar el desarrollo y facilitar el mantenimiento.
 
@@ -22,27 +22,24 @@ Se comienza a trabajar por la fase roja escribiendo un test que supervise la imp
 
 A continuación en la fase verde, se trabaja en la implementación del código tratando de superar el test de la forma más directa y rápida posible; \textit{no importa que el código sea horrible}.
 
-Habiendo superado el test sabemos que contamos con un código que funciona, por lo mismo pasamos a la fase azul donde refactorizamos este código ahora en búsqueda de eficiencia y limpieza. Ya que contamos con nuestros test unitarios, podremos saber en todo momento cuando nuestra refactorización es correcta o genera problemas.
+Habiendo superado el test sabemos que contamos con un código que funciona, pasamos entonces a la fase azul donde refactorizamos este código ahora en búsqueda de eficiencia y limpieza. Ya que contamos con nuestros test unitarios, podremos saber en todo momento cuando nuestra refactorización es correcta o genera problemas.
 
 Repetimos el ciclo hasta alcanzar nuestras metas de implementación.
 
-Siguiendo esta metodología, se otorgará mayor flexibilidad para el diseño creativo del juego. Al mismo tiempo, dada la magnitud y complejidad de todo el sistema, ya que el testeo del código es parte del proceso de desarrollo se pretende minimizar considerablemente la cantidad de bugs que llegue a la rama \textbf{main} (ver el apartado \nameref{flujo:repositorio}).
+Siguiendo esta metodología, se otorgará mayor flexibilidad para el diseño creativo del juego. Al mismo tiempo, dada la magnitud y complejidad de todo el sistema, ya que el testeo del código es parte del proceso de desarrollo, se pretende minimizar considerablemente la cantidad de bugs que llegue a la rama \textbf{main} (ver el apartado \nameref{flujo:repositorio}).
 
 \subsection{Refactorización: Rendimiento y limpieza.}\label{principios:refactorizacion-rendimiento-limpieza}
 Aunque es frecuente limpiar el código a medida que se escribe, al hacer eso no estamos refactorizando; el factor clave de la refactorización es hacerlo intencionalmente pero de forma separada a la adición de nueva funcionalidad. \emph{Al ya tener definidas las pruebas, la reescritura del código se puede hacer con seguridad y confianza}.
 
 El objetivo en este proceso es doble, por un lado se busca un rendimiento óptimo en los apartados que lo requieran (combate, IA, físicas y animación por ejemplo) y por otro la revisión del código además de mejorar la legibilidad del mismo (mejores nombres de funciones, variables y comentarios), nos ayuda al entendimiento del sistema y puede señalar oportunidades de encapsulación y mejoras al modelamiento.
 
-\subsubsection{Documentación dentro del código.}\label{principios:documentacion-en-codigo}
-La búsqueda de simplicidad en el diseño también aplica a la documentación del código. Idealmente éste debe estar “autodocumentado”, es decir que los nombres de las variables, métodos y clases den cuenta de manera transparente e intuitiva su rol dentro de la lógica del algoritmo. En los casos más complejos, es de vital importancia añadir comentarios no solo para facilitar la comprensión de líneas más complejas, sino para ayudar al futuro proceso de refactorización y debbuging. \emph{Los nombres largos no lastran la eficiencia del código}.
+\subsection{El documento de Diseño técnico.}\label{principios:documento-de-diseno}
+Dado que por un lado el proyecto aun se encuentra en estado de planificación, y por otro en este documento se abarcarán todas las dimensiones relevantes al desarrollo en un sólo lugar, su propia construcción y lectura es un ejercicio de diseño; no sólo del software, sino también del flujo de trabajo. Por consiguiente la continua revisión de este texto servirá como una oportunidad para optimización y mejoras.
 
-En cuanto al formato del código dado que \lsc{GDS}cript está basado en Python, además de las propias sugerencias de Godot se recomienda seguir la \href{https://www.python.org/dev/peps/pep-0008/}{guía de estilo PEP-8}. En especial las siguientes:
+El texto estará disponible en formato \lsc{TEX}, \lsc{PDF} y \lsc{HTML} en el repositorio de documentación del proyecto: \url{https://github.com/polirritmico/Bakumapu-docs}. La versión \lsc{HTML} se encuentra disponible en la siguiente dirección: \url{https://polirritmico.github.io/Bakumapu-docs/}. Si fuera necesario se puede generar una copia en formato Markdown utilizando Pandoc o algo similar.
 
-\begin{itemize}
-	\item Límite horizontal de 79 caracteres.
-	\item Separación entre funciones de 1 línea en blanco y 2 entre clases.
-	\item Indentación por 4 espacios
-	\item Operadores y variables separados por un espacio. Por ejemplo: {\small \texttt{var direction = Vector2(2, 5 + PI)}}).
-\end{itemize}
+El uso del documento se verá en detalle en el apartado \nameref{flujo:documentacion}.
+
 
 Aplicando simplicidad junto al desarrollo colectivo del software, nos aseguramos que a medida que el código crezca, el equipo conocerá de mejor manera y con mayor amplitud el sistema completo y sus interacciones.
+

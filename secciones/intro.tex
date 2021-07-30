@@ -2,14 +2,18 @@
 %% Intro
 
 \section{Introducción.}\label{intro:introduccion}
-El presente documento busca ser una herramienta de diseño, un mapa de ruta que encamine el desarrollo técnico del software en general y la implementación del código en el motor de juegos \textbf{Godot}. Incluye información con respecto al flujo de trabajo (\nameref{flujo:metodologia-kanban}), descripción del \nameref{modelado:modelado-del-software}, lineamientos de uso de sistemas de control con \lsc{GIT} (\nameref{flujo:modelo-de-ramas}), consideraciones de \nameref{i18n:internacionalizacion} y los muchos otros detalles que involucra un programa de esta magnitud.
 
-Del mismo modo, el texto también pretende servir de ayuda o consulta para detalles específicos, y al mismo tiempo servir de referencia para facilitar una visión general del funcionamiento interno del juego. Sobretodo al momento de implementar secciones completamente nuevas de código.
+\subsection{Cómo usar este documento.}\label{intro:como-usar-documento}
+El presente documento busca ser una herramienta de diseño, un mapa de ruta que encamine tanto el desarrollo técnico del software en general como la implementación del código en el motor de juegos \textbf{Godot}. Incluye información relevante con respecto al flujo de trabajo (\nameref{flujo:metodologia-kanban}), la descripción del \nameref{modelado:modelado-del-software}, los lineamientos de uso de sistemas de control con \lsc{GIT} (\nameref{flujo:modelo-de-ramas}), las consideraciones de \nameref{i18n:internacionalizacion} y a los muchos otros detalles que involucra un programa de esta magnitud.
 
-El funcionamiento de este documento se abordará con más detalle en el apartado \nameref{flujo:documento-de-diseno}.
+Del mismo modo, el texto pretende servir de ayuda o consulta para detalles específicos y de referencia para facilitar una visión general del funcionamiento interno del juego. Para facilitar el acceso a la información relevante, se agrupan los contenidos en secciones afines, se añade un completo índice de contenidos junto a referencias cruzadas a otras secciones dentro del mismo texto.
+
+Lo ideal es una primera lectura para hacerse de una idea general del funcionamiento del software, o al menos para tener una noción de lo que se pretende a nivel de diseño. Luego, la idea es usarlo a modo de referencia o mapa antes y durante la implementación del código.
+
+El funcionamiento de este documento se abordará con más detalle en los apartados \nameref{principios:documento-de-diseno} y  \nameref{flujo:documentacion}.
 
 \subsection{Lista de requerimientos.}\label{intro:lista-de-requerimientos}
-Es relevante comenzar mostrando la lista de los requerimientos y consideraciones iniciales para el planteamiento del programa. Se entiende que esta es una propuesta inicial y las distintas implementaciones quizás generen nuevos requisitos o hagan obsoletos otros.
+A continuación se presenta la lista inicial de requerimientos y consideraciones del programa. Importante destacar que este listado probablemente cambie a lo largo del desarrollo, además que las distintas implementaciones quizás generen nuevos requisitos o hagan obsoletos otros.
 
 \begin{enumerate}
 	\item Enfoque en la facilidad de agregar y editar contenido.
@@ -60,13 +64,13 @@ Es relevante comenzar mostrando la lista de los requerimientos y consideraciones
 	\item Dificultad ajustable en menú.
 \end{enumerate}
 
-\subsection{Software y herramientas de producción.}\label{intro:software-y-herramientas}
+\subsection{Listado de software y herramientas de producción.}\label{intro:software-y-herramientas}
 
 \subsubsection{Godot v3.3.}
 Se utilizará como herramienta principal de desarrollo el motor de videojuegos multiplataforma open source \textbf{Godot} en su rama 3.3 estable. Ante el lanzamiento de la versión 4.0 se estudiará la migración del proyecto.
 
 \subsubsection*{\small GUT 7.1.0.}
-Plugin de \textbf{Godot} para escribir y controlar las pruebas (test unitarios) de los scripts en Godot. Instalable desde el propio engine (tutorial \href{https://www.youtube.com/watch?v=5DrhMiuLRl0}{aquí}). Más información en el apartado \nameref{principios:TDD}.
+Plugin de \textbf{Godot} para escribir y controlar las pruebas de los scripts. Instalable desde la propia interfaz de Godot (tutorial \href{https://www.youtube.com/watch?v=5DrhMiuLRl0}{aquí}). Más información en el apartado \nameref{principios:TDD}.
 
 \subsubsection{Trello.}
 Se utilizará la plataforma \textbf{Trello} para coordinar todo el desarrollo y el flujo de trabajo del equipo siguiendo la \emph{Metodología Kanban}. Más información en el apartado \nameref{flujo:tablero-kanban}.
@@ -77,12 +81,12 @@ El código estará alojado en un repositorio \lsc{GIT} en \textbf{Github} en la 
 El control de versiones se explicará en detalle en el apartado \nameref{flujo:repositorio}.
 
 \subsubsection{Google Suite.}
-Por conveniencia, tanto los archivos para la organización del proyecto así como los de diseño del juego, se realizarán principalmente en la suite de Google. Más información en el apartado \nameref{flujo:google-drive}.
+Por conveniencia, tanto los archivos para la organización del proyecto así como los de diseño artístico del juego, se realizarán principalmente en la suite de Google. Más información en el apartado \nameref{flujo:google-drive}.
 
 \subsubsection{LaTeX.}
-Para realizar el presente documento se ha utilizado \LaTeXe\ desde TeX Live 2021. Como alternativa se encuentra la plataforma online \href{https://www.overleaf.com/}{Overleaf} (requiere registro). En cualquier caso, un archivo \lsc{TEX} es simplemente un texto plano, por lo que para su edición cualquier editor de textos sencillo debería funcionar sin inconvenientes.
+Para realizar el presente documento se ha utilizado \LaTeXe\ (parte del paquete TeX Live 2021) en el editor TeXstudio v3.1.2. Como alternativa se encuentra la plataforma online \href{https://www.overleaf.com/}{Overleaf} (gratuita con registro). En cualquier caso, un archivo \lsc{TEX} es simplemente un archivo de texto plano, por lo que para su edición cualquier editor de textos sencillo debería funcionar sin inconvenientes.
 
-Para su conversión a \lsc{HTML} se utilizará \textbf{make4ht} en su versión 0.3g. Si es necesario convertirlo a Markdown se recomienda tomar el mismo \lsc{HTML} y transformarlo con Pandoc en su versión 2.10.1.
+Para su conversión a \lsc{HTML} se utilizará \textbf{make4ht} en su versión 0.3g. Si es necesario convertirlo a Markdown se recomienda tomar el mismo \lsc{HTML} y transformarlo con Pandoc. Más información en el apartado \nameref{flujo:diseno-tecnico}.
 
 \subsubsection{Aseprite.}
 Se utilizará en su versión 1.2.25 para el trabajo en estilo pixel art de los sprites de tiles, props, animaciones, \lsc{GUI} y la gran mayoría de los elementos visuales del juego. Ejecutable compilado para Windows \href{https://drive.google.com/drive/folders/1DPhGeg7WzV9j81u3B5isgsXqoMtfd_Uv?usp=sharing}{aquí}.
