@@ -271,24 +271,22 @@ Se manejará la \href{https://drive.google.com/open?id=1p8u-1UpXts8OHGRHEZLSIiQr
 	\end{itemize}
 \end{itemize}
 
-\subsection{Documentación.}\label{flujo:documentacion}
+\subsection{El documento de Diseño técnico.}\label{flujo:documento-de-diseno}
+A nivel de desarrollo muchas veces terminamos dedicando más tiempo a estudiar el código y a entender su funcionamiento que al escribir nueva funcionalidad; por ello la documentación se vuelve tan relevante. Ya desde el corto plazo comienzan a aparecer los beneficios de una correcta docuemtnación; un código más fácil de entender ahorra tiempo, mejora la estabilidad del software y en general todo el desarrollo se torna más productivo. La documentación técnica de Bakumapu estará dividia principalmente en dos fuentes, el presente documento y la documentación de los archivos del código. 
 
-\subsubsection{El documento de Diseño técnico.}\label{flujo-documento-de-diseno}
-Como ya se ha mencionado, la función de este documento es triple:
-
+Este texto ---como ya se ha señalado--- busca desempeñar 3 funciones:
 \begin{enumerate}
 	\item Usarse como referencia ante dudas técnicas o de modelado.
 	\item Entregar toda la información relevante acerca del flujo de trabajo y del funcionamiento del software para integrar a nuevos miembros del equipo.
 	\item Servir de instrumento de diseño.
 \end{enumerate}
 
-\paragraph*{¿Qué se documenta?}
-En términos generales, el código debe estar debidamente comentado dentro de los archivos correspondientes (revisar apartado \nameref{principios:documentacion-en-codigo}). Para pequeñas modificaciones o adiciones ---sobre todo en relación a funciones y variables---, será suficiente con ajustar estos comentarios en el código. No obstante, para las modificaciones más importantes que involucren cambiar o definir la interacción entre clases o elementos de un ámbito más grande, se deberán mencionar en este documento a modo de referencia técnica en el apartado \nameref{modelado:modelado-del-software}.
+\subsubsection{¿Qué se documenta aquí?}
+El código debe estar debidamente documentado dentro de los archivos y líneas correspondientes (revisar apartado \nameref{flujo:documentacion-en-codigo}). Las modificaciones más importantes que involucren cambiar o definir la interacción entre clases o elementos de un ámbito más grande, se deberán anotar en este texto a modo de referencia técnica en el apartado \nameref{modelado:funcionamiento-general}.
 
 \subsubsection{Modificando el documento.}
-Como ya se ha mencionado el texto debe modificarse utilizando \LaTeX en cualquier editor de textos. 
 
-Cada modificación a este documento deberá aumentar la numeración de la subversión en 1 (v0.0.1 a v0.0.2). Los primeros 2 índices (v\textbf{0.0.}1) estarán en línea con la última rama \textbf{main} del repositorio. Cada vez que se suba una versión de la rama, se deberá chequear que el documento contenga los cambios relevantes a esa versión, incorporarlos si hace falta y actualizar la versión y volver la subversión a cero (v0.\textbf{5.36} a v0.\textbf{6.0}). El versionado de las ramas se discutirá más adelante en el apartado \nameref{flujo:versionado-y-nombres}.
+Como ya se ha mencionado el texto debe modificarse utilizando el sistema \LaTeX en cualquier editor de textos. En el apartado \nameref{flujo:latex} se verán en detalle las consideraciones relevantes al formato. 
 
 Dado que la instalación de \LaTeX\ puede ser engorrosa en ciertos contextos, no es necesario compilar una nueva versión con cada cambio de subversión, pero sí será conveniente para los cambios de versiones menores.
 
@@ -296,13 +294,18 @@ Al finalizar las secciones más grandes del código, se debe actualizar el apart
 
 Es importante aclarar que el objetivo no es una explicación línea a línea de cómo funciona el código, sino una noción general de ámbitos o lógicas más globales. Con señalar el sentido de estas entidades dentro del sistema y su interacción con el resto es suficiente.
 
-\paragraph{Versionado:}
+\paragraph{Versionado.}
 Para cambiar la versión editar el Makefile.
 
-\subsection{LaTeX}
-Explicación de comandos básicos de \LaTeX, instalación, compilación. 
+Cada modificación a este documento deberá aumentar la numeración de la subversión en 1 (v0.0.1 a v0.0.2). Los primeros 2 índices (v\textbf{0.0.}1) estarán en línea con la última rama \textbf{main} del repositorio. Cada vez que se suba una versión de la rama, se deberá chequear que el documento contenga los cambios relevantes a esa versión, incorporarlos si hace falta y actualizar la versión y volver la subversión a cero (v0.\textbf{5.36} a v0.\textbf{6.0}). El versionado de las ramas se discutirá más adelante en el apartado \nameref{flujo:versionado-y-nombres}.
 
-\subsection{Documentación dentro del código.}\label{principios:documentacion-en-codigo}
+\subsubsection{LaTeX.}\label{flujo:latex}
+Explicación de comandos básicos de \LaTeX, instalación, compilación.
+
+\subsubsection{Exportar a HTML.}\label{flujo:exportar-a-html}
+Para exportar.
+
+\subsection{Documentación dentro del código.}\label{flujo:documentacion-en-codigo}
 La búsqueda de simplicidad en el diseño también aplica a la documentación del código. Idealmente éste debe estar “autodocumentado”, es decir que los nombres de las variables, métodos y clases den cuenta de manera transparente e intuitiva su rol dentro de la lógica del algoritmo. En los casos más complejos, es de vital importancia añadir comentarios no solo para facilitar la comprensión de líneas más complejas, sino para ayudar al futuro proceso de refactorización y debbuging. \emph{Los nombres largos no lastran la eficiencia del código}.
 
 En cuanto al formato del código dado que \lsc{GDS}cript está basado en Python, además de las propias sugerencias de Godot se recomienda seguir la \href{https://www.python.org/dev/peps/pep-0008/}{guía de estilo PEP-8}.
