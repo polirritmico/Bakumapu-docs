@@ -263,35 +263,33 @@ Referencia rápida para comandos \lsc{GIT} \href{https://rogerdudler.github.io/g
 \subsection{Documentación.}
 
 \subsubsection{El documento de Diseño técnico.}\label{flujo:documento-de-diseno}
-A nivel de desarrollo muchas veces terminamos dedicando más tiempo a estudiar el código y a entender su funcionamiento que a escribir nueva funcionalidad; por ello la documentación se vuelve tan relevante. Ya desde el corto plazo comienzan a aparecer los beneficios de una correcta docuemtnación; un código más fácil de entender ahorra tiempo, mejora la estabilidad del software y en general todo el desarrollo se torna más productivo. La documentación técnica de Bakumapu estará dividia principalmente en dos fuentes, el presente documento y la documentación de los archivos del código. 
+A nivel de desarrollo muchas veces terminamos dedicando más tiempo a estudiar el código y a entender su funcionamiento que a escribir nueva funcionalidad, por ello la documentación se vuelve tan relevante. Ya desde el corto plazo comienzan a aparecer los beneficios de una correcta documentación; un código más fácil de entender ahorra tiempo, mejora la estabilidad del software y en general todo el desarrollo se torna más productivo. La documentación técnica de Bakumapu estará dividia principalmente en dos fuentes, el presente documento y la documentación de los archivos del código. 
 
-Este texto ---como ya se ha señalado--- busca desempeñar 3 funciones:
-\begin{enumerate}
+El presente texto, como ya se ha mencionado, tiene como objetivo desempeñar tres funciones principales:
+\begin{enumerate}[noitemsep]
 	\item Usarse como referencia ante dudas técnicas o de modelado.
 	\item Entregar toda la información relevante acerca del flujo de trabajo y del funcionamiento del software para integrar a nuevos miembros del equipo.
 	\item Servir de instrumento de diseño.
 \end{enumerate}
 
+Para que estos objetivos se cumplan, el documento debe ser modificado a medida que avanza el desarrollo del software.
+
 \subsubsection*{¿Qué se documenta aquí?}
-El código debe estar debidamente documentado dentro de los archivos y líneas correspondientes (revisar apartado \nameref{flujo:documentacion-en-codigo}). Las modificaciones más importantes que involucren cambiar o definir la interacción entre clases o elementos de un ámbito más grande, se deberán anotar en este texto a modo de referencia técnica en el apartado \nameref{modelado:funcionamiento-general}.
+No se debe confundir la documentación de este texto con los comentarios o explicaciones dentro del código. El código debe estar debidamente documentado dentro de los archivos y líneas correspondientes (revisar apartado \nameref{flujo:documentacion-en-codigo}); pero cuando haya modificaciones importantes que involucren cambiar o definir la interacción entre clases o elementos de un ámbito más grande, se deberán anotar en este texto a modo de referencia técnica en el apartado \nameref{modelado:funcionamiento-general}.
 
 \subsubsection*{Modificando el documento.}
+Para modificar el documento, basta con utilizar un editor de textos sencillos y seguir la nomenclatura del sistema \LaTeX. En el apartado \nameref{flujo:latex} se discutirán los detalles relevantes al respecto.
 
-Como ya se ha mencionado el texto debe modificarse utilizando el sistema \LaTeX en cualquier editor de textos. En el apartado \nameref{flujo:documento-de-diseno} se verán en detalle las consideraciones relevantes al formato. 
-
-Dado que la instalación de \LaTeX\ puede ser engorrosa en ciertos contextos, no es necesario compilar una nueva versión con cada cambio de subversión, pero sí será conveniente para los cambios de versiones menores.
+Dado que la instalación de \LaTeX\ puede ser engorrosa en ciertos contextos (podría involucrar la instalación manual de muchos paquetes), no es necesario compilar una nueva versión con cada cambio sino simplemente mantener los archivos \lsc{TEX}.
 
 Al finalizar las secciones más grandes del código, se debe actualizar el apartado correspondiente.
 
-Es importante aclarar que el objetivo no es una explicación línea a línea de cómo funciona el código, sino una noción general de ámbitos o lógicas más globales. Con señalar el sentido de estas entidades dentro del sistema y su interacción con el resto es suficiente.
+Es importante volver a reiterar que el objetivo no es escribir una explicación línea a línea de cómo funciona el código, sino una noción general de ámbitos o lógicas más globales. Con señalar el sentido de estas entidades dentro del sistema y su interacción con el resto será suficiente.
 
 \subsubsection*{Versionado.}
 Para cambiar la versión editar el Makefile.
 
 Cada modificación a este documento deberá aumentar la numeración de la subversión en 1 (v0.0.1 a v0.0.2). Los primeros 2 índices (v\textbf{0.0.}1) estarán en línea con la última rama \textbf{main} del repositorio. Cada vez que se suba una versión de la rama, se deberá chequear que el documento contenga los cambios relevantes a esa versión, incorporarlos si hace falta y actualizar la versión y volver la subversión a cero (v0.\textbf{5.36} a v0.\textbf{6.0}). El versionado de las ramas se discutirá más adelante en el apartado \nameref{flujo:versionado-y-nombres}.
-
-\subsubsection*{LaTeX.}
-Explicación de comandos básicos de \LaTeX, instalación, compilación.
 
 \subsubsection*{Exportar a HTML.}
 Para exportar.
@@ -305,7 +303,7 @@ En especial las siguientes indicaciones:
 \begin{itemize}
 	\item Límite horizontal de 79 caracteres. 
 	\item Separación de 1 línea en blanco entre funciones y 2 entre clases.
-	\item Indentación por 4 espacios
+	\item Indentación por 4 espacios.
 	\item Operadores y variables separados por un espacio:\\\small \texttt{var ejemplo = Vector2(2, 5 + PI.get(2))}.
 \end{itemize}
 
@@ -328,3 +326,5 @@ Se manejará la \href{https://drive.google.com/open?id=1p8u-1UpXts8OHGRHEZLSIiQr
 	\end{itemize}
 \end{itemize}
 
+\subsection{LaTeX.}\label{flujo:latex}
+Explicación de comandos básicos de \LaTeX, instalación, compilación.
