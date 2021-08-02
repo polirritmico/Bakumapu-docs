@@ -23,3 +23,5 @@
 *.out
 *.synctex.gz
 *.log
+## easy-todo file
+*.lod
