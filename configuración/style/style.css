@@ -89,7 +89,7 @@ html {font-size: 1.8rem;}
 body {
     font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
     margin:auto;
-    max-width: 1280px;
+    /*max-width: 1280px;/**/
 }
 
 a {color: #fd9621; transition: 0.3s;}
