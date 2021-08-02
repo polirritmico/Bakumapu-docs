@@ -86,7 +86,11 @@ html, body, input, textarea, select, button {background-color: #23241f;}
 html, body, input, textarea, select, button {border-color: #736b5e; color: #ebebe5;}
 
 html {font-size: 1.8rem;}
-body {font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;}
+body {
+    font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
+    margin:auto;
+    max-width: 1280px;
+}
 
 a {color: #fd9621;}
 table {border-color: #545b5e;}
