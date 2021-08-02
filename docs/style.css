@@ -120,11 +120,7 @@ img {max-width: 100%; max-height: auto; width: auto; height: auto;}
 
 /* Animación de entrada */
 @keyframes slideInFromLeft {
-  0% {transform: translateX(-150%);}
+  0% {transform: translateX(-100%);}
   100% {transform: translateX(0);}
 }
-@keyframes slideInFromBtm {
-  0% {transform: translateY(-150%);}
-  100% {transform: translateY(0);}
-}
-body {animation: 1s ease-out 0s 1 slideInFromBtm;}
+body {animation: 1s ease-out 0s 1 slideInFromLeft;}
