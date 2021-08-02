@@ -85,11 +85,18 @@
 html, body, input, textarea, select, button {background-color: #23241f;}
 html, body, input, textarea, select, button {border-color: #736b5e; color: #ebebe5;}
 
-html {font-size: 1.8rem;}
+html {font-size: 2.25rem;}/*6vw*/
 body {
     font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
+    padding: .5em;
     margin:auto;
-    /*max-width: 1280px;/**/
+    max-width: 1280px;/**/
+}
+
+@media only screen and (max-width: 720px) {
+  html {
+    font-size: 5vw;
+  }
 }
 
 a {color: #fd9621; transition: 0.3s;}
