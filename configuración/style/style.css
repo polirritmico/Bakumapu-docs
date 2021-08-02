@@ -85,20 +85,19 @@
 html, body, input, textarea, select, button {background-color: #23241f;}
 html, body, input, textarea, select, button {border-color: #736b5e; color: #ebebe5;}
 
-html {font-size: 2.25rem;}/*6vw*/
+html {font-size: 2.25rem; scroll-behavior: smooth;}
 body {
     font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
     padding: .5em;
     margin:auto;
     max-width: 1280px;/**/
 }
-
-@media only screen and (max-width: 720px) {
-  html {
-    font-size: 1.75rem;
-  }
+/* Para pantallas de menos de 720 */
+@media only screen and (max-width: 719px) {
+  html {font-size: 1.75rem;}
 }
 
+/* Links y tablas */
 a {color: #fd9621; transition: 0.3s;}
 a:hover {color: #27aeae;}
 table {border-color: #545b5e;}
@@ -116,4 +115,16 @@ h5, h6 {color: #74705d; font-size: 1.1em;}
 /* Imágenes no estiradas */
 img {max-width: 100%; max-height: auto; width: auto; height: auto;}
 
+
 .likesubsectionHead{font-size: 1.2em; color: #27aeae;}
+
+/* Animación de entrada */
+@keyframes slideInFromLeft {
+  0% {transform: translateX(-150%);}
+  100% {transform: translateX(0);}
+}
+@keyframes slideInFromBtm {
+  0% {transform: translateY(-150%);}
+  100% {transform: translateY(0);}
+}
+body {animation: 1s ease-out 0s 1 slideInFromBtm;}
