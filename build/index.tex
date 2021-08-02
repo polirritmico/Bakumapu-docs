@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Clase del documento
+\documentclass[11pt,titlepage]{article}
+
+%% Modo oscuro
+\newif\ifdark\darktrue % \darktrue \darkfalse
+
+%% Paquetes
+\input{configuración/paquetes}
+
+%% Configuración
+\input{configuración/estilos}
+
+%% Macros
+%\input{configuración/macros}
+
+%% Version
+\newcommand{\docversion}{0.0.1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\setcounter{page}{0} % Evita mensaje de alerta
+	\vspace*{4\baselineskip} % sin * se descarta al inicio
+
+	\begin{flushright}
+		\Huge\textbf{\underline{Bakumapu}}\\
+	
+		\Large \textcolor{colorsubtitulo}{Diseño técnico.}
+	
+		\vfill
+	
+		\normalsize Estudio
+		{\large \sfrac{6}{8}} - \the\year.\the\month.\the\day\_v\docversion
+	\end{flushright}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagebreak
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{secciones/intro}
+\include{secciones/principios}
+\include{secciones/flujo}
+\include{secciones/i18n}
+\include{secciones/modelado}
+\include{secciones/io}
+\include{secciones/organización}
+\include{secciones/toolkit}
+\include{secciones/optimización}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

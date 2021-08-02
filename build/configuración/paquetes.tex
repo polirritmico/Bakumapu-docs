@@ -1,0 +1,42 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paquetes generales
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Babel, paquete para documentos en español.
+%% Traduce términos y ajusta símbolos
+%% 
+%% - Revertir estilos de listas y enumaraciones:
+%%     es-nolists, es-noenumerate, es-noitemize
+%% - No sangrar el primer párrafo:
+%%    es-noindentfirst
+%% - Quitar punto en los números de títulos:
+%%     es-nosectiondot
+%% - Versalitas: \lsc{RAE} siglo \lsc{XVII}
+%% - Punto para decimales en modo matemático:
+%%     es-nodecimaldot
+%% - Solo ajustes mínimos: es-minimal
+%% - Documentación completa en:
+%% http://tug.ctan.org/tex-archive/language/babel/contrib/spanish/spanish.pdf
+\usepackage[spanish,es-noitemize]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Funcionalidad extra:
+\usepackage{graphicx} % Importar imagenes
+\usepackage{float} % Ajustar posición de figuras
+\usepackage{xfrac} % Fracciones anguladas
+\usepackage{listings} % Bloque para citar códigos de programación
+\usepackage{longtable} % Tabla a través de cambios de páginas
+\usepackage[table]{xcolor} % Colorear celdas en tablas
+\usepackage{scrextend} % Sección con margen \begin{addmargin}[3em]{0pt}
+\usepackage{enumitem} % Ajustes de listas como cambiar bullets
+\usepackage{needspace} % Permite agregar criterios de espacio para nueva página
+
+%\usepackage[spanish]{varioref} % para referencias \vref{label}
+%\usepackage{cite} % Para citas
+%\usepackage{changepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Compatibilidad con make4ht (pasar documentos LaTeX a html)
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}

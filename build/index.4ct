@@ -1,0 +1,106 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{\'{I}ndice}}{1}\relax 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-20001}{QQ2-1-2}{Introducción.}}{5}\relax 
+\doTocEntry\tocsubsection{1.1}{\csname a:TocLink\endcsname{1}{x1-30001}{QQ2-1-3}{Cómo usar este documento.}}{5}\relax 
+\doTocEntry\tocsubsection{1.2}{\csname a:TocLink\endcsname{1}{x1-40002}{QQ2-1-4}{Lista de requerimientos.}}{6}\relax 
+\doTocEntry\tocsubsection{1.3}{\csname a:TocLink\endcsname{1}{x1-50003}{QQ2-1-5}{Listado de software y herramientas de producción.}}{9}\relax 
+\doTocEntry\tocsubsubsection{1.3.1}{\csname a:TocLink\endcsname{1}{x1-60001}{QQ2-1-6}{Godot v3.3.}}{9}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-70001}{QQ2-1-7}{\small  GUT 7.1.0.}}{9}\relax 
+\doTocEntry\tocsubsubsection{1.3.2}{\csname a:TocLink\endcsname{1}{x1-80002}{QQ2-1-8}{Trello.}}{9}\relax 
+\doTocEntry\tocsubsubsection{1.3.3}{\csname a:TocLink\endcsname{1}{x1-90003}{QQ2-1-9}{GIT y Github.}}{9}\relax 
+\doTocEntry\tocsubsubsection{1.3.4}{\csname a:TocLink\endcsname{1}{x1-100004}{QQ2-1-10}{Google Suite.}}{10}\relax 
+\doTocEntry\tocsubsubsection{1.3.5}{\csname a:TocLink\endcsname{1}{x1-110005}{QQ2-1-11}{LaTeX.}}{10}\relax 
+\doTocEntry\tocsubsubsection{1.3.6}{\csname a:TocLink\endcsname{1}{x1-120006}{QQ2-1-12}{Aseprite.}}{10}\relax 
+\doTocEntry\tocsubsubsection{1.3.7}{\csname a:TocLink\endcsname{1}{x1-130007}{QQ2-1-13}{Krita.}}{10}\relax 
+\doTocEntry\tocsubsubsection{1.3.8}{\csname a:TocLink\endcsname{1}{x1-140008}{QQ2-1-14}{Inkscape.}}{11}\relax 
+\doTocEntry\tocsubsubsection{1.3.9}{\csname a:TocLink\endcsname{1}{x1-150009}{QQ2-1-15}{Finale 2014.}}{11}\relax 
+\doTocEntry\tocsubsubsection{1.3.10}{\csname a:TocLink\endcsname{1}{x1-1600010}{QQ2-1-16}{Ableton Live.}}{11}\relax 
+\doTocEntry\tocsubsubsection{1.3.11}{\csname a:TocLink\endcsname{1}{x1-1700011}{QQ2-1-17}{LAME 64bits.}}{11}\relax 
+\doTocEntry\tocsubsubsection{1.3.12}{\csname a:TocLink\endcsname{1}{x1-1800012}{QQ2-1-18}{FFmpeg.}}{12}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-190002}{QQ2-1-19}{Visión general del desarrollo y principios del diseño técnico.}}{15}\relax 
+\doTocEntry\tocsubsection{2.1}{\csname a:TocLink\endcsname{1}{x1-200001}{QQ2-1-20}{Principios de diseño.}}{15}\relax 
+\doTocEntry\tocsubsection{2.2}{\csname a:TocLink\endcsname{1}{x1-210002}{QQ2-1-21}{Desarrollo dirigido por tests (TDD).}}{15}\relax 
+\doTocEntry\toclof{1}{\csname a:TocLink\endcsname{1}{x1-21001r1}{}{\ignorespaces Flujo de desarrollo TDD.}}{figure}\relax 
+\doTocEntry\tocsubsection{2.3}{\csname a:TocLink\endcsname{1}{x1-220003}{QQ2-1-23}{Refactorización: Rendimiento y limpieza.}}{18}\relax 
+\doTocEntry\tocsubsection{2.4}{\csname a:TocLink\endcsname{1}{x1-230004}{QQ2-1-24}{El documento de diseño técnico: una herramienta de diseño.}}{19}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-240003}{QQ2-1-25}{Flujo de trabajo y control de versiones.}}{22}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-250001}{QQ2-1-26}{Metodología Kanban.}}{22}\relax 
+\doTocEntry\tocsubsubsection{3.1.1}{\csname a:TocLink\endcsname{1}{x1-260001}{QQ2-1-27}{El Tablero Kanban.}}{22}\relax 
+\doTocEntry\toclof{2}{\csname a:TocLink\endcsname{1}{x1-26001r2}{}{\ignorespaces Tablero Kanban en Trello.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{3.1.2}{\csname a:TocLink\endcsname{1}{x1-270002}{QQ2-1-29}{Límites de trabajo y columnas asociadas.}}{25}\relax 
+\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-27001r3}{}{\ignorespaces Límites de trabajo en Trello.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{3.1.3}{\csname a:TocLink\endcsname{1}{x1-280003}{QQ2-1-31}{Descripción de columnas.}}{28}\relax 
+\doTocEntry\tocsubsubsection{3.1.4}{\csname a:TocLink\endcsname{1}{x1-290004}{QQ2-1-32}{Flexibilidad.}}{29}\relax 
+\doTocEntry\tocsubsubsection{3.1.5}{\csname a:TocLink\endcsname{1}{x1-300005}{QQ2-1-33}{Nombres de Tarjetas.}}{29}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-310002}{QQ2-1-34}{Repositorio.}}{29}\relax 
+\doTocEntry\tocsubsubsection{3.2.1}{\csname a:TocLink\endcsname{1}{x1-320001}{QQ2-1-35}{Modelo de Ramas de función.}}{30}\relax 
+\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-32001r4}{}{\ignorespaces Ramas en \lsc  {GIT}.}}{figure}\relax 
+\doTocEntry\toclikeparagraph{}{\csname a:TocLink\endcsname{1}{x1-330001}{QQ2-1-37}{Ramas de implementación.}}{33}\relax 
+\doTocEntry\tocsubsubsection{3.2.2}{\csname a:TocLink\endcsname{1}{x1-340002}{QQ2-1-38}{Versionado y nombres semánticos.}}{34}\relax 
+\doTocEntry\tocsubsubsection{3.2.3}{\csname a:TocLink\endcsname{1}{x1-350003}{QQ2-1-39}{Alternativas al modelo de ramas de función.}}{35}\relax 
+\doTocEntry\tocsubsubsection{3.2.4}{\csname a:TocLink\endcsname{1}{x1-360004}{QQ2-1-40}{Comandos de GIT.}}{35}\relax 
+\doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-370003}{QQ2-1-41}{Documentación.}}{39}\relax 
+\doTocEntry\tocsubsubsection{3.3.1}{\csname a:TocLink\endcsname{1}{x1-380001}{QQ2-1-42}{El documento de Diseño técnico.}}{39}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-390001}{QQ2-1-43}{¿Qué se documenta aquí?}}{40}\relax 
+\doTocEntry\toclikeparagraph{}{\csname a:TocLink\endcsname{1}{x1-400001}{QQ2-1-44}{Importante:}}{40}\relax 
+\doTocEntry\tocsubsubsection{3.3.2}{\csname a:TocLink\endcsname{1}{x1-410002}{QQ2-1-45}{Modificando el documento.}}{40}\relax 
+\doTocEntry\tocsubsubsection{3.3.3}{\csname a:TocLink\endcsname{1}{x1-420003}{QQ2-1-46}{Versionado del documento.}}{41}\relax 
+\doTocEntry\tocsubsubsection{3.3.4}{\csname a:TocLink\endcsname{1}{x1-430004}{QQ2-1-47}{Exportar a HTML.}}{42}\relax 
+\doTocEntry\tocsubsubsection{3.3.5}{\csname a:TocLink\endcsname{1}{x1-440005}{QQ2-1-48}{Repositorio de documentación.}}{42}\relax 
+\doTocEntry\tocsubsubsection{3.3.6}{\csname a:TocLink\endcsname{1}{x1-450006}{QQ2-1-49}{Documentación dentro del código.}}{43}\relax 
+\doTocEntry\tocsubsection{3.4}{\csname a:TocLink\endcsname{1}{x1-460004}{QQ2-1-50}{Google Drive.}}{44}\relax 
+\doTocEntry\tocsubsection{3.5}{\csname a:TocLink\endcsname{1}{x1-470005}{QQ2-1-51}{LaTeX.}}{45}\relax 
+\doTocEntry\tocsubsubsection{3.5.1}{\csname a:TocLink\endcsname{1}{x1-480001}{QQ2-1-52}{Lista de comandos.}}{45}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-490004}{QQ2-1-53}{Internacionalización.}}{49}\relax 
+\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-500001}{QQ2-1-54}{Qué entendemos por internacionalización (i18n).}}{49}\relax 
+\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-510002}{QQ2-1-55}{Qué entendemos por localización (l10n).}}{50}\relax 
+\doTocEntry\tocsubsection{4.3}{\csname a:TocLink\endcsname{1}{x1-520003}{QQ2-1-56}{Implementación.}}{51}\relax 
+\doTocEntry\tocsubsubsection{4.3.1}{\csname a:TocLink\endcsname{1}{x1-530001}{QQ2-1-57}{Exploración.}}{51}\relax 
+\doTocEntry\tocsubsubsection{4.3.2}{\csname a:TocLink\endcsname{1}{x1-540002}{QQ2-1-58}{Codificación:}}{52}\relax 
+\doTocEntry\tocsubsubsection{4.3.3}{\csname a:TocLink\endcsname{1}{x1-550003}{QQ2-1-59}{Estructura de los directorios de l10n.}}{52}\relax 
+\doTocEntry\tocsubsubsection{4.3.4}{\csname a:TocLink\endcsname{1}{x1-560004}{QQ2-1-60}{Diagrama del árbol de directorios:}}{52}\relax 
+\doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-56001r5}{}{\ignorespaces Organización de archivos de i18n.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{4.3.5}{\csname a:TocLink\endcsname{1}{x1-570005}{QQ2-1-62}{Kit de desarrollo y API.}}{55}\relax 
+\doTocEntry\tocsubsubsection{4.3.6}{\csname a:TocLink\endcsname{1}{x1-580006}{QQ2-1-63}{Godot.}}{56}\relax 
+\doTocEntry\tocsubsubsection{4.3.7}{\csname a:TocLink\endcsname{1}{x1-590007}{QQ2-1-64}{Toma de decisiones.}}{56}\relax 
+\doTocEntry\tocsubsubsection{4.3.8}{\csname a:TocLink\endcsname{1}{x1-600008}{QQ2-1-65}{Otras referencias.}}{57}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-610005}{QQ2-1-66}{Modelado del software.}}{58}\relax 
+\doTocEntry\tocsubsection{5.1}{\csname a:TocLink\endcsname{1}{x1-620001}{QQ2-1-67}{Arquitectura.}}{58}\relax 
+\doTocEntry\toclof{6}{\csname a:TocLink\endcsname{1}{x1-62001r6}{}{\ignorespaces Ejemplo de arquitectura ajustable.}}{figure}\relax 
+\doTocEntry\tocsubsection{5.2}{\csname a:TocLink\endcsname{1}{x1-630002}{QQ2-1-69}{Sistema de Managers.}}{61}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-640002}{QQ2-1-70}{\:noindent \normalfont  \textit  {Enfoque de diseño a priori.}}}{61}\relax 
+\doTocEntry\tocsubsection{5.3}{\csname a:TocLink\endcsname{1}{x1-650003}{QQ2-1-71}{Diagrama del sistema de managers.}}{67}\relax 
+\doTocEntry\tocsubsection{5.4}{\csname a:TocLink\endcsname{1}{x1-660004}{QQ2-1-72}{Funcionamiento general.}}{67}\relax 
+\doTocEntry\tocsubsubsection{5.4.1}{\csname a:TocLink\endcsname{1}{x1-670001}{QQ2-1-73}{GameManager.}}{68}\relax 
+\doTocEntry\tocsubsubsection{5.4.2}{\csname a:TocLink\endcsname{1}{x1-680002}{QQ2-1-74}{LevelManager.}}{69}\relax 
+\doTocEntry\tocsubsubsection{5.4.3}{\csname a:TocLink\endcsname{1}{x1-690003}{QQ2-1-75}{QuestManager.}}{70}\relax 
+\doTocEntry\tocsubsubsection{5.4.4}{\csname a:TocLink\endcsname{1}{x1-700004}{QQ2-1-76}{CutsceneManager.}}{71}\relax 
+\doTocEntry\tocsubsubsection{5.4.5}{\csname a:TocLink\endcsname{1}{x1-710005}{QQ2-1-77}{PlayerManager.}}{72}\relax 
+\doTocEntry\tocsubsubsection{5.4.6}{\csname a:TocLink\endcsname{1}{x1-720006}{QQ2-1-78}{IAManager.}}{73}\relax 
+\doTocEntry\tocsubsubsection{5.4.7}{\csname a:TocLink\endcsname{1}{x1-730007}{QQ2-1-79}{UIManager.}}{74}\relax 
+\doTocEntry\tocsubsubsection{5.4.8}{\csname a:TocLink\endcsname{1}{x1-740008}{QQ2-1-80}{AudioManager.}}{75}\relax 
+\doTocEntry\tocsubsubsection{5.4.9}{\csname a:TocLink\endcsname{1}{x1-750009}{QQ2-1-81}{DebugManager.}}{76}\relax 
+\doTocEntry\tocsubsubsection{5.4.10}{\csname a:TocLink\endcsname{1}{x1-7600010}{QQ2-1-82}{Otros managers.}}{77}\relax 
+\doTocEntry\tocsubsection{5.5}{\csname a:TocLink\endcsname{1}{x1-770005}{QQ2-1-83}{Otras consideraciones.}}{77}\relax 
+\doTocEntry\tocsubsubsection{5.5.1}{\csname a:TocLink\endcsname{1}{x1-780001}{QQ2-1-84}{Plantillas.}}{77}\relax 
+\doTocEntry\tocsection{6}{\csname a:TocLink\endcsname{1}{x1-790006}{QQ2-1-85}{Input/Output.}}{80}\relax 
+\doTocEntry\tocsection{7}{\csname a:TocLink\endcsname{1}{x1-800007}{QQ2-1-86}{Organización del proyecto.}}{83}\relax 
+\doTocEntry\tocsubsection{7.1}{\csname a:TocLink\endcsname{1}{x1-810001}{QQ2-1-87}{Árbol de directorios.}}{83}\relax 
+\doTocEntry\toclikesubsubsection{}{\csname a:TocLink\endcsname{1}{x1-820001}{QQ2-1-88}{Diagrama del árbol.}}{85}\relax 
+\doTocEntry\tocsubsection{7.2}{\csname a:TocLink\endcsname{1}{x1-830002}{QQ2-1-89}{Nombres de archivos.}}{88}\relax 
+\doTocEntry\tocsubsection{7.3}{\csname a:TocLink\endcsname{1}{x1-840003}{QQ2-1-90}{Nombres de ramas y tarjetas.}}{88}\relax 
+\doTocEntry\tocsection{8}{\csname a:TocLink\endcsname{1}{x1-850008}{QQ2-1-91}{Kit de desarrollo de software.}}{91}\relax 
+\doTocEntry\tocsubsection{8.1}{\csname a:TocLink\endcsname{1}{x1-860001}{QQ2-1-92}{Elementos narrativos.}}{92}\relax 
+\doTocEntry\tocsubsubsection{8.1.1}{\csname a:TocLink\endcsname{1}{x1-870001}{QQ2-1-93}{Textos varios.}}{92}\relax 
+\doTocEntry\tocsubsubsection{8.1.2}{\csname a:TocLink\endcsname{1}{x1-880002}{QQ2-1-94}{Fichas de personaje.}}{92}\relax 
+\doTocEntry\tocsubsubsection{8.1.3}{\csname a:TocLink\endcsname{1}{x1-890003}{QQ2-1-95}{Cutscenes y diálogos.}}{92}\relax 
+\doTocEntry\tocsubsubsection{8.1.4}{\csname a:TocLink\endcsname{1}{x1-900004}{QQ2-1-96}{Quests.}}{93}\relax 
+\doTocEntry\tocsubsection{8.2}{\csname a:TocLink\endcsname{1}{x1-910002}{QQ2-1-97}{Elementos de mecánicas de jugabilidad.}}{93}\relax 
+\doTocEntry\tocsubsubsection{8.2.1}{\csname a:TocLink\endcsname{1}{x1-920001}{QQ2-1-98}{Estadísticas del jugador.}}{93}\relax 
+\doTocEntry\tocsubsubsection{8.2.2}{\csname a:TocLink\endcsname{1}{x1-930002}{QQ2-1-99}{Armas, equipamiento e ítems.}}{93}\relax 
+\doTocEntry\tocsubsubsection{8.2.3}{\csname a:TocLink\endcsname{1}{x1-940003}{QQ2-1-100}{Personajes.}}{94}\relax 
+\doTocEntry\tocsubsubsection{8.2.4}{\csname a:TocLink\endcsname{1}{x1-950004}{QQ2-1-101}{Locaciones o niveles.}}{94}\relax 
+\doTocEntry\tocsubsection{8.3}{\csname a:TocLink\endcsname{1}{x1-960003}{QQ2-1-102}{Traducción.}}{94}\relax 
+\doTocEntry\tocsubsection{8.4}{\csname a:TocLink\endcsname{1}{x1-970004}{QQ2-1-103}{Lineamientos del software del Kit.}}{94}\relax 
+\doTocEntry\tocsection{9}{\csname a:TocLink\endcsname{1}{x1-980009}{QQ2-1-104}{Optimización.}}{98}\relax 
+\par 
