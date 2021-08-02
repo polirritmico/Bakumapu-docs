@@ -25,6 +25,8 @@
 .ectt-1095{ font-family: monospace,monospace;}
 .ectt-1095{ font-family: monospace,monospace;}
 .ectt-1095{ font-family: monospace,monospace;}
+.cmsy-10x-x-109{}
+.ecrm-0800{font-size:72%;}
 .ecbx-1095{ font-weight: bold;}
 .ecbx-1095{ font-weight: bold;}
 .ecbx-1095{ font-weight: bold;}
@@ -37,7 +39,6 @@
 .ecbx-1095{ font-weight: bold;}
 .ecbx-1095{ font-weight: bold;}
 .eccc1095-{font-size:90%;}
-.cmsy-10x-x-109{}
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
@@ -62,7 +63,6 @@
 .ectt-1000{ font-family: monospace,monospace;}
 .ectt-1000{ font-family: monospace,monospace;}
 .ectt-1000{ font-family: monospace,monospace;}
-.ecrm-0800{font-size:72%;}
 .eccc0900-{font-size:81%;}
 .small-caps{font-variant: small-caps; }
 p{margin-top:0;margin-bottom:0}
@@ -226,6 +226,8 @@ span#textcolor13{color:#90DA2B}
 span#textcolor14{color:#90DA2B}
 span#textcolor15{color:#90DA2B}
 span#textcolor16{color:#90DA2B}
+span#textcolor17{color:#90DA2B}
+span#textcolor18{color:#90DA2B}
 #TBL-1 colgroup{border-left: 1px solid black;border-right:1px solid black;}
 #TBL-1{border-collapse:collapse;}
 #TBL-1 colgroup{border-left: 1px solid black;border-right:1px solid black;}
