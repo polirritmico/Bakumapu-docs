@@ -1,7 +1,8 @@
 SHELL = /bin/sh
+# Actualizar con cada cambio
 VERSION = 0.0.1
 
-#OTHER = README CHANGES
+# In/Out target names
 INFILE = main
 OUTFILE = index
 
@@ -22,8 +23,8 @@ html:
 	@cp -r imágenes build/
 	@cp -r secciones build/
 	@echo -n "Ajustando versión y subtítulo: "
-	@sed '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' <$(INFILE).tex >build/$(OUTFILE).tex
-	@sed -i '/colorsubtitulo/s/{\\textsc{Diseño\ técnico.}}/{Diseño\ técnico.}/' build/$(OUTFILE).tex
+	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
+	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico.}}/{Diseño\ técnico.}/' <$(INFILE).tex >build/$(OUTFILE).tex
 
 	@echo -e "OK\nIniciando conversión:\n.................................................."
 	@cd build && \
