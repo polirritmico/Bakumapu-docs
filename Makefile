@@ -78,7 +78,7 @@ sync:
 	@git add .
 	@git status
 	@echo -e "..................................................\nSubiendo el commit:"
-	@git commit -m "Uploaded repo to version $(VERSION) by Makefile"
+	@git commit -m "Auto uploaded v$(VERSION)"
 	@git push
 	@echo -e "..................................................\nSincronización exitosa."
 	@echo "Version web en: https://polirritmico.github.io/Bakumapu-docs/"
