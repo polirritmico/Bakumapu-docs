@@ -92,7 +92,8 @@ body {
     max-width: 1280px;
 }
 
-a {color: #fd9621;}
+a {color: #fd9621; transition: 0.3s;}
+a:hover {color: #27aeae;}
 table {border-color: #545b5e;}
 
 /* Encabezados */
