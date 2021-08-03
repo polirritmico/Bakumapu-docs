@@ -39,6 +39,8 @@ html:
 
 	@echo -en "Corrigiendo espacios a comandos con signos '\$$': "
 	@sed -i 's/$$<\/span><\/span>/$$ <\/span><\/span>/' build/export/$(OUTFILE).html
+	@echo -en "OK\nAjustando espacios: "
+	@sed -i '/<span/s/ / /g' build/export/$(OUTFILE).html
 	@echo -en "OK\nAjustando links a target='_blank': "
 	@sed -i -r "s/<a href='http([^>]*)'>/<a href='http\1' target='_blank'>/" build/export/$(OUTFILE).html
 	@echo -en "OK\nQuitando puntos a referencias: "
