@@ -13,7 +13,9 @@ PDFLATEX=pdflatex
 # The default targets
 #all: latex2html
 default:
-	@echo "Utilice 'make html', 'make clean' o 'make sync'."
+	@echo "Utilice 'make html', 'make clean', 'make sync' o 'make all'."
+
+all: clean html sync
 
 html:
 	@echo "Generando 'docs/$(OUTFILE).html' a partir de '$(INFILE).tex'"
