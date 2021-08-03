@@ -94,7 +94,7 @@ body {
 }
 /* Para pantallas de menos de 720 */
 @media only screen and (max-width: 719px) {
-  html {font-size: 1.75rem;}
+  html {font-size: 1.33rem;}
 }
 
 /* Links y tablas */
@@ -115,7 +115,7 @@ h5, h6 {color: #74705d; font-size: 1.1em;}
 /* Imágenes no estiradas */
 img {max-width: 100%; max-height: auto; width: auto; height: auto;}
 
-
+/* Para subsecciones con "*" */
 .likesubsectionHead{font-size: 1.2em; color: #27aeae;}
 
 /* Animación de entrada */

@@ -88,7 +88,7 @@ html, body, input, textarea, select, button {border-color: #736b5e; color: #ebeb
 html {font-size: 2.25rem; scroll-behavior: smooth;}
 body {
     font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
-    /*padding: .5em;
+    padding: .5em;
     margin:auto;
     max-width: 1280px;/**/
 }
@@ -115,7 +115,7 @@ h5, h6 {color: #74705d; font-size: 1.1em;}
 /* Imágenes no estiradas */
 img {max-width: 100%; max-height: auto; width: auto; height: auto;}
 
-
+/* Para subsecciones con "*" */
 .likesubsectionHead{font-size: 1.2em; color: #27aeae;}
 
 /* Animación de entrada */
