@@ -95,6 +95,7 @@ body {
 /* Para pantallas de menos de 720 */
 @media only screen and (max-width: 719px) {
   html {font-size: 1.33rem;}
+  div.longtable {margin-left: -1em;}
 }
 
 /* Animación de entrada */
@@ -109,7 +110,6 @@ a {color: #fd9621; transition: 0.3s;}
 a:hover {color: #27aeae;}
 
 table {border-color: #545b5e;}
-div.longtable{margin-left: -1em;}
 
 /* Encabezados */
 .underline{font-family: "Computer Modern Typewriter";font-size: 1.2rem;}
