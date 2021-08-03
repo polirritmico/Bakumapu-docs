@@ -88,18 +88,27 @@ html, body, input, textarea, select, button {border-color: #736b5e; color: #ebeb
 html {font-size: 2.25rem; scroll-behavior: smooth;}
 body {
     font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
-    padding: .5em;
-    margin:auto;
-    max-width: 1280px;/**/
+    padding: 0.5em;
+    margin: auto;
+    max-width: 1280px;
 }
 /* Para pantallas de menos de 720 */
 @media only screen and (max-width: 719px) {
   html {font-size: 1.33rem;}
+  div.longtable {margin-left: -1em;}
 }
+
+/* Animación de entrada */
+@keyframes slideInFromLeft {
+  0% {transform: translateX(-100%);}
+  100% {transform: translateX(0);}
+}
+body {animation: 1s ease-out 0s 1 slideInFromLeft;}
 
 /* Links y tablas */
 a {color: #fd9621; transition: 0.3s;}
 a:hover {color: #27aeae;}
+
 table {border-color: #545b5e;}
 
 /* Encabezados */
@@ -111,16 +120,10 @@ h5, h6 {color: #74705d; font-size: 1.1em;}
 
 /* Bloques de código */
 .lstlisting {border: solid 1px black; background-color: #4c4d47;}
+div.lstlisting{white-space: normal; overflow-wrap: break-word;}
 
 /* Imágenes no estiradas */
 img {max-width: 100%; max-height: auto; width: auto; height: auto;}
 
-/* Para subsecciones con "*" */
+/* Subsección sin enumerar con "*" */
 .likesubsectionHead{font-size: 1.2em; color: #27aeae;}
-
-/* Animación de entrada */
-@keyframes slideInFromLeft {
-  0% {transform: translateX(-100%);}
-  100% {transform: translateX(0);}
-}
-body {animation: 1s ease-out 0s 1 slideInFromLeft;}
