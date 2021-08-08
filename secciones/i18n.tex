@@ -12,19 +12,19 @@ El principal sentido de la i18n es diseñar el código de tal forma que el progr
 	Por ejemplo usar el sistema Unicode para la codificación de caracteres, usar tipografías compatibles, controlar la concatenación de cadenas y evitar que el código dependa de strings pertenecientes a la \lsc{UI}.
 	
 	\item \textbf{Crear métodos específicos para la localización:}
-	Añadir etiquetas para habilitar texto bidireccional, la identificación de idiomas (ISO-639) o hacer la \lsc{UI} compatible con el texto vertical y otras tipografías ajenas al alfabeto latino.
+	Añadir etiquetas para habilitar texto bidireccional, la identificación de idiomas (\href{https://es.wikipedia.org/wiki/ISO_639}{ISO-639}) o hacer la \lsc{UI} compatible con el texto vertical y otras tipografías ajenas al alfabeto latino.
 	
-	\item \textbf{Preparar el código para que se ajuste a las preferencias locales, lingüísticas y/o culturales:}
+	\item \textbf{Preparar el código para que se ajuste a las preferencias locales, lingüísticas o culturales:}
 	Esto supone incorporar características y datos de localización predefinidos a partir de bibliotecas existentes o de preferencias de usuario, formatos de fecha y hora, calendarios locales, formatos y sistemas de números, ordenamiento y presentación de listas, uso de nombres personales y formas de tratamiento, etc.
 	
-	\item \textbf{Separar del código o contenido fuente de los elementos localizables:}
+	\item \textbf{Separar del código los elementos localizables:}
 	De este modo podrán cargarse o seleccionarse alternativas localizadas según lo que determinen las preferencias internacionales del usuario.
 \end{enumerate}
 
 \subsection{Qué entendemos por localización (l10n).}\label{i18n:que-entendemos-l10n}
 Se entiende por l10n la adaptación del software con el objetivo de adecuarlo a las necesidades lingüísticas, culturales o incluso legales de un mercado, país o localidad en concreto.
 
-Más allá de considerar la traducción de la interfaz de usuario y de la documentación, la l10n es bastante más compleja pues además implica el ajuste de:
+Más allá de considerar la traducción de la documentación y la interfaz de usuario, la l10n es bastante más compleja pues además implica ajustar:
 \begin{itemize}
 	\item Formatos numéricos, de fecha y de hora.
 	\item Uso de símbolos de moneda.

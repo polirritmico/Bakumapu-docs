@@ -342,7 +342,7 @@ var ejemplo = Vector2(2, 5 + PI.get(2))
 \subsection{Google Drive.}\label{flujo:google-drive}
 Se manejará la \href{https://drive.google.com/open?id=1p8u-1UpXts8OHGRHEZLSIiQrqqx0Y4Kt}{carpeta compartida Bakumapu}, cuyo acceso será proporcionado a todos los miembros del desarrollo. En la raíz de esta carpeta se encuentran los documentos principales del diseño del juego, y las siguientes subcarpetas:
 \begin{itemize}
-	\item \textbf{Herramientas:} Contiene los instaladores, código fuente, o links de descarga del software discutido en este apartado además de los scripts de desarrollo. También contiene tutoriales para los colaboradores no técnicos del proyecto.
+	\item \textbf{Herramientas:} Contiene los instaladores, código fuente, o links de descarga del software mencionado en el apartado \nameref{intro:software-y-herramientas} además de los scripts de desarrollo. También contiene tutoriales para los colaboradores no técnicos del proyecto.
 	\item \textbf{Referencias:} Libros, imágenes, documentos, audios, videos y todo material referenciado para el desarrollo, inspiración, discusión o diseño del juego.
 	\item \textbf{Historia:} Una especie de repositorio para la narrativa del juego. Contiene documentos sobre la historia, biografía de personajes, arcos narrativos, descripciones, locaciones, historia, trasfondos, etc.
 	\begin{itemize}
@@ -350,7 +350,7 @@ Se manejará la \href{https://drive.google.com/open?id=1p8u-1UpXts8OHGRHEZLSIiQr
 		
 		Dentro de la carpeta Historia hay dos subdirectorios relevantes a nivel técnico: Quest y Diálogos. Cada uno contendrá planillas con datos que serán importados a Godot programáticamente, es decir se deberá desarrollar un script o programa que transforme su contenido a \lsc{XML}, \lsc{CSV} o \lsc{JSON} y este sea manejable por Godot con \emph{muy poca} intervención.
 		
-		Más información de estas herramientas en los apartados \nameref{kit:cutscenes-y-dialogos} y \nameref{kit:quests}. Además estos archivos deberán seguir la convención de nombres detallada en el apartado \nameref{organizacion:nombres-de-archivos}.
+		Más información de estas herramientas en los apartados \nameref{kit:cutscenes-y-dialogos} y \nameref{kit:quests}. Además, estos archivos deberán seguir la convención de nombres detallada en el apartado \nameref{organizacion:nombres-de-archivos}.
 	\end{itemize}
 \end{itemize}
 
@@ -360,18 +360,18 @@ Se manejará la \href{https://drive.google.com/open?id=1p8u-1UpXts8OHGRHEZLSIiQr
 \subsection{LaTeX.}\label{flujo:latex}
 Pese a lo que pueda parecer, el uso de \LaTeX\ a nivel básico es bastante sencillo, simplemente es escribir el texto y utilizar comandos para marcar el estilo o contenido para el compilador. En términos prácticos, a nivel básico es escribir el título de una sección, subsección o incluso sub-subsección con el comando correspondiente y separar los párrafos con un línea en blanco entremedio.
 
-En cualquier caso, teniendo los mismos archivos \lsc{TEX} del documento a modo de ejemplo y con la información discutida en este apartado, debiese ser suficiente para realizar todos los ajustes necesarios sin inconvenientes. Si hay algo que faltase y que pudiera aclarar el proceso, sería muy provechoso agregarlo al documento.
+En cualquier caso, teniendo los mismos archivos \lsc{TEX} del documento a modo de ejemplo y con la información de este apartado, debiese ser suficiente para todas las modificaciones. Si hubiera por mencionar algo que facilite el proceso, se debería agregar en este apartado.
 
 En lo posible tratar de no agregar nuevos paquetes.
 
-\subsubsection{Lista de comandos.}\label{flujo:listado-comandos-latex}
+\subsubsection{Lista de comandos LaTeX.}\label{flujo:listado-comandos-latex}
 Los comandos son palabras claves que el compilador interpreta para generar el documento. Siempre deben comenzar con el signo backslash (\textbackslash).
 
 \noindent A continuación una lista con los comandos más fundamentales:
 
 \begin{enumerate}
 \item Comentarios:
-\begin{lstlisting}
+\lstset{style=latex}\begin{lstlisting}
 Esto es un texto normal.
 % Esto es un comentario. No se compila.
 Texto % Comentario.
@@ -381,13 +381,13 @@ Texto % Comentario.
 Necesito escribir una linea \_ y un porcentaje \%
 El signo \ funciona con este comando: \textbackslash.
 \end{lstlisting}
-\item Secciones:
+\item Secciones (en orden descendente):
 \begin{lstlisting}
 \section{Titulo de seccion.}
 \subsection{Titulo de subseccion.}
 \subsection*{Titulo.} % Asterisco para no ennumerar.
 \subsubsection{Titulo de subsubseccion.}
-\paragraph{Titulo de paragraph.}
+\paragraph{Titulo de seccion parrafo.}
 \end{lstlisting}
 \item Ajustes tipográficos:
 \begin{lstlisting}
@@ -401,7 +401,7 @@ Cursiva: Texto a \textit{cursiva}.
 	\item Alineación:
 	\begin{lstlisting}
 \begin{centering} % alternativas: flushleft, flushright
-Texto alineado en base al valor de alineacion.
+Texto alineado en base al valor en begin.
 \end{centering}
 	\end{lstlisting}
 	\Needspace{4\baselineskip}
@@ -421,13 +421,15 @@ Los parrafos se separan con una linea en blanco.
 
 \item Referencias:
 \begin{lstlisting}
-\subsection{Seccion a citar}\label{archivo:nombre-referencia}
-Para facilitar el proceso en label ponemos el nombre del
-archivo luego : y un nombre descriptivo. Soporta solo
-caracteres en ingles, sin acentos ni letra enie.
+% Lo que queremos referenciar:
+\subsection{Titulo subseccion}
+% Le agregamos label. Ojala usar {nombre_archivo:descripcion}
+\subsection{Titulo subseccion}\label{modelado:titulo-sec}
 
-Para crear la referencia hacia este titulo:
-Mas info aqui: \nameref{archivo:nombre-referencia}
+% Para crear la referencia hacia ese titulo:
+La siguiente referencia: \nameref{modelado:titulo-sec}
+
+% Ojo: En label{} solo ASCII basico, no tildes ni enie.
 \end{lstlisting}
 
 \item Listas:
@@ -452,10 +454,8 @@ Mas info aqui: \nameref{archivo:nombre-referencia}
 \item Código:
 \begin{lstlisting}
 \begin{lstlisting*} % sin el asterisco
-# Solo puede contener caracteres ascii basicos
-# sin acentos ni enies.
-Clase.llamado(ejemplo.datos, objeto.pos())
-
+% Dentro de lstlisting solo ASCII basico sin tildes ni enies
+var test = Clase.llamado(ejemplo.datos, objeto.pos())
 $ comando -opciones ruta_a_archivo.txt
 \end{lstlisting*} % sin el asterisco
 \end{lstlisting}
@@ -464,14 +464,15 @@ $ comando -opciones ruta_a_archivo.txt
 \begin{enumerate}
 	\item Mover a la siguiente página si no hay espacio disponible:
 	\begin{lstlisting}
-% el \baselineskip es para obtener el alto de X lineas
+% el 2\baselineskip es para obtener el alto de 2 lineas
 \Needspace{2\baselineskip}
 	\end{lstlisting}
 	
 	\item Salto de página:
 	\begin{lstlisting}
 \pagebreak
-	\end{lstlisting}	
+	\end{lstlisting}
+	
 \end{enumerate}
 
 \end{enumerate}

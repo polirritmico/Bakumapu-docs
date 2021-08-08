@@ -17,16 +17,16 @@ Por ejemplo, tendremos la posibilidad de fusionar el manager de música con el d
 \Needspace{2\baselineskip}
 El enfoque agrupa los distintos comportamientos esperados a nivel de funciones al tiempo que favorece el surgimiento de una narrativa en cuanto a los nombres de las clases, funciones, variables y su sentido dentro del sistema global. Se trata de generar una especie de cadena de producción que opera en base a inputs y outputs esperados.
 
-Por último e igual de relevante, esta encapsulación de funcionalidad va a servir para enfocar de mejor manera los distintos test unitarios que se generen en el desarrollo. Esto incluso posibilita agrupar una serie de comportamientos esperados para generar objetos y variables de casos o situaciones específicas con el fin de comprobar interacciones entre los distintos Managers (test de interacción).
+Por último e igual de relevante, esta encapsulación de funcionalidad va a servir para enfocar de mejor manera los distintos test unitarios que se generen en el desarrollo. Esto incluso permite agrupar una serie de comportamientos esperados, para generar objetos y variables de casos o situaciones específicas, con el fin de comprobar interacciones entre los distintos Managers (test de interacción).
 
 En cuanto a su implementación, quizás el mayor desafío sea que la interacción con el modelo de Godot no lastre el rendimiento.
 
 \subsection{Sistema de Managers.}\label{modelado:sistema-de-managers}
 \subsection*{\noindent\normalfont\textit{Enfoque de diseño a priori.}}
 
-Como adelantamos, la idea principal es desacoplar los distintos niveles lógico-funcionales del diseño de la implementación de los niveles y el resto del contenido.
+Como adelantamos, la idea principal es desacoplar los distintos niveles lógico-funcionales del diseño, de la implementación de los niveles y el resto del contenido.
 
-Este sistema de managers por tanto vendrá a funcionar como una especie de motor lógico dentro de la implementación en Godot. Para ello se encapsularán las distintas áreas del juego en una serie de submanagers (o cajas negras) y un manager principal que los coordine llamado GameManager (\lsc{GM}).
+Este sistema de managers por tanto, vendrá a funcionar como una especie de motor lógico dentro de la implementación en Godot. Para ello, se encapsularán las distintas áreas del juego en una serie de submanagers (o cajas negras) y un manager principal que los coordine llamado GameManager (\lsc{GM}).
 
 \pagebreak[4]
 \begin{center}
@@ -45,11 +45,11 @@ Este sistema de managers por tanto vendrá a funcionar como una especie de motor
 		\color{colorthalt}LevelManager & \color{colortextotabla}Todo lo relativo a los niveles. Por ejemplo el conjunto de métodos que se encargan de toda la lógica relevante del nivel, una interfaz para que \lsc{GM} pueda conectar los distintos requerimientos del nivel, carga de locaciones, ubicación e inicio de subrutinas de Player y \lsc{NPC}, señales de áreas para CutsceneManager, \lsc{UI} específicas, etc. 
 		Al igual que \lsc{GM} posiblemente tenderá a complejizarse por lo que es importante estar pendiente de posibles desacoplamientos. \\
 		\hline
-		\color{colorthalt}QuestManager & \color{colortextotabla}Todo lo relevante a las misiones: Requerimientos, Objetivos, experiencia, ítems, cutscenes, niveles, etc. \\
+		\color{colorthalt}QuestManager & \color{colortextotabla}Todo lo relevante a las misiones: requerimientos, objetivos, experiencia, ítems, cutscenes, niveles, etc. \\
 		\hline
 		\color{colorthalt}Cutscene\newline{}Manager & \color{colortextotabla}Todo lo relativo a los momentos en el que el jugador no está interactuando con la \lsc{UI} ni tiene control del personaje, es decir animaciones dentro y fuera del gameplay. Incluye diálogos pero estudiar si es conveniente una separación. \\
 		\hline
-		\color{colorthalt}PlayerManager & \color{colortextotabla}Todo lo relativo al jugador: estados, ítems, exp, estadísticas, estados de misiones, controles, path del árbol de decisiones, etc. Los sprites de player implementarán una state machine.\\
+		\color{colorthalt}PlayerManager & \color{colortextotabla}Todo lo relativo al jugador: estados, ítems, exp, estadísticas, estados de misiones, controles, path del árbol de decisiones, etc. Implementar una state machine.\\
 		\hline
 		\color{colorthalt}IAManager & \color{colortextotabla}Todo lo referente a IA: Rutas de \lsc{NPC}, combate de \lsc{NPC} aliados y enemigos y si compete, la generación procedural de niveles. \\
 		\hline
@@ -63,6 +63,7 @@ Este sistema de managers por tanto vendrá a funcionar como una especie de motor
 \end{center}
 
 \subsection{Diagrama del sistema de managers.}\label{modelado:diagrama-del-sistema}
+\todoii{ToDo: Hacer diagrama}{Hacer diagrama de managers}
 
 \subsection{Funcionamiento general.}\label{modelado:funcionamiento-general}
 Al partir, lo primero es iniciar GameManager que instancia los submanagers correspondientes para mostrar las escenas de presentación y luego iniciar el menú principal del juego. La escena del menú principal enviará señales a \lsc{GM} para que se inicie una nueva partida, se cargue o continúe partidas guardadas, se ajusten opciones, se inicien actualizaciones o se cierre el juego.
