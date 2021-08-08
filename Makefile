@@ -13,6 +13,9 @@ PDFLATEX=pdflatex
 # The default targets
 #all: latex2html
 default:
+	@echo -n "Ajustando la versión: "
+	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
+	@echo "OK."
 	@echo "Utilice 'make html', 'make clean', 'make sync' o 'make all'."
 
 all: clean html sync

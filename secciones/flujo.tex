@@ -18,13 +18,14 @@ La idea es anotar cada tarea del proyecto en una tarjeta y agregarla a la column
 \subsubsection{Límites de trabajo y columnas asociadas.}\label{flujo:limites-de-trabajo}
 Cada columna tiene asociado un límite máximo de tareas simultáneas (\lsc{WIP}) por lo que si el límite ha sido alcanzado no se podrán incorporar nuevas tareas a la columna hasta haber avanzado una de sus tarjetas a la columna siguiente. Este límite se puede ver en el número dentro de llaves [~].
 
-Al mismo tiempo cada columna tendrá una división vertical, dejando a la izquierda las tareas en proceso y a la derecha las tareas que ya han completado la etapa. El límite es compartido por ambas secciones por lo que independiente de la sección en la que se encuentre la tarjeta, no puede haber más tarjetas que el límite establecido en la columna.
+Al mismo tiempo, cada columna tendrá una división vertical, dejando a la izquierda las tareas en proceso y a la derecha las tareas que ya han completado la etapa. El límite es compartido por ambas secciones, por lo que independiente de la sección en la que se encuentre la tarjeta, no puede haber más tarjetas que el límite establecido en la columna.
 
-Lamentablemente la plataforma Trello no permite dividir una misma columna en dos secciones, por lo que se añadirá una enumeración al nombre de cada columna que se repetirá en los casos de columnas asociadas. Por ejemplo, sumando las tareas de la columna “2. [5] Trabajando” y las de la columna “2. Terminadas”, solo puede haber 5 tareas simultáneas por lo que no deberemos añadir una sexta.
+Lamentablemente la plataforma Trello no permite dividir una misma columna en dos secciones, por lo que se añadirá una enumeración al nombre de cada columna que se repetirá en los casos de columnas asociadas. Por ejemplo en la \autoref{flujo:figura-wip}, sumando las tareas de la columna “2. [5] Trabajando” y las de la columna “2. Terminadas” solo puede haber 5 tareas simultáneas por lo que no deberemos añadir una sexta.
 
 \begin{figure}[h]
 	\centering
 	\caption{Límites de trabajo en Trello.}
+	\label{flujo:figura-wip}
 	\includegraphics[width=\textwidth]{imágenes/tablero02.png}
 \end{figure}
 
@@ -36,7 +37,7 @@ El funcionamiento de cada columna es bastante sencillo:
 	\item \textbf{Columna Tareas:} Acá dejamos las tareas en sus tarjetas y las ordenamos según prioridad (arriba más urgentes). Solo se debería empezar a trabajar en la tarea superior. La prioridad de las tareas será determinada por el equipo.
 	\item \textbf{Columna Desglose de tareas:} Es \textit{muy importante} que las tareas sean descompuestas en tareas sencillas para que no se demoren más de unos días en completarse. Las tareas que entran a esta columna se analizan y dividen en tareas acotadas.
 	\item \textbf{Columna Desglosadas:} Aquí las tareas desglosadas esperan hasta que alguien se haga cargo de implementar el código y pasan a la siguiente columna.
-	\item \textbf{Columna Trabajando:} Aquí el encargado se anota en la tarjeta y trabaja hasta completarla, pasándola a Terminadas.
+	\item \textbf{Columna Trabajando:} Aquí el encargado se anota en la tarjeta y trabaja hasta completarla, pasándola a Terminadas. Una tarea se considerará completada solo cuando haya pasado todos los test correspondientes.
 	\item \textbf{Columna Implementadas:} Acá quedan las tarjetas con tareas terminadas esperando revisión.
 	\item \textbf{Columna En revisión:} Acá van las tareas que se estén revisando. Si tienen problemas o bugs pequeños se resuelven aquí mismo, si tuviera bugs o un problema más grande podría volver a analizarse el desglose con alta prioridad.
 	\item \textbf{Columna Hecho:} Aquí van las tareas terminadas. Se eliminan al hacer el merge de un conjunto de features completo a develop (cuando sube la versión).
@@ -91,15 +92,15 @@ Para una información más detallada sobre el funcionamiento de \lsc{GIT} bajo e
 \subsubsection{Versionado y nombres semánticos.}\label{flujo:versionado-y-nombres}
 Los nombres de las versiones seguirán la nomenclatura de versionado semántico, en este caso \textbf{Bakumapu\_vX.Y.Z} donde cada número representa:
 \begin{itemize}[label=-]
-	\item \textbf{X:} La versión principal. 0 alfa, 1 release. Si hay cambios no compatibles con la versión anterior, \textbf{X} se incrementa en 1. No debería ser mayor a 1.
+	\item \textbf{X:} La versión principal. 0 alfa, 1 release. Si hay cambios no compatibles con la versión anterior, \textbf{X} se incrementa en 1.
 	\item \textbf{Y:} La versión menor. Aumenta cuando se agreguen nuevas funcionalidades. Los archivos del usuario (savegames) deben ser siempre compatibles con la versión menor anterior.
-	\item \textbf{Z:} La versión de patch. Siempre que se solucione un bug se incrementa y cuando avance la versión menor o principal vuelve a cero.
+	\item \textbf{Z:} La versión de patch. Siempre que se solucionen bugs se incrementa. Cuando avance la versión menor o principal vuelve a cero.
 \end{itemize}
 
 Esta nomenclatura se debe aplicar en las ramas \textbf{main} y \textbf{release}.
 
 \subsubsection{Alternativas al modelo de ramas de función.}\label{flujo:alternativas-al-branching}
-Si el flujo bajo el sistema de ramas de función resulta demasiado tedioso o la visualización general del código se pierde con mucha facilidad, ya sea por merges muy complejos o espaciados, se propone como alternativa la metodología de \href{https://es.wikipedia.org/wiki/Entrega_continua}{Entrega continua}.
+Si el flujo bajo el sistema de ramas de función resulta demasiado tedioso o la visualización general del código se pierde con mucha facilidad ya sea por merges muy complejos o espaciados, se propone como alternativa la metodología de \href{https://es.wikipedia.org/wiki/Entrega_continua}{Entrega continua}.
 
 \subsubsection{Comandos de GIT.}\label{flujo:comandos-de-git}
 Este apartado es una referencia rápida a los comandos y configuraciones más comunes en el trabajo con \lsc{GIT}.
@@ -137,7 +138,7 @@ data_*/
 	
 	\Needspace{7\baselineskip}
 	
-	\item Evitar problemas de formato de archivo entre Windows y el resto de sistemas:
+	\item Evitar problemas de formato de archivo entre Windows (\lsc{CRLF}) y el resto de sistemas:
 	\begin{lstlisting}
 $ .gitattributes:
 	\end{lstlisting}
@@ -266,7 +267,7 @@ Referencia rápida para comandos \lsc{GIT} \href{https://rogerdudler.github.io/g
 \subsection{Documentación.}\label{flujo:documentacion}
 
 \subsubsection{El documento de Diseño técnico.}\label{flujo:documento-de-diseno}
-A nivel de desarrollo muchas veces terminamos dedicando más tiempo a estudiar el código y a entender su funcionamiento que a escribir nueva funcionalidad, por ello la documentación se vuelve tan relevante. Un código más fácil de entender ahorra tiempo, por eso ayuda a mejorar la estabilidad del software y en general todo el desarrollo se torna más productivo. La documentación técnica de Bakumapu estará dividida en este documento y en los archivos de código (\nameref{flujo:documentacion-en-codigo}).
+A nivel de desarrollo muchas veces terminamos dedicando más tiempo a estudiar el código y a entender su funcionamiento que a escribir nueva funcionalidad, por ello la documentación se vuelve tan relevante. Un código más fácil de entender ahorra tiempo, por eso ayuda a mejorar la estabilidad del software y en general todo el desarrollo se torna más productivo. La documentación técnica de Bakumapu estará dividida en este documento y en los archivos de código (apartado \nameref{flujo:documentacion-en-codigo}).
 
 El presente texto, como ya se ha mencionado, tiene como objetivo desempeñar tres funciones principales:
 \begin{enumerate}[noitemsep]
@@ -275,23 +276,27 @@ El presente texto, como ya se ha mencionado, tiene como objetivo desempeñar tre
 	\item Servir de instrumento de diseño.
 \end{enumerate}
 
-Para que estos objetivos se cumplan, el documento debe mantenerse actualizado a medida que se vaya escribiendo el código y tomando las distintas decisiones de diseño e implementación. Por lo mismo se ha generado un repositorio especial para ello (\nameref{flujo:repositorio-de-documentacion}). 
+Para que estos objetivos se cumplan, el documento debe mantenerse actualizado a medida que se vaya escribiendo el código y tomando las distintas decisiones de diseño e implementación. Por lo mismo se ha generado un repositorio especial para ello (apartado \nameref{flujo:repositorio-de-documentacion}). 
 
 \subsubsection*{¿Qué se documenta aquí?}
-No se debe confundir la documentación de este texto con los comentarios o explicaciones dentro del código. El código debe estar debidamente documentado dentro de los archivos y líneas correspondientes (\nameref{flujo:documentacion-en-codigo}). No obstante, cuando haya modificaciones importantes que involucren cambiar o definir la interacción entre clases o elementos de ámbitos más globales, se deberán anotar en este texto a modo de referencia técnica en el apartado \nameref{modelado:funcionamiento-general}.
+No se debe confundir la documentación de este texto con los comentarios o explicaciones dentro del código. El código debe estar debidamente documentado dentro de los archivos y líneas correspondientes (apartado \nameref{flujo:documentacion-en-codigo}). No obstante, cuando haya modificaciones importantes que involucren cambiar o definir la interacción entre clases o elementos de ámbitos más globales, se deberán anotar en este texto a modo de referencia técnica en el apartado \nameref{modelado:funcionamiento-general}.
 
 \paragraph*{Importante:}
 Es muy relevante dejar en claro que el objetivo no es escribir una explicación \emph{línea a línea} de cómo funciona el código, sino una \emph{noción general} de ámbitos o lógicas más globales. Con señalar el sentido de estas entidades dentro del sistema y su interacción con el resto será suficiente.
 
 \subsubsection{Modificando el documento.}\label{flujo:modificando-el-documento}
-Para modificar el documento, basta con utilizar un editor de textos sencillos y seguir la nomenclatura del sistema \LaTeX. En el apartado \nameref{flujo:latex} se proporcionará una breve guía con un listado de los comandos relevantes. En cualquier caso, considerando que el grueso del documento ya está definido, no es más que seguir simplemente el mismo modelo de ejemplo.
+Para modificar el documento, basta con utilizar un editor de textos sencillos y seguir la nomenclatura del sistema \LaTeX. En el apartado \nameref{flujo:latex} se proporcionará una breve guía con un listado de los comandos relevantes. En cualquier caso, considerando que el grueso del documento ya está definido, simplemente es cosa de usar los mismos apartados del documento como ejemplo.
 
 Dado que en ciertos contextos la instalación de \LaTeX\ puede ser bastante engorrosa (la instalación manual de muchísimos paquetes), no es necesario compilar una nueva versión con cada cambio sino simplemente mantener los archivos \lsc{TEX} y la versión dentro de \textbf{Makefile} actualizados.
 
 \subsubsection{Versionado del documento.}\label{flujo:versionado-del-documento}
-Cada modificación a este documento deberá aumentar la numeración de la subversión en 1 (v0.0\textbf{.1} a v0.0\textbf{.2}). Los primeros 2 índices (v\textbf{0.0.}1) estarán en línea con la última rama \textbf{main} del repositorio. Cada vez que se suba una nueva versión de la rama, se deberá chequear que el documento contenga los cambios relevantes a esa versión e incorporarlos. En este caso (cambio en la versión menor), la subversión debe volver a cero (v0.\textbf{5.36} a v0.\textbf{6.0}). El versionado de las ramas se discutirá más adelante en el apartado \nameref{flujo:versionado-y-nombres}.
+Cada modificación a este documento deberá aumentar la numeración de la subversión en 1 (v0.0\textbf{.1} a v0.0\textbf{.2}). Los primeros 2 índices (v\textbf{0.0.}1) estarán en línea con la última rama \textbf{main} del repositorio. Cada vez que se suba una nueva versión de la rama, se deberá chequear que el documento contenga los cambios relevantes a esa versión e incorporarlos. Con cada cambio de versión menor, la subversión debe volver a cero (v0.\textbf{5.36} a v0.\textbf{6.0}). El versionado de las ramas se discutirá más adelante en el apartado \nameref{flujo:versionado-y-nombres}.
 
-Al realizar estos cambios más grandes, lo importante es que después de editar el texto de la sección correspondiente, también se ajuste la versión dentro del archivo \textbf{Makefile}. Esto actualizará automáticamente la versión en todos los lugares correspondientes cuando se recompile:
+Para ajustar la versión del documento solo hay que editar el archivo \textbf{Makefile}, que se encargará automáticamente de hacer todos los ajustes durante la recompilación:
+\begin{center}
+\texttt{Versión actual: v\docversion.}
+\end{center}
+
 \Needspace{3\baselineskip}
 \begin{lstlisting}
 Bakumapu-docs $ nano Makefile
@@ -301,9 +306,6 @@ SHELL = /bin/sh
 # Actualizar con cada cambio
 VERSION = 0.0.1
 \end{lstlisting}
-\begin{center}
-\texttt{Versión actual: v\docversion.}
-\end{center}
 
 \subsubsection{Exportar a HTML.}\label{flujo:exportar-a-html}
 Para exportar a \lsc{HTML} bastará con usar el paquete \textbf{make4ht} (utiliza pdflatex y htlatex). Las instrucciones de compilación están configuradas en el fichero Makefile, por lo que la conversión se automatiza con el comando:
