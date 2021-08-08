@@ -6,6 +6,8 @@
 
 %% Tamaño de página:
 %\usepackage[margin=2cm]{geometry}
+%% Mostrar márgenes:
+%\usepackage[showframe]{geometry}
 
 %% Script Koma más parecido a artículo base:
 %\setkomafont{disposition}{\normalcolor\bfseries}
@@ -71,16 +73,9 @@
 	\definecolor{colorkeyword}{HTML}{960000}
 	\definecolor{colorcomments}{HTML}{74705d}
 \fi 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Sección para texto sin sangría
-%\newenvironment{nonindent}
-%{\setlength{\parindent}{0pt}}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -95,19 +90,40 @@ breaklinks,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Sección para texto sin sangría
+%\newenvironment{nonindent}
+%{\setlength{\parindent}{0pt}}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Bloques de código
-\lstset{
+%% Bash:
+\lstdefinestyle{bash}{
 	language=bash,
 	basicstyle=\small\ttfamily\color{colorcodetext},
   backgroundcolor=\color{colorcodebg},
-%  rulesepcolor=\color{gray},
   literate=*{\$}{{\textcolor{colorprompt}{\$ }}}{1},
   commentstyle=\color{colorprompt},
   rulecolor=\color{black},
-  morekeywords={text,binary,gz},
   keywordstyle=\color{colorkeyword},
+  morekeywords={text,binary,gz},
+	frame=tblr,
+	columns=fullflexible,
+	showstringspaces=false,
+%  rulesepcolor=\color{gray},
 %	 numbers=left,
 %	 numberstyle=\tiny,
+}
+%% Latex:
+\lstdefinestyle{latex}{
+	language=[LaTeX]{TeX},
+	basicstyle=\small\ttfamily\color{colorcodetext},
+  backgroundcolor=\color{colorcodebg},
+  literate=*{\$}{{\textcolor{colorprompt}{\$ }}}{1},
+  commentstyle=\color{colorprompt},
+  rulecolor=\color{black},
+  morekeywords={subsection,subsubsection,paragraph,nameref,Needspace,includegraphics},
+  keywordstyle=\color{colorkeyword},
 	frame=tblr,
 	columns=fullflexible,
 	showstringspaces=false,
