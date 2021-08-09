@@ -395,6 +395,7 @@ El signo \ funciona con este comando: \textbackslash.
 Negrita: Texto a \textbf{negrita}.
 Enfasis: Texto a \emph{enfasis}
 Cursiva: Texto a \textit{cursiva}.
+Versalita: Texto a \lsc{versalita}.
 \end{lstlisting}
 
 \item Ajustes de párrafo:
@@ -472,7 +473,13 @@ $ comando -opciones ruta_a_archivo.txt
 	\item Salto de página:
 	\begin{lstlisting}
 \pagebreak
-	\end{lstlisting}\lstset{style=bash}
+	\end{lstlisting}
+	
+	\item Espacios indivisible (non-breaking space):
+	\begin{lstlisting}
+60~hz, 50~km, siglo~\lsc{XVI}.
+	\end{lstlisting}
+	\lstset{style=bash}
 \end{enumerate}
 
 \end{enumerate}

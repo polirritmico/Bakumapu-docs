@@ -5,6 +5,47 @@
 
 \todoii{ToDo: Desarrollar}{Desarrollar sección IO}
 
-Desde el punto de vista del usuario son básicamente 3 elementos: Archivos (como archivos de carga/guardado y de configuración), periféricos (como teclado y ratón, gamepad, o touchscreen); e internet para actualizaciones y servicios de cloud para savegames y configuraciones.
+El sistema interactuará con el usuario a través de inputs y outputs específicos. A futuro dentro del desarrollo será preciso implementar algunas tecnologías en concreto. De momento solo es necesario mantener la flexibilidad del código y estudiar la propia implementación para decidir con mejores indicadores. Las decisiones al respecto serán de responsabilidad del equipo de diseño en mutuo acuerdo con el equipo técnico.
 
-A futuro dentro del desarrollo será preciso implementar algunas tecnologías en concreto. De momento solo es necesario mantener la flexibilidad del código y estudiar la propia implementación para decidir con mejores indicadores.
+En cualquier caso, a continuación se presenta un listado con elementos recurrentes y algunos que desde ya se deberían considerar:
+
+\subsection{Inputs.}
+Son básicamente 3 elementos los que interactúan con el sistema a nivel de usuario: Archivos de carga, guardado y de configuración, periféricos como teclado, ratón, gamepad o touchscreen; e internet para actualizaciones y servicios en la nube como savegames y configuraciones.
+
+A nivel interno, estos inputs se refieren a los archivos de configuración, stats, niveles, diálogos, sprites, audio, etc.
+
+\subsubsection{Archivos.}
+
+
+Para los jugadores se refieren básicamente a savegames y archivos de configuración.
+
+\subsubsection{Controles.}
+\begin{description}
+\item[Teclado:] Además
+
+\item[Gamepad:] description
+
+\item[Mouse:] description
+
+\item[Touchpad:] description
+
+\item[Touchscreen:] description
+
+\item[Giroscopio:] description
+
+\end{description}
+
+\subsubsection{Internet.}
+
+\subsection{Outputs.}
+
+\subsubsection{Video.}
+La proporción a soportar será de 16:9 en resoluciones de 720p y 1080p a 60~hz.
+
+\subsubsection{Audio.}
+El audio a soportar será estéreo a 44~khz.
+
+\subsubsection{Vibración.}
+Rumble.
+
+\subsubsection{Otros.}

@@ -60,7 +60,10 @@ html:
 	@rm -r build/export
 	@rm -rf docs && mv build docs
 	@echo -e "OK\n.................................................."
-	@echo -e "HTML generado exitosamente.\nUsar 'make sync' para subir a GITHUB."
+	@echo -e "HTML generado exitosamente."
+	@echo "Revisar en: file:///home/eduardo/Documentos/Bakumapu/Dise%C3%B1o%20t%C3%A9cnico/docs/index.html"
+	@echo "Usar 'make sync' para subir a GITHUB."
+	\
 
 clean:
 	@mkdir -p temp
