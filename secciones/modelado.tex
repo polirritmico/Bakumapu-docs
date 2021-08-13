@@ -4,20 +4,34 @@
 \section{Modelado del software.}\label{modelado:modelado-del-software}
 
 \subsection{Arquitectura.}\label{modelado:arquitectura}
-La principal decisión de diseño es construir una arquitectura que permita modificarse a lo largo del desarrollo, para ello se dividirá la funcionalidad del software en Unidades Manager. Estas unidades además de delimitar scopes, irán construyendo en conjunto un lenguaje común de funciones y variables, acorde a la lógica de funcionamiento del sistema. Es decir, el nombre de las funciones y variables de cada manager tendrán coherencia externa generando idealmente una “narración” del funcionamiento del código. De esta forma la flexibilidad de la arquitectura permitirá cambiar y generar lo que se espera de cada dominio del Manager.
+La principal decisión de diseño es construir una arquitectura que permita modificarse a lo largo del desarrollo, para ello se dividirá la funcionalidad del software en Unidades Manager. Estas unidades además de delimitar scopes, irán construyendo en conjunto un lenguaje común de funciones y variables, acorde a la lógica de funcionamiento del sistema. Es decir, el nombre de las funciones y variables de cada manager tendrán coherencia externa generando idealmente una “narración” del funcionamiento del código.
 
-Por ejemplo, tendremos la posibilidad de fusionar el manager de música con el de sonido, o separar el sistema de datos en un sistema que interactúe con una base de datos de idiomas y otro que parsee archivos de misiones, etc.
+Por ejemplo:
+\begin{lstlisting}
+@@ src/characters/player/tyanka.gd
+PlayerMng.storeItem(Tyanka.item_bag, GM.getRewardFromCurrentQuest(\
+                       PlayerMng.currentQuest.getPath()))
+\end{lstlisting}
+\begin{lstlisting}[language=Python]
+@@ src/game/game_manager.gd
+def getRewardFromCurrentQuest(path) -> item:
+    quest = QuestMng.getQuestFromPath(path)
+    return quest.getReward(path)
+\end{lstlisting}
 
-\begin{figure}[h]
+\vspace{\baselineskip}
+A nivel de arquitectura más global, tendremos la posibilidad de ajustar la interacción entre managers a través de GameManager, aislando los cambios internos de cada manager de su exterior. Es decir, cada manager operará como una caja negra, una estación en la cadena productiva cuyo funcionamiento interno es ignorado por el sistema, siendo lo único relevante sus inputs y outputs esperados.
+
+De esta forma por ejemplo, podremos fusionar o separar el manager de datos entre uno que maneje los datos en la memoria dentro de Godot y uno que interactué con la base de datos; o por ejemplo, separar el manager de música con el de sonido sin cambiar el código de los managers específicos que lo utilizan concentrándonos exclusivamente en ajustar las llamadas en GM.
+
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.6\textwidth]{imágenes/arquitectura.png}
-	\caption{Ejemplo de arquitectura ajustable.}
+	\caption{Ejemplo de sistema de managers ajustable.}
 \end{figure}
 
 \Needspace{2\baselineskip}
-El enfoque agrupa los distintos comportamientos esperados a nivel de funciones al tiempo que favorece el surgimiento de una narrativa en cuanto a los nombres de las clases, funciones, variables y su sentido dentro del sistema global. Se trata de generar una especie de cadena de producción que opera en base a inputs y outputs esperados.
-
-Por último e igual de relevante, esta encapsulación de funcionalidad va a servir para enfocar de mejor manera los distintos test unitarios que se generen en el desarrollo. Esto incluso permite agrupar una serie de comportamientos esperados, para generar objetos y variables de casos o situaciones específicas, con el fin de comprobar interacciones entre los distintos Managers (test de interacción).
+Por último e igual de relevante, esta encapsulación de funcionalidad va a servir para enfocar de mejor manera los distintos test unitarios que se generen en el desarrollo. Esto incluso permite agrupar una serie de comportamientos esperados, para generar objetos y variables de casos o situaciones específicas con el fin de comprobar interacciones entre los distintos Managers (test de interacción).
 
 En cuanto a su implementación, quizás el mayor desafío sea que la interacción con el modelo de Godot no lastre el rendimiento.
 
