@@ -6,7 +6,7 @@
 \subsection{Arquitectura.}\label{modelado:arquitectura}
 La principal decisión de diseño es construir una arquitectura que permita modificarse a lo largo del desarrollo, para ello se dividirá la funcionalidad del software en Unidades Manager. Estas unidades además de delimitar scopes, irán construyendo en conjunto un lenguaje común de funciones y variables, acorde a la lógica de funcionamiento del sistema. Es decir, el nombre de las funciones y variables de cada manager tendrán coherencia externa generando idealmente una “narración” del funcionamiento del código.
 
-Por ejemplo:
+Por ejemplo \texttt{tyanka.gd} podría reimplementar funciones de PlayerMng:
 \begin{lstlisting}
 @@ src/characters/player/tyanka.gd
 PlayerMng.storeItem(Tyanka.item_bag, GM.getRewardFromCurrentQuest(\
@@ -19,10 +19,9 @@ def getRewardFromCurrentQuest(path) -> item:
     return quest.getReward(path)
 \end{lstlisting}
 
-\vspace{\baselineskip}
-A nivel de arquitectura más global, tendremos la posibilidad de ajustar la interacción entre managers a través de GameManager, aislando los cambios internos de cada manager de su exterior. Es decir, cada manager operará como una caja negra, una estación en la cadena productiva cuyo funcionamiento interno es ignorado por el sistema, siendo lo único relevante sus inputs y outputs esperados.
+A nivel de arquitectura más global, tendremos la posibilidad de ajustar la interacción entre managers, aislando sus cambios internos de su exterior. Es decir, cada manager operará como una estación de una cadena productiva cuyo funcionamiento interno es ignorado por el sistema, siendo lo único relevante sus inputs y outputs esperados.
 
-De esta forma por ejemplo, podremos fusionar o separar el manager de datos entre uno que maneje los datos en la memoria dentro de Godot y uno que interactué con la base de datos; o por ejemplo, separar el manager de música con el de sonido sin cambiar el código de los managers específicos que lo utilizan concentrándonos exclusivamente en ajustar las llamadas en GM.
+De esta forma por ejemplo, podremos fusionar o separar el manager de data entre uno que administre la memoria y uno que interactué con una base de datos, podríamos separar el manager de música con el de sonido sin cambiar el código de los managers específicos que lo utilizan concentrándonos exclusivamente en ajustar las llamadas en GM.
 
 \begin{figure}[ht]
 	\centering
@@ -31,16 +30,16 @@ De esta forma por ejemplo, podremos fusionar o separar el manager de datos entre
 \end{figure}
 
 \Needspace{2\baselineskip}
-Por último e igual de relevante, esta encapsulación de funcionalidad va a servir para enfocar de mejor manera los distintos test unitarios que se generen en el desarrollo. Esto incluso permite agrupar una serie de comportamientos esperados, para generar objetos y variables de casos o situaciones específicas con el fin de comprobar interacciones entre los distintos Managers (test de interacción).
+Por último e igual de relevante, esta encapsulación de funcionalidad va a servir para enfocar de mejor manera los distintos test unitarios que se generen en el desarrollo. Esto podría permitir agrupar una serie de comportamientos esperados, para comprobar relaciones entre los distintos managers (test de interacción) generando objetos y variables de casos o situaciones específicas.
 
 En cuanto a su implementación, quizás el mayor desafío sea que la interacción con el modelo de Godot no lastre el rendimiento.
 
-\subsection{Sistema de Managers.}\label{modelado:sistema-de-managers}
+\subsection{Funcionamiento general.}\label{modelado:funcionamiento-general}
 \subsection*{\noindent\normalfont\textit{Enfoque de diseño a priori.}}
 
-Como adelantamos, la idea principal es desacoplar los distintos niveles lógico-funcionales del diseño, de la implementación de los niveles y el resto del contenido.
+Como adelantamos, la idea principal es desacoplar los distintos niveles lógico-funcionales de diseño, de la implementación de los niveles y el resto del contenido.
 
-Este sistema de managers por tanto, vendrá a funcionar como una especie de motor lógico dentro de la implementación en Godot. Para ello, se encapsularán las distintas áreas del juego en una serie de submanagers (o cajas negras) y un manager principal que los coordine llamado GameManager (\lsc{GM}).
+Este sistema de managers encapsulará las distintas áreas del juego en una serie de submanagers y un manager principal que los coordine llamado GameManager (\lsc{GM}).
 
 \pagebreak[4]
 \begin{center}
@@ -76,10 +75,10 @@ Este sistema de managers por tanto, vendrá a funcionar como una especie de moto
 	\end{longtable}
 \end{center}
 
-\subsection{Diagrama del sistema de managers.}\label{modelado:diagrama-del-sistema}
+\subsection{Diagrama del sistema.}\label{modelado:diagrama-del-sistema}
 \todoii{ToDo: Hacer diagrama}{Hacer diagrama de managers}
 
-\subsection{Funcionamiento general.}\label{modelado:funcionamiento-general}
+\subsection{Funcionamiento del sistema de managers.}\label{modelado:funcionamiento-de-managers}
 Al partir, lo primero es iniciar GameManager que instancia los submanagers correspondientes para mostrar las escenas de presentación y luego iniciar el menú principal del juego. La escena del menú principal enviará señales a \lsc{GM} para que se inicie una nueva partida, se cargue o continúe partidas guardadas, se ajusten opciones, se inicien actualizaciones o se cierre el juego.
 
 Independiente del sistema o mecanismo para iniciar o cargar una partida, será LevelManager el encargado de cargar los elementos del nivel como el mapa, los sprites, scripts de cutscenes, instanciar objetos, música, sonidos ambiente, quests, etc. Sin embargo será \lsc{GM} el encargado de conectar la lógica del nivel con los distintos managers correspondientes. Por ejemplo LevelManager carga la música, pero es \lsc{GM} quién conecta la señales de reproducción con MusicManager. Es decir \lsc{GM} funciona como una interfaz a través de la cual LevelManager interactúa con el resto del sistema.
