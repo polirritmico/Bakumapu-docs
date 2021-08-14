@@ -7,37 +7,56 @@
 
 El sistema interactuará con el usuario a través de inputs y outputs específicos. A futuro dentro del desarrollo será preciso implementar algunas tecnologías en concreto. De momento solo es necesario mantener la flexibilidad del código y estudiar la propia implementación para decidir con mejores indicadores. Las decisiones al respecto serán de responsabilidad del equipo de diseño en mutuo acuerdo con el equipo técnico.
 
-En cualquier caso, a continuación se presenta un listado con elementos recurrentes y algunos que desde ya se deberían considerar:
+En cualquier caso, a continuación se presenta un listado con elementos recurrentes y algunos que desde ya se deberían considerar. Es importante volver a recalcar que la implementación de varios de estos elementos debería ejecutarse en las etapas finales del desarrollo. Lo importante en este punto es considerar que existen y que el sistema debería estar preparado para una implementación lo más fluida posible.
 
 \subsection{Inputs.}
-Son básicamente 3 elementos los que interactúan con el sistema a nivel de usuario: Archivos de carga, guardado y de configuración, periféricos como teclado, ratón, gamepad o touchscreen; e internet para actualizaciones y servicios en la nube como savegames y configuraciones.
-
-A nivel interno, estos inputs se refieren a los archivos de configuración, stats, niveles, diálogos, sprites, audio, etc.
+Fundamentalmente son 3 elementos de entrada los que interactúan con el sistema a nivel de usuario: \textbf{Archivos} de carga, guardado y de configuración, \textbf{periféricos} como teclado, ratón, gamepad o touchscreen; e \textbf{internet} para actualizaciones y servicios en la nube como savegames y configuraciones. A nivel de desarrollo se mantienen los mismos inputs, y adicionalmente también incluiría archivos de stats, niveles, diálogos, sprites, audio, etc.
 
 \subsubsection{Archivos.}
 
+\begin{description}
+\item[Savegames:] \hfill \\ Archivos de guardado en checkpoints automáticos dentro del juego u otro sistema de puntos de control que el usuario tenga que utilizar dentro del gameplay. De esta forma se conservaría solo la información con respecto al árbol de decisiones, stats, ítems, etc. y no a las posiciones de \lsc{NPC}, enemigos, ítems aleatorios, etc.
 
-Para los jugadores se refieren básicamente a savegames y archivos de configuración.
+\item[Configuración:] Archivo o archivos sencillos con comandos y valores que el juego interpreta. Útiles para hacer tests, soporte, debugging y para guardar los ajustes del usuario entre distintos dispositivos.
+
+\item[Varios:] Probablemente a medida que avance el desarrollo se irán agregando archivos específicos que sea necesario integrar al sistema. A medida que estos archivos sean definidos deberían agregarse en este apartado.
+\end{description}
 
 \subsubsection{Controles.}
 \begin{description}
-\item[Teclado:] Además
+\item[Teclado:] Uno de los controles principales de juego. Lo importante es considerar la i18n para el mapeo y no utilizar teclas específicas de una layout en concreto.
 
-\item[Gamepad:] description
+\item[Mouse:] Lo relevante es que involucra generar un puntero (el ícono) que se adapte a los distintos contextos de la interfaz e incluso ofrezca respuesta visual del juego. Por ejemplo que letreros cambien de color al poner el cursor encima, que la interfaz haga un efecto ojo de pez en los botones cuando el ratón pase por encima, o muestre áreas de impacto al seleccionar un ataque, etc.
 
-\item[Mouse:] description
+En cuanto a su configuración, sería conveniente que en el menú de opciones o a través del archivo de configuración se pudiera ajustar la aceleración o la sensibilidad del puntero. 
 
-\item[Touchpad:] description
+\item[Gamepad:] Hay 2 consideraciones, el esquema de botones y características adicionales. El esquema de botones será estudiado en el diseño del juego por lo que se mantiene la premisa de la flexibilidad a nivel técnico. Godot ofrece opciones especiales con respecto a los controles, por lo que la implementación podría comenzar desde allí. Si el sistema pudiera reconocer algunas de las características del control sería muy bueno, o en el peor de los casos al menos ofrecer layouts de configuración basados en los controles de los sistemas más populares como snes, psx, xbox, etc.
 
-\item[Touchscreen:] description
+Además sería conveniente utilizar las opciones adicionales de los controles como vibración, giroscopio, sonido e incluso iluminación, pero estas opciones deberían tener de momento baja prioridad en el desarrollo.
 
-\item[Giroscopio:] description
+\item[Touchpad:] Similar al ratón. Investigar si es necesaria alguna consideración especial.
 
+\item[Touchscreen:] Lo más relevante es que debe incluir una interfaz con botones virtuales para presionar que definan áreas de actuación. Estudiar si ayuda a la jugabilidad el poder interactuar directamente con elementos en el área de juego. Por ejemplo para iniciar un diálogo con un \lsc{NPC}, se podría mover con el stick virtual y pulsar el botón de acción, o simplemente presionar sobre el personaje y automáticamente el jugador se mueve hacía allá y abre el diálogo.
 \end{description}
 
 \subsubsection{Internet.}
+\begin{description}
+\item[Archivos de usuario:] Lo principal a nivel de usuario es poder guardar los ficheros de configuración y savegames en algún sistema en la nube para facilitar la posibilidad de jugar una única campaña a través de diferentes dispositivos. Además, el tener un respaldo del progreso del juego siempre va a ser algo positivo.
+
+\item[Actualización:] Automáticamente el sistema debería poder comprobar la versión instalada del juego, informar la disponibilidad de una nueva versión, descargar los archivos necesarios e iniciar el proceso de actualización automáticamente. Además se deberán implementar opciones para desactivar tanto la descarga como la instalación automática de las actualizaciones.
+\end{description}
 
 \subsection{Outputs.}
+
+\subsubsection{Archivos}
+\begin{description}
+\item[Savegames:] description
+
+\item[Configuración:] description
+
+\item[Depurado:] Quizás sea conveniente generar un mecanismo de generación de reportes con información relevante para facilitar el soporte a los usuarios, o facilitar la comprensión de los distintos fallos que puedan ocurrir sobretodo por consideraciones especiales en determinados sistemas.
+\end{description}
+
 
 \subsubsection{Video.}
 La proporción a soportar será de 16:9 en resoluciones de 720p y 1080p a 60~hz.
@@ -49,3 +68,6 @@ El audio a soportar será estéreo a 44~khz.
 Rumble.
 
 \subsubsection{Otros.}
+
+\subsection{DRM.}
+\todoii{ToDo: Desarrollar}{Desarrollar sección DRM}
