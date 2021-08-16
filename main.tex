@@ -3,7 +3,7 @@
 \documentclass[11pt,titlepage]{article}
 
 %% Modo oscuro
-\newif\ifdark\darktrue % \darktrue \darkfalse
+\newif\ifdark\darktrue % usar \darktrue o \darkfalse
 
 %% Paquetes
 \input{configuración/paquetes}
@@ -44,8 +44,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pagebreak
+
+\pagenumbering{roman}
 \tableofcontents
 \listoftodos
+\clearpage
+\pagenumbering{arabic}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
