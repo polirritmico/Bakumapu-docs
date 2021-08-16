@@ -13,7 +13,7 @@ Fundamentalmente son 3 elementos de entrada los que interactúan con el sistema 
 \subsubsection{Archivos.}
 
 \begin{description}
-\item[Savegames:] Archivos de carga a checkpoints u otro sistema de puntos de control dentro del gameplay. Se debería definir exactamente que se carga y que no. Por ejemplo poder cargar el árbol de decisiones, stats, ítems, equipamiento, munición, etc., y no la posición de \lsc{NPC}, ítems aleatorios, enemigos, entre otros.
+\item[Savegames:] Archivos de carga a checkpoints u otro sistema de puntos de control dentro del gameplay. Se debería definir exactamente que se carga y que no. Por ejemplo poder cargar el árbol de decisiones, stats, ítems, equipamiento, munición, etc., y no la posición de los \lsc{NPC}, ítems aleatorios, enemigos, entre otros.
 
 \item[Configuración:] Permite cargar la configuración de usuario en distintas instalaciones o dispositivos. Este archivo debería ser un texto plano.
 \end{description}
@@ -53,7 +53,9 @@ Godot ofrece opciones especiales con respecto a los controles, por lo que la imp
 La proporción a soportar será de 16:9 en resoluciones de 720p y 1080p a 60~hz. En todos los sistemas la orientación será horizontal (landscape). El uso de tecnologías como HDR o mayores framerates deberá estudiarse, pero probablemente no sean necesarias.
 
 \subsubsection{Audio.}
-El audio a soportar en primera instancia será estéreo a 44~khz. Godot ofrece un sistema de mezcla y posicionamiento 5.1 que se deberá estudiar su implementación; no obstante el criterio debe ser técnico con respecto a la dificultad y el tiempo requerido para su codificación.
+La codificación para los archivos de música, sonido ambiente y efectos será en el formato \lsc{OGG} a 192~kbps y 44~khz\footnote{En comparación al \lsc{MP}{\footnotesize 3}, el \lsc{OGG} ocupa menos espacio y tiene mejor calidad a igual bitrate, a costa de un uso de \lsc{CPU} marginalmente superior (En una máquina moderna no debería presentar ningún problema).}. Todos los audios de música y de sonido ambiente deberán ser audios en estéreo, no obstante los efectos de sonido podrán ser monofónicos pues Godot ofrece un sistema de mezcla y posicionamiento interno que incluso permite mezclas en 5.1.
+
+En cualquier caso la implementación base será en estéreo; el soporte de mezclas de más canales deberá ser estudiado en base a un criterio técnico que considere la dificultad, el tiempo extra requerido, el impacto en el rendimiento del programa y retrocompatibilidad con equipos estéreo.
 
 \subsubsection{Archivos}
 \begin{description}
