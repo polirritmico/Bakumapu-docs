@@ -13,6 +13,7 @@
 .ecbx-2488{ font-weight: bold;}
 .ecbx-2488{ font-weight: bold;}
 .ecbx-2488{ font-weight: bold;}
+.ecbx-2488{ font-weight: bold;}
 .ecrm-1440{font-size:127%;}
 .ptmr8c-x-x-120{font-size:109%;}
 .ecrm-0700{font-size:63%;}
@@ -28,6 +29,8 @@
 .ectt-1095{ font-family: monospace,monospace;}
 .ectt-1095{ font-family: monospace,monospace;}
 .ectt-1095{ font-family: monospace,monospace;}
+.ectt-1095{ font-family: monospace,monospace;}
+.ecbx-1095{ font-weight: bold;}
 .ecbx-1095{ font-weight: bold;}
 .ecbx-1095{ font-weight: bold;}
 .ecbx-1095{ font-weight: bold;}
@@ -54,8 +57,10 @@
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
+.ecti-1095{ font-style: italic;}
 .ecrm-1000{font-size:90%;}
 .ectt-1000{font-size:90%; font-family: monospace,monospace;}
+.ectt-1000{ font-family: monospace,monospace;}
 .ectt-1000{ font-family: monospace,monospace;}
 .ectt-1000{ font-family: monospace,monospace;}
 .ectt-1000{ font-family: monospace,monospace;}
@@ -81,7 +86,9 @@
 .ecbx-0800{ font-weight: bold;}
 .ecbx-0800{ font-weight: bold;}
 .ecbx-0800{ font-weight: bold;}
+.ecbx-0800{ font-weight: bold;}
 .eccc0900-{font-size:81%;}
+.ecrm-0600{font-size:54%;}
 .small-caps{font-variant: small-caps; }
 p{margin-top:0;margin-bottom:0}
 p.indent{text-indent:0;}
