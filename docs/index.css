@@ -55,7 +55,6 @@
 .ecti-1095{ font-style: italic;}
 .ecti-1095{ font-style: italic;}
 .ecrm-1000{font-size:90%;}
-.ecrm-0900{font-size:81%;}
 .ectt-1000{font-size:90%; font-family: monospace,monospace;}
 .ectt-1000{ font-family: monospace,monospace;}
 .ectt-1000{ font-family: monospace,monospace;}
@@ -68,6 +67,7 @@
 .ectt-1000{ font-family: monospace,monospace;}
 .ectt-1000{ font-family: monospace,monospace;}
 .ectt-1000{ font-family: monospace,monospace;}
+.ecrm-0900{font-size:81%;}
 .ecrm-0800{font-size:72%;}
 .ecbx-0800{font-size:72%; font-weight: bold;}
 .ecbx-0800{ font-weight: bold;}
@@ -245,7 +245,6 @@ span#textcolor14{color:#90DA2B}
 span#textcolor15{color:#90DA2B}
 span#textcolor16{color:#90DA2B}
 span#textcolor17{color:#90DA2B}
-span#textcolor18{color:#90DA2B}
 #TBL-1 colgroup{border-left: 1px solid black;border-right:1px solid black;}
 #TBL-1{border-collapse:collapse;}
 #TBL-1 colgroup{border-left: 1px solid black;border-right:1px solid black;}
