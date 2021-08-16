@@ -106,17 +106,9 @@ Se utilizará para toda la composición musical en formato \lsc{MIDI} y \lsc{MUS
 \subsubsection{Ableton Live.}
 Se utilizará la versión 10.1.4 para los \lsc{MIX}, masters y/o conversión de archivos \lsc{MIDI} a formato \lsc{WAV} estéreo y toda la producción de diseño sonoro del juego. Tomar nota en caso de utilizar VST específicos.
 
-\subsubsection{LAME 64bits.}
-Conversor de \lsc{WAV} a \lsc{MP}{\footnotesize 3} en su \href{https://lame.sourceforge.io/download.php}{versión 3.100}. El formato para los archivos de música y sonido ambiente será el \lsc{MP}{\footnotesize 3} en estéreo, con un bitrate de 192 kbps a 44.1 khz. Muy importante: conservar los archivos \lsc{WAV}.
-
+\subsubsection{FFmpeg.}
+El formato para los archivos de música, sonido ambiente y efectos será el \lsc{OGG}. Para su conversión se utilizará \href{http://ffmpeg.org/}{FFmpeg} en su última versión estable (actualmente la 4.4) con el encoder \texttt{libvorvis}. Los \lsc{OGG} deberán ser de 192~kbps a 44~khz:
 \lstset{style=bash}
 \begin{lstlisting}
-$ lame -b 192 -m s ARCHIVO.wav ARCHIVO.mp3
-\end{lstlisting}
-
-\subsubsection{FFmpeg.}
-Se utilizará en su versión 4.4 para convertir archivos \lsc{WAV} a \lsc{OGG}.
-
-\begin{lstlisting}
-$ ffmpeg -i ARCHIVO.wav -acodec libvorbis ARCHIVO.ogg
+$ ffmpeg -i ARCHIVO.wav -acodec libvorbis -q:a 6 ARCHIVO.ogg
 \end{lstlisting}
