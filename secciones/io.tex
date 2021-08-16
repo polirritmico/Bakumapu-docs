@@ -46,14 +46,16 @@ Godot ofrece opciones especiales con respecto a los controles, por lo que la imp
 
 \subsubsection{Controles.}
 \begin{description}
-\item[Vibración:] El juego deberá soportar los sistema de rumble de los distintos controles y smartphones. Idealmente con las distintas posibilidades que ofrece la tecnología como intensidad, duración, dirección, etc.
+\item[Vibración:] El juego deberá soportar los sistema de vibración de los distintos controles y smartphones. Idealmente con las distintas posibilidades que ofrece la tecnología como intensidad, duración, dirección, patrones, etc.
+
+\item[Touchscreen:] Para los smartphones se deberá adoptar una interfaz específica que muestre los botones de control en la pantalla o al menos ofrecer una guía visual que indique el área de interacción además de los muchos ajustes a los menús, \lsc{HUD}, y el resto de arreglos necesarios para la interfaz.
 \end{description}
 
 \subsubsection{Video.}
-La proporción a soportar será de 16:9 en resoluciones de 720p y 1080p a 60~hz. En todos los sistemas la orientación será horizontal (landscape). El uso de tecnologías como HDR o mayores framerates deberá estudiarse, pero probablemente no sean necesarias.
+La proporción a soportar será de 16:9 en resoluciones de 720p y 1080p a 60~\lsc{FPS}. En todos los sistemas la orientación será horizontal (landscape). El uso de tecnologías como \lsc{HDR} o mayores framerates deberá estudiarse, pero probablemente no sean necesarias.
 
 \subsubsection{Audio.}
-La codificación para los archivos de música, sonido ambiente y efectos será en el formato \lsc{OGG} a 192~kbps y 44~khz\footnote{En comparación al \lsc{MP}{\footnotesize 3}, el \lsc{OGG} ocupa menos espacio y tiene mejor calidad a igual bitrate, a costa de un uso de \lsc{CPU} marginalmente superior (En una máquina moderna no debería presentar ningún problema).}. Todos los audios de música y de sonido ambiente deberán ser audios en estéreo, no obstante los efectos de sonido podrán ser monofónicos pues Godot ofrece un sistema de mezcla y posicionamiento interno que incluso permite mezclas en 5.1.
+La codificación para los archivos de música, sonido ambiente y efectos será en el formato \lsc{OGG} a 192~kbps y 44~khz\footnote{En comparación al \lsc{MP}{\tiny 3}, el \lsc{OGG} ocupa menos espacio y tiene mejor calidad a igual bitrate. El uso de \lsc{CPU} es marginalmente mayor en comparación, pero en una máquina moderna no debería suponer ningún problema.}. Todos los audios de música y de sonido ambiente deberán estar en estéreo, no obstante los efectos de sonido podrán ser monofónicos pues Godot ofrece un sistema de mezcla y posicionamiento interno que incluso permite mezclas en 5.1.
 
 En cualquier caso la implementación base será en estéreo; el soporte de mezclas de más canales deberá ser estudiado en base a un criterio técnico que considere la dificultad, el tiempo extra requerido, el impacto en el rendimiento del programa y retrocompatibilidad con equipos estéreo.
 
@@ -66,7 +68,7 @@ Estos archivos serán útiles para guardar los ajustes del usuario entre distint
 
 \item[Depurado:] Quizás sea conveniente generar un mecanismo de generación de reportes con información relevante para facilitar el soporte a los usuarios, o facilitar la comprensión de los distintos fallos que puedan ocurrir sobretodo por consideraciones especiales en determinados sistemas.
 
-\item[Varios:] Probablemente a medida que avance el desarrollo aparezcan nuevos archivos que sea conveniente generar. Por ejemplo logs, informes de estadísticas del gameplay o algún tipo de telemetría. A medida que estos archivos sean definidos deberían agregarse en este apartado.
+\item[Varios:] Probablemente a medida que avance el desarrollo aparezcan nuevos archivos que sea conveniente generar. Por ejemplo logs, informes de estadísticas del gameplay o algún tipo de telemetría\footnote{Importante: Cualquier tipo de data del usuario debería ser enviada bajo su conocimiento y consentimiento. Revisar implicaciones legales.}. A medida que estos archivos sean definidos deberían agregarse en este apartado.
 \end{description}
 
 \subsubsection{Internet.}
@@ -84,10 +86,8 @@ Estos son outputs de tecnologías específicas que no deberían implementarse ha
 
 \item[Leds del control:] Probablemente se deba implementar una funcionalidad que ajuste el color de los leds del control en base a los puntos de vida actuales del jugador (verde a rojo), y algunos flashes de daño y ataque.
 
-\item[Pantallas del control:] De momento no se considera a nivel de desarrollo implementar alguna funcionalidad con esta tecnología.
-
-\item[Touchscreen:] Para pantallas de smartphones se deberá adaptar la interfaz para acomodar los botones en pantalla o al menos tener una guía visual para el área de interacción del control en la pantalla.
+\item[Pantallas del control:] De momento no se considera implementar alguna funcionalidad con esta tecnología.
 \end{description}
 
 \subsection{DRM.}
-En la etapa final del desarrollo se deberá implementar un sistema \emph{no invasivo} de control de copia del juego. Quizás asociar un archivo que contenga alguna clave de cifrado única con un usuario o descarga en concreto. Los sistemas de distribución como Steam suelcen ofrecer sistemas al respecto.
+En la etapa final del desarrollo se deberá implementar un sistema \emph{no invasivo} de control de copia del juego. Quizás asociar un archivo que contenga alguna clave de cifrado única con un usuario o descarga en concreto. Los sistemas de distribución como Steam suelen ofrecer soluciones al respecto.
