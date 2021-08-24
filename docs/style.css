@@ -87,13 +87,20 @@
 /**************************************************************************/
 /******************************* GENERALES ********************************/
 /**************************************************************************/
-html, body, input, textarea, select, button {background-color: #23241f;}
+html, body, input, textarea, select, button {background: rgba(35, 36, 31, .9);}/*#23241f*/
 html, body, input, textarea, select, button {border-color: #736b5e; color: #ebebe5;}
 
-html {font-size: 2.25rem; scroll-behavior: smooth;}
+html {
+    font-size: 2.25rem;
+    scroll-behavior: smooth;
+
+    background-image: url("imágenes/fondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 body {
     font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
-    padding: 0.5em;
+    padding: 1.5em;
     margin: auto;
     max-width: 1280px;
 }

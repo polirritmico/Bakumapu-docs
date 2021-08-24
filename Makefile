@@ -50,6 +50,8 @@ html:
 #	@sed -i '/<a /s/.<!-- tex4ht:/<!-- tex4ht:/g' build/export/$(OUTFILE).html
 	@echo -en "Ok\nAgregando espacios a figuras: "
 	@sed -i '/<span class='\''id'\''>Figura/s/<\/span>/ <\/span>/' build/export/$(OUTFILE).html
+	@echo -en "OK\nAgregando fondo: "
+	@cp imágenes/fondo.jpg build/export/imágenes/
 
 	@echo -en "OK\nLimpiando archivos de compilación: "
 	@cd build && \
