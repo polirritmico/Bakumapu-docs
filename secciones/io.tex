@@ -1,16 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % IO
 
-\section{Input/Output.}\label{io:input-output}
+\section{Input/Output}\label{io:input-output}
 
 El sistema interactuará con el usuario a través de inputs y outputs específicos. A futuro dentro del desarrollo será preciso implementar algunas tecnologías en concreto. De momento solo es necesario mantener la flexibilidad del código y estudiar la propia implementación para decidir con mejores indicadores. Las decisiones al respecto serán de responsabilidad del equipo de diseño en mutuo acuerdo con el equipo técnico.
 
 En cualquier caso, a continuación se presenta un listado con elementos recurrentes y algunos que desde ya se deberían considerar. Es importante volver a recalcar que la implementación de varios de estos componentes debería ejecutarse en las etapas finales del desarrollo. Lo importante en este punto es considerar que existen y que el sistema debería estar preparado para una implementación lo más fluida posible.
 
-\subsection{Inputs.}
+\subsection{Inputs}
 Fundamentalmente son 3 elementos de entrada los que interactúan con el sistema a nivel de usuario: \textbf{Archivos} de carga, guardado y de configuración, \textbf{periféricos} como teclado, ratón, gamepad o touchscreen; e \textbf{internet} para actualizaciones y servicios en la nube como savegames y configuraciones. A nivel de desarrollo se mantienen los mismos inputs, y adicionalmente también incluiría archivos de stats, niveles, diálogos, sprites, audio, etc.
 
-\subsubsection{Archivos.}
+\subsubsection{Archivos}
 
 \begin{description}
 \item[Savegames:] Archivos de carga a checkpoints u otro sistema de puntos de control dentro del gameplay. Se debería definir exactamente que se carga y que no. Por ejemplo poder cargar el árbol de decisiones, stats, ítems, equipamiento, munición, etc., y no la posición de los \lsc{NPC}, ítems aleatorios, enemigos, entre otros.
@@ -18,7 +18,7 @@ Fundamentalmente son 3 elementos de entrada los que interactúan con el sistema 
 \item[Configuración:] Permite cargar la configuración de usuario en distintas instalaciones o dispositivos. Este archivo debería ser un texto plano.
 \end{description}
 
-\subsubsection{Controles.}
+\subsubsection{Controles}
 \begin{description}
 \item[Teclado:] Uno de los controles principales de juego. Lo importante es considerar la i18n para el mapeo y no utilizar teclas específicas de una layout en concreto.
 
@@ -35,26 +35,26 @@ Godot ofrece opciones especiales con respecto a los controles, por lo que la imp
 \item[Touchpad:] Similar al ratón. Investigar si es necesaria alguna consideración especial.
 \end{description}
 
-\subsubsection{Internet.}
+\subsubsection{Internet}
 \begin{description}
 \item[Archivos de usuario:] Lo principal a nivel de usuario es poder importar los ficheros de configuración y savegames desde algún sistema en la nube para facilitar la posibilidad de jugar una única campaña a través de diferentes dispositivos.
 
 \item[Actualización:] Automáticamente el sistema debería poder comprobar la versión instalada del juego, informar la disponibilidad de una nueva versión, descargar los archivos necesarios e iniciar el proceso de actualización automáticamente. Además se deberán implementar opciones para desactivar tanto la descarga como la instalación automática de las actualizaciones.
 \end{description}
 
-\subsection{Outputs.}
+\subsection{Outputs}
 
-\subsubsection{Controles.}
+\subsubsection{Controles}
 \begin{description}
 \item[Vibración:] El juego deberá soportar los sistema de vibración de los distintos controles y smartphones. Idealmente con las distintas posibilidades que ofrece la tecnología como intensidad, duración, dirección, patrones, etc.
 
 \item[Touchscreen:] Para los smartphones se deberá adoptar una interfaz específica que muestre los botones de control en la pantalla o al menos ofrecer una guía visual que indique el área de interacción además de los muchos ajustes a los menús, \lsc{HUD}, y el resto de arreglos necesarios para la interfaz.
 \end{description}
 
-\subsubsection{Video.}
+\subsubsection{Video}
 La proporción a soportar será de 16:9 en resoluciones de 720p y 1080p a 60~\lsc{FPS}. En todos los sistemas la orientación será horizontal (landscape). El uso de tecnologías como \lsc{HDR} o mayores framerates deberá estudiarse, pero probablemente no sean necesarias.
 
-\subsubsection{Audio.}
+\subsubsection{Audio}
 La codificación para los archivos de música, sonido ambiente y efectos será en el formato \lsc{OGG} a 192~kbps y 44~khz\footnote{En comparación al \lsc{MP}{\tiny 3}, el \lsc{OGG} ocupa menos espacio y tiene mejor calidad a igual bitrate. El uso de \lsc{CPU} es marginalmente mayor en comparación, pero en una máquina moderna no debería suponer ningún problema.}. Todos los audios de música y de sonido ambiente deberán estar en estéreo, no obstante los efectos de sonido podrán ser monofónicos pues Godot ofrece un sistema de mezcla y posicionamiento interno que incluso permite mezclas en 5.1.
 
 En cualquier caso la implementación base será en estéreo; el soporte de mezclas de más canales deberá ser estudiado en base a un criterio técnico que considere la dificultad, el tiempo extra requerido, el impacto en el rendimiento del programa y retrocompatibilidad con equipos estéreo.
@@ -71,14 +71,14 @@ Estos archivos serán útiles para guardar los ajustes del usuario entre distint
 \item[Varios:] Probablemente a medida que avance el desarrollo aparezcan nuevos archivos que sea conveniente generar. Por ejemplo logs, informes de estadísticas del gameplay o algún tipo de telemetría\footnote{Importante: Cualquier tipo de data del usuario debería ser enviada bajo su conocimiento y consentimiento. Revisar implicaciones legales.}. A medida que estos archivos sean definidos deberían agregarse en este apartado.
 \end{description}
 
-\subsubsection{Internet.}
+\subsubsection{Internet}
 \begin{description}
 \item[Archivos de usuario:] Lo principal a nivel de usuario es poder guardar los ficheros de configuración y savegames en algún sistema en la nube. Dependiendo del sistema utilizado se debería realizar una implementación acorde; por ejemplo Steam tiene \lsc{API} específicas al respecto. También se podría facilitar la posibilidad de subir pantallazos a distintas redes sociales.
 
 \item[Soporte:] El sistema debería ser capaz de generar y enviar reportes de error con información relevante del sistema y ejecución para debugging. Si es demasiado complejo que contengan el backtrace, al menos un informe que indique bajo que circunstancias se produjo el error o algo al respecto.
 \end{description}
 
-\subsubsection{Otros outputs.}
+\subsubsection{Otros outputs}
 Estos son outputs de tecnologías específicas que no deberían implementarse hasta las etapas finales del desarrollo (si es que se implementan).
 
 \begin{description}
@@ -89,5 +89,5 @@ Estos son outputs de tecnologías específicas que no deberían implementarse ha
 \item[Pantallas del control:] De momento no se considera implementar alguna funcionalidad con esta tecnología.
 \end{description}
 
-\subsection{DRM.}
+\subsection{DRM}
 En la etapa final del desarrollo se deberá implementar un sistema \emph{no invasivo} de control de copia del juego. Quizás asociar un archivo que contenga alguna clave de cifrado única con un usuario o descarga en concreto. Los sistemas de distribución como Steam suelen ofrecer soluciones al respecto.

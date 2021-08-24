@@ -29,7 +29,7 @@ html:
 	@cp -r secciones build/
 	@echo -n "Ajustando versión y subtítulo: "
 	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
-	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico.}}/{Diseño\ técnico.}/' <$(INFILE).tex >build/$(OUTFILE).tex
+	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico}}/{Diseño\ técnico}/' <$(INFILE).tex >build/$(OUTFILE).tex
 
 	@echo -e "OK\nIniciando conversión:\n.................................................."
 	@cd build && \
@@ -46,8 +46,8 @@ html:
 	@sed -i '/<span/s/ / /g' build/export/$(OUTFILE).html
 	@echo -en "OK\nAjustando links a target='_blank': "
 	@sed -i -r "s/<a href='http([^>]*)'>/<a href='http\1' target='_blank'>/" build/export/$(OUTFILE).html
-	@echo -en "OK\nQuitando puntos a referencias: "
-	@sed -i '/<a /s/.<!-- tex4ht:/<!-- tex4ht:/g' build/export/$(OUTFILE).html
+#	@echo -en "OK\nQuitando puntos a referencias: "
+#	@sed -i '/<a /s/.<!-- tex4ht:/<!-- tex4ht:/g' build/export/$(OUTFILE).html
 	@echo -en "Ok\nAgregando espacios a figuras: "
 	@sed -i '/<span class='\''id'\''>Figura/s/<\/span>/ <\/span>/' build/export/$(OUTFILE).html
 
