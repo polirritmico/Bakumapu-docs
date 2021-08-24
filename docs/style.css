@@ -87,7 +87,7 @@
 /**************************************************************************/
 /******************************* GENERALES ********************************/
 /**************************************************************************/
-html, body, input, textarea, select, button {background: rgba(35, 36, 31, .9);}/*#23241f*/
+html, body, input, textarea, select, button {background: rgba(35, 36, 31, .95);}/*#23241f*/
 html, body, input, textarea, select, button {border-color: #736b5e; color: #ebebe5;}
 
 html {
@@ -115,7 +115,13 @@ body {
   0% {transform: translateX(-100%);}
   100% {transform: translateX(0);}
 }
-body {animation: 1s ease-out 0s 1 slideInFromLeft;}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to   {opacity: 1;}
+}
+
+html {animation: 1.5s ease-out 0.2s 1 fadeIn;}
+body {animation: 1s ease-out 0.2s 1 slideInFromLeft;}
 
 /* Links y tablas */
 a {color: #fd9621; transition: 0.3s;}
