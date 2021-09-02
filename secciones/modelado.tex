@@ -6,7 +6,7 @@
 \subsection{Arquitectura}\label{modelado:arquitectura}
 La principal decisión de diseño es construir una arquitectura que permita modificarse a lo largo del desarrollo, para ello se dividirá la funcionalidad del software en Unidades Manager. Estas unidades además de delimitar scopes, irán construyendo en conjunto un lenguaje común de funciones y variables, acorde a la lógica de funcionamiento del sistema. Es decir, el nombre de las funciones y variables de cada manager tendrán coherencia externa generando idealmente una “narración” del funcionamiento del código.
 
-Por ejemplo \texttt{tyanka.gd} podría reimplementar funciones de PlayerMng:
+Por ejemplo, \texttt{tyanka.gd} podría reimplementar funciones de PlayerMng:
 \begin{lstlisting}
 @@ src/characters/player/tyanka.gd
 PlayerMng.storeItem(Tyanka.item_bag, GM.getRewardFromCurrentQuest(\
@@ -55,7 +55,7 @@ Este sistema de managers encapsulará las distintas áreas del juego en una seri
 		\hline
 		\rowcolor{colorthbg}\color{colorthtext}\textbf{SubManager} & \color{colorthtext}\textbf{Dimensión} \\
 		\hline
-		\color{colorthalt}LevelManager & \color{colortextotabla}Todo lo relativo a los niveles. Por ejemplo el conjunto de métodos que se encargan de toda la lógica relevante del nivel, una interfaz para que \lsc{GM} pueda conectar los distintos requerimientos del nivel, carga de locaciones, ubicación e inicio de subrutinas de Player y \lsc{NPC}, señales de áreas para CutsceneManager, \lsc{UI} específicas, etc. 
+		\color{colorthalt}LevelManager & \color{colortextotabla}Todo lo relativo a los niveles. Por ejemplo, el conjunto de métodos que se encargan de toda la lógica relevante del nivel, una interfaz para que \lsc{GM} pueda conectar los distintos requerimientos del nivel, carga de locaciones, ubicación e inicio de subrutinas de Player y \lsc{NPC}, señales de áreas para CutsceneManager, \lsc{UI} específicas, etc. 
 		Al igual que \lsc{GM} posiblemente tenderá a complejizarse por lo que es importante estar pendiente de posibles desacoplamientos. \\
 		\hline
 		\color{colorthalt}QuestManager & \color{colortextotabla}Todo lo relevante a las misiones: requerimientos, objetivos, experiencia, ítems, cutscenes, niveles, etc. \\
@@ -81,7 +81,7 @@ Este sistema de managers encapsulará las distintas áreas del juego en una seri
 \subsection{Funcionamiento del sistema de managers}\label{modelado:funcionamiento-de-managers}
 Al partir, lo primero es iniciar GameManager que instancia los submanagers correspondientes para mostrar las escenas de presentación y luego iniciar el menú principal del juego. La escena del menú principal enviará señales a \lsc{GM} para que se inicie una nueva partida, se cargue o continúe partidas guardadas, se ajusten opciones, se inicien actualizaciones o se cierre el juego.
 
-Independiente del sistema o mecanismo para iniciar o cargar una partida, será LevelManager el encargado de cargar los elementos del nivel como el mapa, los sprites, scripts de cutscenes, instanciar objetos, música, sonidos ambiente, quests, etc. Sin embargo será \lsc{GM} el encargado de conectar la lógica del nivel con los distintos managers correspondientes. Por ejemplo LevelManager carga la música, pero es \lsc{GM} quién conecta la señales de reproducción con MusicManager. Es decir \lsc{GM} funciona como una interfaz a través de la cual LevelManager interactúa con el resto del sistema.
+Independiente del sistema o mecanismo para iniciar o cargar una partida, será LevelManager el encargado de cargar los elementos del nivel como el mapa, los sprites, scripts de cutscenes, instanciar objetos, música, sonidos ambiente, quests, etc. Sin embargo será \lsc{GM} el encargado de conectar la lógica del nivel con los distintos managers correspondientes. Por ejemplo, LevelManager carga la música pero es \lsc{GM} quién conecta la señales de reproducción con MusicManager. Es decir \lsc{GM} funciona como una interfaz a través de la cual LevelManager interactúa con el resto del sistema.
 
 A continuación una idea general preliminar, o una guía para la implementación de los distintos managers:
 
@@ -118,9 +118,9 @@ A continuación una idea general preliminar, o una guía para la implementación
 \begin{description}
 	\item[Descripción:] Controla los momentos del juego en que el jugador no tiene el manejo directo de algún personaje o interfaz; se incluyen también los diálogos entre los \lsc{NPC} y/o el jugador. Cada cutscene corresponderá a un archivo de guión procesado por la herramienta del toolkit que la convertirá desde un formato de hoja de cálculo a un nodo dentro de Godot. Este nodo contendrá un listado de acciones secuenciales y la información requerida para su ejecución; será trabajo de CutsceneManager implementarlas y ejecutarlas. Las acciones van desde transiciones, fades a negro, diálogos, efectos atmosféricos, efectos de sonido, dar o quitar objetos; a mover \lsc{NPC}, agregar quests, cambios de estados de props, aparición de enemigos, etc.
 	
-	\item[Consideraciones:] Lo principal es implementar un sistema de scripts que interprete las distintas instrucciones para los guiones adjuntos. La idea es que todas estas instrucciones se puedan ajustar directamente desde el archivo (o Godot). Puede ser útil añadir un sistema de control para que se ejecuten solo scripts que tengan satisfechas todas sus dependencias. Por ejemplo indicar de antemano qué personajes u objetos deben estar implementados para que la cutscene funcione correctamente, y arrojar un error en caso de que falte algo. Dado que trabajará con texto, no olvidar hacer los ajustes necesarios para la l10n del contenido (ver el apartado \nameref{i18n:implementacion}).
+	\item[Consideraciones:] Lo principal es implementar un sistema de scripts que interprete las distintas instrucciones para los guiones adjuntos. La idea es que todas estas instrucciones se puedan ajustar directamente desde el archivo (o Godot). Puede ser útil añadir un sistema de control para que se ejecuten solo scripts que tengan satisfechas todas sus dependencias. Por ejemplo, indicar de antemano qué personajes u objetos deben estar implementados para que la cutscene funcione correctamente y arrojar un error en caso de que falte algo. Dado que trabajará con texto, no olvidar hacer los ajustes necesarios para la l10n del contenido (ver el apartado \nameref{i18n:implementacion}).
 	
-	\item[Funcionamiento:] Cada nodo cutscene podría adjuntarse a un área de activación/interacción, a una entrada de diálogo, al tomar o activar un ítem, según condiciones de tiempo, quest completadas, etc. Al activarse la cutscene, CutsceneManager va interpretando y ejecutando las distintas líneas del guión según corresponda. Por ejemplo para los diálogos, cada línea podría tener una primera columna para identificar al personaje hablante, luego la siguiente que señale qué sprite usar (quizás asociado a alguna emoción del tipo enojo, alegría, herido, etc.).
+	\item[Funcionamiento:] Cada nodo cutscene podría adjuntarse a un área de activación/interacción, a una entrada de diálogo, al tomar o activar un ítem, según condiciones de tiempo, quest completadas, etc. Al activarse la cutscene, CutsceneManager va interpretando y ejecutando las distintas líneas del guión según corresponda. Por ejemplo, para los diálogos cada línea podría tener una primera columna para identificar al personaje hablante, luego la siguiente que señale qué sprite usar (quizás asociado a alguna emoción del tipo enojo, alegría, herido, etc.).
 	
 	Como se comentó en QuestManager, quizás sea útil un objeto “Interactible” que se pueda anexar a objetos relevantes como a un área de interacción, un timer, una transición, una opción de diálogo, etc.
 \end{description}
@@ -171,8 +171,8 @@ A continuación una idea general preliminar, o una guía para la implementación
 \end{description}
 
 \subsubsection{Otros managers}\label{modelado:otros-managers}
-Como se ha comentado, quizás sea necesario agregar otros managers más específicos como por ejemplo InventoryManager, ItemsManager, DialogueManager, SaveManager, etc. Lo principal es mantener la coherencia del sistema y mantener un diseño limpio.
+Como se ha comentado, quizás sea necesario agregar otros managers más específicos como por ejemplo: InventoryManager, ItemsManager, DialogueManager, SaveManager, etc. Lo principal es mantener la coherencia del sistema y mantener un diseño limpio.
 
 \subsection{Otras consideraciones}\label{modelado:managers-otras-consideraciones}
 \subsubsection{Plantillas}
-Algunos managers utilizarán objetos estandarizados, por ejemplo QuestManager utilizará objetos Quest, CutscenesManager Cutscenes, AudioManager Music y Audio, LevelManager objetos Level, etc. La idea es generar plantillas de estos objetos para una expedita generación de contenido.
+Algunos managers utilizarán objetos estandarizados; por ejemplo, QuestManager utilizará objetos Quest, CutscenesManager Cutscenes, AudioManager Music y Audio, LevelManager objetos Level, etc. La idea es generar plantillas de estos objetos para una expedita generación de contenido.
