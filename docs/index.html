@@ -5,9 +5,9 @@
     <meta charset='utf-8'>
     <meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator'>
     <meta content='width=device-width,initial-scale=1' name='viewport'>
-    <link href='index.css' rel='stylesheet' type='text/css'>
+    <link href='index.css' type='text/css' rel='stylesheet'>
     <meta content='index.tex' name='src'>
-    <link href='style.css' rel='stylesheet' type='text/css'>
+    <link href='style.css' type='text/css' rel='stylesheet'>
   </head>
   <body>
     <!-- l. 28 -->
@@ -19,7 +19,7 @@
         <span id='textcolor1'><span class='ecrm-1440'>Diseño técnico</span></span>
       </p><!-- l. 39 -->
       <p class='noindent'>
-        Estudio <span class='ecrm-0700'>6</span><span class='ptmr8c-x-x-120'>/</span><span class='ecrm-0700'>8</span> - 2021.8.24_v0.0.1
+        Estudio <span class='ecrm-0700'>6</span><span class='ptmr8c-x-x-120'>/</span><span class='ecrm-0700'>8</span> - 2021.9.1_v0.0.1
       </p>
     </div>
     <h3 class='likesectionHead'>
@@ -508,7 +508,7 @@
     <p class='noindent'>
       El formato para los archivos de música, sonido ambiente y efectos será el <span class='eccc1095-'><span class='small-caps'>ogg</span></span>. Para su conversión se utilizará <a href='http://ffmpeg.org/' target='_blank'>FFmpeg</a> en su última versión estable (actualmente la 4.4) con el encoder <span class='ectt-1095'>libvorvis</span>. Los <span class='eccc1095-'><span class='small-caps'>ogg</span></span> deberán ser de 192 kbps a 44 khz:
     </p><!-- l. 112 -->
-    <div class='lstlisting' id='listing-1'>
+    <div id='listing-1' class='lstlisting'>
       <span class='label'><a id='x1-18001r1'></a></span><span id='textcolor2'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>ffmpeg -i ARCHIVO.wav -acodec libvorbis -q:a 6 ARCHIVO.ogg</span>
     </div>
     <p>
@@ -538,7 +538,7 @@
     <figure class='figure'>
       <a id='x1-21001r1'></a> <!-- l. 17 -->
       <p class='noindent'>
-        <img width='270' src='im%C3%A1genes/tdd.png' height='270' alt='PIC'>
+        <img alt='PIC' width='270' src='im%C3%A1genes/tdd.png' height='270'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 1: </span><span class='content'>Flujo de desarrollo TDD.</span>
@@ -607,7 +607,7 @@
     <figure class='figure'>
       <a id='x1-26001r2'></a> <!-- l. 14 -->
       <p class='noindent'>
-        <img width='360' src='im%C3%A1genes/tablero01.png' height='360' alt='PIC'>
+        <img alt='PIC' width='360' src='im%C3%A1genes/tablero01.png' height='360'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 2: </span><span class='content'>Tablero Kanban en Trello.</span>
@@ -633,7 +633,7 @@
       <figcaption class='caption'>
         <span class='id'>Figura 3: </span><span class='content'>Límites de trabajo en Trello.</span>
       </figcaption><!-- tex4ht:label?: x1-27001r3  -->
-      <img width='360' src='im%C3%A1genes/tablero02.png' height='360' alt='PIC'>
+      <img alt='PIC' width='360' src='im%C3%A1genes/tablero02.png' height='360'>
     </figure><!-- l. 32 -->
     <p class='indent'>
       Respetar los límites de cada columna, facilitará la distribución de trabajo en un modelo de entrega continua y nos permitirá tomar decisiones más acertadas y realistas al momento de la planificación. <a id='x1-27002r29'></a>
@@ -718,7 +718,7 @@
     <figure class='figure'>
       <a id='x1-32001r4'></a> <!-- l. 64 -->
       <p class='noindent'>
-        <img width='360' src='im%C3%A1genes/git.png' height='360' alt='PIC'>
+        <img alt='PIC' width='360' src='im%C3%A1genes/git.png' height='360'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 4: </span><span class='content'>Ramas en <span class='eccc1095-'><span class='small-caps'>git</span></span>.</span>
@@ -817,10 +817,10 @@
         <p class='noindent'>
           Configuración:
         </p><!-- l. 110 -->
-        <div class='lstlisting' id='listing-2'>
+        <div id='listing-2' class='lstlisting'>
           <span class='label'><a id='x1-36001r1'></a></span><span id='textcolor3'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>./config/git/config</span>
         </div><!-- l. 114 -->
-        <div class='lstlisting' id='listing-3'>
+        <div id='listing-3' class='lstlisting'>
           <span class='label'><a id='x1-36002r1'></a></span><span class='ectt-1000'>conf[user] </span><br>
           <span class='label'><a id='x1-36003r2'></a></span><span class='ectt-1000'>name = USUARIO </span><br>
           <span class='label'><a id='x1-36004r3'></a></span><span class='ectt-1000'>email = MAIL_REGISTRADO_EN_GITHUB </span><br>
@@ -841,7 +841,7 @@
         <p class='noindent'>
           Archivos y directorios ignorados por <span class='eccc1095-'><span class='small-caps'>git</span></span> (en .gitignore dentro de Bakumapu):
         </p><!-- l. 127 -->
-        <div class='lstlisting' id='listing-4'>
+        <div id='listing-4' class='lstlisting'>
           <span class='label'><a id='x1-36009r1'></a></span><span class='ectt-1000'># Godot-specific ignores </span><br>
           <span class='label'><a id='x1-36010r2'></a></span><span class='ectt-1000'>.import/ </span><br>
           <span class='label'><a id='x1-36011r3'></a></span><span class='ectt-1000'>export/ </span><br>
@@ -858,13 +858,13 @@
         <p class='noindent'>
           Evitar problemas de formato de archivo entre Windows (<span class='eccc1095-'><span class='small-caps'>crlf</span></span>) y el resto de sistemas:
         </p><!-- l. 142 -->
-        <div class='lstlisting' id='listing-5'>
+        <div id='listing-5' class='lstlisting'>
           <span class='label'><a id='x1-36018r1'></a></span><span id='textcolor4'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>.gitattributes:</span>
         </div><!-- l. 145 -->
         <p class='noindent'></p>
         <div class='minipage'>
           <!-- l. 146 -->
-          <div class='lstlisting' id='listing-6'>
+          <div id='listing-6' class='lstlisting'>
             <span class='label'><a id='x1-36019r1'></a></span><span class='ectt-1000'># Set the default behavior, in </span><br>
             <span class='label'><a id='x1-36020r2'></a></span><span class='ectt-1000'># case people </span><br>
             <span class='label'><a id='x1-36021r3'></a></span><span class='ectt-1000'># don’t have core.autocrlf set </span><br>
@@ -900,7 +900,7 @@
         </div>
         <div class='minipage'>
           <!-- l. 181 -->
-          <div class='lstlisting' id='listing-7'>
+          <div id='listing-7' class='lstlisting'>
             <span class='label'><a id='x1-36050r1'></a></span><span class='ectt-1000'># images </span><br>
             <span class='label'><a id='x1-36051r2'></a></span><span class='ectt-1000'> </span><br>
             <span class='label'><a id='x1-36052r3'></a></span><span class='ectt-1000'>*.png binary </span><br>
@@ -940,7 +940,7 @@
         <p class='noindent'>
           Clonar el repositorio en el espacio de trabajo local:
         </p><!-- l. 217 -->
-        <div class='lstlisting' id='listing-8'>
+        <div id='listing-8' class='lstlisting'>
           <span class='label'><a id='x1-36081r1'></a></span><span id='textcolor5'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git clone https://github.com/polirritmico/Bakumapu</span>
         </div>
       </li>
@@ -949,7 +949,7 @@
         <p class='noindent'>
           - Ver el estado de la rama actual:
         </p><!-- l. 222 -->
-        <div class='lstlisting' id='listing-9'>
+        <div id='listing-9' class='lstlisting'>
           <span class='label'><a id='x1-36082r1'></a></span><span id='textcolor6'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git status</span>
         </div>
       </li>
@@ -958,7 +958,7 @@
         <p class='noindent'>
           Cambiar a una rama (por ejemplo develop):
         </p><!-- l. 227 -->
-        <div class='lstlisting' id='listing-10'>
+        <div id='listing-10' class='lstlisting'>
           <span class='label'><a id='x1-36083r1'></a></span><span id='textcolor7'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git checkout develop</span>
         </div>
       </li>
@@ -967,7 +967,7 @@
         <p class='noindent'>
           Crear una nueva rama en base a la rama actual (ejemplo “ft-01”:
         </p><!-- l. 232 -->
-        <div class='lstlisting' id='listing-11'>
+        <div id='listing-11' class='lstlisting'>
           <span class='label'><a id='x1-36084r1'></a></span><span id='textcolor8'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git checkout -b ft-01</span>
         </div>
       </li>
@@ -976,7 +976,7 @@
         <p class='noindent'>
           Enviar la rama local a Github (origin es un alias de la ruta al repo en github):
         </p><!-- l. 237 -->
-        <div class='lstlisting' id='listing-12'>
+        <div id='listing-12' class='lstlisting'>
           <span class='label'><a id='x1-36085r1'></a></span><span id='textcolor9'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git push -u origin ft-01</span>
         </div>
       </li>
@@ -985,7 +985,7 @@
         <p class='noindent'>
           Agrega todos los cambios al área de pruebas:
         </p><!-- l. 242 -->
-        <div class='lstlisting' id='listing-13'>
+        <div id='listing-13' class='lstlisting'>
           <span class='label'><a id='x1-36086r1'></a></span><span id='textcolor10'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git add .</span>
         </div>
       </li>
@@ -994,7 +994,7 @@
         <p class='noindent'>
           Agrega comentarios al commit:
         </p><!-- l. 247 -->
-        <div class='lstlisting' id='listing-14'>
+        <div id='listing-14' class='lstlisting'>
           <span class='label'><a id='x1-36087r1'></a></span><span id='textcolor11'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git commit -m descripcion</span>
         </div>
       </li>
@@ -1003,7 +1003,7 @@
         <p class='noindent'>
           Envía los cambios locales de la rama actual a Github:
         </p><!-- l. 252 -->
-        <div class='lstlisting' id='listing-15'>
+        <div id='listing-15' class='lstlisting'>
           <span class='label'><a id='x1-36088r1'></a></span><span id='textcolor12'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git push</span>
         </div>
       </li>
@@ -1012,7 +1012,7 @@
         <p class='noindent'>
           Actualizar el repositorio local desde Github:
         </p><!-- l. 257 -->
-        <div class='lstlisting' id='listing-16'>
+        <div id='listing-16' class='lstlisting'>
           <span class='label'><a id='x1-36089r1'></a></span><span id='textcolor13'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git pull</span>
         </div>
       </li>
@@ -1092,10 +1092,10 @@
         <span class='ectt-1095'>Versión actual: v0.0.1.</span>
       </p>
     </div><!-- l. 301 -->
-    <div class='lstlisting' id='listing-17'>
+    <div id='listing-17' class='lstlisting'>
       <span class='label'><a id='x1-42001r1'></a></span><span class='ectt-1000'>Bakumapu-docs </span><span id='textcolor14'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>nano Makefile</span>
     </div><!-- l. 304 -->
-    <div class='lstlisting' id='listing-18'>
+    <div id='listing-18' class='lstlisting'>
       <span class='label'><a id='x1-42002r1'></a></span><span class='ectt-1000'>SHELL = /bin/sh </span><br>
       <span class='label'><a id='x1-42003r2'></a></span><span class='ectt-1000'># Actualizar con cada cambio </span><br>
       <span class='label'><a id='x1-42004r3'></a></span><span class='ectt-1000'>VERSION = 0.0.1</span>
@@ -1109,7 +1109,7 @@
     <p class='noindent'>
       Para exportar a <span class='eccc1095-'><span class='small-caps'>html</span></span> bastará con usar el paquete <span class='ecbx-1095'>make4ht</span> (utiliza pdflatex y htlatex). Las instrucciones de compilación están configuradas en el fichero Makefile, por lo que la conversión se automatiza con el comando:
     </p><!-- l. 312 -->
-    <div class='lstlisting' id='listing-19'>
+    <div id='listing-19' class='lstlisting'>
       <span class='label'><a id='x1-43001r1'></a></span><span class='ectt-1000'>Bakumapu-docs </span><span id='textcolor15'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>make html</span>
     </div><!-- l. 315 -->
     <p class='indent'>
@@ -1124,7 +1124,7 @@
     <p class='indent'>
       Para sincronizar el servidor además de los comandos <span class='eccc1095-'><span class='small-caps'>git</span></span> habituales, el archivo <span class='ecbx-1095'>Makefile</span> tiene las instrucciones para automatizar el proceso:
     </p><!-- l. 321 -->
-    <div class='lstlisting' id='listing-20'>
+    <div id='listing-20' class='lstlisting'>
       <span class='label'><a id='x1-44001r1'></a></span><span class='ectt-1000'>Bakumapu-docs </span><span id='textcolor16'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>make sync</span>
     </div>
     <p>
@@ -1163,7 +1163,7 @@
         <p class='noindent'>
           Operadores y variables separados por un espacio:
         </p><!-- l. 334 -->
-        <div class='lstlisting' id='listing-21'>
+        <div id='listing-21' class='lstlisting'>
           <span class='label'><a id='x1-45001r1'></a></span><span class='ectt-1000'>var ejemplo = Vector2(2, 5 + PI.get(2))</span>
         </div>
       </li>
@@ -1241,7 +1241,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Comentarios: <!-- l. 375 -->
-        <div class='lstlisting' id='listing-22'>
+        <div id='listing-22' class='lstlisting'>
           <span class='label'><a id='x1-48002r1'></a></span><span class='ectt-1000'>Esto es un texto normal. </span><br>
           <span class='label'><a id='x1-48003r2'></a></span><span class='ectt-1000'>% Esto es un comentario. No se compila. </span><br>
           <span class='label'><a id='x1-48004r3'></a></span><span class='ectt-1000'>Texto % Comentario.</span>
@@ -1252,7 +1252,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Escapar símbolos: <!-- l. 381 -->
-        <div class='lstlisting' id='listing-23'>
+        <div id='listing-23' class='lstlisting'>
           <span class='label'><a id='x1-48006r1'></a></span><span class='ectt-1000'>Necesito escribir una linea \_ y un porcentaje \% </span><br>
           <span class='label'><a id='x1-48007r2'></a></span><span class='ectt-1000'>El signo \ funciona con este comando: \textbackslash.</span>
         </div>
@@ -1262,7 +1262,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Secciones (en orden descendente): <!-- l. 386 -->
-        <div class='lstlisting' id='listing-24'>
+        <div id='listing-24' class='lstlisting'>
           <span class='label'><a id='x1-48009r1'></a></span><span class='ectt-1000'>\section{Titulo de seccion} </span><br>
           <span class='label'><a id='x1-48010r2'></a></span><span class='ectt-1000'>\subsection{Titulo de subseccion} </span><br>
           <span class='label'><a id='x1-48011r3'></a></span><span class='ectt-1000'>\subsection*{Titulo.} % Asterisco para no ennumerar. </span><br>
@@ -1275,7 +1275,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Ajustes tipográficos: <!-- l. 394 -->
-        <div class='lstlisting' id='listing-25'>
+        <div id='listing-25' class='lstlisting'>
           <span class='label'><a id='x1-48015r1'></a></span><span class='ectt-1000'>Negrita: Texto a \textbf{negrita}. </span><br>
           <span class='label'><a id='x1-48016r2'></a></span><span class='ectt-1000'>Enfasis: Texto a \emph{enfasis} </span><br>
           <span class='label'><a id='x1-48017r3'></a></span><span class='ectt-1000'>Cursiva: Texto a \textit{cursiva}. </span><br>
@@ -1293,7 +1293,7 @@
           </dt>
           <dd class='enumerate-enumitem'>
             Alineación: <!-- l. 404 -->
-            <div class='lstlisting' id='listing-26'>
+            <div id='listing-26' class='lstlisting'>
               <span class='label'><a id='x1-48021r1'></a></span><span class='ectt-1000'>\begin{centering} % alternativas: flushleft, flushright </span><br>
               <span class='label'><a id='x1-48022r2'></a></span><span class='ectt-1000'>Texto alineado en base al valor en begin. </span><br>
               <span class='label'><a id='x1-48023r3'></a></span><span class='ectt-1000'>\end{centering}</span>
@@ -1304,7 +1304,7 @@
           </dt>
           <dd class='enumerate-enumitem'>
             Saltos de línea: <!-- l. 411 -->
-            <div class='lstlisting' id='listing-27'>
+            <div id='listing-27' class='lstlisting'>
               <span class='label'><a id='x1-48025r1'></a></span><span class='ectt-1000'>Los saltos necesitan este comando\\ </span><br>
               <span class='label'><a id='x1-48026r2'></a></span><span class='ectt-1000'>sino se encadenan en una misma linea. </span><br>
               <span class='label'><a id='x1-48027r3'></a></span><span class='ectt-1000'> </span><br>
@@ -1316,7 +1316,7 @@
           </dt>
           <dd class='enumerate-enumitem'>
             Quitar sangría: <!-- l. 419 -->
-            <div class='lstlisting' id='listing-28'>
+            <div id='listing-28' class='lstlisting'>
               <span class='label'><a id='x1-48030r1'></a></span><span class='ectt-1000'>\noindent Primera linea sin sangria.</span>
             </div>
           </dd>
@@ -1327,7 +1327,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Referencias: <!-- l. 425 -->
-        <div class='lstlisting' id='listing-29'>
+        <div id='listing-29' class='lstlisting'>
           <span class='label'><a id='x1-48032r1'></a></span><span class='ectt-1000'>% Lo que queremos referenciar: </span><br>
           <span class='label'><a id='x1-48033r2'></a></span><span class='ectt-1000'>\subsection{Titulo subseccion} </span><br>
           <span class='label'><a id='x1-48034r3'></a></span><span class='ectt-1000'>% Le agregamos label. Ojala usar {nombre_archivo:descripcion} </span><br>
@@ -1344,7 +1344,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Listas: <!-- l. 438 -->
-        <div class='lstlisting' id='listing-30'>
+        <div id='listing-30' class='lstlisting'>
           <span class='label'><a id='x1-48042r1'></a></span><span class='ectt-1000'>\begin{enumerate} % Para listas no numeradas usar itemize. </span><br>
           <span class='label'><a id='x1-48043r2'></a></span><span class='ectt-1000'>   \item Primer item numerado. </span><br>
           <span class='label'><a id='x1-48044r3'></a></span><span class='ectt-1000'>   \item Segundo item numerado. </span><br>
@@ -1356,7 +1356,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Imágenes: <!-- l. 446 -->
-        <div class='lstlisting' id='listing-31'>
+        <div id='listing-31' class='lstlisting'>
           <span class='label'><a id='x1-48047r1'></a></span><span class='ectt-1000'>\begin{figure}[h] % h de here, t top, b bottom o nada. </span><br>
           <span class='label'><a id='x1-48048r2'></a></span><span class='ectt-1000'>   \centering </span><br>
           <span class='label'><a id='x1-48049r3'></a></span><span class='ectt-1000'>   \includegraphics[]{ruta/al/archivo} </span><br>
@@ -1370,7 +1370,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Código: <!-- l. 457 -->
-        <div class='lstlisting' id='listing-32'>
+        <div id='listing-32' class='lstlisting'>
           <span class='label'><a id='x1-48054r1'></a></span><span class='ectt-1000'>\begin{lstlisting*} % sin el asterisco </span><br>
           <span class='label'><a id='x1-48055r2'></a></span><span class='ectt-1000'>% Dentro de lstlisting solo ASCII basico sin tildes ni enies </span><br>
           <span class='label'><a id='x1-48056r3'></a></span><span class='ectt-1000'>var test = Clase.llamado(ejemplo.datos, objeto.pos()) </span><br>
@@ -1389,7 +1389,7 @@
           </dt>
           <dd class='enumerate-enumitem'>
             Mover a la siguiente página si no hay espacio disponible: <!-- l. 468 -->
-            <div class='lstlisting' id='listing-33'>
+            <div id='listing-33' class='lstlisting'>
               <span class='label'><a id='x1-48061r1'></a></span><span class='ectt-1000'>% el 2\baselineskip es para obtener el alto de 2 lineas </span><br>
               <span class='label'><a id='x1-48062r2'></a></span><span class='ectt-1000'>\Needspace{2\baselineskip}</span>
             </div>
@@ -1399,7 +1399,7 @@
           </dt>
           <dd class='enumerate-enumitem'>
             Salto de página: <!-- l. 474 -->
-            <div class='lstlisting' id='listing-34'>
+            <div id='listing-34' class='lstlisting'>
               <span class='label'><a id='x1-48064r1'></a></span><span class='ectt-1000'>\pagebreak</span>
             </div>
           </dd>
@@ -1408,7 +1408,7 @@
           </dt>
           <dd class='enumerate-enumitem'>
             Espacios indivisible (non-breaking space): <!-- l. 479 -->
-            <div class='lstlisting' id='listing-35'>
+            <div id='listing-35' class='lstlisting'>
               <span class='label'><a id='x1-48066r1'></a></span><span class='ectt-1000'>60~hz, 50~km, siglo~\lsc{XVI}.</span>
             </div>
           </dd>
@@ -1435,7 +1435,7 @@
         1.
       </dt>
       <dd class='enumerate-enumitem'>
-        <span class='ecbx-1095'>Diseño y desarrollo que facilite la localización o la</span> <span class='ecbx-1095'>distribución internacional:</span> Por ejemplo usar el sistema Unicode para la codificación de caracteres, usar tipografías compatibles, controlar la concatenación de cadenas y evitar que el código dependa de strings pertenecientes a la <span class='eccc1095-'><span class='small-caps'>ui</span></span>.
+        <span class='ecbx-1095'>Diseño y desarrollo que facilite la localización o la</span> <span class='ecbx-1095'>distribución internacional:</span> Por ejemplo, usar el sistema Unicode para la codificación de caracteres, usar tipografías compatibles, controlar la concatenación de cadenas y evitar que el código dependa de strings pertenecientes a la <span class='eccc1095-'><span class='small-caps'>ui</span></span>.
       </dd>
       <dt class='enumerate-enumitem'>
         2.
@@ -1548,7 +1548,7 @@
     <figure class='figure'>
       <a id='x1-56001r5'></a> <!-- l. 58 -->
       <p class='noindent'>
-        <img alt='PIC' src='im%C3%A1genes/arbol_i18n.png'>
+        <img src='im%C3%A1genes/arbol_i18n.png' alt='PIC'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 5: </span><span class='content'>Organización de archivos de i18n.</span>
@@ -1647,9 +1647,15 @@
       <dd class='enumerate-enumitem'>
         <a href='https://stackoverflow.com/a/15343103/14377142' target='_blank'>Gettext or Database translation?</a>
       </dd>
+      <dt class='enumerate-enumitem'>
+        4.
+      </dt>
+      <dd class='enumerate-enumitem'>
+        <a href='https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/' target='_blank'>The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets</a>
+      </dd>
     </dl>
     <p>
-      <a id='x1-60004r53'></a>
+      <a id='x1-60005r53'></a>
     </p>
     <h3 class='sectionHead'>
       <span class='titlemark'>5.</span> <a id='x1-610005'></a>Modelado del software
@@ -1664,14 +1670,14 @@
       La principal decisión de diseño es construir una arquitectura que permita modificarse a lo largo del desarrollo, para ello se dividirá la funcionalidad del software en Unidades Manager. Estas unidades además de delimitar scopes, irán construyendo en conjunto un lenguaje común de funciones y variables, acorde a la lógica de funcionamiento del sistema. Es decir, el nombre de las funciones y variables de cada manager tendrán coherencia externa generando idealmente una “narración” del funcionamiento del código.
     </p><!-- l. 9 -->
     <p class='indent'>
-      Por ejemplo <span class='ectt-1095'>tyanka.gd</span> podría reimplementar funciones de PlayerMng:
+      Por ejemplo, <span class='ectt-1095'>tyanka.gd</span> podría reimplementar funciones de PlayerMng:
     </p><!-- l. 10 -->
-    <div class='lstlisting' id='listing-36'>
+    <div id='listing-36' class='lstlisting'>
       <span class='label'><a id='x1-62001r1'></a></span><span class='ectt-1000'>@@ src/characters/player/tyanka.gd </span><br>
       <span class='label'><a id='x1-62002r2'></a></span><span class='ectt-1000'>PlayerMng.storeItem(Tyanka.item_bag, GM.getRewardFromCurrentQuest(\ </span><br>
       <span class='label'><a id='x1-62003r3'></a></span><span class='ectt-1000'>                 PlayerMng.currentQuest.getPath()))</span>
     </div><!-- l. 15 -->
-    <div class='lstlisting' id='listing-37'>
+    <div id='listing-37' class='lstlisting'>
       <span class='label'><a id='x1-62004r1'></a></span><span class='ectt-1000'>@@ src/game/game_manager.gd </span><br>
       <span class='label'><a id='x1-62005r2'></a></span><span class='ectt-1000'>def getRewardFromCurrentQuest(path) -&gt; item: </span><br>
       <span class='label'><a id='x1-62006r3'></a></span><span class='ectt-1000'>   quest = QuestMng.getQuestFromPath(path) </span><br>
@@ -1686,7 +1692,7 @@
     <figure class='figure'>
       <a id='x1-62008r6'></a> <!-- l. 28 -->
       <p class='noindent'>
-        <img width='216' src='im%C3%A1genes/arquitectura.png' height='216' alt='PIC'>
+        <img alt='PIC' width='216' src='im%C3%A1genes/arquitectura.png' height='216'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 6: </span><span class='content'>Ejemplo de sistema de managers ajustable.</span>
@@ -1716,7 +1722,7 @@
         <a id='x1-64001r1'></a>
       </p><!-- l. 51 -->
       <div class='longtable'>
-        <table class='longtable' id='TBL-1'>
+        <table id='TBL-1' class='longtable'>
           <colgroup id='TBL-1-1g'>
             <col id='TBL-1-1'>
           </colgroup>
@@ -1724,109 +1730,109 @@
             <col id='TBL-1-2'>
           </colgroup>
           <tr style='vertical-align:baseline;' id='TBL-1-1-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-1-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-1-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-2-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-2-1'></td>
+            <td id='TBL-1-2-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-3-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-3-1'>
+            <td id='TBL-1-3-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 51 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-4-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-4-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-4-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-5-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-5-1'></td>
+            <td id='TBL-1-5-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-6-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-6-1'>
+            <td id='TBL-1-6-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 51 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-7-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-7-1'>
+            <td id='TBL-1-7-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 51 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-8-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-8-1'></td>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-8-2'></td>
+            <td id='TBL-1-8-1' style='white-space:normal; text-align:left;' class='td11'></td>
+            <td id='TBL-1-8-2' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-9-'>
-            <td style='white-space:nowrap; text-align:left;' colspan='2' class='td11' id='TBL-1-9-1'>
+            <td style='white-space:nowrap; text-align:left;' class='td11' id='TBL-1-9-1' colspan='2'>
               <div style='white-space:nowrap; text-align:left;' class='multicolumn'>
                 <span class='ecbx-1095'>GameManager</span>
               </div>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-10-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-10-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-10-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-11-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-11-1'></td>
+            <td id='TBL-1-11-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-12-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-12-1'>
+            <td id='TBL-1-12-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 54 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-13-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-13-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-13-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-14-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-14-1'></td>
+            <td id='TBL-1-14-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-15-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-15-1'>
+            <td id='TBL-1-15-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 54 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-16-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-16-1'>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-16-1' colspan='2'>
               <div style='white-space:normal; text-align:left;' class='multicolumn'>
                 Manager principal a nivel de ejecución cuya función además de iniciar el juego será la de instanciar al resto de SubManagers. <span class='eccc1095-'><span class='small-caps'>gm</span></span> tendrá una clara tendencia a crecer en complejidad por lo que es muy importante que opere delegando funciones más que implementándolas. En esta misma línea si la interacción entre managers termina siendo demasiado compleja entonces será un síntoma de que es necesario un rediseño en cuanto a los in/outs de los submanagers implicados.
               </div>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-17-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-17-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-17-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-18-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-18-1'></td>
+            <td id='TBL-1-18-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-19-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-19-1'>
+            <td id='TBL-1-19-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 56 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-20-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-20-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-20-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-21-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-21-1'></td>
+            <td id='TBL-1-21-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-22-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-22-1'>
+            <td id='TBL-1-22-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 56 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-23-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-23-1'>
+            <td id='TBL-1-23-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 56 -->
               <p class='noindent'>
                 <span class='ecbx-1095'>SubManager</span>
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-23-2'>
+            <td id='TBL-1-23-2' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 56 -->
               <p class='noindent'>
                 <span class='ecbx-1095'>Dimensión</span>
@@ -1834,75 +1840,75 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-24-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-24-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-24-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-25-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-25-1'></td>
+            <td id='TBL-1-25-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-26-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-26-1'>
+            <td id='TBL-1-26-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 58 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-27-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-27-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-27-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-28-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-28-1'></td>
+            <td id='TBL-1-28-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-29-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-29-1'>
+            <td id='TBL-1-29-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 58 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-30-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-30-1'>
+            <td id='TBL-1-30-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 58 -->
               <p class='noindent'>
                 LevelManager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-30-2'>
+            <td id='TBL-1-30-2' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 58 -->
               <p class='noindent'>
-                Todo lo relativo a los niveles. Por ejemplo el conjunto de métodos que se encargan de toda la lógica relevante del nivel, una interfaz para que <span class='eccc1095-'><span class='small-caps'>gm</span></span> pueda conectar los distintos requerimientos del nivel, carga de locaciones, ubicación e inicio de subrutinas de Player y <span class='eccc1095-'><span class='small-caps'>npc</span></span>, señales de áreas para CutsceneManager, <span class='eccc1095-'><span class='small-caps'>ui</span></span> específicas, etc. Al igual que <span class='eccc1095-'><span class='small-caps'>gm</span></span> posiblemente tenderá a complejizarse por lo que es importante estar pendiente de posibles desacoplamientos.
+                Todo lo relativo a los niveles. Por ejemplo, el conjunto de métodos que se encargan de toda la lógica relevante del nivel, una interfaz para que <span class='eccc1095-'><span class='small-caps'>gm</span></span> pueda conectar los distintos requerimientos del nivel, carga de locaciones, ubicación e inicio de subrutinas de Player y <span class='eccc1095-'><span class='small-caps'>npc</span></span>, señales de áreas para CutsceneManager, <span class='eccc1095-'><span class='small-caps'>ui</span></span> específicas, etc. Al igual que <span class='eccc1095-'><span class='small-caps'>gm</span></span> posiblemente tenderá a complejizarse por lo que es importante estar pendiente de posibles desacoplamientos.
               </p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-31-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-31-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-31-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-32-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-32-1'></td>
+            <td id='TBL-1-32-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-33-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-33-1'>
+            <td id='TBL-1-33-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 61 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-34-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-34-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-34-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-35-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-35-1'></td>
+            <td id='TBL-1-35-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-36-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-36-1'>
+            <td id='TBL-1-36-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 61 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-37-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-37-1'>
+            <td id='TBL-1-37-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 61 -->
               <p class='noindent'>
                 QuestManager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-37-2'>
+            <td id='TBL-1-37-2' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 61 -->
               <p class='noindent'>
                 Todo lo relevante a las misiones: requerimientos, objetivos, experiencia, ítems, cutscenes, niveles, etc.
@@ -1910,38 +1916,38 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-38-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-38-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-38-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-39-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-39-1'></td>
+            <td id='TBL-1-39-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-40-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-40-1'>
+            <td id='TBL-1-40-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 63 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-41-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-41-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-41-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-42-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-42-1'></td>
+            <td id='TBL-1-42-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-43-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-43-1'>
+            <td id='TBL-1-43-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 63 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-44-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-44-1'>
+            <td id='TBL-1-44-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 63 -->
               <p class='noindent'>
                 Cutscene<br class='newline'>
                 Manager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-44-2'>
+            <td id='TBL-1-44-2' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 63 -->
               <p class='noindent'>
                 Todo lo relativo a los momentos en el que el jugador no está interactuando con la <span class='eccc1095-'><span class='small-caps'>ui</span></span> ni tiene control del personaje, es decir animaciones dentro y fuera del gameplay. Incluye diálogos pero estudiar si es conveniente una separación.
@@ -1949,37 +1955,37 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-45-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-45-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-45-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-46-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-46-1'></td>
+            <td id='TBL-1-46-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-47-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-47-1'>
+            <td id='TBL-1-47-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 65 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-48-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-48-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-48-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-49-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-49-1'></td>
+            <td id='TBL-1-49-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-50-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-50-1'>
+            <td id='TBL-1-50-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 65 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-51-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-51-1'>
+            <td id='TBL-1-51-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 65 -->
               <p class='noindent'>
                 PlayerManager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-51-2'>
+            <td id='TBL-1-51-2' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 65 -->
               <p class='noindent'>
                 Todo lo relativo al jugador: estados, ítems, exp, estadísticas, estados de misiones, controles, path del árbol de decisiones, etc. Implementar una state machine.
@@ -1987,37 +1993,37 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-52-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-52-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-52-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-53-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-53-1'></td>
+            <td id='TBL-1-53-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-54-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-54-1'>
+            <td id='TBL-1-54-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 67 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-55-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-55-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-55-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-56-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-56-1'></td>
+            <td id='TBL-1-56-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-57-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-57-1'>
+            <td id='TBL-1-57-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 67 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-58-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-58-1'>
+            <td id='TBL-1-58-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 67 -->
               <p class='noindent'>
                 IAManager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-58-2'>
+            <td id='TBL-1-58-2' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 67 -->
               <p class='noindent'>
                 Todo lo referente a IA: Rutas de <span class='eccc1095-'><span class='small-caps'>npc</span></span>, combate de <span class='eccc1095-'><span class='small-caps'>npc</span></span> aliados y enemigos y si compete, la generación procedural de niveles.
@@ -2025,37 +2031,37 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-59-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-59-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-59-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-60-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-60-1'></td>
+            <td id='TBL-1-60-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-61-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-61-1'>
+            <td id='TBL-1-61-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 69 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-62-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-62-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-62-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-63-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-63-1'></td>
+            <td id='TBL-1-63-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-64-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-64-1'>
+            <td id='TBL-1-64-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 69 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-65-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-65-1'>
+            <td id='TBL-1-65-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 69 -->
               <p class='noindent'>
                 UIManager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-65-2'>
+            <td id='TBL-1-65-2' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 69 -->
               <p class='noindent'>
                 Todo lo relativo a la interfaz gráfica: Barras de vida, visualización del mapa, menús, inventario, árbol de habilidades e interfaz de diálogo.
@@ -2063,37 +2069,37 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-66-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-66-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-66-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-67-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-67-1'></td>
+            <td id='TBL-1-67-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-68-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-68-1'>
+            <td id='TBL-1-68-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 71 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-69-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-69-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-69-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-70-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-70-1'></td>
+            <td id='TBL-1-70-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-71-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-71-1'>
+            <td id='TBL-1-71-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 71 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-72-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-72-1'>
+            <td id='TBL-1-72-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 71 -->
               <p class='noindent'>
                 AudioManager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-72-2'>
+            <td id='TBL-1-72-2' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 71 -->
               <p class='noindent'>
                 Control de la música, transiciones, volumen, etc.; y los sonidos de los distintos objetos, su paneo, volumen, efectos, etc.
@@ -2101,38 +2107,38 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-73-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-73-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-73-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-74-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-74-1'></td>
+            <td id='TBL-1-74-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-75-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-75-1'>
+            <td id='TBL-1-75-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 73 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-76-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-76-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-76-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-77-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-77-1'></td>
+            <td id='TBL-1-77-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-78-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-78-1'>
+            <td id='TBL-1-78-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 73 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-79-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-79-1'>
+            <td id='TBL-1-79-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 73 -->
               <p class='noindent'>
                 Debug<br class='newline'>
                 Manager
               </p>
             </td>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-79-2'>
+            <td id='TBL-1-79-2' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 73 -->
               <p class='noindent'>
                 Interfaz de debug que obtenga información relevante para el desarrollo sobre el funcionamiento de los distintos managers y objetos instanciados.
@@ -2140,49 +2146,49 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-80-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-80-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-80-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-81-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-81-1'></td>
+            <td id='TBL-1-81-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-82-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-82-1'>
+            <td id='TBL-1-82-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 75 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-83-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-83-1'></td>
+            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-83-1' colspan='2'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-84-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-84-1'></td>
+            <td id='TBL-1-84-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-85-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-85-1'>
+            <td id='TBL-1-85-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 75 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-86-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-86-1'></td>
+            <td id='TBL-1-86-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-87-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-87-1'></td>
+            <td id='TBL-1-87-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-88-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-88-1'>
+            <td id='TBL-1-88-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 75 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-89-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-89-1'>
+            <td id='TBL-1-89-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 75 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-90-'>
-            <td style='white-space:normal; text-align:left;' class='td11' id='TBL-1-90-1'>
+            <td id='TBL-1-90-1' style='white-space:normal; text-align:left;' class='td11'>
               <!-- l. 75 -->
               <p class='noindent'></p>
             </td>
@@ -2209,7 +2215,7 @@
       Al partir, lo primero es iniciar GameManager que instancia los submanagers correspondientes para mostrar las escenas de presentación y luego iniciar el menú principal del juego. La escena del menú principal enviará señales a <span class='eccc1095-'><span class='small-caps'>gm</span></span> para que se inicie una nueva partida, se cargue o continúe partidas guardadas, se ajusten opciones, se inicien actualizaciones o se cierre el juego.
     </p><!-- l. 84 -->
     <p class='indent'>
-      Independiente del sistema o mecanismo para iniciar o cargar una partida, será LevelManager el encargado de cargar los elementos del nivel como el mapa, los sprites, scripts de cutscenes, instanciar objetos, música, sonidos ambiente, quests, etc. Sin embargo será <span class='eccc1095-'><span class='small-caps'>gm</span></span> el encargado de conectar la lógica del nivel con los distintos managers correspondientes. Por ejemplo LevelManager carga la música, pero es <span class='eccc1095-'><span class='small-caps'>gm</span></span> quién conecta la señales de reproducción con MusicManager. Es decir <span class='eccc1095-'><span class='small-caps'>gm</span></span> funciona como una interfaz a través de la cual LevelManager interactúa con el resto del sistema.
+      Independiente del sistema o mecanismo para iniciar o cargar una partida, será LevelManager el encargado de cargar los elementos del nivel como el mapa, los sprites, scripts de cutscenes, instanciar objetos, música, sonidos ambiente, quests, etc. Sin embargo será <span class='eccc1095-'><span class='small-caps'>gm</span></span> el encargado de conectar la lógica del nivel con los distintos managers correspondientes. Por ejemplo, LevelManager carga la música pero es <span class='eccc1095-'><span class='small-caps'>gm</span></span> quién conecta la señales de reproducción con MusicManager. Es decir <span class='eccc1095-'><span class='small-caps'>gm</span></span> funciona como una interfaz a través de la cual LevelManager interactúa con el resto del sistema.
     </p><!-- l. 86 -->
     <p class='indent'>
       A continuación una idea general preliminar, o una guía para la implementación de los distintos managers: <a id='x1-66001r65'></a>
@@ -2360,7 +2366,7 @@
       <dd class='description'>
         <!-- l. 121 -->
         <p class='noindent'>
-          Lo principal es implementar un sistema de scripts que interprete las distintas instrucciones para los guiones adjuntos. La idea es que todas estas instrucciones se puedan ajustar directamente desde el archivo (o Godot). Puede ser útil añadir un sistema de control para que se ejecuten solo scripts que tengan satisfechas todas sus dependencias. Por ejemplo indicar de antemano qué personajes u objetos deben estar implementados para que la cutscene funcione correctamente, y arrojar un error en caso de que falte algo. Dado que trabajará con texto, no olvidar hacer los ajustes necesarios para la l10n del contenido (ver el apartado <a href='#x1-520003'>Implementación<!-- tex4ht:ref: i18n:implementacion  --></a>).
+          Lo principal es implementar un sistema de scripts que interprete las distintas instrucciones para los guiones adjuntos. La idea es que todas estas instrucciones se puedan ajustar directamente desde el archivo (o Godot). Puede ser útil añadir un sistema de control para que se ejecuten solo scripts que tengan satisfechas todas sus dependencias. Por ejemplo, indicar de antemano qué personajes u objetos deben estar implementados para que la cutscene funcione correctamente y arrojar un error en caso de que falte algo. Dado que trabajará con texto, no olvidar hacer los ajustes necesarios para la l10n del contenido (ver el apartado <a href='#x1-520003'>Implementación<!-- tex4ht:ref: i18n:implementacion  --></a>).
         </p>
       </dd>
       <dt class='description'>
@@ -2371,7 +2377,7 @@
       <dd class='description'>
         <!-- l. 123 -->
         <p class='noindent'>
-          Cada nodo cutscene podría adjuntarse a un área de activación/interacción, a una entrada de diálogo, al tomar o activar un ítem, según condiciones de tiempo, quest completadas, etc. Al activarse la cutscene, CutsceneManager va interpretando y ejecutando las distintas líneas del guión según corresponda. Por ejemplo para los diálogos, cada línea podría tener una primera columna para identificar al personaje hablante, luego la siguiente que señale qué sprite usar (quizás asociado a alguna emoción del tipo enojo, alegría, herido, etc.).
+          Cada nodo cutscene podría adjuntarse a un área de activación/interacción, a una entrada de diálogo, al tomar o activar un ítem, según condiciones de tiempo, quest completadas, etc. Al activarse la cutscene, CutsceneManager va interpretando y ejecutando las distintas líneas del guión según corresponda. Por ejemplo, para los diálogos cada línea podría tener una primera columna para identificar al personaje hablante, luego la siguiente que señale qué sprite usar (quizás asociado a alguna emoción del tipo enojo, alegría, herido, etc.).
         </p><!-- l. 125 -->
         <p class='noindent'>
           Como se comentó en QuestManager, quizás sea útil un objeto “Interactible” que se pueda anexar a objetos relevantes como a un área de interacción, un timer, una transición, una opción de diálogo, etc.
@@ -2590,7 +2596,7 @@
       <span class='titlemark'>5.4.10.</span> <a id='x1-7600010'></a>Otros managers
     </h5><!-- l. 174 -->
     <p class='noindent'>
-      Como se ha comentado, quizás sea necesario agregar otros managers más específicos como por ejemplo InventoryManager, ItemsManager, DialogueManager, SaveManager, etc. Lo principal es mantener la coherencia del sistema y mantener un diseño limpio. <a id='x1-76001r72'></a>
+      Como se ha comentado, quizás sea necesario agregar otros managers más específicos como por ejemplo: InventoryManager, ItemsManager, DialogueManager, SaveManager, etc. Lo principal es mantener la coherencia del sistema y mantener un diseño limpio. <a id='x1-76001r72'></a>
     </p>
     <h4 class='subsectionHead'>
       <span class='titlemark'>5.5.</span> <a id='x1-770005'></a>Otras consideraciones
@@ -2602,47 +2608,50 @@
       <span class='titlemark'>5.5.1.</span> <a id='x1-780001'></a>Plantillas
     </h5><!-- l. 178 -->
     <p class='noindent'>
-      Algunos managers utilizarán objetos estandarizados, por ejemplo QuestManager utilizará objetos Quest, CutscenesManager Cutscenes, AudioManager Music y Audio, LevelManager objetos Level, etc. La idea es generar plantillas de estos objetos para una expedita generación de contenido. <a id='x1-78001r66'></a>
+      Algunos managers utilizarán objetos estandarizados; por ejemplo, QuestManager utilizará objetos Quest, CutscenesManager Cutscenes, AudioManager Music y Audio, LevelManager objetos Level, etc. La idea es generar plantillas de estos objetos para una expedita generación de contenido. <a id='x1-78001r66'></a>
     </p>
     <h3 class='sectionHead'>
       <span class='titlemark'>6.</span> <a id='x1-790006'></a>Input/Output
     </h3><!-- l. 6 -->
     <p class='noindent'>
-      El sistema interactuará con el usuario a través de inputs y outputs específicos. A futuro dentro del desarrollo será preciso implementar algunas tecnologías en concreto. De momento solo es necesario mantener la flexibilidad del código y estudiar la propia implementación para decidir con mejores indicadores. Las decisiones al respecto serán de responsabilidad del equipo de diseño en mutuo acuerdo con el equipo técnico.
+      El sistema interactuará con el usuario a través de inputs y outputs específicos, pero de momento no es necesario implementar tecnologías en concreto, sino mantener la flexibilidad del código y estudiar la propia implementación para decidir con mejores indicadores. Estas decisiones serán de responsabilidad del equipo de diseño en mutuo acuerdo con el equipo técnico.
     </p><!-- l. 8 -->
     <p class='indent'>
-      En cualquier caso, a continuación se presenta un listado con elementos recurrentes y algunos que desde ya se deberían considerar. Es importante volver a recalcar que la implementación de varios de estos componentes debería ejecutarse en las etapas finales del desarrollo. Lo importante en este punto es considerar que existen y que el sistema debería estar preparado para una implementación lo más fluida posible. <a id='x1-79001r83'></a>
+      A continuación se presenta un listado con elementos recurrentes, incluyendo algunos que desde ya se deberían considerar para que su implementación sea lo más fluida posible. <a id='x1-79001r83'></a>
     </p>
     <h4 class='subsectionHead'>
       <span class='titlemark'>6.1.</span> <a id='x1-800001'></a>Inputs
     </h4><!-- l. 11 -->
     <p class='noindent'>
-      Fundamentalmente son 3 elementos de entrada los que interactúan con el sistema a nivel de usuario: <span class='ecbx-1095'>Archivos</span> de carga, guardado y de configuración, <span class='ecbx-1095'>periféricos</span> como teclado, ratón, gamepad o touchscreen; e <span class='ecbx-1095'>internet</span> para actualizaciones y servicios en la nube como savegames y configuraciones. A nivel de desarrollo se mantienen los mismos inputs, y adicionalmente también incluiría archivos de stats, niveles, diálogos, sprites, audio, etc. <a id='x1-80001r84'></a>
+      Fundamentalmente son 3 elementos de entrada los que interactúan con el sistema a nivel de usuario: <span class='ecbx-1095'>Archivos</span> de carga, guardado y de configuración, <span class='ecbx-1095'>periféricos</span> como teclado, ratón, gamepad o touchscreen; e <span class='ecbx-1095'>internet</span> para actualizaciones y servicios en la nube como savegames y configuraciones.
+    </p><!-- l. 13 -->
+    <p class='indent'>
+      A nivel de desarrollo se mantienen los mismos inputs, pero adicionalmente se incluirían archivos de stats, niveles, diálogos, sprites, audio, etc. <a id='x1-80001r84'></a>
     </p>
     <h5 class='subsubsectionHead'>
       <span class='titlemark'>6.1.1.</span> <a id='x1-810001'></a>Archivos
     </h5>
     <dl class='description'>
       <dt class='description'>
-        <!-- l. 16 --><br class='noindent'>
-        <span class='ecbx-1095'>Savegames:</span><br>
-        <br>
-      </dt>
-      <dd class='description'>
-        <!-- l. 16 -->
-        <p class='noindent'>
-          Archivos de carga a checkpoints u otro sistema de puntos de control dentro del gameplay. Se debería definir exactamente que se carga y que no. Por ejemplo poder cargar el árbol de decisiones, stats, ítems, equipamiento, munición, etc., y no la posición de los <span class='eccc1095-'><span class='small-caps'>npc</span></span>, ítems aleatorios, enemigos, entre otros.
-        </p>
-      </dd>
-      <dt class='description'>
         <!-- l. 18 --><br class='noindent'>
-        <span class='ecbx-1095'>Configuración:</span><br>
+        <span class='ecbx-1095'>Savegames:</span><br>
         <br>
       </dt>
       <dd class='description'>
         <!-- l. 18 -->
         <p class='noindent'>
-          Permite cargar la configuración de usuario en distintas instalaciones o dispositivos. Este archivo debería ser un texto plano.
+          Archivos de carga a checkpoints u otro sistema de puntos de control dentro del gameplay. Se debería definir exactamente que se carga y que no. Por ejemplo, poder cargar el árbol de decisiones, stats, ítems, equipamiento, munición, etc., y no la posición de los <span class='eccc1095-'><span class='small-caps'>npc</span></span>, ítems aleatorios, enemigos, entre otros.
+        </p>
+      </dd>
+      <dt class='description'>
+        <!-- l. 20 --><br class='noindent'>
+        <span class='ecbx-1095'>Configuración:</span><br>
+        <br>
+      </dt>
+      <dd class='description'>
+        <!-- l. 20 -->
+        <p class='noindent'>
+          Permite cargar la configuración de usuario en distintas instalaciones o dispositivos. Este archivo debería ser un texto sencillo.
         </p>
       </dd>
     </dl>
@@ -2654,62 +2663,62 @@
     </h5>
     <dl class='description'>
       <dt class='description'>
-        <!-- l. 23 --><br class='noindent'>
-        <span class='ecbx-1095'>Teclado:</span><br>
-        <br>
-      </dt>
-      <dd class='description'>
-        <!-- l. 23 -->
-        <p class='noindent'>
-          Uno de los controles principales de juego. Lo importante es considerar la i18n para el mapeo y no utilizar teclas específicas de una layout en concreto.
-        </p>
-      </dd>
-      <dt class='description'>
         <!-- l. 25 --><br class='noindent'>
-        <span class='ecbx-1095'>Mouse:</span><br>
+        <span class='ecbx-1095'>Teclado:</span><br>
         <br>
       </dt>
       <dd class='description'>
         <!-- l. 25 -->
         <p class='noindent'>
-          Lo relevante es que involucra generar un puntero (el ícono) que se adapte a los distintos contextos de la interfaz e incluso ofrezca respuesta visual del juego. Por ejemplo que letreros cambien de color al poner el cursor encima, que la interfaz haga un efecto ojo de pez en los botones cuando el ratón pase por encima, o muestre áreas de impacto al seleccionar un ataque, etc.
-        </p><!-- l. 27 -->
-        <p class='noindent'>
-          En cuanto a su configuración, sería conveniente que en el menú de opciones o a través del archivo de configuración se pudiera ajustar la aceleración, sensibilidad o velocidad del puntero.
+          Uno de los controles principales de juego. Lo importante es considerar la i18n para el mapeo y no utilizar teclas específicas de una layout en concreto; <span class='ecti-1095'>no todos los teclados son</span> <span class='eccc1095-'><span class='small-caps'>qwerty</span></span>.
         </p>
       </dd>
       <dt class='description'>
-        <!-- l. 29 --><br class='noindent'>
+        <!-- l. 27 --><br class='noindent'>
+        <span class='ecbx-1095'>Mouse:</span><br>
+        <br>
+      </dt>
+      <dd class='description'>
+        <!-- l. 27 -->
+        <p class='noindent'>
+          Requiere de un cursor que se adapte a los distintos contextos del juego y sprites especiales o efectos para resaltar el foco de los elementos visuales con los que interactúa el jugador. Por ejemplo: áreas de ataque, elementos del HUD, letreros, mapa, etc.
+        </p><!-- l. 29 -->
+        <p class='noindent'>
+          Si fuera necesario, se podrían agregar entradas en el menú de configuración para ajustar la aceleración, sensibilidad, velocidad del puntero, etc.
+        </p>
+      </dd>
+      <dt class='description'>
+        <!-- l. 31 --><br class='noindent'>
         <span class='ecbx-1095'>Gamepad:</span><br>
         <br>
       </dt>
       <dd class='description'>
-        <!-- l. 29 -->
+        <!-- l. 31 -->
         <p class='noindent'>
-          El esquema de botones será estudiado en el diseño del juego por lo que se mantiene la premisa de la flexibilidad a nivel técnico, no obstante debería poder modificarse a gusto del jugador en el menú de configuración. Idealmente el sistema se adaptará automáticamente a los mandos de control más populares como controles de tipo snes, psx, xbox, etc. Si no es posible la detección automática en determinados contextos, al menos se debería ofrecer los layout correspondientes en el menú de configuración. Bakumapu debería ofrecer la posibilidad de controlar el juego con un control con D-Pad y sticks análogos (respondiendo gradualmente).
-        </p><!-- l. 31 -->
+          El mapeo del control deberá poder ajustarse en todo momento. Además, debería ofrecerse al usuario una forma sencilla de ajustarlo y el sistema debería reconocer automáticamente los modelos más comunes y ofrecer layouts predefinidas. El control debería ofrecer respuesta gradual para los sticks análogos.Por su parte Godot tiene una interfaz especial para los controles, por lo que para su implementación se podría comenzar por ahí.
+        </p><!-- l. 33 -->
         <p class='noindent'>
-          Godot ofrece opciones especiales con respecto a los controles, por lo que la implementación podría comenzar desde allí. Con respecto a las características adicionales de los controles más modernos, a nivel de diseño se estudiará si se incluye o no el soporte de inputs más específicos tales como giroscopio, micrófono y panel táctil entre otros.
-        </p>
-      </dd>
-      <dt class='description'>
-        <!-- l. 33 --><br class='noindent'>
-        <span class='ecbx-1095'>Touchscreen:</span><br>
-        <br>
-      </dt>
-      <dd class='description'>
-        <!-- l. 33 -->
-        <p class='noindent'>
-          Control táctil de un gamepad simulado y demarcado por la interfaz. Estudiar si ayuda a la jugabilidad el poder interactuar directamente con elementos en el área de juego. Por ejemplo para iniciar un diálogo con un <span class='eccc1095-'><span class='small-caps'>npc</span></span>, se podría mover con el stick virtual y pulsar el botón de acción, o simplemente presionar sobre el personaje y automáticamente el jugador camina hacia donde corresponde y abre el diálogo.
+          Con respecto a las características adicionales de los controles más modernos tales como giroscopio, micrófono, panel tácticl, etc., se estudiará su implementación en el diseño del juego; pero evidentemente todo con muy baja prioridad en las primeras etapas.
         </p>
       </dd>
       <dt class='description'>
         <!-- l. 35 --><br class='noindent'>
-        <span class='ecbx-1095'>Touchpad:</span><br>
+        <span class='ecbx-1095'>Touchscreen:</span><br>
         <br>
       </dt>
       <dd class='description'>
         <!-- l. 35 -->
+        <p class='noindent'>
+          Se mostrará un gamepad virtual en la interfaz. Además se estudiará si mejora la jugabilidad interactuar directamente con elementos en el área de juego. Por ejemplo, para iniciar un diálogo con un <span class='eccc1095-'><span class='small-caps'>npc</span></span>, se podría mover con el stick virtual y pulsar el botón de acción o simplemente presionar sobre el personaje y automáticamente el jugador camina hacia donde corresponde y abre el diálogo.
+        </p>
+      </dd>
+      <dt class='description'>
+        <!-- l. 37 --><br class='noindent'>
+        <span class='ecbx-1095'>Touchpad:</span><br>
+        <br>
+      </dt>
+      <dd class='description'>
+        <!-- l. 37 -->
         <p class='noindent'>
           Similar al ratón. Investigar si es necesaria alguna consideración especial.
         </p>
@@ -2723,30 +2732,30 @@
     </h5>
     <dl class='description'>
       <dt class='description'>
-        <!-- l. 40 --><br class='noindent'>
-        <span class='ecbx-1095'>Archivos de usuario:</span><br>
-        <br>
-      </dt>
-      <dd class='description'>
-        <!-- l. 40 -->
-        <p class='noindent'>
-          Lo principal a nivel de usuario es poder importar los ficheros de configuración y savegames desde algún sistema en la nube para facilitar la posibilidad de jugar una única campaña a través de diferentes dispositivos.
-        </p>
-      </dd>
-      <dt class='description'>
         <!-- l. 42 --><br class='noindent'>
-        <span class='ecbx-1095'>Actualización:</span><br>
+        <span class='ecbx-1095'>Archivos de usuario:</span><br>
         <br>
       </dt>
       <dd class='description'>
         <!-- l. 42 -->
         <p class='noindent'>
+          Lo principal a nivel de usuario es poder importar los ficheros de configuración y savegames desde algún sistema en la nube para facilitar la posibilidad de jugar una única campaña a través de diferentes dispositivos.
+        </p>
+      </dd>
+      <dt class='description'>
+        <!-- l. 44 --><br class='noindent'>
+        <span class='ecbx-1095'>Actualización:</span><br>
+        <br>
+      </dt>
+      <dd class='description'>
+        <!-- l. 44 -->
+        <p class='noindent'>
           Automáticamente el sistema debería poder comprobar la versión instalada del juego, informar la disponibilidad de una nueva versión, descargar los archivos necesarios e iniciar el proceso de actualización automáticamente. Además se deberán implementar opciones para desactivar tanto la descarga como la instalación automática de las actualizaciones.
         </p>
       </dd>
-    </dl>
-    <p>
-      <a id='x1-83001r86'></a>
+    </dl><!-- l. 47 -->
+    <p class='noindent'>
+      Revisar la documentación de la API <a href='https://partner.steamgames.com/doc/features/cloud' target='_blank'>Steam Cloud</a>. <a id='x1-83001r86'></a>
     </p>
     <h4 class='subsectionHead'>
       <span class='titlemark'>6.2.</span> <a id='x1-840002'></a>Outputs
@@ -2759,25 +2768,25 @@
     </h5>
     <dl class='description'>
       <dt class='description'>
-        <!-- l. 49 --><br class='noindent'>
+        <!-- l. 53 --><br class='noindent'>
         <span class='ecbx-1095'>Vibración:</span><br>
         <br>
       </dt>
       <dd class='description'>
-        <!-- l. 49 -->
+        <!-- l. 53 -->
         <p class='noindent'>
-          El juego deberá soportar los sistema de vibración de los distintos controles y smartphones. Idealmente con las distintas posibilidades que ofrece la tecnología como intensidad, duración, dirección, patrones, etc.
+          El juego deberá soportar la vibración de controles y smartphones; idealmente con las distintas posibilidades que ofrece la tecnología como intensidad, duración, dirección, patrones, etc.
         </p>
       </dd>
       <dt class='description'>
-        <!-- l. 51 --><br class='noindent'>
+        <!-- l. 55 --><br class='noindent'>
         <span class='ecbx-1095'>Touchscreen:</span><br>
         <br>
       </dt>
       <dd class='description'>
-        <!-- l. 51 -->
+        <!-- l. 55 -->
         <p class='noindent'>
-          Para los smartphones se deberá adoptar una interfaz específica que muestre los botones de control en la pantalla o al menos ofrecer una guía visual que indique el área de interacción además de los muchos ajustes a los menús, <span class='eccc1095-'><span class='small-caps'>hud</span></span>, y el resto de arreglos necesarios para la interfaz.
+          En los smartphones la interfaz deberá mostrar los controles y alguna respuesta visual cuando se presione algún botón. Por lo mismo va a necesitar una interfaz especial para este tipo de dispositivos.
         </p>
       </dd>
     </dl>
@@ -2786,65 +2795,117 @@
     </p>
     <h5 class='subsubsectionHead'>
       <span class='titlemark'>6.2.2.</span> <a id='x1-860002'></a>Video
-    </h5><!-- l. 55 -->
+    </h5><!-- l. 59 -->
     <p class='noindent'>
-      La proporción a soportar será de 16:9 en resoluciones de 720p y 1080p a 60 <span class='eccc1095-'><span class='small-caps'>fps</span></span>. En todos los sistemas la orientación será horizontal (landscape). El uso de tecnologías como <span class='eccc1095-'><span class='small-caps'>hdr</span></span> o mayores framerates deberá estudiarse, pero probablemente no sean necesarias. <a id='x1-86001r92'></a>
+      El formato de salida de video será:
+    </p>
+    <ul class='itemize1'>
+      <li class='itemize'>
+        <!-- l. 62 -->
+        <p class='noindent'>
+          Proporción: <span class='ecbx-1095'>16:9</span>.
+        </p>
+      </li>
+      <li class='itemize'>
+        <!-- l. 64 -->
+        <p class='noindent'>
+          Resolución: <span class='ecbx-1095'>720p</span> y <span class='ecbx-1095'>1080p</span>.
+        </p>
+      </li>
+      <li class='itemize'>
+        <!-- l. 66 -->
+        <p class='noindent'>
+          Framerate: <span class='ecbx-1095'>60 </span><span class='ecxc-1095'>fps</span>.
+        </p>
+      </li>
+      <li class='itemize'>
+        <!-- l. 68 -->
+        <p class='noindent'>
+          Orientación: <span class='ecbx-1095'>landscape</span> (apaisada).
+        </p>
+      </li>
+    </ul><!-- l. 71 -->
+    <p class='indent'>
+      El uso de tecnologías como <span class='eccc1095-'><span class='small-caps'>hdr</span></span> o mayores framerates deberá estudiarse, pero probablemente no sean necesarias. <a id='x1-86001r92'></a>
     </p>
     <h5 class='subsubsectionHead'>
       <span class='titlemark'>6.2.3.</span> <a id='x1-870003'></a>Audio
-    </h5><!-- l. 58 -->
+    </h5><!-- l. 74 -->
     <p class='noindent'>
-      La codificación para los archivos de música, sonido ambiente y efectos será en el formato <span class='eccc1095-'><span class='small-caps'>ogg</span></span> a 192 kbps y 44 khz<span class='footnote-mark'><a href='#fn3x0' id='fn3x0-bk'><sup class='textsuperscript'>3</sup></a></span><a id='x1-87001f3'></a>. Todos los audios de música y de sonido ambiente deberán estar en estéreo, no obstante los efectos de sonido podrán ser monofónicos pues Godot ofrece un sistema de mezcla y posicionamiento interno que incluso permite mezclas en 5.1.
-    </p><!-- l. 60 -->
+      La codificación para los archivos de música, sonido ambiente y efectos será:
+    </p>
+    <ul class='itemize1'>
+      <li class='itemize'>
+        <!-- l. 76 -->
+        <p class='noindent'>
+          Formato: <span class='ecxc-1095'>ogg</span> vorbis<span class='footnote-mark'><a href='#fn3x0' id='fn3x0-bk'><sup class='textsuperscript'>3</sup></a></span><a id='x1-87001f3'></a>.
+        </p>
+      </li>
+      <li class='itemize'>
+        <!-- l. 78 -->
+        <p class='noindent'>
+          Sample Rate: <span class='ecbx-1095'>44 khz</span>.
+        </p>
+      </li>
+      <li class='itemize'>
+        <!-- l. 80 -->
+        <p class='noindent'>
+          Bitrate: <span class='ecbx-1095'>192 kbps</span>.
+        </p>
+      </li>
+    </ul><!-- l. 83 -->
     <p class='indent'>
-      En cualquier caso la implementación base será en estéreo; el soporte de mezclas de más canales deberá ser estudiado en base a un criterio técnico que considere la dificultad, el tiempo extra requerido, el impacto en el rendimiento del programa y retrocompatibilidad con equipos estéreo. <a id='x1-87002r93'></a>
+      Los audios de sonido ambiente y música deberán ser estéreo, no obstante los efectos de sonido podrán ser monofónicos pues Godot ofrece un sistema de mezcla y posicionamiento interno que incluso permite mezclas en 5.1.
+    </p><!-- l. 85 -->
+    <p class='indent'>
+      En cualquier caso, la implementación base será en estéreo y el soporte de mezclas de más canales deberá ser estudiado en base a un criterio técnico que considere la dificultad, el tiempo extra requerido, el impacto en el rendimiento del programa y retrocompatibilidad con equipos estéreo. <a id='x1-87002r93'></a>
     </p>
     <h5 class='subsubsectionHead'>
       <span class='titlemark'>6.2.4.</span> <a id='x1-880004'></a>Archivos
     </h5>
     <dl class='description'>
       <dt class='description'>
-        <!-- l. 64 --><br class='noindent'>
+        <!-- l. 89 --><br class='noindent'>
         <span class='ecbx-1095'>Partidas guardadas:</span><br>
         <br>
       </dt>
       <dd class='description'>
-        <!-- l. 64 -->
+        <!-- l. 89 -->
         <p class='noindent'>
-          El sistema debería poder generar rápidamente archivos de guardado que incluyan toda la información relevante para continuar la partida. Estos archivos deberán estar codificados para evitar trampas, y se debe determinar qué tipo de información almacenan. Por ejemplo se podría conservar solo la información con respecto al árbol de decisiones, stats, ítems, etc. y no a las posiciones de <span class='eccc1095-'><span class='small-caps'>npc</span></span>, enemigos, ítems aleatorios, etc.
+          El sistema debería poder generar rápidamente archivos de guardado que incluyan toda la información relevante para continuar la partida. Estos archivos deberán estar codificados para evitar trampas y se debe determinar qué tipo de información almacenan. Por ejemplo, se podría conservar solo la información con respecto al árbol de decisiones, stats, ítems, etc. y no a las posiciones de <span class='eccc1095-'><span class='small-caps'>npc</span></span>, enemigos, ítems aleatorios, etc.
         </p>
       </dd>
       <dt class='description'>
-        <!-- l. 66 --><br class='noindent'>
+        <!-- l. 91 --><br class='noindent'>
         <span class='ecbx-1095'>Configuración:</span><br>
         <br>
       </dt>
       <dd class='description'>
-        <!-- l. 66 -->
+        <!-- l. 91 -->
         <p class='noindent'>
           Cualquier opción distinta a las por defecto deberían estar señaladas en un archivo de texto plano que contenga comandos y valores separados por el símbolo “<span class='ectt-1095'>=</span>” de todas las opciones modificadas. Estos archivos serán útiles para guardar los ajustes del usuario entre distintos dispositivos y para realizar tests, ofrecer soporte y debugging.
         </p>
       </dd>
       <dt class='description'>
-        <!-- l. 69 --><br class='noindent'>
+        <!-- l. 94 --><br class='noindent'>
         <span class='ecbx-1095'>Depurado:</span><br>
         <br>
       </dt>
       <dd class='description'>
-        <!-- l. 69 -->
+        <!-- l. 94 -->
         <p class='noindent'>
           Quizás sea conveniente generar un mecanismo de generación de reportes con información relevante para facilitar el soporte a los usuarios, o facilitar la comprensión de los distintos fallos que puedan ocurrir sobretodo por consideraciones especiales en determinados sistemas.
         </p>
       </dd>
       <dt class='description'>
-        <!-- l. 71 --><br class='noindent'>
+        <!-- l. 96 --><br class='noindent'>
         <span class='ecbx-1095'>Varios:</span><br>
         <br>
       </dt>
       <dd class='description'>
-        <!-- l. 71 -->
+        <!-- l. 96 -->
         <p class='noindent'>
-          Probablemente a medida que avance el desarrollo aparezcan nuevos archivos que sea conveniente generar. Por ejemplo logs, informes de estadísticas del gameplay o algún tipo de telemetría<span class='footnote-mark'><a href='#fn4x0' id='fn4x0-bk'><sup class='textsuperscript'>4</sup></a></span><a id='x1-88001f4'></a>. A medida que estos archivos sean definidos deberían agregarse en este apartado.
+          Probablemente a medida que avance el desarrollo aparezcan nuevos archivos que sea conveniente generar. Por ejemplo: logs, informes de estadísticas del gameplay o algún tipo de telemetría<span class='footnote-mark'><a href='#fn4x0' id='fn4x0-bk'><sup class='textsuperscript'>4</sup></a></span><a id='x1-88001f4'></a>. A medida que estos archivos sean definidos deberían agregarse en este apartado.
         </p>
       </dd>
     </dl>
@@ -2856,23 +2917,23 @@
     </h5>
     <dl class='description'>
       <dt class='description'>
-        <!-- l. 76 --><br class='noindent'>
+        <!-- l. 101 --><br class='noindent'>
         <span class='ecbx-1095'>Archivos de usuario:</span><br>
         <br>
       </dt>
       <dd class='description'>
-        <!-- l. 76 -->
+        <!-- l. 101 -->
         <p class='noindent'>
-          Lo principal a nivel de usuario es poder guardar los ficheros de configuración y savegames en algún sistema en la nube. Dependiendo del sistema utilizado se debería realizar una implementación acorde; por ejemplo Steam tiene <span class='eccc1095-'><span class='small-caps'>api</span></span> específicas al respecto. También se podría facilitar la posibilidad de subir pantallazos a distintas redes sociales.
+          Lo principal a nivel de usuario es poder guardar los ficheros de configuración y savegames en algún sistema en la nube. Dependiendo del sistema utilizado se debería realizar una implementación acorde; por ejemplo, Steam tiene <span class='eccc1095-'><span class='small-caps'>api</span></span> específicas al respecto. También se podría facilitar la posibilidad de subir pantallazos a distintas redes sociales.
         </p>
       </dd>
       <dt class='description'>
-        <!-- l. 78 --><br class='noindent'>
+        <!-- l. 103 --><br class='noindent'>
         <span class='ecbx-1095'>Soporte:</span><br>
         <br>
       </dt>
       <dd class='description'>
-        <!-- l. 78 -->
+        <!-- l. 103 -->
         <p class='noindent'>
           El sistema debería ser capaz de generar y enviar reportes de error con información relevante del sistema y ejecución para debugging. Si es demasiado complejo que contengan el backtrace, al menos un informe que indique bajo que circunstancias se produjo el error o algo al respecto.
         </p>
@@ -2883,40 +2944,40 @@
     </p>
     <h5 class='subsubsectionHead'>
       <span class='titlemark'>6.2.6.</span> <a id='x1-900006'></a>Otros outputs
-    </h5><!-- l. 82 -->
+    </h5><!-- l. 107 -->
     <p class='noindent'>
       Estos son outputs de tecnologías específicas que no deberían implementarse hasta las etapas finales del desarrollo (si es que se implementan).
     </p>
     <dl class='description'>
       <dt class='description'>
-        <!-- l. 85 --><br class='noindent'>
+        <!-- l. 110 --><br class='noindent'>
         <span class='ecbx-1095'>Sonido desde el control:</span><br>
         <br>
       </dt>
       <dd class='description'>
-        <!-- l. 85 -->
+        <!-- l. 110 -->
         <p class='noindent'>
           Independiente a la posibilidad de algunos controles más modernos de funcionar como una “segunda tarjeta de sonido” donde conectar audífonos, algunos mandos incluyen un parlante que ayuda a la inmersión en distintos contextos de juego. Se debe estudiar las posibilidades que ofrece Godot al respecto cuando se trabaje en los ports para las distintas consolas.
         </p>
       </dd>
       <dt class='description'>
-        <!-- l. 87 --><br class='noindent'>
+        <!-- l. 112 --><br class='noindent'>
         <span class='ecbx-1095'>Leds del control:</span><br>
         <br>
       </dt>
       <dd class='description'>
-        <!-- l. 87 -->
+        <!-- l. 112 -->
         <p class='noindent'>
           Probablemente se deba implementar una funcionalidad que ajuste el color de los leds del control en base a los puntos de vida actuales del jugador (verde a rojo), y algunos flashes de daño y ataque.
         </p>
       </dd>
       <dt class='description'>
-        <!-- l. 89 --><br class='noindent'>
+        <!-- l. 114 --><br class='noindent'>
         <span class='ecbx-1095'>Pantallas del control:</span><br>
         <br>
       </dt>
       <dd class='description'>
-        <!-- l. 89 -->
+        <!-- l. 114 -->
         <p class='noindent'>
           De momento no se considera implementar alguna funcionalidad con esta tecnología.
         </p>
@@ -2927,9 +2988,12 @@
     </p>
     <h4 class='subsectionHead'>
       <span class='titlemark'>6.3.</span> <a id='x1-910003'></a>DRM
-    </h4><!-- l. 93 -->
+    </h4><!-- l. 118 -->
     <p class='noindent'>
-      En la etapa final del desarrollo se deberá implementar un sistema <span class='ecti-1095'>no invasivo</span> de control de copia del juego. Quizás asociar un archivo que contenga alguna clave de cifrado única con un usuario o descarga en concreto. Los sistemas de distribución como Steam suelen ofrecer soluciones al respecto. <a id='x1-91001r85'></a>
+      En la etapa final del desarrollo se deberá implementar un sistema <span class='ecti-1095'>no invasivo</span> de control de copia del juego. Quizás asociar un archivo que contenga alguna clave de cifrado única con un usuario o descarga en concreto. Los sistemas de distribución como Steam suelen ofrecer soluciones al respecto.
+    </p><!-- l. 120 -->
+    <p class='indent'>
+      Revisar la documentación de las librerías del framework de Steam: <a href='https://partner.steamgames.com/doc/features/drm' target='_blank'>Steamworks Documentation - Steam DRM</a>. <a id='x1-91001r85'></a>
     </p>
     <h3 class='sectionHead'>
       <span class='titlemark'>7.</span> <a id='x1-920007'></a>Organización del proyecto
@@ -3015,7 +3079,7 @@
       <li class='itemize'>
         <!-- l. 39 -->
         <p class='noindent'>
-          <span class='ecbx-1095'>shared:</span> Colección de todos los assets y resources compartidos por más de una escena. Por ejemplo fuentes tipográficas, música, tilesets, sprites, assets genéricos, etc.
+          <span class='ecbx-1095'>shared:</span> Colección de todos los assets y resources compartidos por más de una escena. Por ejemplo: fuentes tipográficas, música, tilesets, sprites, assets genéricos, etc.
         </p>
       </li>
     </ul>
@@ -3025,7 +3089,7 @@
     <figure class='figure'>
       <!-- l. 45 -->
       <p class='noindent'>
-        <img width='503' src='im%C3%A1genes/arbol_proyecto.png' height='503' alt='PIC'>
+        <img alt='PIC' width='503' src='im%C3%A1genes/arbol_proyecto.png' height='503'>
       </p>
     </figure>
     <p>
@@ -3118,7 +3182,7 @@
       <span class='titlemark'>8.1.2.</span> <a id='x1-1000002'></a>Fichas de personaje
     </h5><!-- l. 22 -->
     <p class='noindent'>
-      Además de servir para el proceso de traducción, es probable que ciertos strings como nombres, descripciones o incluso stats de altura y peso sean usados directamente por el software. Por lo mismo es importante tener un formato unificado al respecto. En este sentido quizás sea necesaria una herramienta específica que controle estos templates de personajes en base al funcionamiento de las escenas para poder importar sus strings (por ejemplo el nombre o pseudónimo del personaje en distintos idiomas). <a id='x1-100001r106'></a>
+      Además de servir para el proceso de traducción, es probable que ciertos strings como nombres, descripciones o incluso stats de altura y peso sean usados directamente por el software. Por lo mismo es importante tener un formato unificado al respecto. En este sentido quizás sea necesaria una herramienta específica que controle estos templates de personajes en base al funcionamiento de las escenas para poder importar sus strings (por ejemplo, el nombre o pseudónimo del personaje en distintos idiomas). <a id='x1-100001r106'></a>
     </p>
     <h5 class='subsubsectionHead'>
       <span class='titlemark'>8.1.3.</span> <a id='x1-1010003'></a>Cutscenes y diálogos
@@ -3178,7 +3242,7 @@
       <span class='titlemark'>8.4.</span> <a id='x1-1090004'></a>Lineamientos para el software del Kit
     </h4><!-- l. 53 -->
     <p class='noindent'>
-      Para todas estas herramientas se propone utilizar Python, por su similitud con <span class='eccc1095-'><span class='small-caps'>gds</span></span>cript y por la disponibilidad multiplataforma. Para la mayoría solo será necesario una batería de scripts, no obstante por ejemplo para los que use directamente el equipo de traducción, se propone el uso de una <span class='eccc1095-'><span class='small-caps'>gui</span></span> en Qt5 (PyQt5) por su fácil manejo y compatibilidad entre sistemas.
+      Para todas estas herramientas se propone utilizar Python, por su similitud con <span class='eccc1095-'><span class='small-caps'>gds</span></span>cript y por la disponibilidad multiplataforma. Para la mayoría solo será necesario una batería de scripts; no obstante, para los que use directamente el equipo de traducción se propone el uso de una <span class='eccc1095-'><span class='small-caps'>gui</span></span> en Qt5 (PyQt5) por su fácil manejo y compatibilidad entre sistemas.
     </p><!-- l. 55 -->
     <p class='indent'>
       Es relevante recordar que todos los textos de contenidos deben estar codificados en UTF-8.<span class='footnote-mark'><a href='#fn5x0' id='fn5x0-bk'><sup class='textsuperscript'>5</sup></a></span><a id='x1-109001f5'></a> <a id='x1-109002r103'></a>
@@ -3228,10 +3292,10 @@
       </p><!-- l. 75 -->
       <p class='noindent'>
         <span class='footnote-mark'><a href='#fn2x0-bk' id='fn2x0'><sup class='textsuperscript'>2</sup></a></span><span class='ecrm-0900'>Es muy importante este punto porque el tiempo que el código de la rama permanezca</span> <span class='ecrm-0900'>fuera de develop puede generar bugs desconocidos al estar aislado de los commit de otras</span> <span class='ecrm-0900'>ramas.</span>
-      </p><!-- l. 58 -->
-      <p class='indent'>
-        <span class='footnote-mark'><a href='#fn3x0-bk' id='fn3x0'><sup class='textsuperscript'>3</sup></a></span><span class='ecrm-0900'>En comparación al</span> <span class='eccc0900-'><span class='small-caps'>mp</span></span> <span class='ecrm-0600'>3</span><span class='ecrm-0900'>, el</span> <span class='eccc0900-'><span class='small-caps'>ogg</span></span> <span class='ecrm-0900'>ocupa menos espacio y tiene mejor calidad a igual</span> <span class='ecrm-0900'>bitrate. El uso de</span> <span class='eccc0900-'><span class='small-caps'>cpu</span></span> <span class='ecrm-0900'>es marginalmente mayor en comparación, pero en una máquina</span> <span class='ecrm-0900'>moderna no debería suponer ningún problema.</span>
-      </p><!-- l. 71 -->
+      </p><!-- l. 76 -->
+      <p class='noindent'>
+        <span class='footnote-mark'><a href='#fn3x0-bk' id='fn3x0'><sup class='textsuperscript'>3</sup></a></span><span class='ecrm-0900'>En comparación al</span> <span class='eccc0900-'><span class='small-caps'>mp</span></span><span class='ecrm-0600'>3</span><span class='ecrm-0900'>, el</span> <span class='eccc0900-'><span class='small-caps'>ogg</span></span> <span class='ecrm-0900'>ocupa menos espacio y tiene mejor calidad a igual</span> <span class='ecrm-0900'>bitrate. En comparación el uso de</span> <span class='eccc0900-'><span class='small-caps'>cpu</span></span> <span class='ecrm-0900'>es marginalmente mayor, pero en una máquina</span> <span class='ecrm-0900'>moderna (más de 300 </span><span class='eccc0900-'><span class='small-caps'>mh</span></span><span class='ecrm-0900'>z) no debería suponer ningún problema.</span>
+      </p><!-- l. 96 -->
       <p class='noindent'>
         <span class='footnote-mark'><a href='#fn4x0-bk' id='fn4x0'><sup class='textsuperscript'>4</sup></a></span><span class='ecrm-0900'>Importante: Cualquier tipo de data del usuario debería ser enviada bajo su</span> <span class='ecrm-0900'>conocimiento y consentimiento. Revisar implicaciones legales.</span>
       </p><!-- l. 55 -->
