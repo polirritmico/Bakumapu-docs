@@ -19,7 +19,7 @@ A continuación se presenta una propuesta de aplicaciones sencillas que facilite
 Se consideran textos como diarios, descripciones y pensamientos. Son elementos sencillos, básicamente strings. Como tal la transformación puede ser sencillamente a un nodo en Godot. Quizás el nombre del archivo podría indicar el tipo (entrada del diario, descripción, etc.). 
 
 \subsubsection{Fichas de personaje}\label{kit:fichas-de-personaje}
-Además de servir para el proceso de traducción, es probable que ciertos strings como nombres, descripciones o incluso stats de altura y peso sean usados directamente por el software. Por lo mismo es importante tener un formato unificado al respecto. En este sentido quizás sea necesaria una herramienta específica que controle estos templates de personajes en base al funcionamiento de las escenas para poder importar sus strings (por ejemplo el nombre o pseudónimo del personaje en distintos idiomas).
+Además de servir para el proceso de traducción, es probable que ciertos strings como nombres, descripciones o incluso stats de altura y peso sean usados directamente por el software. Por lo mismo es importante tener un formato unificado al respecto. En este sentido quizás sea necesaria una herramienta específica que controle estos templates de personajes en base al funcionamiento de las escenas para poder importar sus strings (por ejemplo, el nombre o pseudónimo del personaje en distintos idiomas).
 
 \subsubsection{Cutscenes y diálogos}\label{kit:cutscenes-y-dialogos}
 Básicamente es una hoja de cálculo. En la primera columna está el comando y en las siguientes los datos necesarios para que se ejecute. Probablemente deba transformarse a un archivo \lsc{GDS}cript con una colección de strings.
@@ -50,6 +50,6 @@ Además de los elementos de jugabilidad y narrativos ya descritos, quizás sea m
 \todoii{ToDo}{Herramienta de traducción} ¿Cómo va a funcionar esto? ¿qué debería entrar y que salir? Y una idea de como preparar el material de input para que este programa o script sepa qué interpretar y generar estos documentos de traducción.
 
 \subsection{Lineamientos para el software del Kit}\label{kit:lineamientos-software-kit}
-Para todas estas herramientas se propone utilizar Python, por su similitud con \lsc{GDS}cript y por la disponibilidad multiplataforma. Para la mayoría solo será necesario una batería de scripts, no obstante por ejemplo para los que use directamente el equipo de traducción, se propone el uso de una \lsc{GUI} en Qt5 (PyQt5) por su fácil manejo y compatibilidad entre sistemas.
+Para todas estas herramientas se propone utilizar Python, por su similitud con \lsc{GDS}cript y por la disponibilidad multiplataforma. Para la mayoría solo será necesario una batería de scripts; no obstante, para los que use directamente el equipo de traducción se propone el uso de una \lsc{GUI} en Qt5 (PyQt5) por su fácil manejo y compatibilidad entre sistemas.
 
 Es relevante recordar que todos los textos de contenidos deben estar codificados en UTF-8.\footnote{Al parecer la codificación de los archivos \lsc{TSCN} debe ser \lsc{US}-\lsc{ASCII}. Investigar y testear antes de implementar la exportación a estos archivos.}
