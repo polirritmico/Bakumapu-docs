@@ -7,12 +7,12 @@ El sistema interactuará con el usuario a través de inputs y outputs específic
 
 A continuación se presenta un listado con elementos recurrentes, incluyendo algunos que desde ya se deberían considerar para que su implementación sea lo más fluida posible.
 
-\subsection{Inputs}
+\subsection{Inputs}\label{io:inputs}
 Fundamentalmente son 3 elementos de entrada los que interactúan con el sistema a nivel de usuario: \textbf{Archivos} de carga, guardado y de configuración, \textbf{periféricos} como teclado, ratón, gamepad o touchscreen; e \textbf{internet} para actualizaciones y servicios en la nube como savegames y configuraciones.
 
 A nivel de desarrollo se mantienen los mismos inputs, pero adicionalmente se incluirían archivos de stats, niveles, diálogos, sprites, audio, etc.
 
-\subsubsection{Archivos}
+\subsubsection{Archivos}\label{io:inputs-archivos}
 
 \begin{description}
 \item[Savegames:] Archivos de carga a checkpoints u otro sistema de puntos de control dentro del gameplay. Se debería definir exactamente que se carga y que no. Por ejemplo, poder cargar el árbol de decisiones, stats, ítems, equipamiento, munición, etc., y no la posición de los \lsc{NPC}, ítems aleatorios, enemigos, entre otros.
@@ -20,7 +20,7 @@ A nivel de desarrollo se mantienen los mismos inputs, pero adicionalmente se inc
 \item[Configuración:] Permite cargar la configuración de usuario en distintas instalaciones o dispositivos. Este archivo debería ser un texto sencillo.
 \end{description}
 
-\subsubsection{Controles}
+\subsubsection{Controles}\label{io:inputs-controles}
 \begin{description}
 \item[Teclado:] Uno de los controles principales de juego. Lo importante es considerar la i18n para el mapeo y no utilizar teclas específicas de una layout en concreto; \emph{no todos los teclados son \lsc{QWERTY}}.
 
@@ -37,7 +37,7 @@ Con respecto a las características adicionales de los controles más modernos t
 \item[Touchpad:] Similar al ratón. Investigar si es necesaria alguna consideración especial.
 \end{description}
 
-\subsubsection{Internet}
+\subsubsection{Internet}\label{io:inputs-internet}
 \begin{description}
 \item[Archivos de usuario:] Lo principal a nivel de usuario es poder importar los ficheros de configuración y savegames desde algún sistema en la nube para facilitar la posibilidad de jugar una única campaña a través de diferentes dispositivos.
 
@@ -46,16 +46,16 @@ Con respecto a las características adicionales de los controles más modernos t
 
 Revisar la documentación de la API \href{https://partner.steamgames.com/doc/features/cloud}{Steam Cloud}.
 
-\subsection{Outputs}
+\subsection{Outputs}\label{io:outputs}
 
-\subsubsection{Controles}
+\subsubsection{Controles}\label{io:output-controles}
 \begin{description}
 \item[Vibración:] El juego deberá soportar la vibración de controles y smartphones; idealmente con las distintas posibilidades que ofrece la tecnología como intensidad, duración, dirección, patrones, etc.
 
 \item[Touchscreen:] En los smartphones la interfaz deberá mostrar los controles y alguna respuesta visual cuando se presione algún botón. Por lo mismo va a necesitar una interfaz especial para este tipo de dispositivos.
 \end{description}
 
-\subsubsection{Video}
+\subsubsection{Video}\label{io:output-video}
 \noindent El formato de salida de video será:
 
 \begin{itemize}
@@ -70,7 +70,7 @@ Revisar la documentación de la API \href{https://partner.steamgames.com/doc/fea
 
 El uso de tecnologías como \lsc{HDR} o mayores framerates deberá estudiarse, pero probablemente no sean necesarias.
 
-\subsubsection{Audio}
+\subsubsection{Audio}\label{io:output-audio}
 \noindent La codificación para los archivos de música, sonido ambiente y efectos será:
 \begin{itemize}
 \item Formato: \textbf{\lsc{OGG}} vorbis\footnote{En comparación al \lsc{MP}{\tiny 3}, el \lsc{OGG} ocupa menos espacio y tiene mejor calidad a igual bitrate. En comparación el uso de \lsc{CPU} es marginalmente mayor, pero en una máquina moderna (más de 300~\lsc{MH}z) no debería suponer ningún problema.}.
@@ -84,7 +84,7 @@ Los audios de sonido ambiente y música deberán ser estéreo, no obstante los e
 
 En cualquier caso, la implementación base será en estéreo y el soporte de mezclas de más canales deberá ser estudiado en base a un criterio técnico que considere la dificultad, el tiempo extra requerido, el impacto en el rendimiento del programa y retrocompatibilidad con equipos estéreo.
 
-\subsubsection{Archivos}
+\subsubsection{Archivos}\label{io:output-archivos}
 \begin{description}
 \item[Partidas guardadas:] El sistema debería poder generar rápidamente archivos de guardado que incluyan toda la información relevante para continuar la partida. Estos archivos deberán estar codificados para evitar trampas y se debe determinar qué tipo de información almacenan. Por ejemplo, se podría conservar solo la información con respecto al árbol de decisiones, stats, ítems, etc. y no a las posiciones de \lsc{NPC}, enemigos, ítems aleatorios, etc.
 
@@ -96,14 +96,14 @@ Estos archivos serán útiles para guardar los ajustes del usuario entre distint
 \item[Varios:] Probablemente a medida que avance el desarrollo aparezcan nuevos archivos que sea conveniente generar. Por ejemplo: logs, informes de estadísticas del gameplay o algún tipo de telemetría\footnote{Importante: Cualquier tipo de data del usuario debería ser enviada bajo su conocimiento y consentimiento. Revisar implicaciones legales.}. A medida que estos archivos sean definidos deberían agregarse en este apartado.
 \end{description}
 
-\subsubsection{Internet}
+\subsubsection{Internet}\label{io:output-internet}
 \begin{description}
 \item[Archivos de usuario:] Lo principal a nivel de usuario es poder guardar los ficheros de configuración y savegames en algún sistema en la nube. Dependiendo del sistema utilizado se debería realizar una implementación acorde; por ejemplo, Steam tiene \lsc{API} específicas al respecto. También se podría facilitar la posibilidad de subir pantallazos a distintas redes sociales.
 
 \item[Soporte:] El sistema debería ser capaz de generar y enviar reportes de error con información relevante del sistema y ejecución para debugging. Si es demasiado complejo que contengan el backtrace, al menos un informe que indique bajo que circunstancias se produjo el error o algo al respecto.
 \end{description}
 
-\subsubsection{Otros outputs}
+\subsubsection{Otros outputs}\label{io:output-otros-outputs}
 Estos son outputs de tecnologías específicas que no deberían implementarse hasta las etapas finales del desarrollo (si es que se implementan).
 
 \begin{description}
@@ -114,7 +114,7 @@ Estos son outputs de tecnologías específicas que no deberían implementarse ha
 \item[Pantallas del control:] De momento no se considera implementar alguna funcionalidad con esta tecnología.
 \end{description}
 
-\subsection{DRM}
+\subsection{DRM}\label{io:drm}
 En la etapa final del desarrollo se deberá implementar un sistema \emph{no invasivo} de control de copia del juego. Quizás asociar un archivo que contenga alguna clave de cifrado única con un usuario o descarga en concreto. Los sistemas de distribución como Steam suelen ofrecer soluciones al respecto.
 
 Revisar la documentación de las librerías del framework de Steam: \href{https://partner.steamgames.com/doc/features/drm}{Steamworks Documentation - Steam DRM}.
