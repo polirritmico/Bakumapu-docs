@@ -148,4 +148,13 @@ img {max-width: 100%; max-height: auto; width: auto; height: auto;}
 /* Subsección sin enumerar con "*" */
 .likesubsectionHead{font-size: 1.2em; color: #27aeae;}
 
+/**************************************************************************/
+/****************************** ESPECIFICOS *******************************/
+/**************************************************************************/
+
+/* TOC */
+.subsectionToc {margin-left:1em;}
+.subsubsectionToc {margin-left:2em;}
+
+
 /* EOF */

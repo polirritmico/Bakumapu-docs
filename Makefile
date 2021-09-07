@@ -6,9 +6,10 @@ VERSION = 0.0.1
 INFILE = main
 OUTFILE = index
 
-# Define some variables
+# Define variables
 LATEX=latex
 PDFLATEX=pdflatex
+TOC_LEVEL=2
 
 # The default targets
 #all: latex2html
@@ -30,6 +31,8 @@ html:
 	@echo -n "Ajustando versión y subtítulo: "
 	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
 	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico}}/{Diseño\ técnico}/' <$(INFILE).tex >build/$(OUTFILE).tex
+	@echo -en "OK\nAjustando nivel de TOC a $(TOC_LEVEL) para el html: "
+	@sed -i '/\\setcounter/s/{tocdepth}{*.}/{tocdepth}{$(TOC_LEVEL)}/' build/configuración/estilos.tex
 
 	@echo -e "OK\nIniciando conversión:\n.................................................."
 	@cd build && \
@@ -50,6 +53,7 @@ html:
 #	@sed -i '/<a /s/.<!-- tex4ht:/<!-- tex4ht:/g' build/export/$(OUTFILE).html
 	@echo -en "Ok\nAgregando espacios a figuras: "
 	@sed -i '/<span class='\''id'\''>Figura/s/<\/span>/ <\/span>/' build/export/$(OUTFILE).html
+	@sed -i 's/Figura~/Figura /' build/export/$(OUTFILE).html
 	@echo -en "OK\nAgregando fondo: "
 	@cp imágenes/fondo.jpg build/export/imágenes/
 
@@ -65,7 +69,6 @@ html:
 	@echo -e "HTML generado exitosamente."
 	@echo "Revisar en: file:///home/eduardo/Documentos/Bakumapu/Dise%C3%B1o%20t%C3%A9cnico/docs/index.html"
 	@echo "Usar 'make sync' para subir a GITHUB."
-	\
 
 clean:
 	@mkdir -p temp
