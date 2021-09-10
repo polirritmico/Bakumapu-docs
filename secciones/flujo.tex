@@ -87,17 +87,14 @@ La contribución de código será organizada a través del modelo de ramas de fu
 	\item \textbf{Ramas de bugs:} Debe crearse una por cada bug encontrado. Dependiendo del bug la rama será creada a partir de \textbf{main}, \textbf{develop} o \textbf{release}. El merge del fix deberá ser hacia \textbf{develop} y si corresponde también a \textbf{release}. El nombre de la rama debe comenzar con “\textbf{bug-}” y corresponderse con el de su tarjeta asociada en el tablero (apartado \nameref{organizacion:nombres-de-ramas}).
 \end{enumerate}
 
+\subsubsection{Refactorización}
+La reescritura de features ya implementadas o cualquier parte del código, se deberá trabajar directamente sobre develop, tratando de dejar el menor tiempo posible el código en un estado inestable (sin superar los test de aceptación). Por lo mismo, se sugiere trabajar la refactorización en pasos muy pequeños de tal forma que sea trivial la detección del error.
+
+\subsubsection{Commits}
+Todos los commits de una rama de \textbf{features} o \textbf{bugs} y la refactorización del código que se trabaje directamente en \textbf{develop}, deberán tener al inicio del mensaje del commit la \lsc{ID} de la tarea correspondiente (ver el apartado \nameref{organizacion:id-ramas-tarjetas}.
+
 Para una información más detallada sobre el funcionamiento de \lsc{GIT} bajo el modelo de ramas de función ver el \href{https://www.atlassian.com/es/git/tutorials/comparing-workflows/feature-branch-workflow}{siguiente enlace} (no olvidar los matices con respecto al trabajo bajo TDD en el apartado \nameref{principios:vision-general-desarrollo}).
 
-\subsubsection{Versionado y nombres semánticos}\label{flujo:versionado-y-nombres}
-Los nombres de las versiones seguirán la nomenclatura de versionado semántico, en este caso \textbf{Bakumapu\_vX.Y.Z} donde cada número representa:
-\begin{itemize}[label=-]
-	\item \textbf{X:} La versión principal. 0 alfa, 1 release. Si hay cambios no compatibles con la versión anterior, \textbf{X} se incrementa en 1.
-	\item \textbf{Y:} La versión menor. Aumenta cuando se agreguen nuevas funcionalidades. Los archivos del usuario (savegames) deben ser siempre compatibles con la versión menor anterior.
-	\item \textbf{Z:} La versión de patch. Siempre que se solucionen bugs se incrementa. Cuando avance la versión menor o principal vuelve a cero.
-\end{itemize}
-
-Esta nomenclatura se debe aplicar en las ramas \textbf{main} y \textbf{release}.
 
 \subsubsection{Alternativas al modelo de ramas de función}\label{flujo:alternativas-al-branching}
 Si el flujo bajo el sistema de ramas de función resulta demasiado tedioso o la visualización general del código se pierde con mucha facilidad ya sea por merges muy complejos o espaciados, se propone como alternativa la metodología de \href{https://es.wikipedia.org/wiki/Entrega_continua}{Entrega continua}.
@@ -290,7 +287,7 @@ Para modificar el documento, basta con utilizar un editor de textos sencillos y 
 Dado que en ciertos contextos la instalación de \LaTeX\ puede ser bastante engorrosa (la instalación manual de muchísimos paquetes), no es necesario compilar una nueva versión con cada cambio sino simplemente mantener los archivos \lsc{TEX} y la versión dentro de \textbf{Makefile} actualizados.
 
 \subsubsection{Versionado del documento}\label{flujo:versionado-del-documento}
-Cada modificación a este documento deberá aumentar la numeración de la subversión en 1 (v0.0\textbf{.1} a v0.0\textbf{.2}). Los primeros 2 índices (v\textbf{0.0.}1) estarán en línea con la última rama \textbf{main} del repositorio. Cada vez que se suba una nueva versión de la rama, se deberá chequear que el documento contenga los cambios relevantes a esa versión e incorporarlos. Con cada cambio de versión menor, la subversión debe volver a cero (v0.\textbf{5.36} a v0.\textbf{6.0}). El versionado de las ramas se discutirá más adelante en el apartado \nameref{flujo:versionado-y-nombres}.
+Cada modificación a este documento deberá aumentar la numeración de la subversión en 1 (v0.0\textbf{.1} a v0.0\textbf{.2}). Los primeros 2 índices (v\textbf{0.0.}1) estarán en línea con la última rama \textbf{main} del repositorio. Cada vez que se suba una nueva versión de la rama, se deberá chequear que el documento contenga los cambios relevantes a esa versión e incorporarlos. Con cada cambio de versión menor, la subversión debe volver a cero (v0.\textbf{5.36} a v0.\textbf{6.0}). El versionado de las ramas se discutirá en el apartado \nameref{organizacion:ramas-principales}.
 
 Para ajustar la versión del documento solo hay que editar el archivo \textbf{Makefile}, que se encargará automáticamente de hacer todos los ajustes durante la recompilación:
 \begin{center}
