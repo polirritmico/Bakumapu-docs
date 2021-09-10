@@ -79,35 +79,42 @@ A continuación la organización preliminar de la carpeta \textbf{src}:
 En términos generales estas son las consideraciones importantes:
 
 \begin{enumerate}
-  \item Los nombres solo podrán contener letras \textbf{a-z}, números \textbf{0-9} y guión medio “\textbf{-}” y bajo “\textbf{_}”. No deberán contener acentos, ni eñe, ni espacios.
+  \item Los nombres solo podrán contener letras \textbf{a-z}, números \textbf{0-9} y guión medio “\textbf{-}” y bajo “\textbf{\_}”. No deberán contener acentos, ni eñe, ni espacios.
   
   \item Todos los nombres de archivos deben estar en inglés.
   
-  \item Por compatibilidad con sistemas Windows, todos los nombres deben estar en minúscula y seguir el estilo \href{https://en.wikipedia.org/wiki/Snake_case}{snake_case} (palabras en minúscula separadas por guiones bajos “_”). Tener mucho ojo con esto porque un error puede enredar bastante el asunto en \lsc{GIT}.
+  \item Por compatibilidad con sistemas Windows, todos los nombres deben estar en minúscula y seguir el estilo \href{https://en.wikipedia.org/wiki/Snake_case}{snake\_case} (palabras en minúscula separadas por guiones bajos “\_”).
 \end{enumerate}
 
 La carpeta Design tendrá mayor libertad en los nombres ya que los archivos no serán referenciados por el código; no obstante se sugiere seguir los mismos principios.
 
 \subsection{Nombres de ramas y tarjetas}\label{organizacion:nombres-de-ramas}
 
+\subsubsection{Ramas principales}\label{organizacion:ramas-principales}
+La rama \textbf{develop} mantendrá siempre el mismo nombre. Por su parte las ramas \textbf{main} y \textbf{release} seguirán la nomenclatura del versionado semántico, en este caso \textbf{Bakumapu\_vX.Y.Z} donde cada número representa:
+\begin{itemize}[label=-]
+	\item \textbf{X:} La versión principal. 0 alfa, 1 release. Si hay cambios no compatibles con la versión anterior, \textbf{X} se incrementa en 1.
+	\item \textbf{Y:} La versión menor. Aumenta cuando se agreguen nuevas funcionalidades. Los archivos del usuario (savegames) deben ser siempre compatibles con la versión menor anterior.
+	\item \textbf{Z:} La versión de patch. Siempre que se solucionen bugs se incrementa. Cuando avance la versión menor o principal vuelve a cero.
+\end{itemize}
 
+\subsubsection{Ramas de implementación y tarjetas}\label{organizacion:id-ramas-tarjetas}
+Como ya se explicó en el apartado \nameref{flujo:flujo-de-trabajo}, lo primero es anotar la tarea a trabajar en una tarjeta dentro del tablero Kanban. Cada tarea tendrá una \lsc{ID} específica y se utilizará ese mismo identificador para nombrar la rama correspondiente en el repositorio. De esta forma, será bastante sencillo poder hacer un seguimiento tanto para la depuración del código, como para la administración del flujo de trabajo del proyecto.
 
+Esta \lsc{ID} o identificador tendrá la forma \textbf{A-B}, siendo \textbf{B} simplemente un contador que comienza en 1 y se incrementa con cada nueva instancia de \textbf{A}; y \textbf{A} señala la rama del repositorio asociada a la tarea:
 
-Ya que las ramas del repositorio \lsc{GIT} y las tarjetas del tablero Kanban tienen su origen en la misma tarea designada por el equipo de desarrollo, para mantener un seguimiento más riguroso y tener mejor información compartirán un mismo nombre. Este nombre será designado al momento de establecer la tarea y deberá cumplir las especificaciones detalladas a continuación.
+\begin{itemize}
+\item[Rama de features:] Cuando se trate de implementar una nueva funcionalidad, estamos hablando de una tarea que corresponde a las ramas de features. Por lo mismo el nombre de la tarea comenzará con las siglas \textbf{ft-}.
 
-% Hacer tabla resumen con códigos de nombres.
-\todoii{ToDo: Tabla resumen de archivos}{Hacer tabla resumen con códigos de nombres}
+\item[Rama de bugs:] Cuando se trate de la corrección de un \lsc{BUG}, las siglas serán: \textbf{bug-}.
 
-Los siguientes nombres corresponden a cada subrama:
-\begin{enumerate}
-\item Rama de features: \lsc{ft-}
-\item Rama de bugs: \lsc{bug-}
-\item Rama de patches: \lsc{patch-}
-Los patches son cambios al código motivados por features nuevas más que por problemas.
-\end{enumerate}
+\item[Refactorización:] Cuando la tarea se trate de refactorizar código ya implementado, las siglas a utilizar serán: \textbf{rfc-}. La refactorización se debe trabajar directamente sobre develop y la ID se usará en la tarjeta y al momento de hacer el commit hacia develop.
 
-Así, tareas relacionadas con algún elemento de la interfaz gráfica del juego tendrán el nombre de “ui-”
+\item[Documentación:] Los cambios en la documentación del repositorio del código usaran las siglas \textbf{doc-}. La nomenclatura no es necesaria para el repositorio de este documento.
 
-Las ramas con nombres con los que se va a interactuar son las de features y bugs.
-Las ramas de nombre fijo
-Hay tres tipos de subramas, ramas de features, ramas de bugs y ramas de patch
+\item{Otros:} Evidentemente el equipo puede evaluar en cualquier momento crear una nueva categoría sin inconvenientes. El único detalle es incluir esta categoría dentro de este mismo apartado. De momento para tareas puntuales se podría utilizar el identificador \textbf{misc-}.
+\end{itemize}
+
+Con estos sencillos elementos se pretende lograr un flujo de trabajo expedito que permita un control transparente del flujo de trabajo y al mismo tiempo manteniendo un control transparente del proyecto para cualquier miembro del equipo.
+
+Con estos sencillos elementos se pretende organizar el repositorio de manera que el flujo de trabajo sea expedito, vaya en línea con los criterios de gestión del proyecto, que cualquier miembro del equipo pueda hacer consultas directas al historial del repositorio, y facilite el uso de herramientas como visualizaciones de árbol o grafo de \lsc{GIT}.
