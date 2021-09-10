@@ -2,14 +2,14 @@ SHELL = /bin/sh
 # Actualizar con cada cambio
 VERSION = 0.0.1
 
-# In/Out target names
-INFILE = main
-OUTFILE = index
-
 # Define variables
 LATEX=latex
 PDFLATEX=pdflatex
 HTML_TOC_LEVEL=2
+
+# In/Out target names
+INFILE = main
+OUTFILE = index
 
 # The default targets
 #all: latex2html
@@ -66,8 +66,11 @@ html:
 	@rm -r build/export
 	@rm -rf docs && mv build docs
 	@echo -e "OK\n.................................................."
-	@echo -e "HTML generado exitosamente."
-	@echo "Revisar en: file:///home/eduardo/Documentos/Bakumapu/Dise%C3%B1o%20t%C3%A9cnico/docs/index.html"
+
+	@echo -en "HTML generado exitosamente.\nRevisar en: file://"
+# 	Get current directory and transform it to a valid URL
+	@echo -n '$(PWD)' | sed -e 's/ñ/%C3%B1/' -e 's/ /%20/' -e 's/é/%C3%A9/'
+	@echo -e "/docs/index.html"
 	@echo "Usar 'make sync' para subir a GITHUB."
 
 clean:
