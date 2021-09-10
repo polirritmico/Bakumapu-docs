@@ -125,7 +125,7 @@ body {animation: 1s ease-out 0.2s 1 slideInFromLeft;}
 
 /* Links y tablas */
 a {color: #fd9621; transition: 0.3s;}
-a:hover {color: #27aeae;}
+a:hover {color: #e7db74;}
 .url>span{font-family: 'Computer Modern Typewriter';}/**/
 
 table {border-color: #545b5e;}
