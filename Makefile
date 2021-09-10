@@ -9,7 +9,7 @@ OUTFILE = index
 # Define variables
 LATEX=latex
 PDFLATEX=pdflatex
-TOC_LEVEL=2
+HTML_TOC_LEVEL=2
 
 # The default targets
 #all: latex2html
@@ -31,8 +31,8 @@ html:
 	@echo -n "Ajustando versión y subtítulo: "
 	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
 	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico}}/{Diseño\ técnico}/' <$(INFILE).tex >build/$(OUTFILE).tex
-	@echo -en "OK\nAjustando nivel de TOC a $(TOC_LEVEL) para el html: "
-	@sed -i '/\\setcounter/s/{tocdepth}{*.}/{tocdepth}{$(TOC_LEVEL)}/' build/configuración/estilos.tex
+	@echo -en "OK\nAjustando nivel de TOC a $(HTML_TOC_LEVEL) para el html: "
+	@sed -i '/\\setcounter/s/{tocdepth}{*.}/{tocdepth}{$(HTML_TOC_LEVEL)}/' build/configuración/estilos.tex
 
 	@echo -e "OK\nIniciando conversión:\n.................................................."
 	@cd build && \
