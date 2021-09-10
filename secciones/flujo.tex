@@ -95,7 +95,6 @@ Todos los commits de una rama de \textbf{features} o \textbf{bugs} y la refactor
 
 Para una información más detallada sobre el funcionamiento de \lsc{GIT} bajo el modelo de ramas de función ver el \href{https://www.atlassian.com/es/git/tutorials/comparing-workflows/feature-branch-workflow}{siguiente enlace} (no olvidar los matices con respecto al trabajo bajo TDD en el apartado \nameref{principios:vision-general-desarrollo}).
 
-
 \subsubsection{Alternativas al modelo de ramas de función}\label{flujo:alternativas-al-branching}
 Si el flujo bajo el sistema de ramas de función resulta demasiado tedioso o la visualización general del código se pierde con mucha facilidad ya sea por merges muy complejos o espaciados, se propone como alternativa la metodología de \href{https://es.wikipedia.org/wiki/Entrega_continua}{Entrega continua}.
 
@@ -269,8 +268,10 @@ A nivel de desarrollo muchas veces terminamos dedicando más tiempo a estudiar e
 El presente texto, como ya se ha mencionado, tiene como objetivo desempeñar tres funciones principales:
 \begin{enumerate}[noitemsep]
 	\item Usarse como referencia ante dudas técnicas o de modelado.
-	\item Entregar toda la información relevante acerca del flujo de trabajo y del funcionamiento del software para integrar a nuevos miembros del equipo.
+	
 	\item Servir de instrumento de diseño.
+	
+	\item Entregar toda la información relevante acerca del flujo de trabajo y del funcionamiento del software para integrar a nuevos miembros del equipo.
 \end{enumerate}
 
 Para que estos objetivos se cumplan, el documento debe mantenerse actualizado a medida que se vaya escribiendo el código y tomando las distintas decisiones de diseño e implementación. Por lo mismo se ha generado un repositorio especial para ello (apartado \nameref{flujo:repositorio-de-documentacion}). 
@@ -296,7 +297,7 @@ Para ajustar la versión del documento solo hay que editar el archivo \textbf{Ma
 
 \Needspace{3\baselineskip}
 \begin{lstlisting}
-Bakumapu-docs $ nano Makefile
+Bakumapu-docs $ vim Makefile
 \end{lstlisting}
 \begin{lstlisting}[language=bash]
 SHELL = /bin/sh
