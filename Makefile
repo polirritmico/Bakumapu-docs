@@ -73,6 +73,7 @@ html:
 	@echo -e "/docs/index.html"
 	@echo "Usar 'make sync' para subir a GITHUB."
 
+# Limpia archivos generados por LaTeX
 clean:
 	@mkdir -p temp
 	@mv $(INFILE).tex temp/
@@ -82,6 +83,7 @@ clean:
 	@mv temp/* ./
 	@rm -r temp
 
+# Elimina todos los archivos del html generado
 clear:
 	@rm -rf build
 	@mkdir -p temp
