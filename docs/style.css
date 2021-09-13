@@ -146,7 +146,7 @@ div.lstlisting{white-space: normal; overflow-wrap: break-word;}
 img {max-width: 100%; max-height: auto; width: auto; height: auto;}
 
 /* Subsección sin enumerar con "*" */
-.likesubsectionHead{font-size: 1.2em; color: #27aeae;}
+.likesubsectionHead{font-size: 1.1em; color: #27aeae; margin-top:-1.25em;}
 
 /**************************************************************************/
 /****************************** ESPECIFICOS *******************************/
