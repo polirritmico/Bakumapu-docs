@@ -104,24 +104,28 @@ La rama \textbf{develop} mantendrá siempre el mismo nombre. Por su parte las ra
 \end{itemize}
 
 \subsubsection{Ramas de implementación y tarjetas}\label{organizacion:id-ramas-tarjetas}
-\subsection*{\noindent\normalfont\textit{Generando la ID}}
+\subsection*{\noindent\normalfont\textit{Asignando una ID}}
 
-Como ya se explicó en el apartado \nameref{flujo:flujo-de-trabajo}, lo primero es anotar la tarea a trabajar en una tarjeta dentro del tablero Kanban. Cada tarea tendrá una \lsc{ID} específica que también se utilizará para nombrar la rama correspondiente en el repositorio. De esta forma será bastante sencillo hacer un seguimiento para depurar el código o cuando se evalúe la administración del flujo de trabajo del proyecto.
+Como ya se explicó en el apartado \nameref{flujo:flujo-de-trabajo}, lo primero es anotar la tarea a trabajar en una tarjeta dentro del tablero Kanban. Cada tarea tendrá una \lsc{ID} específica que también se utilizará para nombrar la rama correspondiente en el repositorio. De esta forma será bastante sencillo hacer un seguimiento para depurar el código o cuando se evalúe el flujo de trabajo.
 
-Esta \lsc{ID} o identificador tendrá la forma \textbf{A-B}, siendo \textbf{B} simplemente un contador que comienza en 1 y se incrementa con cada nueva instancia de \textbf{A}; y \textbf{A} señala la rama del repositorio asociada a la tarea:
+Esta \lsc{ID} tendrá 2 partes separadas por un guión “-”. La primera, señalará el tipo de rama del repositorio asociada a la tarea:
 
 \begin{itemize}
-\item[Rama de features:] Cuando se trate de implementar una nueva funcionalidad, estamos hablando de una tarea que corresponde a las ramas de features. Por lo mismo el nombre de la tarea comenzará con las siglas \textbf{ft-}.
+\item \textbf{Rama de features (ft):} Cuando se trate de implementar una nueva funcionalidad estamos hablando de una tarea que corresponde a las ramas de features y su nombre \lsc{ID} deberá comenzará con las siglas \textbf{ft-}.
 
-\item[Rama de bugs:] Cuando se trate de la corrección de un \lsc{BUG}, las siglas serán: \textbf{bug-}.
+\item \textbf{Rama de bugs (bug):} Cuando se trate de la corrección de un \lsc{BUG}, las siglas serán \textbf{bug-}.
 
-\item[Refactorización:] Cuando la tarea se trate de refactorizar código ya implementado, las siglas a utilizar serán: \textbf{rfc-}. La refactorización se debe trabajar directamente sobre develop y la ID se usará en la tarjeta y al momento de hacer el commit hacia develop.
+\item \textbf{Refactorización (rfc):} Cuando la tarea se trate de refactorizar código ya implementado, las siglas a utilizar serán \textbf{rfc-}. La refactorización se debe trabajar directamente sobre develop y la \lsc{ID} debe usarse al momento de hacer el commit hacia develop.
 
-\item[Documentación:] Los cambios en la documentación del repositorio del código usaran las siglas \textbf{doc-}. La nomenclatura no es necesaria para el repositorio de este documento.
+\item \textbf{Documentación (doc):} Los cambios en la documentación del repositorio del código usaran las siglas \textbf{doc-}. La nomenclatura no es necesaria para el repositorio de este documento.
 
-\item{Otros:} Evidentemente el equipo puede evaluar en cualquier momento crear una nueva categoría sin inconvenientes. El único detalle es incluir esta categoría dentro de este mismo apartado. De momento para tareas puntuales se podría utilizar el identificador \textbf{misc-}.
+\item \textbf{Otros (misc):} Evidentemente el equipo puede evaluar en cualquier momento crear una nueva categoría sin inconvenientes. El único detalle es incluir esta categoría dentro de este mismo apartado. De momento para tareas puntuales se podría utilizar el identificador \textbf{misc-}.
 \end{itemize}
 
-Con estos sencillos elementos se pretende lograr un flujo de trabajo expedito que permita un control transparente del flujo de trabajo y al mismo tiempo manteniendo un control transparente del proyecto para cualquier miembro del equipo.
+La segunda parte de la \lsc{ID} será un contador {n + 1} por cada sigla: ft-1, ft-2, bug-1, rfc-1, ft-42, etc.
 
-Con estos sencillos elementos se pretende organizar el repositorio de manera que el flujo de trabajo sea expedito, vaya en línea con los criterios de gestión del proyecto, que cualquier miembro del equipo pueda hacer consultas directas al historial del repositorio, y facilite el uso de herramientas como visualizaciones de árbol o grafo de \lsc{GIT}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{center}$\ast$~$\ast$~$\ast$\end{center}
+
+Con estos sencillos elementos se pretende organizar el repositorio de tal forma que el flujo de trabajo vaya en línea con los criterios de gestión de una forma expedita y que permita a cualquier miembro del equipo hacer consultas directas al historial del repositorio para así facilitar el uso de herramientas de gestión y visualización de \lsc{GIT}.
