@@ -2,11 +2,9 @@
 % Organización del proyecto
 \section{Organización del proyecto}\label{organizacion:organizacion-del-proyecto}
 
-Dado que el proyecto será manejado por personas en distintos sistemas operativos es vital mantener una coherencia en el orden y la estructura de los archivos y directorios del proyecto.
+Dado que el proyecto será manejado por personas en distintos sistemas operativos es vital mantener una coherencia en los nombres y la estructura de los archivos y directorios del proyecto. El presente apartado contiene una propuesta base que considera el funcionamiento general del desarrollo y la estructura de los archivos dentro del repositorio.
 
-A continuación, se presenta una propuesta base que considera tanto los ficheros del código como los del diseño artístico:
-
-\subsection{Árbol de directorios}\label{organizacion:arbol-de-directorios}
+\subsection{Organización de carpetas}\label{organizacion:arreglo-carpetas}
 
 \begin{itemize}
 \item \textbf{Design:} Esta carpeta contiene todos los archivos del diseño de arte del juego (música, sonidos, sprites, tilesets, bocetos, dibujos, animación, etc.). Es de uso para artistas y desarrolladores y su organización muy probablemente se irá modificando en el tiempo. \emph{Ningún archivo dentro de esta carpeta debe ser referenciado por el código}, por lo mismo permite mayor libertad para ajustar nombres y ubicaciones. Más información al respecto en el apartado \nameref{organizacion:nombres-de-archivos}.
@@ -21,7 +19,7 @@ A continuación, se presenta una propuesta base que considera tanto los ficheros
 
 \item \textbf{src:} Probablemente la carpeta principal para el desarrollo técnico. Además del código fuente del programa contendrá todo lo relativo a nodos, escenas, assets, librerías y scripts. La estructura de esta carpeta será utilizada por el proyecto dentro de Godot.
 
-Una consideración importante para mantener la organización de los archivos de una forma que sea coherente con la abstracción de \textit{escenas y nodos}, es crear cada escena dentro de su propia carpeta. Aquí, además del archivo \lsc{TSCN}, deberían estar todos los assets que utiliza la escena para evitar cualquier problemas de dependencias. La idea es poder mover o copiar la carpeta de ubicación y que todo siga funcionando.
+Una consideración importante para mantener la organización de los archivos de una forma que sea coherente con la abstracción de \textit{escenas y nodos}, es crear cada escena dentro de su propia carpeta. Aquí, además del archivo \lsc{TSCN}, deberían estar todos los assets que utiliza la escena para evitar cualquier problemas de dependencias. La idea es poder mover o copiar la carpeta de ubicación y que todo siga funcionando dentro de ella.
 
 \begin{lstlisting}
 $ ls src/characters/player/tyanka/
@@ -83,10 +81,10 @@ En términos generales estas son las consideraciones importantes:
   
   \item Todos los nombres de archivos deben estar en inglés.
   
-  \item Por compatibilidad con sistemas Windows, todos los nombres deben estar en minúscula y seguir el estilo \href{https://en.wikipedia.org/wiki/Snake_case}{snake\_case} (palabras en minúscula separadas por guiones bajos “\_”).
+  \item Por compatibilidad, todos los nombres deben estar en minúscula y seguir el estilo \href{https://en.wikipedia.org/wiki/Snake_case}{snake\_case} (palabras en minúscula separadas por guiones bajos “\_”).
 \end{enumerate}
 
-La carpeta Design tendrá mayor libertad en los nombres ya que los archivos no serán referenciados por el código; no obstante se sugiere seguir los mismos principios.
+La carpeta Design tendrá mayor libertad en los nombres ya que los archivos no serán referenciados por el código; no obstante se sugiere seguir los mismos principios para evitar problemas de pérdida de datos.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,15 +92,21 @@ La carpeta Design tendrá mayor libertad en los nombres ya que los archivos no s
 \subsection{Nombres de ramas y tarjetas}\label{organizacion:nombres-de-ramas}
 
 \subsubsection{Ramas principales}\label{organizacion:ramas-principales}
+
 La rama \textbf{develop} mantendrá siempre el mismo nombre. Por su parte las ramas \textbf{main} y \textbf{release} seguirán la nomenclatura del versionado semántico, en este caso \textbf{Bakumapu\_vX.Y.Z} donde cada número representa:
+
 \begin{itemize}[label=-]
 	\item \textbf{X:} La versión principal. 0 alfa, 1 release. Si hay cambios no compatibles con la versión anterior, \textbf{X} se incrementa en 1.
+	
 	\item \textbf{Y:} La versión menor. Aumenta cuando se agreguen nuevas funcionalidades. Los archivos del usuario (savegames) deben ser siempre compatibles con la versión menor anterior.
+	
 	\item \textbf{Z:} La versión de patch. Siempre que se solucionen bugs se incrementa. Cuando avance la versión menor o principal vuelve a cero.
 \end{itemize}
 
 \subsubsection{Ramas de implementación y tarjetas}\label{organizacion:id-ramas-tarjetas}
-Como ya se explicó en el apartado \nameref{flujo:flujo-de-trabajo}, lo primero es anotar la tarea a trabajar en una tarjeta dentro del tablero Kanban. Cada tarea tendrá una \lsc{ID} específica y se utilizará ese mismo identificador para nombrar la rama correspondiente en el repositorio. De esta forma, será bastante sencillo poder hacer un seguimiento tanto para la depuración del código, como para la administración del flujo de trabajo del proyecto.
+\subsection*{\noindent\normalfont\textit{Generando la ID}}
+
+Como ya se explicó en el apartado \nameref{flujo:flujo-de-trabajo}, lo primero es anotar la tarea a trabajar en una tarjeta dentro del tablero Kanban. Cada tarea tendrá una \lsc{ID} específica que también se utilizará para nombrar la rama correspondiente en el repositorio. De esta forma será bastante sencillo hacer un seguimiento para depurar el código o cuando se evalúe la administración del flujo de trabajo del proyecto.
 
 Esta \lsc{ID} o identificador tendrá la forma \textbf{A-B}, siendo \textbf{B} simplemente un contador que comienza en 1 y se incrementa con cada nueva instancia de \textbf{A}; y \textbf{A} señala la rama del repositorio asociada a la tarea:
 
