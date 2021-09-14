@@ -56,6 +56,9 @@ html:
 	@sed -i 's/Figura~/Figura /' build/export/$(OUTFILE).html
 	@echo -en "OK\nAgregando fondo: "
 	@cp imágenes/fondo.jpg build/export/imágenes/
+	@echo -en "OK\nAgregando favicon: "
+	@cp imágenes/icon.svg build/export/imágenes/
+	@sed -i '/\/head/i \ \ \ \ <link rel="icon" href="imágenes\/icon.svg">' build/export/$(OUTFILE).html
 
 	@echo -en "OK\nLimpiando archivos de compilación: "
 	@cd build && \
