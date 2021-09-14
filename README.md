@@ -1,4 +1,4 @@
-# Bakumapu: Repositorio de documentación
+# Bakumapu: Repositorio de documentación :book:
 
 La presente documentación está escrita en el formato LaTeX y se exporta automáticamente con make4ht a HTML para su cómoda lectura en el siguiente enlace:
 - https://polirritmico.github.io/Bakumapu-docs/
