@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Anexo LaTeX
+
+%\appendix
+\section{Comandos \LaTeX}\label{anexo-latex:listado-comandos-latex}
+Los comandos son palabras claves que el compilador interpreta para generar el documento. Siempre deben comenzar con el signo backslash (\textbackslash).
+
+\noindent A continuación una lista con los comandos más fundamentales:
+
+\begin{enumerate}
+\item Comentarios:
+\lstset{style=latex}
+\begin{lstlisting}
+Esto es un texto normal.
+% Esto es un comentario. No se compila.
+Texto % Comentario.
+\end{lstlisting}
+\item Escapar símbolos:
+\begin{lstlisting}
+Necesito escribir una linea \_ y un porcentaje \%
+El signo \ funciona con este comando: \textbackslash.
+\end{lstlisting}
+\item Secciones (en orden descendente):
+\begin{lstlisting}
+\section{Titulo de seccion}
+\subsection{Titulo de subseccion}
+\subsection*{Titulo.} % Asterisco para no ennumerar.
+\subsubsection{Titulo de subsubseccion}
+\paragraph{Titulo de seccion parrafo}
+\end{lstlisting}
+\item Ajustes tipográficos:
+\begin{lstlisting}
+Negrita: Texto a \textbf{negrita}.
+Enfasis: Texto a \emph{enfasis}
+Cursiva: Texto a \textit{cursiva}.
+Versalita: Texto a \lsc{versalita}.
+\end{lstlisting}
+
+\item Ajustes de párrafo:
+	\begin{enumerate}
+	\item Alineación:
+	\begin{lstlisting}
+\begin{centering} % alternativas: flushleft, flushright
+Texto alineado en base al valor en begin.
+\end{centering}
+	\end{lstlisting}
+	\Needspace{4\baselineskip}
+	\item Saltos de línea:
+	\begin{lstlisting}
+Los saltos necesitan este comando\\
+sino se encadenan en una misma linea.
+
+Los parrafos se separan con una linea en blanco.
+	\end{lstlisting}
+
+	\item Quitar sangría:
+	\begin{lstlisting}
+\noindent Primera linea sin sangria.
+	\end{lstlisting}
+	\end{enumerate}
+
+\item Referencias:
+\begin{lstlisting}
+% Lo que queremos referenciar:
+\subsection{Titulo subseccion}
+% Le agregamos label. Ojala usar {nombre_archivo:descripcion}
+\subsection{Titulo subseccion}\label{modelado:titulo-sec}
+
+% Para crear la referencia hacia ese titulo:
+La siguiente referencia: \nameref{modelado:titulo-sec}
+
+% Ojo: En label{} solo ASCII basico, no tildes ni enie.
+\end{lstlisting}
+
+\item Listas:
+\begin{lstlisting}
+\begin{enumerate} % Para listas no numeradas usar itemize.
+    \item Primer item numerado.
+    \item Segundo item numerado.
+\end{enumerate}
+\end{lstlisting}
+
+\item Imágenes:
+\begin{lstlisting}
+\begin{figure}[h] % h de here, t top, b bottom o nada.
+    \centering
+    \includegraphics[]{ruta/al/archivo}
+    \caption{Subtitulo.}
+    \label{fig:imagen} % Si queremos label para referencia.
+\end{figure}
+\end{lstlisting}
+
+\Needspace{7\baselineskip}
+\item Código:
+\begin{lstlisting}
+\begin{lstlisting*} % sin el asterisco
+% Dentro de lstlisting solo ASCII basico sin tildes ni enies
+var test = Clase.llamado(ejemplo.datos, objeto.pos())
+$ comando -opciones ruta_a_archivo.txt
+\end{lstlisting*} % sin el asterisco
+\end{lstlisting}
+
+\item Otros:
+\begin{enumerate}
+	\item Mover a la siguiente página si no hay espacio disponible:
+	\begin{lstlisting}
+% el 2\baselineskip es para obtener el alto de 2 lineas
+\Needspace{2\baselineskip}
+	\end{lstlisting}
+	
+	\item Salto de página:
+	\begin{lstlisting}
+\pagebreak
+	\end{lstlisting}
+	
+	\item Espacios indivisible (non-breaking space):
+	\begin{lstlisting}
+60~hz, 50~km, siglo~\lsc{XVI}.
+	\end{lstlisting}
+	\lstset{style=bash}
+\end{enumerate}
+
+\end{enumerate}

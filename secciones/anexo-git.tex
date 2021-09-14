@@ -1,0 +1,161 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Anexo GIT
+\appendix
+\section{Comandos de GIT}\label{anexo-git}
+
+Este apartado es una referencia rápida a los comandos y configuraciones más comunes en el trabajo con \lsc{GIT}. Otra referencia útil \lsc{GIT} \href{https://rogerdudler.github.io/git-guide}{aquí}.
+
+\begin{itemize}[label=-]
+	\item Configuración:
+	\begin{lstlisting}
+$ ./config/git/config
+	\end{lstlisting}
+	
+	\begin{lstlisting}
+conf[user]
+name = USUARIO
+email = MAIL_REGISTRADO_EN_GITHUB
+[credential]
+helper = store
+[core]
+autocrlf = input
+	\end{lstlisting}
+	
+	\item Credentials en archivo $\sim$/.config/git/credentials (asociado al usuario y al repositorio)
+	
+	\item Archivos y directorios ignorados por \lsc{GIT} (en .gitignore dentro de Bakumapu):
+	\begin{lstlisting}
+# Godot-specific ignores
+.import/
+export/
+export.cfg
+export_presets.cfg
+
+# Mono-specific ignores
+.mono/
+data_*/
+	\end{lstlisting}
+	
+	\Needspace{7\baselineskip}
+	
+	\item Evitar problemas de formato de archivo entre Windows (\lsc{CRLF}) y el resto de sistemas:
+	\begin{lstlisting}
+$ .gitattributes:
+	\end{lstlisting}
+	\noindent\begin{minipage}{.45\textwidth}
+	\begin{lstlisting}
+# Set the default behavior, in
+# case people
+# don't have core.autocrlf set
+
+* text eol=lf
+
+# Explicitly declare text
+# files you want to always
+# be normalized and converted 
+# to native line endings on
+# checkout.
+
+*.godot text
+*.tscn text
+*.gd text
+*.tres text
+*.import text
+*.md text
+*.txt text
+*.json text
+*.xml text
+*.py text
+*.c text
+*.h text
+
+# binary files that should not
+# be modified
+
+# fonts
+*.ttf binary
+*.otf binary
+	\end{lstlisting}
+	\end{minipage}\hfill
+	\begin{minipage}{.45\textwidth}
+	\begin{lstlisting}[escapechar=\%]
+# images
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.aseprite binary
+*.gif binary
+*.xcf binary
+*.svg binary
+*.kra binary
+
+# sound
+
+*.wav binary
+*.ogg binary
+*.sf2 binary
+*.midi binary
+*.amr binary
+*.musx binary
+*.mp3 binary
+
+# misc
+
+*.zip binary
+*.rar binary
+*.tar.gz
+
+
+
+%
+	\end{lstlisting}
+	\end{minipage}
+
+	\item Clonar el repositorio en el espacio de trabajo local:
+	\begin{lstlisting}
+$ git clone https://github.com/polirritmico/Bakumapu
+	\end{lstlisting}
+
+	\item Ver el estado de la rama actual:
+	\begin{lstlisting}
+$ git status
+	\end{lstlisting}
+	
+	\item Cambiar a una rama (por ejemplo develop):
+	\begin{lstlisting}
+$ git checkout develop
+	\end{lstlisting}
+	
+	\item Crear una nueva rama en base a la rama actual (ejemplo “ft-01”:
+	\begin{lstlisting}
+$ git checkout -b ft-01
+	\end{lstlisting}
+	
+	\item Enviar la rama local a Github (origin es un alias de la ruta al repo en github):
+	\begin{lstlisting}
+$ git push -u origin ft-01
+	\end{lstlisting}
+	
+	\item Agrega todos los cambios al área de pruebas:
+	\begin{lstlisting}
+$ git add .
+	\end{lstlisting}
+	
+	\item Agrega comentarios al commit:
+	\begin{lstlisting}
+$ git commit -m descripcion
+	\end{lstlisting}
+	
+	\item Envía los cambios locales de la rama actual a Github:
+	\begin{lstlisting}
+$ git push
+	\end{lstlisting}
+	
+	\item Actualizar el repositorio local desde Github:
+	\begin{lstlisting}
+$ git pull
+	\end{lstlisting}
+\end{itemize}
+
