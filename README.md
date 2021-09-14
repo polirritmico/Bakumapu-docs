@@ -5,7 +5,7 @@ La presente documentación está escrita en el formato LaTeX y exportada a HTML 
 Para su lectura seguir el siguiente enlace:
 - https://polirritmico.github.io/Bakumapu-docs/
 
-También está disponible el documento original en PDF [aquí](https://github.com/polirritmico/Bakumapu-docs/blob/main/main.pdf).
+También está disponible el documento original en PDF [aquí](https://github.com/polirritmico/Bakumapu-docs/raw/main/main.pdf).
 
 ---
 
