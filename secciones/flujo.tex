@@ -33,20 +33,31 @@ Respetar los límites de cada columna, facilitará la distribución de trabajo e
 
 \subsubsection{Descripción de columnas}\label{flujo:descripcion-de-columnas}
 El funcionamiento de cada columna es bastante sencillo:
+
 \begin{enumerate}
 	\item \textbf{Columna Tareas:} Acá dejamos las tareas en sus tarjetas y las ordenamos según prioridad (arriba más urgentes). Solo se debería empezar a trabajar en la tarea superior. La prioridad de las tareas será determinada por el equipo.
-	\item \textbf{Columna Desglose de tareas:} Es \textit{muy importante} que las tareas sean descompuestas en tareas sencillas para que no se demoren más de unos días en completarse. Las tareas que entran a esta columna se analizan y dividen en tareas acotadas.
-	\item \textbf{Columna Desglosadas:} Aquí las tareas desglosadas esperan hasta que alguien se haga cargo de implementar el código y pasan a la siguiente columna.
-	\item \textbf{Columna Trabajando:} Aquí el encargado se anota en la tarjeta y trabaja hasta completarla, pasándola a Terminadas. Una tarea se considerará completada solo cuando haya pasado todos los test correspondientes.
-	\item \textbf{Columna Implementadas:} Acá quedan las tarjetas con tareas terminadas esperando revisión.
+	
+	\item \textbf{Columna Desglose de tareas:} Es \textit{muy importante} que las tareas sean descompuestas en tareas sencillas para que no tomen más de unos días en completarse. Las tareas que entran a esta columna se analizan y dividen en tareas acotadas.
+	
+	\item \textbf{Columna Ajuste de tarjeta:} A cada tarjeta en esta columna habrá que asignarle una ID (revisar \nameref{flujo:nombres-de-tarjetas}, ajustar su nombre y descripción de modo que quede perfectamente claro de qué se trata. Si es necesario se puede añadir información relevante.
+
+	\item \textbf{Columna Asignación:} Aquí, la tarea ya ajustada espera a que alguien la tome y se asigne a ella. Este encargado será responsable de completar la tarea hasta la columna Implementadas.
+	
+	\item \textbf{Columna Trabajando - Test:} En esta etapa lo primero es crear la rama correspondiente, luego escribir el test y verificar que falle (más información en el apartado \nameref{principios:TDD}).
+	
+	\item \textbf{Columna Trabajando - Código:} En esta etapa se implementa la funcionalidad hasta que se hayan pasado todos los test correspondientes y haya concluido el ciclo de refactorización con los test aprobados.
+	
+	\item \textbf{Columna Implementadas:} Acá quedan las tarjetas con tareas terminadas esperando revisión de otro desarrollador (idealmente) que se deberá asignar a la tarjeta para pasarla a la siguiente etapa.
+	
 	\item \textbf{Columna En revisión:} Acá van las tareas que se estén revisando. Si tienen problemas o bugs pequeños se resuelven aquí mismo, si tuviera bugs o un problema más grande podría volver a analizarse el desglose con alta prioridad.
-	\item \textbf{Columna Hecho:} Aquí van las tareas terminadas. Se eliminan al hacer el merge de un conjunto de features completo a develop (cuando sube la versión).
+	
+	\item \textbf{Columna Finalizadas:} Aquí van las tareas terminadas. Se archivan al hacer el merge de un conjunto de features completo a develop (cuando sube la versión).
 \end{enumerate}
 
 \subsubsection{Flexibilidad}\label{flujo:flexibilidad}
 Esta es una herramienta que permite tener visualizadas las distintas áreas del proyecto, identificar cuellos de botella y contribuir a la gestión mediante límites de trabajo; no obstante, no debe olvidarse que es solo una guía. Si algo del sistema necesita cambiarse porque va contra el flujo de trabajo, se debe ajustar rápidamente.
 
-\subsubsection{Nombres de Tarjetas}\label{flujo:nombres-de-tarjetas}
+\subsubsection{Nombres de Tarjetas e ID}\label{flujo:nombres-de-tarjetas}
 Los nombres de las tareas se deben corresponder con la tarea o funcionalidad a implementar y a su rama asociada en \lsc{GIT}. Más detalles en el apartado \nameref{organizacion:nombres-de-ramas}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
