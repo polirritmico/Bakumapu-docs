@@ -3,11 +3,11 @@
   <head>
     <title></title>
     <meta charset='utf-8'>
-    <meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator'>
-    <meta content='width=device-width,initial-scale=1' name='viewport'>
-    <link type='text/css' href='index.css' rel='stylesheet'>
-    <meta content='index.tex' name='src'>
-    <link type='text/css' href='style.css' rel='stylesheet'>
+    <meta name='generator' content='TeX4ht (https://tug.org/tex4ht/)'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <link href='index.css' rel='stylesheet' type='text/css'>
+    <meta name='src' content='index.tex'>
+    <link href='style.css' rel='stylesheet' type='text/css'>
     <link rel="icon" href="imágenes/icon.svg">
   </head>
   <body>
@@ -448,7 +448,7 @@
     <p class='noindent'>
       El formato para los archivos de música, sonido ambiente y efectos será el <span class='eccc1095-'><span class='small-caps'>ogg</span></span>. Para su conversión se utilizará <a href='http://ffmpeg.org/' target='_blank'>FFmpeg</a> en su última versión estable (actualmente la 4.4) con el encoder <span class='ectt-1095'>libvorvis</span>. Los <span class='eccc1095-'><span class='small-caps'>ogg</span></span> deberán ser de 192 kbps a 44 khz:
     </p><!-- l. 112 -->
-    <div class='lstlisting' id='listing-1'>
+    <div id='listing-1' class='lstlisting'>
       <span class='label'><a id='x1-18001r1'></a></span><span id='textcolor2'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>ffmpeg -i ARCHIVO.wav -acodec libvorbis -q:a 6 ARCHIVO.ogg</span>
     </div>
     <p>
@@ -478,7 +478,7 @@
     <figure class='figure'>
       <a id='x1-21001r1'></a> <!-- l. 17 -->
       <p class='noindent'>
-        <img alt='PIC' src='im%C3%A1genes/tdd.png' height='270' width='270'>
+        <img height='270' src='im%C3%A1genes/tdd.png' alt='PIC' width='270'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 1: </span><span class='content'>Flujo de desarrollo TDD.</span>
@@ -547,7 +547,7 @@
     <figure class='figure'>
       <a id='x1-26001r2'></a> <!-- l. 14 -->
       <p class='noindent'>
-        <img alt='PIC' src='im%C3%A1genes/tablero01.png' height='360' width='360'>
+        <img height='360' src='im%C3%A1genes/tablero01.png' alt='PIC' width='360'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 2: </span><span class='content'>Tablero Kanban en Trello.</span>
@@ -573,7 +573,7 @@
       <figcaption class='caption'>
         <span class='id'>Figura 3: </span><span class='content'>Límites de trabajo en Trello.</span>
       </figcaption><!-- tex4ht:label?: x1-27001r3  -->
-      <img alt='PIC' src='im%C3%A1genes/tablero02.png' height='360' width='360'>
+      <img height='360' src='im%C3%A1genes/tablero02.png' alt='PIC' width='360'>
     </figure><!-- l. 32 -->
     <p class='indent'>
       Respetar los límites de cada columna, facilitará la distribución de trabajo en un modelo de entrega continua y nos permitirá tomar decisiones más acertadas y realistas al momento de la planificación. <a id='x1-27002r29'></a>
@@ -658,7 +658,7 @@
     <figure class='figure'>
       <a id='x1-32001r4'></a> <!-- l. 64 -->
       <p class='noindent'>
-        <img alt='PIC' src='im%C3%A1genes/git.png' height='360' width='360'>
+        <img height='360' src='im%C3%A1genes/git.png' alt='PIC' width='360'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 4: </span><span class='content'>Ramas en <span class='eccc1095-'><span class='small-caps'>git</span></span>.</span>
@@ -809,10 +809,10 @@
         <span class='ectt-1095'>Versión actual: v0.0.1.</span>
       </p>
     </div><!-- l. 143 -->
-    <div class='lstlisting' id='listing-2'>
+    <div id='listing-2' class='lstlisting'>
       <span class='label'><a id='x1-43001r1'></a></span><span class='ectt-1000'>Bakumapu-docs </span><span id='textcolor3'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>vim Makefile</span>
     </div><!-- l. 146 -->
-    <div class='lstlisting' id='listing-3'>
+    <div id='listing-3' class='lstlisting'>
       <span class='label'><a id='x1-43002r1'></a></span><span class='ectt-1000'>SHELL = /bin/sh </span><br>
       <span class='label'><a id='x1-43003r2'></a></span><span class='ectt-1000'># Actualizar con cada cambio </span><br>
       <span class='label'><a id='x1-43004r3'></a></span><span class='ectt-1000'>VERSION = 0.0.1</span>
@@ -826,7 +826,7 @@
     <p class='noindent'>
       Para exportar a <span class='eccc1095-'><span class='small-caps'>html</span></span> bastará con usar el paquete <span class='ecbx-1095'>make4ht</span> (utiliza pdflatex y htlatex). Las instrucciones de compilación están configuradas en el fichero Makefile, por lo que la conversión se automatiza con el comando:
     </p><!-- l. 154 -->
-    <div class='lstlisting' id='listing-4'>
+    <div id='listing-4' class='lstlisting'>
       <span class='label'><a id='x1-44001r1'></a></span><span class='ectt-1000'>Bakumapu-docs </span><span id='textcolor4'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>make html</span>
     </div><!-- l. 157 -->
     <p class='indent'>
@@ -841,7 +841,7 @@
     <p class='indent'>
       Para sincronizar el servidor además de los comandos <span class='eccc1095-'><span class='small-caps'>git</span></span> habituales, el archivo <span class='ecbx-1095'>Makefile</span> tiene las instrucciones para automatizar el proceso:
     </p><!-- l. 163 -->
-    <div class='lstlisting' id='listing-5'>
+    <div id='listing-5' class='lstlisting'>
       <span class='label'><a id='x1-45001r1'></a></span><span class='ectt-1000'>Bakumapu-docs </span><span id='textcolor5'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>make sync</span>
     </div>
     <p>
@@ -880,7 +880,7 @@
         <p class='noindent'>
           Operadores y variables separados por un espacio:
         </p><!-- l. 176 -->
-        <div class='lstlisting' id='listing-6'>
+        <div id='listing-6' class='lstlisting'>
           <span class='label'><a id='x1-46001r1'></a></span><span class='ectt-1000'>var ejemplo = Vector2(2, 5 + PI.get(2))</span>
         </div>
       </li>
@@ -935,16 +935,13 @@
       <span class='titlemark'>3.5.</span> <a id='x1-480005'></a>LaTeX
     </h4><!-- l. 203 -->
     <p class='noindent'>
-      Pese a lo que pueda parecer, el uso de L<span class='ecrm-0800'>A</span>TE X a nivel básico es bastante sencillo, simplemente es escribir el texto y utilizar comandos para marcar el estilo o contenido para el compilador. En términos prácticos, a nivel básico es escribir el título de una sección, subsección o incluso sub-subsección con el comando correspondiente y separar los párrafos con una línea en blanco entremedio.
+      Pese a lo que pueda parecer, el uso de L<span class='ecrm-0800'>A</span>TE X a nivel básico es bastante sencillo, simplemente es escribir el texto y utilizar comandos que definan el contenido para el compilador. En términos prácticos, básicamente es delimitar una sección, subsección o sub-subsección con el comando correspondiente y separar los párrafos con una línea en blanco entremedio.
     </p><!-- l. 205 -->
     <p class='indent'>
-      En cualquier caso, teniendo los mismos archivos <span class='eccc1095-'><span class='small-caps'>tex</span></span> del documento como modelo además de la información de este apartado, debiese ser suficiente para todas las modificaciones. Si hubiera por mencionar algo que facilite el proceso, se debería agregar en este apartado.
+      En cualquier caso, los mismos archivos <span class='eccc1095-'><span class='small-caps'>tex</span></span> del documento son un buen modelo de referencia. Si se quiere agregar información o apuntes para facilitar el uso de L<span class='ecrm-0800'>A</span>TE X se debería agregar en este apartado. En lo posible tratar de no agregar nuevos paquetes.
     </p><!-- l. 207 -->
     <p class='indent'>
-      En lo posible tratar de no agregar nuevos paquetes.
-    </p><!-- l. 209 -->
-    <p class='indent'>
-      Para una lista de los comandos más comunes y una rápida explicación al respecto, revisar el anexo <a href='#x1-1200002'>Comandos L<span class='ecrm-0800'>A</span>TE X<!-- tex4ht:ref: anexo-latex:listado-comandos-latex  --></a>. <a id='x1-48001r25'></a>
+      Para una lista de los comandos más comunes y una rápida explicación al respecto, revisar el anexo <a href='#x1-1200002'>Comandos L<span class='ecrm-0800'>A</span>TE X<!-- tex4ht:ref: anexo-latex  --></a>. <a id='x1-48001r25'></a>
     </p>
     <h3 class='sectionHead'>
       <span class='titlemark'>4.</span> <a id='x1-490004'></a>Internacionalización
@@ -1200,12 +1197,12 @@
     <p class='indent'>
       Por ejemplo, <span class='ectt-1095'>tyanka.gd</span> podría reimplementar funciones de PlayerMng:
     </p><!-- l. 10 -->
-    <div class='lstlisting' id='listing-7'>
+    <div id='listing-7' class='lstlisting'>
       <span class='label'><a id='x1-62001r1'></a></span><span class='ectt-1000'>@@ src/characters/player/tyanka.gd </span><br>
       <span class='label'><a id='x1-62002r2'></a></span><span class='ectt-1000'>PlayerMng.storeItem(Tyanka.item_bag, GM.getRewardFromCurrentQuest(\ </span><br>
       <span class='label'><a id='x1-62003r3'></a></span><span class='ectt-1000'>                 PlayerMng.currentQuest.getPath()))</span>
     </div><!-- l. 15 -->
-    <div class='lstlisting' id='listing-8'>
+    <div id='listing-8' class='lstlisting'>
       <span class='label'><a id='x1-62004r1'></a></span><span class='ectt-1000'>@@ src/game/game_manager.gd </span><br>
       <span class='label'><a id='x1-62005r2'></a></span><span class='ectt-1000'>def getRewardFromCurrentQuest(path) -&gt; item: </span><br>
       <span class='label'><a id='x1-62006r3'></a></span><span class='ectt-1000'>   quest = QuestMng.getQuestFromPath(path) </span><br>
@@ -1220,7 +1217,7 @@
     <figure class='figure'>
       <a id='x1-62008r6'></a> <!-- l. 28 -->
       <p class='noindent'>
-        <img alt='PIC' src='im%C3%A1genes/arquitectura.png' height='216' width='216'>
+        <img height='216' src='im%C3%A1genes/arquitectura.png' alt='PIC' width='216'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 6: </span><span class='content'>Ejemplo de sistema de managers ajustable.</span>
@@ -1250,7 +1247,7 @@
         <a id='x1-64001r1'></a>
       </p><!-- l. 51 -->
       <div class='longtable'>
-        <table class='longtable' id='TBL-1'>
+        <table id='TBL-1' class='longtable'>
           <colgroup id='TBL-1-1g'>
             <col id='TBL-1-1'>
           </colgroup>
@@ -1258,109 +1255,109 @@
             <col id='TBL-1-2'>
           </colgroup>
           <tr style='vertical-align:baseline;' id='TBL-1-1-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-1-1'></td>
+            <td id='TBL-1-1-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-2-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-2-1'></td>
+            <td id='TBL-1-2-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-3-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-3-1'>
+            <td id='TBL-1-3-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 51 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-4-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-4-1'></td>
+            <td id='TBL-1-4-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-5-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-5-1'></td>
+            <td id='TBL-1-5-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-6-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-6-1'>
+            <td id='TBL-1-6-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 51 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-7-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-7-1'>
+            <td id='TBL-1-7-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 51 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-8-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-8-1'></td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-8-2'></td>
+            <td id='TBL-1-8-1' class='td11' style='white-space:normal; text-align:left;'></td>
+            <td id='TBL-1-8-2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-9-'>
-            <td colspan='2' class='td11' style='white-space:nowrap; text-align:left;' id='TBL-1-9-1'>
-              <div class='multicolumn' style='white-space:nowrap; text-align:left;'>
+            <td id='TBL-1-9-1' colspan='2' class='td11' style='white-space:nowrap; text-align:left;'>
+              <div style='white-space:nowrap; text-align:left;' class='multicolumn'>
                 <span class='ecbx-1095'>GameManager</span>
               </div>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-10-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-10-1'></td>
+            <td id='TBL-1-10-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-11-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-11-1'></td>
+            <td id='TBL-1-11-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-12-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-12-1'>
+            <td id='TBL-1-12-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 54 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-13-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-13-1'></td>
+            <td id='TBL-1-13-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-14-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-14-1'></td>
+            <td id='TBL-1-14-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-15-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-15-1'>
+            <td id='TBL-1-15-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 54 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-16-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-16-1'>
-              <div class='multicolumn' style='white-space:normal; text-align:left;'>
+            <td id='TBL-1-16-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'>
+              <div style='white-space:normal; text-align:left;' class='multicolumn'>
                 Manager principal a nivel de ejecución cuya función además de iniciar el juego será la de instanciar al resto de SubManagers. <span class='eccc1095-'><span class='small-caps'>gm</span></span> tendrá una clara tendencia a crecer en complejidad por lo que es muy importante que opere delegando funciones más que implementándolas. En esta misma línea si la interacción entre managers termina siendo demasiado compleja entonces será un síntoma de que es necesario un rediseño en cuanto a los in/outs de los submanagers implicados.
               </div>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-17-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-17-1'></td>
+            <td id='TBL-1-17-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-18-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-18-1'></td>
+            <td id='TBL-1-18-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-19-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-19-1'>
+            <td id='TBL-1-19-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 56 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-20-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-20-1'></td>
+            <td id='TBL-1-20-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-21-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-21-1'></td>
+            <td id='TBL-1-21-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-22-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-22-1'>
+            <td id='TBL-1-22-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 56 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-23-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-23-1'>
+            <td id='TBL-1-23-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 56 -->
               <p class='noindent'>
                 <span class='ecbx-1095'>SubManager</span>
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-23-2'>
+            <td id='TBL-1-23-2' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 56 -->
               <p class='noindent'>
                 <span class='ecbx-1095'>Dimensión</span>
@@ -1368,37 +1365,37 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-24-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-24-1'></td>
+            <td id='TBL-1-24-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-25-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-25-1'></td>
+            <td id='TBL-1-25-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-26-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-26-1'>
+            <td id='TBL-1-26-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 58 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-27-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-27-1'></td>
+            <td id='TBL-1-27-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-28-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-28-1'></td>
+            <td id='TBL-1-28-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-29-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-29-1'>
+            <td id='TBL-1-29-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 58 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-30-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-30-1'>
+            <td id='TBL-1-30-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 58 -->
               <p class='noindent'>
                 LevelManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-30-2'>
+            <td id='TBL-1-30-2' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 58 -->
               <p class='noindent'>
                 Todo lo relativo a los niveles. Por ejemplo, el conjunto de métodos que se encargan de toda la lógica relevante del nivel, una interfaz para que <span class='eccc1095-'><span class='small-caps'>gm</span></span> pueda conectar los distintos requerimientos del nivel, carga de locaciones, ubicación e inicio de subrutinas de Player y <span class='eccc1095-'><span class='small-caps'>npc</span></span>, señales de áreas para CutsceneManager, <span class='eccc1095-'><span class='small-caps'>ui</span></span> específicas, etc. Al igual que <span class='eccc1095-'><span class='small-caps'>gm</span></span> posiblemente tenderá a complejizarse por lo que es importante estar pendiente de posibles desacoplamientos.
@@ -1406,37 +1403,37 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-31-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-31-1'></td>
+            <td id='TBL-1-31-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-32-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-32-1'></td>
+            <td id='TBL-1-32-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-33-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-33-1'>
+            <td id='TBL-1-33-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 61 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-34-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-34-1'></td>
+            <td id='TBL-1-34-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-35-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-35-1'></td>
+            <td id='TBL-1-35-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-36-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-36-1'>
+            <td id='TBL-1-36-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 61 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-37-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-37-1'>
+            <td id='TBL-1-37-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 61 -->
               <p class='noindent'>
                 QuestManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-37-2'>
+            <td id='TBL-1-37-2' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 61 -->
               <p class='noindent'>
                 Todo lo relevante a las misiones: requerimientos, objetivos, experiencia, ítems, cutscenes, niveles, etc.
@@ -1444,38 +1441,38 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-38-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-38-1'></td>
+            <td id='TBL-1-38-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-39-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-39-1'></td>
+            <td id='TBL-1-39-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-40-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-40-1'>
+            <td id='TBL-1-40-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 63 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-41-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-41-1'></td>
+            <td id='TBL-1-41-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-42-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-42-1'></td>
+            <td id='TBL-1-42-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-43-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-43-1'>
+            <td id='TBL-1-43-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 63 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-44-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-44-1'>
+            <td id='TBL-1-44-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 63 -->
               <p class='noindent'>
                 Cutscene<br class='newline'>
                 Manager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-44-2'>
+            <td id='TBL-1-44-2' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 63 -->
               <p class='noindent'>
                 Todo lo relativo a los momentos en el que el jugador no está interactuando con la <span class='eccc1095-'><span class='small-caps'>ui</span></span> ni tiene control del personaje, es decir animaciones dentro y fuera del gameplay. Incluye diálogos pero estudiar si es conveniente una separación.
@@ -1483,37 +1480,37 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-45-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-45-1'></td>
+            <td id='TBL-1-45-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-46-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-46-1'></td>
+            <td id='TBL-1-46-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-47-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-47-1'>
+            <td id='TBL-1-47-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 65 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-48-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-48-1'></td>
+            <td id='TBL-1-48-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-49-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-49-1'></td>
+            <td id='TBL-1-49-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-50-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-50-1'>
+            <td id='TBL-1-50-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 65 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-51-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-51-1'>
+            <td id='TBL-1-51-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 65 -->
               <p class='noindent'>
                 PlayerManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-51-2'>
+            <td id='TBL-1-51-2' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 65 -->
               <p class='noindent'>
                 Todo lo relativo al jugador: estados, ítems, exp, estadísticas, estados de misiones, controles, path del árbol de decisiones, etc. Implementar una state machine.
@@ -1521,37 +1518,37 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-52-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-52-1'></td>
+            <td id='TBL-1-52-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-53-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-53-1'></td>
+            <td id='TBL-1-53-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-54-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-54-1'>
+            <td id='TBL-1-54-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 67 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-55-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-55-1'></td>
+            <td id='TBL-1-55-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-56-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-56-1'></td>
+            <td id='TBL-1-56-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-57-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-57-1'>
+            <td id='TBL-1-57-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 67 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-58-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-58-1'>
+            <td id='TBL-1-58-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 67 -->
               <p class='noindent'>
                 IAManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-58-2'>
+            <td id='TBL-1-58-2' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 67 -->
               <p class='noindent'>
                 Todo lo referente a IA: Rutas de <span class='eccc1095-'><span class='small-caps'>npc</span></span>, combate de <span class='eccc1095-'><span class='small-caps'>npc</span></span> aliados y enemigos y si compete, la generación procedural de niveles.
@@ -1559,37 +1556,37 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-59-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-59-1'></td>
+            <td id='TBL-1-59-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-60-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-60-1'></td>
+            <td id='TBL-1-60-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-61-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-61-1'>
+            <td id='TBL-1-61-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 69 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-62-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-62-1'></td>
+            <td id='TBL-1-62-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-63-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-63-1'></td>
+            <td id='TBL-1-63-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-64-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-64-1'>
+            <td id='TBL-1-64-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 69 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-65-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-65-1'>
+            <td id='TBL-1-65-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 69 -->
               <p class='noindent'>
                 UIManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-65-2'>
+            <td id='TBL-1-65-2' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 69 -->
               <p class='noindent'>
                 Todo lo relativo a la interfaz gráfica: Barras de vida, visualización del mapa, menús, inventario, árbol de habilidades e interfaz de diálogo.
@@ -1597,37 +1594,37 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-66-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-66-1'></td>
+            <td id='TBL-1-66-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-67-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-67-1'></td>
+            <td id='TBL-1-67-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-68-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-68-1'>
+            <td id='TBL-1-68-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 71 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-69-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-69-1'></td>
+            <td id='TBL-1-69-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-70-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-70-1'></td>
+            <td id='TBL-1-70-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-71-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-71-1'>
+            <td id='TBL-1-71-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 71 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-72-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-72-1'>
+            <td id='TBL-1-72-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 71 -->
               <p class='noindent'>
                 AudioManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-72-2'>
+            <td id='TBL-1-72-2' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 71 -->
               <p class='noindent'>
                 Control de la música, transiciones, volumen, etc.; y los sonidos de los distintos objetos, su paneo, volumen, efectos, etc.
@@ -1635,38 +1632,38 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-73-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-73-1'></td>
+            <td id='TBL-1-73-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-74-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-74-1'></td>
+            <td id='TBL-1-74-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-75-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-75-1'>
+            <td id='TBL-1-75-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 73 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-76-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-76-1'></td>
+            <td id='TBL-1-76-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-77-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-77-1'></td>
+            <td id='TBL-1-77-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-78-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-78-1'>
+            <td id='TBL-1-78-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 73 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-79-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-79-1'>
+            <td id='TBL-1-79-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 73 -->
               <p class='noindent'>
                 Debug<br class='newline'>
                 Manager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-79-2'>
+            <td id='TBL-1-79-2' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 73 -->
               <p class='noindent'>
                 Interfaz de debug que obtenga información relevante para el desarrollo sobre el funcionamiento de los distintos managers y objetos instanciados.
@@ -1674,49 +1671,49 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-80-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-80-1'></td>
+            <td id='TBL-1-80-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-81-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-81-1'></td>
+            <td id='TBL-1-81-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-82-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-82-1'>
+            <td id='TBL-1-82-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 75 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-83-'>
-            <td colspan='2' class='td11' style='white-space:normal; text-align:left;' id='TBL-1-83-1'></td>
+            <td id='TBL-1-83-1' colspan='2' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-84-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-84-1'></td>
+            <td id='TBL-1-84-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-85-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-85-1'>
+            <td id='TBL-1-85-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 75 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-86-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-86-1'></td>
+            <td id='TBL-1-86-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-87-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-87-1'></td>
+            <td id='TBL-1-87-1' class='td11' style='white-space:normal; text-align:left;'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-88-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-88-1'>
+            <td id='TBL-1-88-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 75 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-89-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-89-1'>
+            <td id='TBL-1-89-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 75 -->
               <p class='noindent'></p>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-90-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-90-1'>
+            <td id='TBL-1-90-1' class='td11' style='white-space:normal; text-align:left;'>
               <!-- l. 75 -->
               <p class='noindent'></p>
             </td>
@@ -2571,7 +2568,7 @@
         <p class='noindent'>
           Una consideración importante para mantener la organización de los archivos de una forma que sea coherente con la abstracción de <span class='ecti-1095'>escenas</span> <span class='ecti-1095'>y nodos</span>, es crear cada escena dentro de su propia carpeta. Aquí, además del archivo <span class='eccc1095-'><span class='small-caps'>tscn</span></span>, deberían estar todos los assets que utiliza la escena para evitar cualquier problemas de dependencias. La idea es poder mover o copiar la carpeta de ubicación y que todo siga funcionando dentro de ella.
         </p><!-- l. 24 -->
-        <div class='lstlisting' id='listing-9'>
+        <div id='listing-9' class='lstlisting'>
           <span class='label'><a id='x1-93001r1'></a></span><span id='textcolor6'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>ls src/characters/player/tyanka/ </span><br>
           <span class='label'><a id='x1-93002r2'></a></span><span class='ectt-1000'>animations/ </span><br>
           <span class='label'><a id='x1-93003r3'></a></span><span class='ectt-1000'>   tyanka_walk_01.png </span><br>
@@ -2644,7 +2641,7 @@
     <figure class='figure'>
       <!-- l. 68 -->
       <p class='noindent'>
-        <img alt='PIC' src='im%C3%A1genes/arbol_proyecto.png' height='503' width='503'>
+        <img height='503' src='im%C3%A1genes/arbol_proyecto.png' alt='PIC' width='503'>
       </p>
     </figure>
     <p>
@@ -2926,18 +2923,24 @@
       <span class='titlemark'>A.</span> <a id='x1-1190001'></a>Comandos de GIT
     </h3><!-- l. 6 -->
     <p class='noindent'>
-      Este apartado es una referencia rápida a los comandos y configuraciones más comunes en el trabajo con <span class='eccc1095-'><span class='small-caps'>git</span></span>. Otra referencia útil <span class='eccc1095-'><span class='small-caps'>git</span></span> <a href='https://rogerdudler.github.io/git-guide' target='_blank'>aquí</a>.
+      Este apartado es una referencia rápida a los comandos y configuraciones más comunes en el trabajo con <span class='eccc1095-'><span class='small-caps'>git</span></span>.
+    </p><!-- l. 8 -->
+    <p class='noindent'>
+      Otra referencia rápida que puede ser de utilidad se puede encontrar <a href='https://rogerdudler.github.io/git-guide' target='_blank'>aquí</a>.
+    </p><!-- l. 10 -->
+    <p class='noindent'>
+      Para información sobre el flujo de trabajo del repositorio ver el apartado <a href='#x1-310002'>Repositorio<!-- tex4ht:ref: flujo:repositorio  --></a>.
     </p>
     <ul class='itemize1'>
       <li class='itemize'>
-        <!-- l. 9 -->
+        <!-- l. 13 -->
         <p class='noindent'>
           Configuración:
-        </p><!-- l. 10 -->
-        <div class='lstlisting' id='listing-10'>
+        </p><!-- l. 14 -->
+        <div id='listing-10' class='lstlisting'>
           <span class='label'><a id='x1-119001r1'></a></span><span id='textcolor7'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>./config/git/config</span>
-        </div><!-- l. 14 -->
-        <div class='lstlisting' id='listing-11'>
+        </div><!-- l. 18 -->
+        <div id='listing-11' class='lstlisting'>
           <span class='label'><a id='x1-119002r1'></a></span><span class='ectt-1000'>conf[user] </span><br>
           <span class='label'><a id='x1-119003r2'></a></span><span class='ectt-1000'>name = USUARIO </span><br>
           <span class='label'><a id='x1-119004r3'></a></span><span class='ectt-1000'>email = MAIL_REGISTRADO_EN_GITHUB </span><br>
@@ -2948,17 +2951,17 @@
         </div>
       </li>
       <li class='itemize'>
-        <!-- l. 24 -->
+        <!-- l. 28 -->
         <p class='noindent'>
           Credentials en archivo <span class='cmsy-10x-x-109'>∼</span>/.config/git/credentials (asociado al usuario y al repositorio)
         </p>
       </li>
       <li class='itemize'>
-        <!-- l. 26 -->
+        <!-- l. 30 -->
         <p class='noindent'>
           Archivos y directorios ignorados por <span class='eccc1095-'><span class='small-caps'>git</span></span> (en .gitignore dentro de Bakumapu):
-        </p><!-- l. 27 -->
-        <div class='lstlisting' id='listing-12'>
+        </p><!-- l. 31 -->
+        <div id='listing-12' class='lstlisting'>
           <span class='label'><a id='x1-119009r1'></a></span><span class='ectt-1000'># Godot-specific ignores </span><br>
           <span class='label'><a id='x1-119010r2'></a></span><span class='ectt-1000'>.import/ </span><br>
           <span class='label'><a id='x1-119011r3'></a></span><span class='ectt-1000'>export/ </span><br>
@@ -2971,17 +2974,17 @@
         </div>
       </li>
       <li class='itemize'>
-        <!-- l. 41 -->
+        <!-- l. 45 -->
         <p class='noindent'>
           Evitar problemas de formato de archivo entre Windows (<span class='eccc1095-'><span class='small-caps'>crlf</span></span>) y el resto de sistemas:
-        </p><!-- l. 42 -->
-        <div class='lstlisting' id='listing-13'>
+        </p><!-- l. 46 -->
+        <div id='listing-13' class='lstlisting'>
           <span class='label'><a id='x1-119018r1'></a></span><span id='textcolor8'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>.gitattributes:</span>
-        </div><!-- l. 45 -->
+        </div><!-- l. 49 -->
         <p class='noindent'></p>
         <div class='minipage'>
-          <!-- l. 46 -->
-          <div class='lstlisting' id='listing-14'>
+          <!-- l. 50 -->
+          <div id='listing-14' class='lstlisting'>
             <span class='label'><a id='x1-119019r1'></a></span><span class='ectt-1000'># Set the default behavior, in </span><br>
             <span class='label'><a id='x1-119020r2'></a></span><span class='ectt-1000'># case people </span><br>
             <span class='label'><a id='x1-119021r3'></a></span><span class='ectt-1000'># don’t have core.autocrlf set </span><br>
@@ -3016,8 +3019,8 @@
           </div>
         </div>
         <div class='minipage'>
-          <!-- l. 81 -->
-          <div class='lstlisting' id='listing-15'>
+          <!-- l. 85 -->
+          <div id='listing-15' class='lstlisting'>
             <span class='label'><a id='x1-119050r1'></a></span><span class='ectt-1000'># images </span><br>
             <span class='label'><a id='x1-119051r2'></a></span><span class='ectt-1000'> </span><br>
             <span class='label'><a id='x1-119052r3'></a></span><span class='ectt-1000'>*.png binary </span><br>
@@ -3053,83 +3056,83 @@
         </div>
       </li>
       <li class='itemize'>
-        <!-- l. 116 -->
+        <!-- l. 120 -->
         <p class='noindent'>
           Clonar el repositorio en el espacio de trabajo local:
-        </p><!-- l. 117 -->
-        <div class='lstlisting' id='listing-16'>
+        </p><!-- l. 121 -->
+        <div id='listing-16' class='lstlisting'>
           <span class='label'><a id='x1-119081r1'></a></span><span id='textcolor9'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git clone https://github.com/polirritmico/Bakumapu</span>
         </div>
       </li>
       <li class='itemize'>
-        <!-- l. 121 -->
+        <!-- l. 125 -->
         <p class='noindent'>
           Ver el estado de la rama actual:
-        </p><!-- l. 122 -->
-        <div class='lstlisting' id='listing-17'>
+        </p><!-- l. 126 -->
+        <div id='listing-17' class='lstlisting'>
           <span class='label'><a id='x1-119082r1'></a></span><span id='textcolor10'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git status</span>
         </div>
       </li>
       <li class='itemize'>
-        <!-- l. 126 -->
+        <!-- l. 130 -->
         <p class='noindent'>
           Cambiar a una rama (por ejemplo develop):
-        </p><!-- l. 127 -->
-        <div class='lstlisting' id='listing-18'>
+        </p><!-- l. 131 -->
+        <div id='listing-18' class='lstlisting'>
           <span class='label'><a id='x1-119083r1'></a></span><span id='textcolor11'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git checkout develop</span>
         </div>
       </li>
       <li class='itemize'>
-        <!-- l. 131 -->
+        <!-- l. 135 -->
         <p class='noindent'>
           Crear una nueva rama en base a la rama actual (ejemplo “ft-01”:
-        </p><!-- l. 132 -->
-        <div class='lstlisting' id='listing-19'>
+        </p><!-- l. 136 -->
+        <div id='listing-19' class='lstlisting'>
           <span class='label'><a id='x1-119084r1'></a></span><span id='textcolor12'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git checkout -b ft-01</span>
         </div>
       </li>
       <li class='itemize'>
-        <!-- l. 136 -->
+        <!-- l. 140 -->
         <p class='noindent'>
           Enviar la rama local a Github (origin es un alias de la ruta al repo en github):
-        </p><!-- l. 137 -->
-        <div class='lstlisting' id='listing-20'>
+        </p><!-- l. 141 -->
+        <div id='listing-20' class='lstlisting'>
           <span class='label'><a id='x1-119085r1'></a></span><span id='textcolor13'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git push -u origin ft-01</span>
         </div>
       </li>
       <li class='itemize'>
-        <!-- l. 141 -->
+        <!-- l. 145 -->
         <p class='noindent'>
           Agrega todos los cambios al área de pruebas:
-        </p><!-- l. 142 -->
-        <div class='lstlisting' id='listing-21'>
+        </p><!-- l. 146 -->
+        <div id='listing-21' class='lstlisting'>
           <span class='label'><a id='x1-119086r1'></a></span><span id='textcolor14'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git add .</span>
         </div>
       </li>
       <li class='itemize'>
-        <!-- l. 146 -->
+        <!-- l. 150 -->
         <p class='noindent'>
           Agrega comentarios al commit:
-        </p><!-- l. 147 -->
-        <div class='lstlisting' id='listing-22'>
+        </p><!-- l. 151 -->
+        <div id='listing-22' class='lstlisting'>
           <span class='label'><a id='x1-119087r1'></a></span><span id='textcolor15'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git commit -m descripcion</span>
         </div>
       </li>
       <li class='itemize'>
-        <!-- l. 151 -->
+        <!-- l. 155 -->
         <p class='noindent'>
           Envía los cambios locales de la rama actual a Github:
-        </p><!-- l. 152 -->
-        <div class='lstlisting' id='listing-23'>
+        </p><!-- l. 156 -->
+        <div id='listing-23' class='lstlisting'>
           <span class='label'><a id='x1-119088r1'></a></span><span id='textcolor16'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git push</span>
         </div>
       </li>
       <li class='itemize'>
-        <!-- l. 156 -->
+        <!-- l. 160 -->
         <p class='noindent'>
           Actualizar el repositorio local desde Github:
-        </p><!-- l. 157 -->
-        <div class='lstlisting' id='listing-24'>
+        </p><!-- l. 161 -->
+        <div id='listing-24' class='lstlisting'>
           <span class='label'><a id='x1-119089r1'></a></span><span id='textcolor17'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git pull</span>
         </div>
       </li>
@@ -3139,10 +3142,13 @@
     </p>
     <h3 class='sectionHead'>
       <span class='titlemark'>B.</span> <a id='x1-1200002'></a>Comandos L<span class='ecrm-0800'>A</span>TE X
-    </h3><!-- l. 6 -->
+    </h3><!-- l. 7 -->
     <p class='noindent'>
       Los comandos son palabras claves que el compilador interpreta para generar el documento. Siempre deben comenzar con el signo backslash (\).
-    </p><!-- l. 8 -->
+    </p><!-- l. 9 -->
+    <p class='noindent'>
+      Para información con respecto al flujo de trabajo del Documento técnico, revisar el apartado <a href='#x1-380003'>Documentación<!-- tex4ht:ref: flujo:documentacion  --></a>.
+    </p><!-- l. 11 -->
     <p class='noindent'>
       A continuación una lista con los comandos más fundamentales:
     </p>
@@ -3151,8 +3157,8 @@
         1.
       </dt>
       <dd class='enumerate-enumitem'>
-        Comentarios: <!-- l. 13 -->
-        <div class='lstlisting' id='listing-25'>
+        Comentarios: <!-- l. 16 -->
+        <div id='listing-25' class='lstlisting'>
           <span class='label'><a id='x1-120002r1'></a></span><span class='ectt-1000'>Esto es un texto normal. </span><br>
           <span class='label'><a id='x1-120003r2'></a></span><span class='ectt-1000'>% Esto es un comentario. No se compila. </span><br>
           <span class='label'><a id='x1-120004r3'></a></span><span class='ectt-1000'>Texto % Comentario.</span>
@@ -3162,8 +3168,8 @@
         2.
       </dt>
       <dd class='enumerate-enumitem'>
-        Escapar símbolos: <!-- l. 19 -->
-        <div class='lstlisting' id='listing-26'>
+        Escapar símbolos: <!-- l. 22 -->
+        <div id='listing-26' class='lstlisting'>
           <span class='label'><a id='x1-120006r1'></a></span><span class='ectt-1000'>Necesito escribir una linea \_ y un porcentaje \% </span><br>
           <span class='label'><a id='x1-120007r2'></a></span><span class='ectt-1000'>El signo \ funciona con este comando: \textbackslash.</span>
         </div>
@@ -3172,8 +3178,8 @@
         3.
       </dt>
       <dd class='enumerate-enumitem'>
-        Secciones (en orden descendente): <!-- l. 24 -->
-        <div class='lstlisting' id='listing-27'>
+        Secciones (en orden descendente): <!-- l. 27 -->
+        <div id='listing-27' class='lstlisting'>
           <span class='label'><a id='x1-120009r1'></a></span><span class='ectt-1000'>\section{Titulo de seccion} </span><br>
           <span class='label'><a id='x1-120010r2'></a></span><span class='ectt-1000'>\subsection{Titulo de subseccion} </span><br>
           <span class='label'><a id='x1-120011r3'></a></span><span class='ectt-1000'>\subsection*{Titulo.} % Asterisco para no ennumerar. </span><br>
@@ -3185,8 +3191,8 @@
         4.
       </dt>
       <dd class='enumerate-enumitem'>
-        Ajustes tipográficos: <!-- l. 32 -->
-        <div class='lstlisting' id='listing-28'>
+        Ajustes tipográficos: <!-- l. 35 -->
+        <div id='listing-28' class='lstlisting'>
           <span class='label'><a id='x1-120015r1'></a></span><span class='ectt-1000'>Negrita: Texto a \textbf{negrita}. </span><br>
           <span class='label'><a id='x1-120016r2'></a></span><span class='ectt-1000'>Enfasis: Texto a \emph{enfasis} </span><br>
           <span class='label'><a id='x1-120017r3'></a></span><span class='ectt-1000'>Cursiva: Texto a \textit{cursiva}. </span><br>
@@ -3203,8 +3209,8 @@
             <span class='ecti-1095'>a</span>)
           </dt>
           <dd class='enumerate-enumitem'>
-            Alineación: <!-- l. 42 -->
-            <div class='lstlisting' id='listing-29'>
+            Alineación: <!-- l. 45 -->
+            <div id='listing-29' class='lstlisting'>
               <span class='label'><a id='x1-120021r1'></a></span><span class='ectt-1000'>\begin{centering} % alternativas: flushleft, flushright </span><br>
               <span class='label'><a id='x1-120022r2'></a></span><span class='ectt-1000'>Texto alineado en base al valor en begin. </span><br>
               <span class='label'><a id='x1-120023r3'></a></span><span class='ectt-1000'>\end{centering}</span>
@@ -3214,8 +3220,8 @@
             <span class='ecti-1095'>b</span>)
           </dt>
           <dd class='enumerate-enumitem'>
-            Saltos de línea: <!-- l. 49 -->
-            <div class='lstlisting' id='listing-30'>
+            Saltos de línea: <!-- l. 52 -->
+            <div id='listing-30' class='lstlisting'>
               <span class='label'><a id='x1-120025r1'></a></span><span class='ectt-1000'>Los saltos necesitan este comando\\ </span><br>
               <span class='label'><a id='x1-120026r2'></a></span><span class='ectt-1000'>sino se encadenan en una misma linea. </span><br>
               <span class='label'><a id='x1-120027r3'></a></span><span class='ectt-1000'> </span><br>
@@ -3226,8 +3232,8 @@
             <span class='ecti-1095'>c</span>)
           </dt>
           <dd class='enumerate-enumitem'>
-            Quitar sangría: <!-- l. 57 -->
-            <div class='lstlisting' id='listing-31'>
+            Quitar sangría: <!-- l. 60 -->
+            <div id='listing-31' class='lstlisting'>
               <span class='label'><a id='x1-120030r1'></a></span><span class='ectt-1000'>\noindent Primera linea sin sangria.</span>
             </div>
           </dd>
@@ -3237,8 +3243,8 @@
         6.
       </dt>
       <dd class='enumerate-enumitem'>
-        Referencias: <!-- l. 63 -->
-        <div class='lstlisting' id='listing-32'>
+        Referencias: <!-- l. 66 -->
+        <div id='listing-32' class='lstlisting'>
           <span class='label'><a id='x1-120032r1'></a></span><span class='ectt-1000'>% Lo que queremos referenciar: </span><br>
           <span class='label'><a id='x1-120033r2'></a></span><span class='ectt-1000'>\subsection{Titulo subseccion} </span><br>
           <span class='label'><a id='x1-120034r3'></a></span><span class='ectt-1000'>% Le agregamos label. Ojala usar {nombre_archivo:descripcion} </span><br>
@@ -3254,8 +3260,8 @@
         7.
       </dt>
       <dd class='enumerate-enumitem'>
-        Listas: <!-- l. 76 -->
-        <div class='lstlisting' id='listing-33'>
+        Listas: <!-- l. 79 -->
+        <div id='listing-33' class='lstlisting'>
           <span class='label'><a id='x1-120042r1'></a></span><span class='ectt-1000'>\begin{enumerate} % Para listas no numeradas usar itemize. </span><br>
           <span class='label'><a id='x1-120043r2'></a></span><span class='ectt-1000'>   \item Primer item numerado. </span><br>
           <span class='label'><a id='x1-120044r3'></a></span><span class='ectt-1000'>   \item Segundo item numerado. </span><br>
@@ -3266,8 +3272,8 @@
         8.
       </dt>
       <dd class='enumerate-enumitem'>
-        Imágenes: <!-- l. 84 -->
-        <div class='lstlisting' id='listing-34'>
+        Imágenes: <!-- l. 87 -->
+        <div id='listing-34' class='lstlisting'>
           <span class='label'><a id='x1-120047r1'></a></span><span class='ectt-1000'>\begin{figure}[h] % h de here, t top, b bottom o nada. </span><br>
           <span class='label'><a id='x1-120048r2'></a></span><span class='ectt-1000'>   \centering </span><br>
           <span class='label'><a id='x1-120049r3'></a></span><span class='ectt-1000'>   \includegraphics[]{ruta/al/archivo} </span><br>
@@ -3280,8 +3286,8 @@
         9.
       </dt>
       <dd class='enumerate-enumitem'>
-        Código: <!-- l. 95 -->
-        <div class='lstlisting' id='listing-35'>
+        Código: <!-- l. 98 -->
+        <div id='listing-35' class='lstlisting'>
           <span class='label'><a id='x1-120054r1'></a></span><span class='ectt-1000'>\begin{lstlisting*} % sin el asterisco </span><br>
           <span class='label'><a id='x1-120055r2'></a></span><span class='ectt-1000'>% Dentro de lstlisting solo ASCII basico sin tildes ni enies </span><br>
           <span class='label'><a id='x1-120056r3'></a></span><span class='ectt-1000'>var test = Clase.llamado(ejemplo.datos, objeto.pos()) </span><br>
@@ -3299,8 +3305,8 @@
             <span class='ecti-1095'>a</span>)
           </dt>
           <dd class='enumerate-enumitem'>
-            Mover a la siguiente página si no hay espacio disponible: <!-- l. 106 -->
-            <div class='lstlisting' id='listing-36'>
+            Mover a la siguiente página si no hay espacio disponible: <!-- l. 109 -->
+            <div id='listing-36' class='lstlisting'>
               <span class='label'><a id='x1-120061r1'></a></span><span class='ectt-1000'>% el 2\baselineskip es para obtener el alto de 2 lineas </span><br>
               <span class='label'><a id='x1-120062r2'></a></span><span class='ectt-1000'>\Needspace{2\baselineskip}</span>
             </div>
@@ -3309,8 +3315,8 @@
             <span class='ecti-1095'>b</span>)
           </dt>
           <dd class='enumerate-enumitem'>
-            Salto de página: <!-- l. 112 -->
-            <div class='lstlisting' id='listing-37'>
+            Salto de página: <!-- l. 115 -->
+            <div id='listing-37' class='lstlisting'>
               <span class='label'><a id='x1-120064r1'></a></span><span class='ectt-1000'>\pagebreak</span>
             </div>
           </dd>
@@ -3318,8 +3324,8 @@
             <span class='ecti-1095'>c</span>)
           </dt>
           <dd class='enumerate-enumitem'>
-            Espacios indivisible (non-breaking space): <!-- l. 117 -->
-            <div class='lstlisting' id='listing-38'>
+            Espacios indivisible (non-breaking space): <!-- l. 120 -->
+            <div id='listing-38' class='lstlisting'>
               <span class='label'><a id='x1-120066r1'></a></span><span class='ectt-1000'>60~hz, 50~km, siglo~\lsc{XVI}.</span>
             </div>
           </dd>
