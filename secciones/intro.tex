@@ -8,11 +8,24 @@ El presente documento busca ser una herramienta de diseño, un mapa de ruta que 
 El documento incluye información con respecto al flujo de trabajo (\nameref{flujo:metodologia-kanban}, \nameref{flujo:modelo-de-ramas}), a la propuesta de diseño o arquitectura (\nameref{modelado:modelado-del-software}), al uso de sistemas de control \lsc{GIT} (\nameref{flujo:modelo-de-ramas}), a consideraciones de \nameref{i18n:internacionalizacion} y a muchos otros detalles relevantes para un software de esta magnitud y complejidad.
 
 \subsection{Cómo usar este documento}\label{intro:como-usar-el-documento}
-Lo ideal es una primera lectura para hacerse de una noción general del funcionamiento del software o lo que se espera lograr en cuanto a su diseño. Posteriormente la idea es usarlo a modo de referencia o mapa de ruta antes y durante la implementación del código.
+Lo ideal es una primera lectura completa para hacerse de una noción general del funcionamiento del software o lo que se espera lograr en cuanto a su diseño. Posteriormente la idea es usarlo a modo de referencia o mapa de ruta antes y durante la implementación del código.
 
 El texto estará disponible para su modificación en el formato \lsc{TEX} en el \href{https://github.com/polirritmico/Bakumapu-docs}{repositorio de documentación del proyecto} y además estará disponible para su lectura en \href{https://polirritmico.github.io/Bakumapu-docs/}{\lsc{HTML}} y en \href{https://github.com/polirritmico/Bakumapu-docs/blob/main/main.pdf}{\lsc{PDF}}.
 
 El manejo del documento se abordará con más detalle en el apartado \nameref{flujo:documento-de-diseno}.
+
+\subsection{Información importante}
+\noindent Los aspectos más relevantes si se busca pasar rápidamente a la implementación de código son los siguientes:
+
+\begin{enumerate}
+\item \nameref{principios:TDD} y \nameref{principios:refactorizacion-rendimiento-limpieza}.
+
+\item \nameref{flujo:metodologia-kanban}, \nameref{flujo:repositorio} y \nameref{flujo:documento-de-diseno}.
+
+\item \nameref{modelado:funcionamiento-general} y \nameref{modelado:funcionamiento-de-managers}.
+
+\item \nameref{organizacion:organizacion-del-proyecto}.
+\end{enumerate}
 
 \subsection{Lista de requerimientos}\label{intro:lista-de-requerimientos}
 A continuación se presenta la lista inicial de requerimientos y consideraciones del programa. Importante destacar que este listado probablemente cambie a lo largo del desarrollo, además que las distintas implementaciones quizás generen nuevos requisitos o hagan obsoletos otros.
