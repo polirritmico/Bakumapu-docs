@@ -137,6 +137,9 @@ h3 {color: #f92472; font-size: 1.6em;}
 h4 {color: #90da2b; font-size: 1.4em;}
 h5, h6 {color: #74705d; font-size: 1.1em;}
 
+/* Listas */
+.enumerate-enumitem {margin-bottom: 0.4em;}
+
 /* Bloques de código */
 .lstlisting { border: solid 1px black; background-color: #4c4d47;}
 div.lstlisting{white-space: normal; overflow-wrap: break-word;}
