@@ -91,12 +91,14 @@ html, body, input, textarea, select, button {background: rgba(35, 36, 31, .95);}
 html, body, input, textarea, select, button {border-color: #736b5e; color: #ebebe5;}
 
 html {
-    font-size: 2.25rem;
+    font-size: 2.1rem;
     scroll-behavior: smooth;
 
-    background-image: url("imágenes/fondo.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: url("imágenes/fondo.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 body {
     font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
