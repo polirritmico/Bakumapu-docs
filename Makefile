@@ -24,8 +24,13 @@ all: pdf clean html sync
 pdf:
 	@echo -n "Ajustando la versión: "
 	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
-	@echo -e "OK\nGenerando PDF a partir de $(INFILE).tex"
+	@echo -en "OK\nGenerando PDF a partir de $(INFILE).tex: "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
+	@echo -en "OK "
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
+	@echo -en "OK "
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
+	@echo -e "OK\n$(INFILE).pdf generado exitosamente."
 
 html:
 	@echo "Generando 'docs/$(OUTFILE).html' a partir de '$(INFILE).tex'"
