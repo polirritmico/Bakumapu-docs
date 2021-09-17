@@ -3,10 +3,10 @@
   <head>
     <title></title>
     <meta charset='utf-8'>
-    <meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator'>
-    <meta content='width=device-width,initial-scale=1' name='viewport'>
+    <meta name='generator' content='TeX4ht (https://tug.org/tex4ht/)'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='index.css'>
-    <meta content='index.tex' name='src'>
+    <meta name='src' content='index.tex'>
     <link rel='stylesheet' type='text/css' href='style.css'>
     <link rel="icon" href="imágenes/icon.svg">
   </head>
@@ -20,57 +20,57 @@
         <span id='textcolor1'><span class='ecrm-1440'>Diseño técnico</span></span>
       </p><!-- l. 39 -->
       <p class='noindent'>
-        Estudio <span class='ecrm-0700'>6</span><span class='ptmr8c-x-x-120'>/</span><span class='ecrm-0700'>8</span> - 2021.9.17_v0.0.1
+        Estudio <span class='ecrm-0700'>6</span><span class='ptmr8c-x-x-120'>/</span><span class='ecrm-0700'>8</span> - 2021.9.17_v0.0.2
       </p>
     </div>
     <h3 class='likesectionHead'>
       <a id='x1-1000'></a>Índice
     </h3>
     <div class='tableofcontents'>
-       <span class='sectionToc'>1 <a href='#x1-20001' id='QQ2-1-2'>Introducción</a></span><br>
-        <span class='subsectionToc'>1.1 <a href='#x1-30001' id='QQ2-1-3'>Cómo usar este documento</a></span><br>
-        <span class='subsectionToc'>1.2 <a href='#x1-40002' id='QQ2-1-4'>Información importante</a></span><br>
-        <span class='subsectionToc'>1.3 <a href='#x1-50003' id='QQ2-1-5'>Lista de requerimientos</a></span><br>
-        <span class='subsectionToc'>1.4 <a href='#x1-60004' id='QQ2-1-6'>Listado de software y herramientas de producción</a></span><br>
-       <span class='sectionToc'>2 <a href='#x1-190002' id='QQ2-1-19'>Visión general del desarrollo y principios del diseño técnico</a></span><br>
-        <span class='subsectionToc'>2.1 <a href='#x1-200001' id='QQ2-1-20'>Principios de diseño</a></span><br>
-        <span class='subsectionToc'>2.2 <a href='#x1-210002' id='QQ2-1-21'>Desarrollo dirigido por tests (TDD)</a></span><br>
-        <span class='subsectionToc'>2.3 <a href='#x1-230003' id='QQ2-1-24'>Refactorización: Rendimiento y limpieza</a></span><br>
-        <span class='subsectionToc'>2.4 <a href='#x1-240004' id='QQ2-1-25'>El documento de diseño técnico: una herramienta de diseño</a></span><br>
-       <span class='sectionToc'>3 <a href='#x1-250003' id='QQ2-1-26'>Flujo de trabajo y control de versiones</a></span><br>
-        <span class='subsectionToc'>3.1 <a href='#x1-260001' id='QQ2-1-27'>Metodología Kanban</a></span><br>
-        <span class='subsectionToc'>3.2 <a href='#x1-320002' id='QQ2-1-35'>Repositorio</a></span><br>
-        <span class='subsectionToc'>3.3 <a href='#x1-390003' id='QQ2-1-43'>Documentación</a></span><br>
-        <span class='subsectionToc'>3.4 <a href='#x1-480004' id='QQ2-1-52'>Google Drive</a></span><br>
-        <span class='subsectionToc'>3.5 <a href='#x1-490005' id='QQ2-1-53'>LaTeX</a></span><br>
-       <span class='sectionToc'>4 <a href='#x1-500004' id='QQ2-1-54'>Internacionalización</a></span><br>
-        <span class='subsectionToc'>4.1 <a href='#x1-510001' id='QQ2-1-55'>Qué entendemos por internacionalización (i18n)</a></span><br>
-        <span class='subsectionToc'>4.2 <a href='#x1-520002' id='QQ2-1-56'>Qué entendemos por localización (l10n)</a></span><br>
-        <span class='subsectionToc'>4.3 <a href='#x1-530003' id='QQ2-1-57'>Implementación</a></span><br>
-       <span class='sectionToc'>5 <a href='#x1-620005' id='QQ2-1-67'>Modelado del software</a></span><br>
-        <span class='subsectionToc'>5.1 <a href='#x1-630001' id='QQ2-1-68'>Arquitectura</a></span><br>
-        <span class='subsectionToc'>5.2 <a href='#x1-640002' id='QQ2-1-70'>Funcionamiento general</a></span><br>
-        <span class='subsectionToc'>5.3 <a href='#x1-660003' id='QQ2-1-72'>Diagrama del sistema</a></span><br>
-        <span class='subsectionToc'>5.4 <a href='#x1-670004' id='QQ2-1-73'>Funcionamiento del sistema de managers</a></span><br>
-        <span class='subsectionToc'>5.5 <a href='#x1-780005' id='QQ2-1-84'>Otras consideraciones</a></span><br>
-       <span class='sectionToc'>6 <a href='#x1-800006' id='QQ2-1-86'>Input/Output</a></span><br>
-        <span class='subsectionToc'>6.1 <a href='#x1-810001' id='QQ2-1-87'>Inputs</a></span><br>
-        <span class='subsectionToc'>6.2 <a href='#x1-850002' id='QQ2-1-91'>Outputs</a></span><br>
-        <span class='subsectionToc'>6.3 <a href='#x1-920003' id='QQ2-1-98'>DRM</a></span><br>
-       <span class='sectionToc'>7 <a href='#x1-930007' id='QQ2-1-99'>Organización del proyecto</a></span><br>
-        <span class='subsectionToc'>7.1 <a href='#x1-940001' id='QQ2-1-100'>Organización de carpetas</a></span><br>
-        <span class='subsectionToc'>7.2 <a href='#x1-960002' id='QQ2-1-102'>Nombres de archivos</a></span><br>
-        <span class='subsectionToc'>7.3 <a href='#x1-970003' id='QQ2-1-103'>Nombres de ramas y tarjetas</a></span><br>
-       <span class='sectionToc'>8 <a href='#x1-1010008' id='QQ2-1-107'>Kit de desarrollo de software</a></span><br>
-        <span class='subsectionToc'>8.1 <a href='#x1-1020001' id='QQ2-1-108'>Elementos narrativos</a></span><br>
-        <span class='subsectionToc'>8.2 <a href='#x1-1070002' id='QQ2-1-113'>Elementos de mecánicas de jugabilidad</a></span><br>
-        <span class='subsectionToc'>8.3 <a href='#x1-1120003' id='QQ2-1-118'>Traducción</a></span><br>
-        <span class='subsectionToc'>8.4 <a href='#x1-1160004' id='QQ2-1-122'>Lineamientos generales para el software del Kit</a></span><br>
-       <span class='sectionToc'>9 <a href='#x1-1170009' id='QQ2-1-123'>Optimización</a></span><br>
-        <span class='subsectionToc'>9.1 <a href='#x1-1180001' id='QQ2-1-124'>¿Qué optimizar?</a></span><br>
-        <span class='subsectionToc'>9.2 <a href='#x1-1190002' id='QQ2-1-125'>Referencias</a></span><br>
-       <span class='sectionToc'>A <a href='#x1-1200001' id='QQ2-1-126'>Comandos de GIT</a></span><br>
-       <span class='sectionToc'>B <a href='#x1-1210002' id='QQ2-1-127'>Comandos L<span class='ecrm-0800'>A</span>TE X</a></span>
+       <span class='sectionToc'>1 <a id='QQ2-1-2' href='#x1-20001'>Introducción</a></span><br>
+        <span class='subsectionToc'>1.1 <a id='QQ2-1-3' href='#x1-30001'>Cómo usar este documento</a></span><br>
+        <span class='subsectionToc'>1.2 <a id='QQ2-1-4' href='#x1-40002'>Información importante</a></span><br>
+        <span class='subsectionToc'>1.3 <a id='QQ2-1-5' href='#x1-50003'>Lista de requerimientos</a></span><br>
+        <span class='subsectionToc'>1.4 <a id='QQ2-1-6' href='#x1-60004'>Listado de software y herramientas de producción</a></span><br>
+       <span class='sectionToc'>2 <a id='QQ2-1-19' href='#x1-190002'>Visión general del desarrollo y principios del diseño técnico</a></span><br>
+        <span class='subsectionToc'>2.1 <a id='QQ2-1-20' href='#x1-200001'>Principios de diseño</a></span><br>
+        <span class='subsectionToc'>2.2 <a id='QQ2-1-21' href='#x1-210002'>Desarrollo dirigido por tests (TDD)</a></span><br>
+        <span class='subsectionToc'>2.3 <a id='QQ2-1-24' href='#x1-230003'>Refactorización: Rendimiento y limpieza</a></span><br>
+        <span class='subsectionToc'>2.4 <a id='QQ2-1-25' href='#x1-240004'>El documento de diseño técnico: una herramienta de diseño</a></span><br>
+       <span class='sectionToc'>3 <a id='QQ2-1-26' href='#x1-250003'>Flujo de trabajo y control de versiones</a></span><br>
+        <span class='subsectionToc'>3.1 <a id='QQ2-1-27' href='#x1-260001'>Metodología Kanban</a></span><br>
+        <span class='subsectionToc'>3.2 <a id='QQ2-1-35' href='#x1-320002'>Repositorio</a></span><br>
+        <span class='subsectionToc'>3.3 <a id='QQ2-1-43' href='#x1-390003'>Documentación</a></span><br>
+        <span class='subsectionToc'>3.4 <a id='QQ2-1-52' href='#x1-480004'>Google Drive</a></span><br>
+        <span class='subsectionToc'>3.5 <a id='QQ2-1-53' href='#x1-490005'>LaTeX</a></span><br>
+       <span class='sectionToc'>4 <a id='QQ2-1-54' href='#x1-500004'>Internacionalización</a></span><br>
+        <span class='subsectionToc'>4.1 <a id='QQ2-1-55' href='#x1-510001'>Qué entendemos por internacionalización (i18n)</a></span><br>
+        <span class='subsectionToc'>4.2 <a id='QQ2-1-56' href='#x1-520002'>Qué entendemos por localización (l10n)</a></span><br>
+        <span class='subsectionToc'>4.3 <a id='QQ2-1-57' href='#x1-530003'>Implementación</a></span><br>
+       <span class='sectionToc'>5 <a id='QQ2-1-67' href='#x1-620005'>Modelado del software</a></span><br>
+        <span class='subsectionToc'>5.1 <a id='QQ2-1-68' href='#x1-630001'>Arquitectura</a></span><br>
+        <span class='subsectionToc'>5.2 <a id='QQ2-1-70' href='#x1-640002'>Funcionamiento general</a></span><br>
+        <span class='subsectionToc'>5.3 <a id='QQ2-1-72' href='#x1-660003'>Diagrama del sistema</a></span><br>
+        <span class='subsectionToc'>5.4 <a id='QQ2-1-73' href='#x1-670004'>Funcionamiento del sistema de managers</a></span><br>
+        <span class='subsectionToc'>5.5 <a id='QQ2-1-84' href='#x1-780005'>Otras consideraciones</a></span><br>
+       <span class='sectionToc'>6 <a id='QQ2-1-86' href='#x1-800006'>Input/Output</a></span><br>
+        <span class='subsectionToc'>6.1 <a id='QQ2-1-87' href='#x1-810001'>Inputs</a></span><br>
+        <span class='subsectionToc'>6.2 <a id='QQ2-1-91' href='#x1-850002'>Outputs</a></span><br>
+        <span class='subsectionToc'>6.3 <a id='QQ2-1-98' href='#x1-920003'>DRM</a></span><br>
+       <span class='sectionToc'>7 <a id='QQ2-1-99' href='#x1-930007'>Organización del proyecto</a></span><br>
+        <span class='subsectionToc'>7.1 <a id='QQ2-1-100' href='#x1-940001'>Organización de carpetas</a></span><br>
+        <span class='subsectionToc'>7.2 <a id='QQ2-1-102' href='#x1-960002'>Nombres de archivos</a></span><br>
+        <span class='subsectionToc'>7.3 <a id='QQ2-1-103' href='#x1-970003'>Nombres de ramas y tarjetas</a></span><br>
+       <span class='sectionToc'>8 <a id='QQ2-1-107' href='#x1-1010008'>Kit de desarrollo de software</a></span><br>
+        <span class='subsectionToc'>8.1 <a id='QQ2-1-108' href='#x1-1020001'>Elementos narrativos</a></span><br>
+        <span class='subsectionToc'>8.2 <a id='QQ2-1-113' href='#x1-1070002'>Elementos de mecánicas de jugabilidad</a></span><br>
+        <span class='subsectionToc'>8.3 <a id='QQ2-1-118' href='#x1-1120003'>Traducción</a></span><br>
+        <span class='subsectionToc'>8.4 <a id='QQ2-1-122' href='#x1-1160004'>Lineamientos generales para el software del Kit</a></span><br>
+       <span class='sectionToc'>9 <a id='QQ2-1-123' href='#x1-1170009'>Optimización</a></span><br>
+        <span class='subsectionToc'>9.1 <a id='QQ2-1-124' href='#x1-1180001'>¿Qué optimizar?</a></span><br>
+        <span class='subsectionToc'>9.2 <a id='QQ2-1-125' href='#x1-1190002'>Referencias</a></span><br>
+       <span class='sectionToc'>A <a id='QQ2-1-126' href='#x1-1200001'>Comandos de GIT</a></span><br>
+       <span class='sectionToc'>B <a id='QQ2-1-127' href='#x1-1210002'>Comandos L<span class='ecrm-0800'>A</span>TE X</a></span>
     </div>
     <p>
       <a id='x1-1001r1'></a>
@@ -422,7 +422,7 @@
       <span class='titlemark'>1.4.3.</span> <a id='x1-100003'></a>GIT y Github
     </h5><!-- l. 95 -->
     <p class='noindent'>
-      El código estará alojado en un repositorio <span class='eccc1095-'><span class='small-caps'>git</span></span> en <span class='ecbx-1095'>Github</span> en la siguiente dirección: <a href='https://github.com/polirritmico/Bakumapu' class='url' target='_blank'><span class='ectt-1095'>https://github.com/polirritmico/Bakumapu</span></a>. Todos los participantes deben tener una cuenta con permisos.
+      El código estará alojado en un repositorio <span class='eccc1095-'><span class='small-caps'>git</span></span> en <span class='ecbx-1095'>Github</span> en la siguiente dirección: <a class='url' href='https://github.com/polirritmico/Bakumapu'><span class='ectt-1095'>https://github.com/polirritmico/Bakumapu</span></a>. Todos los participantes deben tener una cuenta con permisos.
     </p><!-- l. 97 -->
     <p class='indent'>
       El control de versiones se explicará en detalle en el apartado <a href='#x1-320002'>Repositorio<!-- tex4ht:ref: flujo:repositorio  --></a>. <a id='x1-10001r10'></a>
@@ -478,7 +478,7 @@
     <p class='noindent'>
       El formato para los archivos de música, sonido ambiente y efectos será el <span class='eccc1095-'><span class='small-caps'>ogg</span></span>. Para su conversión se utilizará <a href='http://ffmpeg.org/' target='_blank'>FFmpeg</a> en su última versión estable (actualmente la 4.4) con el encoder <span class='ectt-1095'>libvorvis</span>. Los <span class='eccc1095-'><span class='small-caps'>ogg</span></span> deberán ser de 192 kbps a 44 khz:
     </p><!-- l. 125 -->
-    <div class='lstlisting' id='listing-1'>
+    <div id='listing-1' class='lstlisting'>
       <span class='label'><a id='x1-18001r1'></a></span><span id='textcolor2'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>ffmpeg -i ARCHIVO.wav -acodec libvorbis -q:a 6 ARCHIVO.ogg</span>
     </div>
     <p>
@@ -494,7 +494,7 @@
       <span class='titlemark'>2.1.</span> <a id='x1-200001'></a>Principios de diseño
     </h4><!-- l. 7 -->
     <p class='noindent'>
-      Se pretende generar un código sólido, flexible y eficiente, pero el énfasis en esta primera etapa de desarrollo será hacia la <span class='ecti-1095'>flexibilidad</span>. En principio, la idea original de diseño es solo eso, una idea; a medida que se vaya obteniendo más información y <span class='ecti-1095'>aprendamos más del proceso de</span> <span class='ecti-1095'>desarrollo y los requerimientos del diseño</span>, deberemos ir refactorizando el código<span class='footnote-mark'><a href='#fn1x0' id='fn1x0-bk'><sup class='textsuperscript'>1</sup></a></span><a id='x1-20001f1'></a> para obtener unidades más definidas, mejor alineadas a los requerimientos y particularmente, que sean unidades fáciles de mantener.
+      Se pretende generar un código sólido, flexible y eficiente, pero el énfasis en esta primera etapa de desarrollo será hacia la <span class='ecti-1095'>flexibilidad</span>. En principio, la idea original de diseño es solo eso, una idea; a medida que se vaya obteniendo más información y <span class='ecti-1095'>aprendamos más del proceso de</span> <span class='ecti-1095'>desarrollo y los requerimientos del diseño</span>, deberemos ir refactorizando el código<span class='footnote-mark'><a id='fn1x0-bk' href='#fn1x0'><sup class='textsuperscript'>1</sup></a></span><a id='x1-20001f1'></a> para obtener unidades más definidas, mejor alineadas a los requerimientos y particularmente, que sean unidades fáciles de mantener.
     </p><!-- l. 9 -->
     <p class='indent'>
       Para ello, se deberá implementar un sistema de pruebas por cada feature que se trabaje. Esto implica invertir el proceso de desarrollo escribiendo primero el test, dejar que falle y a continuación implementar la funcionalidad. El principio es concentrarse en las pruebas no en el debugging; aunque es ineludible, <span class='ecti-1095'>no</span> <span class='ecti-1095'>queremos estar arreglando bugs, sino que queremos evitarlos</span>.
@@ -511,7 +511,7 @@
     <figure class='figure'>
       <a id='x1-22001r1'></a> <!-- l. 18 -->
       <p class='noindent'>
-        <img width='270' height='270' alt='PIC' src='im%C3%A1genes/tdd.png'>
+        <img alt='PIC' width='270' height='270' src='im%C3%A1genes/tdd.png'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 1: </span><span class='content'>Flujo de desarrollo TDD.</span>
@@ -580,7 +580,7 @@
     <figure class='figure'>
       <a id='x1-27001r2'></a> <!-- l. 14 -->
       <p class='noindent'>
-        <img width='360' height='360' alt='PIC' src='im%C3%A1genes/tablero01.png'>
+        <img alt='PIC' width='360' height='360' src='im%C3%A1genes/tablero01.png'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 2: </span><span class='content'>Tablero Kanban en Trello.</span>
@@ -606,7 +606,7 @@
       <figcaption class='caption'>
         <span class='id'>Figura 3: </span><span class='content'>Límites de trabajo en Trello.</span>
       </figcaption><!-- tex4ht:label?: x1-28001r3  -->
-      <img width='360' height='360' alt='PIC' src='im%C3%A1genes/tablero02.png'>
+      <img alt='PIC' width='360' height='360' src='im%C3%A1genes/tablero02.png'>
     </figure><!-- l. 32 -->
     <p class='indent'>
       Respetar los límites de cada columna, facilitará la distribución de trabajo en un modelo de entrega continua y nos permitirá tomar decisiones más acertadas y realistas al momento de la planificación. <a id='x1-28002r30'></a>
@@ -652,13 +652,13 @@
         6.
       </dt>
       <dd class='enumerate-enumitem'>
-        <span class='ecbx-1095'>Columna Trabajando - Código:</span> En esta etapa se implementa la funcionalidad hasta que se hayan pasado todos los test correspondientes y haya concluido el ciclo de refactorización con los test aprobados.
+        <span class='ecbx-1095'>Columna Trabajando - Código:</span> En esta etapa se implementa la funcionalidad hasta que se hayan pasado todos los test correspondientes y haya concluido el ciclo de refactorización con los test aprobados. Una vez hecho el merge hacia develop se pasa la tarjeta a la siguiente columna.
       </dd>
       <dt class='enumerate-enumitem'>
         7.
       </dt>
       <dd class='enumerate-enumitem'>
-        <span class='ecbx-1095'>Columna Implementadas:</span> Acá quedan las tarjetas con tareas terminadas esperando revisión de otro desarrollador (idealmente) que se deberá asignar a la tarjeta para pasarla a la siguiente etapa.
+        <span class='ecbx-1095'>Columna Implementadas:</span> Acá quedan las tarjetas con tareas terminadas esperando (idealmente) la revisión de otro desarrollador, quien se deberá asignar a la tarjeta antes de moverla a la siguiente etapa.
       </dd>
       <dt class='enumerate-enumitem'>
         8.
@@ -670,7 +670,7 @@
         9.
       </dt>
       <dd class='enumerate-enumitem'>
-        <span class='ecbx-1095'>Columna Finalizadas:</span> Aquí van las tareas terminadas. Se archivan al hacer el merge de un conjunto de features completo a develop (cuando sube la versión).
+        <span class='ecbx-1095'>Columna Finalizadas:</span> Aquí van las tareas terminadas. Se archivan al hacer el merge de un conjunto de features completo a main (cuando sube la versión).
       </dd>
     </dl>
     <p>
@@ -692,7 +692,7 @@
       <span class='titlemark'>3.2.</span> <a id='x1-320002'></a>Repositorio
     </h4><!-- l. 68 -->
     <p class='noindent'>
-      El repositorio <span class='eccc1095-'><span class='small-caps'>git</span></span> de Bakumapu se encuentra alojado en la siguiente dirección: <a href='https://github.com/polirritmico/Bakumapu' class='url' target='_blank'><span class='ectt-1095'>https://github.com/polirritmico/Bakumapu</span></a>.
+      El repositorio <span class='eccc1095-'><span class='small-caps'>git</span></span> de Bakumapu se encuentra alojado en la siguiente dirección: <a class='url' href='https://github.com/polirritmico/Bakumapu'><span class='ectt-1095'>https://github.com/polirritmico/Bakumapu</span></a>.
     </p><!-- l. 70 -->
     <p class='indent'>
       La contribución de código será organizada a través del modelo de ramas de función (feature branching) adaptada a un sistema de TDD de entrega continua (más información en el apartado <a href='#x1-200001'>Principios de diseño<!-- tex4ht:ref: principios:principios-de-diseno  --></a>). <a id='x1-32001r34'></a>
@@ -703,7 +703,7 @@
     <figure class='figure'>
       <a id='x1-33001r4'></a> <!-- l. 75 -->
       <p class='noindent'>
-        <img width='360' height='360' alt='PIC' src='im%C3%A1genes/git.png'>
+        <img alt='PIC' width='360' height='360' src='im%C3%A1genes/git.png'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 4: </span><span class='content'>Ramas en <span class='eccc1095-'><span class='small-caps'>git</span></span>.</span>
@@ -720,7 +720,7 @@
         a.
       </dt>
       <dd class='enumerate-enumitem'>
-        <span class='ecbx-1095'>develop:</span> Esta rama contará siempre con las últimas funciones implementadas. Es la rama principal del desarrollo ya que para trabajar cada feature, se creará una rama a partir de <span class='ecbx-1095'>develop</span>. A medida que se avance esa implementación continuamente se harán merges de vuelta a <span class='ecbx-1095'>develop</span> (al menos uno al día)<span class='footnote-mark'><a href='#fn2x0' id='fn2x0-bk'><sup class='textsuperscript'>2</sup></a></span><a id='x1-33003f2'></a>. De esta forma se pretende que esté siempre disponible el código completo para no perder la referencia global del proyecto.
+        <span class='ecbx-1095'>develop:</span> Esta rama contará siempre con las últimas funciones implementadas. Es la rama principal del desarrollo ya que para trabajar cada feature, se creará una rama a partir de <span class='ecbx-1095'>develop</span>. A medida que se avance esa implementación continuamente se harán merges de vuelta a <span class='ecbx-1095'>develop</span> (al menos uno al día)<span class='footnote-mark'><a id='fn2x0-bk' href='#fn2x0'><sup class='textsuperscript'>2</sup></a></span><a id='x1-33003f2'></a>. De esta forma se pretende que esté siempre disponible el código completo para no perder la referencia global del proyecto.
       </dd>
       <dt class='enumerate-enumitem'>
         b.
@@ -851,13 +851,13 @@
       <!-- l. 149 -->
       <p class='noindent'></p><!-- l. 150 -->
       <p class='noindent'>
-        <span class='ectt-1095'>Versión actual: v0.0.1.</span>
+        <span class='ectt-1095'>Versión actual: v0.0.2.</span>
       </p>
     </div><!-- l. 154 -->
-    <div class='lstlisting' id='listing-2'>
+    <div id='listing-2' class='lstlisting'>
       <span class='label'><a id='x1-44001r1'></a></span><span class='ectt-1000'>Bakumapu-docs </span><span id='textcolor3'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>vim Makefile</span>
     </div><!-- l. 157 -->
-    <div class='lstlisting' id='listing-3'>
+    <div id='listing-3' class='lstlisting'>
       <span class='label'><a id='x1-44002r1'></a></span><span class='ectt-1000'>SHELL = /bin/sh </span><br>
       <span class='label'><a id='x1-44003r2'></a></span><span class='ectt-1000'># Actualizar con cada cambio </span><br>
       <span class='label'><a id='x1-44004r3'></a></span><span class='ectt-1000'>VERSION = 0.0.1</span>
@@ -871,7 +871,7 @@
     <p class='noindent'>
       Para exportar a <span class='eccc1095-'><span class='small-caps'>html</span></span> bastará con usar el paquete <span class='ecbx-1095'>make4ht</span> (utiliza pdflatex y htlatex). Las instrucciones de compilación están configuradas en el fichero Makefile, por lo que la conversión se automatiza con el comando:
     </p><!-- l. 165 -->
-    <div class='lstlisting' id='listing-4'>
+    <div id='listing-4' class='lstlisting'>
       <span class='label'><a id='x1-45001r1'></a></span><span class='ectt-1000'>Bakumapu-docs </span><span id='textcolor4'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>make html</span>
     </div><!-- l. 168 -->
     <p class='indent'>
@@ -881,12 +881,12 @@
       <span class='titlemark'>3.3.5.</span> <a id='x1-460005'></a>Repositorio de documentación
     </h5><!-- l. 171 -->
     <p class='noindent'>
-      Un simple repositorio <span class='eccc1095-'><span class='small-caps'>git</span></span> en Gitbub, ubicado en: <a href='https://github.com/polirritmico/Bakumapu-docs' class='url' target='_blank'><span class='ectt-1095'>https://github.com/polirritmico/Bakumapu-docs</span></a>. Desde aquí solo se puede revisar el código fuente del <span class='eccc1095-'><span class='small-caps'>html</span></span>, para acceder a una versión renderizada está la siguiente <span class='eccc1095-'><span class='small-caps'>url</span></span>: <a href='https://polirritmico.github.io/Bakumapu-docs/' class='url'><span class='ectt-1095'>https://polirritmico.github.io/Bakumapu-docs/</span></a>.
+      Un simple repositorio <span class='eccc1095-'><span class='small-caps'>git</span></span> en Gitbub, ubicado en: <a class='url' href='https://github.com/polirritmico/Bakumapu-docs'><span class='ectt-1095'>https://github.com/polirritmico/Bakumapu-docs</span></a>. Desde aquí solo se puede revisar el código fuente del <span class='eccc1095-'><span class='small-caps'>html</span></span>, para acceder a una versión renderizada está la siguiente <span class='eccc1095-'><span class='small-caps'>url</span></span>: <a class='url' href='https://polirritmico.github.io/Bakumapu-docs/'><span class='ectt-1095'>https://polirritmico.github.io/Bakumapu-docs/</span></a>.
     </p><!-- l. 173 -->
     <p class='indent'>
       Para sincronizar el servidor además de los comandos <span class='eccc1095-'><span class='small-caps'>git</span></span> habituales, el archivo <span class='ecbx-1095'>Makefile</span> tiene las instrucciones para automatizar el proceso:
     </p><!-- l. 174 -->
-    <div class='lstlisting' id='listing-5'>
+    <div id='listing-5' class='lstlisting'>
       <span class='label'><a id='x1-46001r1'></a></span><span class='ectt-1000'>Bakumapu-docs </span><span id='textcolor5'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>make sync</span>
     </div>
     <p>
@@ -925,7 +925,7 @@
         <p class='noindent'>
           Operadores y variables separados por un espacio:
         </p><!-- l. 187 -->
-        <div class='lstlisting' id='listing-6'>
+        <div id='listing-6' class='lstlisting'>
           <span class='label'><a id='x1-47001r1'></a></span><span class='ectt-1000'>var ejemplo = Vector2(2, 5 + PI.get(2))</span>
         </div>
       </li>
@@ -1118,7 +1118,7 @@
     <figure class='figure'>
       <a id='x1-57001r5'></a> <!-- l. 58 -->
       <p class='noindent'>
-        <img alt='PIC' src='im%C3%A1genes/arbol_i18n.png'>
+        <img src='im%C3%A1genes/arbol_i18n.png' alt='PIC'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 5: </span><span class='content'>Organización de archivos de i18n.</span>
@@ -1242,12 +1242,12 @@
     <p class='indent'>
       Por ejemplo, <span class='ectt-1095'>tyanka.gd</span> podría reimplementar funciones de PlayerMng:
     </p><!-- l. 10 -->
-    <div class='lstlisting' id='listing-7'>
+    <div id='listing-7' class='lstlisting'>
       <span class='label'><a id='x1-63001r1'></a></span><span class='ectt-1000'>@@ src/characters/player/tyanka.gd </span><br>
       <span class='label'><a id='x1-63002r2'></a></span><span class='ectt-1000'>PlayerMng.storeItem(Tyanka.item_bag, GM.getRewardFromCurrentQuest(\ </span><br>
       <span class='label'><a id='x1-63003r3'></a></span><span class='ectt-1000'>                 PlayerMng.currentQuest.getPath()))</span>
     </div><!-- l. 15 -->
-    <div class='lstlisting' id='listing-8'>
+    <div id='listing-8' class='lstlisting'>
       <span class='label'><a id='x1-63004r1'></a></span><span class='ectt-1000'>@@ src/game/game_manager.gd </span><br>
       <span class='label'><a id='x1-63005r2'></a></span><span class='ectt-1000'>def getRewardFromCurrentQuest(path) -&gt; item: </span><br>
       <span class='label'><a id='x1-63006r3'></a></span><span class='ectt-1000'>   quest = QuestMng.getQuestFromPath(path) </span><br>
@@ -1262,7 +1262,7 @@
     <figure class='figure'>
       <a id='x1-63008r6'></a> <!-- l. 28 -->
       <p class='noindent'>
-        <img width='216' height='216' alt='PIC' src='im%C3%A1genes/arquitectura.png'>
+        <img alt='PIC' width='216' height='216' src='im%C3%A1genes/arquitectura.png'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 6: </span><span class='content'>Ejemplo de sistema de managers ajustable.</span>
@@ -1300,7 +1300,7 @@
             <col id='TBL-1-2'>
           </colgroup>
           <tr style='vertical-align:baseline;' id='TBL-1-1-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-1-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-1-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-2-'>
             <td id='TBL-1-2-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1312,7 +1312,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-4-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-4-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-4-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-5-'>
             <td id='TBL-1-5-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1334,14 +1334,14 @@
             <td id='TBL-1-8-2' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-9-'>
-            <td style='white-space:nowrap; text-align:left;' id='TBL-1-9-1' colspan='2' class='td11'>
-              <div class='multicolumn' style='white-space:nowrap; text-align:left;'>
+            <td colspan='2' id='TBL-1-9-1' style='white-space:nowrap; text-align:left;' class='td11'>
+              <div style='white-space:nowrap; text-align:left;' class='multicolumn'>
                 <span class='ecbx-1095'>GameManager</span>
               </div>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-10-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-10-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-10-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-11-'>
             <td id='TBL-1-11-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1353,7 +1353,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-13-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-13-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-13-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-14-'>
             <td id='TBL-1-14-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1365,14 +1365,14 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-16-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-16-1' colspan='2' class='td11'>
-              <div class='multicolumn' style='white-space:normal; text-align:left;'>
+            <td colspan='2' id='TBL-1-16-1' style='white-space:normal; text-align:left;' class='td11'>
+              <div style='white-space:normal; text-align:left;' class='multicolumn'>
                 Manager principal a nivel de ejecución cuya función además de iniciar el juego será la de instanciar al resto de SubManagers. <span class='eccc1095-'><span class='small-caps'>gm</span></span> tendrá una clara tendencia a crecer en complejidad por lo que es muy importante que opere delegando funciones más que implementándolas. En esta misma línea si la interacción entre managers termina siendo demasiado compleja entonces será un síntoma de que es necesario un rediseño en cuanto a los in/outs de los submanagers implicados.
               </div>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-17-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-17-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-17-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-18-'>
             <td id='TBL-1-18-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1384,7 +1384,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-20-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-20-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-20-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-21-'>
             <td id='TBL-1-21-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1410,7 +1410,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-24-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-24-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-24-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-25-'>
             <td id='TBL-1-25-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1422,7 +1422,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-27-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-27-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-27-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-28-'>
             <td id='TBL-1-28-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1448,7 +1448,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-31-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-31-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-31-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-32-'>
             <td id='TBL-1-32-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1460,7 +1460,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-34-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-34-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-34-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-35-'>
             <td id='TBL-1-35-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1486,7 +1486,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-38-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-38-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-38-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-39-'>
             <td id='TBL-1-39-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1498,7 +1498,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-41-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-41-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-41-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-42-'>
             <td id='TBL-1-42-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1525,7 +1525,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-45-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-45-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-45-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-46-'>
             <td id='TBL-1-46-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1537,7 +1537,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-48-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-48-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-48-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-49-'>
             <td id='TBL-1-49-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1563,7 +1563,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-52-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-52-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-52-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-53-'>
             <td id='TBL-1-53-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1575,7 +1575,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-55-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-55-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-55-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-56-'>
             <td id='TBL-1-56-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1601,7 +1601,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-59-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-59-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-59-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-60-'>
             <td id='TBL-1-60-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1613,7 +1613,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-62-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-62-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-62-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-63-'>
             <td id='TBL-1-63-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1639,7 +1639,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-66-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-66-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-66-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-67-'>
             <td id='TBL-1-67-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1651,7 +1651,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-69-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-69-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-69-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-70-'>
             <td id='TBL-1-70-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1677,7 +1677,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-73-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-73-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-73-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-74-'>
             <td id='TBL-1-74-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1689,7 +1689,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-76-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-76-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-76-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-77-'>
             <td id='TBL-1-77-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1716,7 +1716,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-80-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-80-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-80-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-81-'>
             <td id='TBL-1-81-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -1728,7 +1728,7 @@
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-83-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-83-1' colspan='2' class='td11'></td>
+            <td colspan='2' id='TBL-1-83-1' style='white-space:normal; text-align:left;' class='td11'></td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-84-'>
             <td id='TBL-1-84-1' style='white-space:normal; text-align:left;' class='td11'></td>
@@ -2405,7 +2405,7 @@
       <li class='itemize'>
         <!-- l. 76 -->
         <p class='noindent'>
-          Formato: <span class='ecxc-1095'>ogg</span> vorbis<span class='footnote-mark'><a href='#fn3x0' id='fn3x0-bk'><sup class='textsuperscript'>3</sup></a></span><a id='x1-88001f3'></a>.
+          Formato: <span class='ecxc-1095'>ogg</span> vorbis<span class='footnote-mark'><a id='fn3x0-bk' href='#fn3x0'><sup class='textsuperscript'>3</sup></a></span><a id='x1-88001f3'></a>.
         </p>
       </li>
       <li class='itemize'>
@@ -2472,7 +2472,7 @@
       <dd class='description'>
         <!-- l. 96 -->
         <p class='noindent'>
-          Probablemente a medida que avance el desarrollo aparezcan nuevos archivos que sea conveniente generar. Por ejemplo: logs, informes de estadísticas del gameplay o algún tipo de telemetría<span class='footnote-mark'><a href='#fn4x0' id='fn4x0-bk'><sup class='textsuperscript'>4</sup></a></span><a id='x1-89001f4'></a>. A medida que estos archivos sean definidos deberían agregarse en este apartado.
+          Probablemente a medida que avance el desarrollo aparezcan nuevos archivos que sea conveniente generar. Por ejemplo: logs, informes de estadísticas del gameplay o algún tipo de telemetría<span class='footnote-mark'><a id='fn4x0-bk' href='#fn4x0'><sup class='textsuperscript'>4</sup></a></span><a id='x1-89001f4'></a>. A medida que estos archivos sean definidos deberían agregarse en este apartado.
         </p>
       </dd>
     </dl>
@@ -2610,7 +2610,7 @@
         <p class='noindent'>
           Una consideración importante para mantener la organización de los archivos de una forma que sea coherente con la abstracción de <span class='ecti-1095'>escenas</span> <span class='ecti-1095'>y nodos</span>, es crear cada escena dentro de su propia carpeta. Aquí, además del archivo <span class='eccc1095-'><span class='small-caps'>tscn</span></span>, deberían estar todos los assets que utiliza la escena para evitar cualquier problemas de dependencias. La idea es poder mover o copiar la carpeta de ubicación y que todo siga funcionando dentro de ella.
         </p><!-- l. 24 -->
-        <div class='lstlisting' id='listing-9'>
+        <div id='listing-9' class='lstlisting'>
           <span class='label'><a id='x1-94001r1'></a></span><span id='textcolor6'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>ls src/characters/player/tyanka/ </span><br>
           <span class='label'><a id='x1-94002r2'></a></span><span class='ectt-1000'>animations/ </span><br>
           <span class='label'><a id='x1-94003r3'></a></span><span class='ectt-1000'>   tyanka_walk_01.png </span><br>
@@ -2683,7 +2683,7 @@
     <figure class='figure'>
       <!-- l. 68 -->
       <p class='noindent'>
-        <img width='503' height='503' alt='PIC' src='im%C3%A1genes/arbol_proyecto.png'>
+        <img alt='PIC' width='503' height='503' src='im%C3%A1genes/arbol_proyecto.png'>
       </p>
     </figure>
     <p>
@@ -2921,7 +2921,7 @@
       Para todas estas herramientas se propone utilizar Python, por su similitud con <span class='eccc1095-'><span class='small-caps'>gds</span></span>cript y por compatibilidad multiplataforma. Para la mayoría de programas solo será necesario una batería de scripts; no obstante, para los que use directamente el equipo de traducción se propone el uso de una <span class='eccc1095-'><span class='small-caps'>gui</span></span> en Qt5 (PyQt5) por su versatilidad, facilidad de uso y licenciamiento.
     </p><!-- l. 78 -->
     <p class='indent'>
-      Es relevante recordar que todos los textos de contenidos deben estar codificados en UTF-8.<span class='footnote-mark'><a href='#fn5x0' id='fn5x0-bk'><sup class='textsuperscript'>5</sup></a></span><a id='x1-116001f5'></a> <a id='x1-116002r107'></a>
+      Es relevante recordar que todos los textos de contenidos deben estar codificados en UTF-8.<span class='footnote-mark'><a id='fn5x0-bk' href='#fn5x0'><sup class='textsuperscript'>5</sup></a></span><a id='x1-116001f5'></a> <a id='x1-116002r107'></a>
     </p>
     <h3 class='sectionHead'>
       <span class='titlemark'>9.</span> <a id='x1-1170009'></a>Optimización
@@ -2979,10 +2979,10 @@
         <p class='noindent'>
           Configuración:
         </p><!-- l. 14 -->
-        <div class='lstlisting' id='listing-10'>
+        <div id='listing-10' class='lstlisting'>
           <span class='label'><a id='x1-120001r1'></a></span><span id='textcolor7'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>./config/git/config</span>
         </div><!-- l. 18 -->
-        <div class='lstlisting' id='listing-11'>
+        <div id='listing-11' class='lstlisting'>
           <span class='label'><a id='x1-120002r1'></a></span><span class='ectt-1000'>conf[user] </span><br>
           <span class='label'><a id='x1-120003r2'></a></span><span class='ectt-1000'>name = USUARIO </span><br>
           <span class='label'><a id='x1-120004r3'></a></span><span class='ectt-1000'>email = MAIL_REGISTRADO_EN_GITHUB </span><br>
@@ -3003,7 +3003,7 @@
         <p class='noindent'>
           Archivos y directorios ignorados por <span class='eccc1095-'><span class='small-caps'>git</span></span> (en .gitignore dentro de Bakumapu):
         </p><!-- l. 31 -->
-        <div class='lstlisting' id='listing-12'>
+        <div id='listing-12' class='lstlisting'>
           <span class='label'><a id='x1-120009r1'></a></span><span class='ectt-1000'># Godot-specific ignores </span><br>
           <span class='label'><a id='x1-120010r2'></a></span><span class='ectt-1000'>.import/ </span><br>
           <span class='label'><a id='x1-120011r3'></a></span><span class='ectt-1000'>export/ </span><br>
@@ -3020,13 +3020,13 @@
         <p class='noindent'>
           Evitar problemas de formato de archivo entre Windows (<span class='eccc1095-'><span class='small-caps'>crlf</span></span>) y el resto de sistemas:
         </p><!-- l. 46 -->
-        <div class='lstlisting' id='listing-13'>
+        <div id='listing-13' class='lstlisting'>
           <span class='label'><a id='x1-120018r1'></a></span><span id='textcolor8'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>.gitattributes:</span>
         </div><!-- l. 49 -->
         <p class='noindent'></p>
         <div class='minipage'>
           <!-- l. 50 -->
-          <div class='lstlisting' id='listing-14'>
+          <div id='listing-14' class='lstlisting'>
             <span class='label'><a id='x1-120019r1'></a></span><span class='ectt-1000'># Set the default behavior, in </span><br>
             <span class='label'><a id='x1-120020r2'></a></span><span class='ectt-1000'># case people </span><br>
             <span class='label'><a id='x1-120021r3'></a></span><span class='ectt-1000'># don’t have core.autocrlf set </span><br>
@@ -3062,7 +3062,7 @@
         </div>
         <div class='minipage'>
           <!-- l. 85 -->
-          <div class='lstlisting' id='listing-15'>
+          <div id='listing-15' class='lstlisting'>
             <span class='label'><a id='x1-120050r1'></a></span><span class='ectt-1000'># images </span><br>
             <span class='label'><a id='x1-120051r2'></a></span><span class='ectt-1000'> </span><br>
             <span class='label'><a id='x1-120052r3'></a></span><span class='ectt-1000'>*.png binary </span><br>
@@ -3102,7 +3102,7 @@
         <p class='noindent'>
           Clonar el repositorio en el espacio de trabajo local:
         </p><!-- l. 121 -->
-        <div class='lstlisting' id='listing-16'>
+        <div id='listing-16' class='lstlisting'>
           <span class='label'><a id='x1-120081r1'></a></span><span id='textcolor9'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git clone https://github.com/polirritmico/Bakumapu</span>
         </div>
       </li>
@@ -3111,7 +3111,7 @@
         <p class='noindent'>
           Ver el estado de la rama actual:
         </p><!-- l. 126 -->
-        <div class='lstlisting' id='listing-17'>
+        <div id='listing-17' class='lstlisting'>
           <span class='label'><a id='x1-120082r1'></a></span><span id='textcolor10'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git status</span>
         </div>
       </li>
@@ -3120,7 +3120,7 @@
         <p class='noindent'>
           Cambiar a una rama (por ejemplo develop):
         </p><!-- l. 131 -->
-        <div class='lstlisting' id='listing-18'>
+        <div id='listing-18' class='lstlisting'>
           <span class='label'><a id='x1-120083r1'></a></span><span id='textcolor11'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git checkout develop</span>
         </div>
       </li>
@@ -3129,7 +3129,7 @@
         <p class='noindent'>
           Crear una nueva rama en base a la rama actual (ejemplo “ft-01”:
         </p><!-- l. 136 -->
-        <div class='lstlisting' id='listing-19'>
+        <div id='listing-19' class='lstlisting'>
           <span class='label'><a id='x1-120084r1'></a></span><span id='textcolor12'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git checkout -b ft-01</span>
         </div>
       </li>
@@ -3138,7 +3138,7 @@
         <p class='noindent'>
           Borrar ramas
         </p><!-- l. 141 -->
-        <div class='lstlisting' id='listing-20'>
+        <div id='listing-20' class='lstlisting'>
           <span class='label'><a id='x1-120085r1'></a></span><span id='textcolor13'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git branch -d rama </span><br>
           <span class='label'><a id='x1-120086r2'></a></span><span id='textcolor14'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git push origin -d rama</span>
         </div>
@@ -3148,7 +3148,7 @@
         <p class='noindent'>
           Borrar ramas locales ya eliminadas en el repo
         </p><!-- l. 147 -->
-        <div class='lstlisting' id='listing-21'>
+        <div id='listing-21' class='lstlisting'>
           <span class='label'><a id='x1-120087r1'></a></span><span id='textcolor15'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git fetch -p </span><br>
           <span class='label'><a id='x1-120088r2'></a></span><span id='textcolor16'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git remote prune origin</span>
         </div>
@@ -3158,7 +3158,7 @@
         <p class='noindent'>
           Merges de ramas
         </p><!-- l. 153 -->
-        <div class='lstlisting' id='listing-22'>
+        <div id='listing-22' class='lstlisting'>
           <span class='label'><a id='x1-120089r1'></a></span><span id='textcolor17'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git checkout rama-destino </span><br>
           <span class='label'><a id='x1-120090r2'></a></span><span id='textcolor18'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git fetch </span><br>
           <span class='label'><a id='x1-120091r3'></a></span><span id='textcolor19'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git pull </span><br>
@@ -3170,7 +3170,7 @@
         <p class='noindent'>
           Enviar la rama local a Github (origin es un alias de la ruta al repo en github):
         </p><!-- l. 161 -->
-        <div class='lstlisting' id='listing-23'>
+        <div id='listing-23' class='lstlisting'>
           <span class='label'><a id='x1-120093r1'></a></span><span id='textcolor21'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git push -u origin ft-01</span>
         </div>
       </li>
@@ -3179,7 +3179,7 @@
         <p class='noindent'>
           Agrega todos los cambios al área de pruebas:
         </p><!-- l. 166 -->
-        <div class='lstlisting' id='listing-24'>
+        <div id='listing-24' class='lstlisting'>
           <span class='label'><a id='x1-120094r1'></a></span><span id='textcolor22'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git add .</span>
         </div>
       </li>
@@ -3188,7 +3188,7 @@
         <p class='noindent'>
           Agrega comentarios al commit:
         </p><!-- l. 171 -->
-        <div class='lstlisting' id='listing-25'>
+        <div id='listing-25' class='lstlisting'>
           <span class='label'><a id='x1-120095r1'></a></span><span id='textcolor23'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git commit -m descripcion</span>
         </div>
       </li>
@@ -3197,7 +3197,7 @@
         <p class='noindent'>
           Envía los cambios locales de la rama actual a Github:
         </p><!-- l. 176 -->
-        <div class='lstlisting' id='listing-26'>
+        <div id='listing-26' class='lstlisting'>
           <span class='label'><a id='x1-120096r1'></a></span><span id='textcolor24'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git push</span>
         </div>
       </li>
@@ -3206,7 +3206,7 @@
         <p class='noindent'>
           Actualizar el repositorio local desde Github:
         </p><!-- l. 181 -->
-        <div class='lstlisting' id='listing-27'>
+        <div id='listing-27' class='lstlisting'>
           <span class='label'><a id='x1-120097r1'></a></span><span id='textcolor25'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git pull</span>
         </div>
       </li>
@@ -3232,7 +3232,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Comentarios: <!-- l. 15 -->
-        <div class='lstlisting' id='listing-28'>
+        <div id='listing-28' class='lstlisting'>
           <span class='label'><a id='x1-121002r1'></a></span><span class='ectt-1000'>Esto es un texto normal. </span><br>
           <span class='label'><a id='x1-121003r2'></a></span><span class='ectt-1000'>% Esto es un comentario. No se compila. </span><br>
           <span class='label'><a id='x1-121004r3'></a></span><span class='ectt-1000'>Texto % Comentario.</span>
@@ -3243,7 +3243,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Escapar símbolos: <!-- l. 21 -->
-        <div class='lstlisting' id='listing-29'>
+        <div id='listing-29' class='lstlisting'>
           <span class='label'><a id='x1-121006r1'></a></span><span class='ectt-1000'>Necesito escribir una linea \_ y un porcentaje \% </span><br>
           <span class='label'><a id='x1-121007r2'></a></span><span class='ectt-1000'>El signo \ funciona con este comando: \textbackslash.</span>
         </div>
@@ -3253,7 +3253,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Secciones (en orden descendente): <!-- l. 26 -->
-        <div class='lstlisting' id='listing-30'>
+        <div id='listing-30' class='lstlisting'>
           <span class='label'><a id='x1-121009r1'></a></span><span class='ectt-1000'>\section{Titulo de seccion} </span><br>
           <span class='label'><a id='x1-121010r2'></a></span><span class='ectt-1000'>\subsection{Titulo de subseccion} </span><br>
           <span class='label'><a id='x1-121011r3'></a></span><span class='ectt-1000'>\subsection*{Titulo.} % Asterisco para no ennumerar. </span><br>
@@ -3266,7 +3266,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Ajustes tipográficos: <!-- l. 34 -->
-        <div class='lstlisting' id='listing-31'>
+        <div id='listing-31' class='lstlisting'>
           <span class='label'><a id='x1-121015r1'></a></span><span class='ectt-1000'>Negrita: Texto a \textbf{negrita}. </span><br>
           <span class='label'><a id='x1-121016r2'></a></span><span class='ectt-1000'>Enfasis: Texto a \emph{enfasis} </span><br>
           <span class='label'><a id='x1-121017r3'></a></span><span class='ectt-1000'>Cursiva: Texto a \textit{cursiva}. </span><br>
@@ -3284,7 +3284,7 @@
           </dt>
           <dd class='enumerate-enumitem'>
             Alineación: <!-- l. 44 -->
-            <div class='lstlisting' id='listing-32'>
+            <div id='listing-32' class='lstlisting'>
               <span class='label'><a id='x1-121021r1'></a></span><span class='ectt-1000'>\begin{centering} % alternativas: flushleft, flushright </span><br>
               <span class='label'><a id='x1-121022r2'></a></span><span class='ectt-1000'>Texto alineado en base al valor en begin. </span><br>
               <span class='label'><a id='x1-121023r3'></a></span><span class='ectt-1000'>\end{centering}</span>
@@ -3295,7 +3295,7 @@
           </dt>
           <dd class='enumerate-enumitem'>
             Saltos de línea: <!-- l. 51 -->
-            <div class='lstlisting' id='listing-33'>
+            <div id='listing-33' class='lstlisting'>
               <span class='label'><a id='x1-121025r1'></a></span><span class='ectt-1000'>Los saltos necesitan este comando\\ </span><br>
               <span class='label'><a id='x1-121026r2'></a></span><span class='ectt-1000'>sino se encadenan en una misma linea. </span><br>
               <span class='label'><a id='x1-121027r3'></a></span><span class='ectt-1000'> </span><br>
@@ -3307,7 +3307,7 @@
           </dt>
           <dd class='enumerate-enumitem'>
             Quitar sangría: <!-- l. 59 -->
-            <div class='lstlisting' id='listing-34'>
+            <div id='listing-34' class='lstlisting'>
               <span class='label'><a id='x1-121030r1'></a></span><span class='ectt-1000'>\noindent Primera linea sin sangria.</span>
             </div>
           </dd>
@@ -3318,7 +3318,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Referencias: <!-- l. 65 -->
-        <div class='lstlisting' id='listing-35'>
+        <div id='listing-35' class='lstlisting'>
           <span class='label'><a id='x1-121032r1'></a></span><span class='ectt-1000'>% Lo que queremos referenciar: </span><br>
           <span class='label'><a id='x1-121033r2'></a></span><span class='ectt-1000'>\subsection{Titulo subseccion} </span><br>
           <span class='label'><a id='x1-121034r3'></a></span><span class='ectt-1000'>% Le agregamos label. Ojala usar {nombre_archivo:descripcion} </span><br>
@@ -3335,7 +3335,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Listas: <!-- l. 78 -->
-        <div class='lstlisting' id='listing-36'>
+        <div id='listing-36' class='lstlisting'>
           <span class='label'><a id='x1-121042r1'></a></span><span class='ectt-1000'>\begin{enumerate} % Para listas no numeradas usar itemize. </span><br>
           <span class='label'><a id='x1-121043r2'></a></span><span class='ectt-1000'>   \item Primer item numerado. </span><br>
           <span class='label'><a id='x1-121044r3'></a></span><span class='ectt-1000'>   \item Segundo item numerado. </span><br>
@@ -3347,7 +3347,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Imágenes: <!-- l. 86 -->
-        <div class='lstlisting' id='listing-37'>
+        <div id='listing-37' class='lstlisting'>
           <span class='label'><a id='x1-121047r1'></a></span><span class='ectt-1000'>\begin{figure}[h] % h de here, t top, b bottom o nada. </span><br>
           <span class='label'><a id='x1-121048r2'></a></span><span class='ectt-1000'>   \centering </span><br>
           <span class='label'><a id='x1-121049r3'></a></span><span class='ectt-1000'>   \includegraphics[]{ruta/al/archivo} </span><br>
@@ -3361,7 +3361,7 @@
       </dt>
       <dd class='enumerate-enumitem'>
         Código: <!-- l. 97 -->
-        <div class='lstlisting' id='listing-38'>
+        <div id='listing-38' class='lstlisting'>
           <span class='label'><a id='x1-121054r1'></a></span><span class='ectt-1000'>\begin{lstlisting*} % sin el asterisco </span><br>
           <span class='label'><a id='x1-121055r2'></a></span><span class='ectt-1000'>% Dentro de lstlisting solo ASCII basico sin tildes ni enies </span><br>
           <span class='label'><a id='x1-121056r3'></a></span><span class='ectt-1000'>var test = Clase.llamado(ejemplo.datos, objeto.pos()) </span><br>
@@ -3380,7 +3380,7 @@
           </dt>
           <dd class='enumerate-enumitem'>
             Mover a la siguiente página si no hay espacio disponible: <!-- l. 108 -->
-            <div class='lstlisting' id='listing-39'>
+            <div id='listing-39' class='lstlisting'>
               <span class='label'><a id='x1-121061r1'></a></span><span class='ectt-1000'>% el 2\baselineskip es para obtener el alto de 2 lineas </span><br>
               <span class='label'><a id='x1-121062r2'></a></span><span class='ectt-1000'>\Needspace{2\baselineskip}</span>
             </div>
@@ -3390,7 +3390,7 @@
           </dt>
           <dd class='enumerate-enumitem'>
             Salto de página: <!-- l. 114 -->
-            <div class='lstlisting' id='listing-40'>
+            <div id='listing-40' class='lstlisting'>
               <span class='label'><a id='x1-121064r1'></a></span><span class='ectt-1000'>\pagebreak</span>
             </div>
           </dd>
@@ -3399,7 +3399,7 @@
           </dt>
           <dd class='enumerate-enumitem'>
             Espacios indivisible (non-breaking space): <!-- l. 119 -->
-            <div class='lstlisting' id='listing-41'>
+            <div id='listing-41' class='lstlisting'>
               <span class='label'><a id='x1-121066r1'></a></span><span class='ectt-1000'>60~hz, 50~km, siglo~\lsc{XVI}.</span>
             </div>
           </dd>
@@ -3409,19 +3409,19 @@
     <div class='footnotes'>
       <!-- l. 7 -->
       <p class='indent'>
-        <span class='footnote-mark'><a href='#fn1x0-bk' id='fn1x0'><sup class='textsuperscript'>1</sup></a></span><span class='ecrm-0900'>Reestructurar su estructura interna sin alterar su comportamiento externo.</span>
+        <span class='footnote-mark'><a id='fn1x0' href='#fn1x0-bk'><sup class='textsuperscript'>1</sup></a></span><span class='ecrm-0900'>Reestructurar su estructura interna sin alterar su comportamiento externo.</span>
       </p><!-- l. 86 -->
       <p class='noindent'>
-        <span class='footnote-mark'><a href='#fn2x0-bk' id='fn2x0'><sup class='textsuperscript'>2</sup></a></span><span class='ecrm-0900'>Es muy importante este punto porque el tiempo que el código de la rama permanezca</span> <span class='ecrm-0900'>fuera de develop puede generar bugs desconocidos al estar aislado de los commit de otras</span> <span class='ecrm-0900'>ramas.</span>
+        <span class='footnote-mark'><a id='fn2x0' href='#fn2x0-bk'><sup class='textsuperscript'>2</sup></a></span><span class='ecrm-0900'>Es muy importante este punto porque el tiempo que el código de la rama permanezca</span> <span class='ecrm-0900'>fuera de develop puede generar bugs desconocidos al estar aislado de los commit de otras</span> <span class='ecrm-0900'>ramas.</span>
       </p><!-- l. 76 -->
       <p class='noindent'>
-        <span class='footnote-mark'><a href='#fn3x0-bk' id='fn3x0'><sup class='textsuperscript'>3</sup></a></span><span class='ecrm-0900'>En comparación al</span> <span class='eccc0900-'><span class='small-caps'>mp</span></span><span class='ecrm-0600'>3</span><span class='ecrm-0900'>, el</span> <span class='eccc0900-'><span class='small-caps'>ogg</span></span> <span class='ecrm-0900'>ocupa menos espacio y tiene mejor calidad a igual</span> <span class='ecrm-0900'>bitrate. En comparación el uso de</span> <span class='eccc0900-'><span class='small-caps'>cpu</span></span> <span class='ecrm-0900'>es marginalmente mayor, pero en una máquina</span> <span class='ecrm-0900'>moderna (más de 300 </span><span class='eccc0900-'><span class='small-caps'>mh</span></span><span class='ecrm-0900'>z) no debería suponer ningún problema.</span>
+        <span class='footnote-mark'><a id='fn3x0' href='#fn3x0-bk'><sup class='textsuperscript'>3</sup></a></span><span class='ecrm-0900'>En comparación al</span> <span class='eccc0900-'><span class='small-caps'>mp</span></span><span class='ecrm-0600'>3</span><span class='ecrm-0900'>, el</span> <span class='eccc0900-'><span class='small-caps'>ogg</span></span> <span class='ecrm-0900'>ocupa menos espacio y tiene mejor calidad a igual</span> <span class='ecrm-0900'>bitrate. En comparación el uso de</span> <span class='eccc0900-'><span class='small-caps'>cpu</span></span> <span class='ecrm-0900'>es marginalmente mayor, pero en una máquina</span> <span class='ecrm-0900'>moderna (más de 300 </span><span class='eccc0900-'><span class='small-caps'>mh</span></span><span class='ecrm-0900'>z) no debería suponer ningún problema.</span>
       </p><!-- l. 96 -->
       <p class='noindent'>
-        <span class='footnote-mark'><a href='#fn4x0-bk' id='fn4x0'><sup class='textsuperscript'>4</sup></a></span><span class='ecrm-0900'>Importante: Cualquier tipo de data del usuario debería ser enviada bajo su</span> <span class='ecrm-0900'>conocimiento y consentimiento. Revisar implicaciones legales.</span>
+        <span class='footnote-mark'><a id='fn4x0' href='#fn4x0-bk'><sup class='textsuperscript'>4</sup></a></span><span class='ecrm-0900'>Importante: Cualquier tipo de data del usuario debería ser enviada bajo su</span> <span class='ecrm-0900'>conocimiento y consentimiento. Revisar implicaciones legales.</span>
       </p><!-- l. 78 -->
       <p class='indent'>
-        <span class='footnote-mark'><a href='#fn5x0-bk' id='fn5x0'><sup class='textsuperscript'>5</sup></a></span><span class='ecrm-0900'>Al parecer la codificación de los archivos</span> <span class='eccc0900-'><span class='small-caps'>tscn</span></span> <span class='ecrm-0900'>debe ser</span> <span class='eccc0900-'><span class='small-caps'>us</span></span><span class='ecrm-0900'>-</span><span class='eccc0900-'><span class='small-caps'>ascii</span></span><span class='ecrm-0900'>. Investigar y testear</span> <span class='ecrm-0900'>antes de implementar la exportación a estos archivos</span> <a href='https://docs.godotengine.org/en/stable/development/file_formats/tscn.html' target='_blank'><span class='ecrm-0900'>TSCN file format</span></a><span class='ecrm-0900'>.</span>
+        <span class='footnote-mark'><a id='fn5x0' href='#fn5x0-bk'><sup class='textsuperscript'>5</sup></a></span><span class='ecrm-0900'>Al parecer la codificación de los archivos</span> <span class='eccc0900-'><span class='small-caps'>tscn</span></span> <span class='ecrm-0900'>debe ser</span> <span class='eccc0900-'><span class='small-caps'>us</span></span><span class='ecrm-0900'>-</span><span class='eccc0900-'><span class='small-caps'>ascii</span></span><span class='ecrm-0900'>. Investigar y testear</span> <span class='ecrm-0900'>antes de implementar la exportación a estos archivos</span> <a href='https://docs.godotengine.org/en/stable/development/file_formats/tscn.html' target='_blank'><span class='ecrm-0900'>TSCN file format</span></a><span class='ecrm-0900'>.</span>
       </p>
     </div>
   </body>

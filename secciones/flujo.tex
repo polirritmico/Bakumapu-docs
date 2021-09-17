@@ -45,13 +45,13 @@ El funcionamiento de cada columna es bastante sencillo:
 	
 	\item \textbf{Columna Trabajando - Test:} En esta etapa lo primero es crear la rama correspondiente, luego escribir el test y verificar que falle (más información en el apartado \nameref{principios:TDD}).
 	
-	\item \textbf{Columna Trabajando - Código:} En esta etapa se implementa la funcionalidad hasta que se hayan pasado todos los test correspondientes y haya concluido el ciclo de refactorización con los test aprobados.
+	\item \textbf{Columna Trabajando - Código:} En esta etapa se implementa la funcionalidad hasta que se hayan pasado todos los test correspondientes y haya concluido el ciclo de refactorización con los test aprobados. Una vez hecho el merge hacia develop se pasa la tarjeta a la siguiente columna.
 	
-	\item \textbf{Columna Implementadas:} Acá quedan las tarjetas con tareas terminadas esperando revisión de otro desarrollador (idealmente) que se deberá asignar a la tarjeta para pasarla a la siguiente etapa.
+	\item \textbf{Columna Implementadas:} Acá quedan las tarjetas con tareas terminadas esperando (idealmente) la revisión de otro desarrollador, quien se deberá asignar a la tarjeta antes de moverla a la siguiente etapa.
 	
 	\item \textbf{Columna En revisión:} Acá van las tareas que se estén revisando. Si tienen problemas o bugs pequeños se resuelven aquí mismo, si tuviera bugs o un problema más grande podría volver a analizarse el desglose con alta prioridad.
 	
-	\item \textbf{Columna Finalizadas:} Aquí van las tareas terminadas. Se archivan al hacer el merge de un conjunto de features completo a develop (cuando sube la versión).
+	\item \textbf{Columna Finalizadas:} Aquí van las tareas terminadas. Se archivan al hacer el merge de un conjunto de features completo a main (cuando sube la versión).
 \end{enumerate}
 
 \subsubsection{Flexibilidad}\label{flujo:flexibilidad}
