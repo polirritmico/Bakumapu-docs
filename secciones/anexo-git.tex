@@ -137,6 +137,20 @@ $ git checkout develop
 $ git checkout -b ft-01
 	\end{lstlisting}
 	
+	\item Borrar ramas 
+	\begin{lstlisting}
+$ git branch -d rama
+$ git push origin -d rama
+	\end{lstlisting}
+	
+	\item Merges de ramas 
+	\begin{lstlisting}
+$ git checkout rama-con-codigo-a-mergear
+$ git fetch
+$ git pull
+$ git merge rama-destino
+	\end{lstlisting}
+	
 	\item Enviar la rama local a Github (origin es un alias de la ruta al repo en github):
 	\begin{lstlisting}
 $ git push -u origin ft-01
