@@ -175,10 +175,11 @@ Para sincronizar el servidor además de los comandos \lsc{GIT} habituales, el ar
 Bakumapu-docs $ make sync
 \end{lstlisting}
 
-\subsubsection{Documentación dentro del código}\label{flujo:documentacion-en-codigo}
+\subsubsection{Formato y documentación dentro del código}\label{flujo:documentacion-en-codigo}
 La búsqueda de simplicidad en el diseño también aplica a la documentación del código. Idealmente éste debe estar “autodocumentado”, es decir que los nombres de las variables, métodos y clases den cuenta de manera transparente e intuitiva su rol dentro de la lógica del algoritmo. En los casos más complejos, es de vital importancia añadir comentarios no solo para facilitar la comprensión de líneas más complejas, sino para ayudar al futuro proceso de refactorización y debbuging. \emph{Los nombres largos no lastran la eficiencia del código}.
 
-En cuanto al formato del código dado que \lsc{GDS}cript está basado en Python, además de las propias sugerencias de Godot se recomienda seguir la \href{https://www.python.org/dev/peps/pep-0008/}{guía de estilo PEP-8}. En especial las siguientes indicaciones:
+En cuanto al formato del código dado que \lsc{GDS}cript está basado en Python, además de las propias \href{https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/gdscript_styleguide.html}{sugerencias de Godot} se recomienda seguir la \href{https://www.python.org/dev/peps/pep-0008/}{guía de estilo PEP-8}. En especial las siguientes indicaciones:
+
 \begin{itemize}[noitemsep]
 	\item Límite horizontal de 79 caracteres. 
 	\item Separación de 1 línea en blanco entre funciones y 2 entre clases.
