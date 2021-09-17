@@ -143,6 +143,12 @@ $ git branch -d rama
 $ git push origin -d rama
 	\end{lstlisting}
 	
+	\item Borrar ramas locales ya eliminadas en el repo
+	\begin{lstlisting}
+$ git fetch -p
+$ git remote prune origin
+	\end{lstlisting}
+	
 	\item Merges de ramas 
 	\begin{lstlisting}
 $ git checkout rama-destino
