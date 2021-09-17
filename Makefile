@@ -19,7 +19,13 @@ default:
 	@echo "OK."
 	@echo "Utilice 'make html', 'make clean', 'make sync' o 'make all'."
 
-all: clean html sync
+all: pdf clean html sync
+
+pdf:
+	@echo -n "Ajustando la versión: "
+	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
+	@echo -e "OK\nGenerando PDF a partir de $(INFILE).tex"
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
 
 html:
 	@echo "Generando 'docs/$(OUTFILE).html' a partir de '$(INFILE).tex'"
