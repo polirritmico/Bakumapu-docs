@@ -3,19 +3,122 @@
 
 \section{Comandos de GIT}\label{anexo-git}
 
-Este apartado es una referencia rápida a los comandos y configuraciones más comunes en el trabajo con \lsc{GIT}.
+Este apartado es una referencia rápida a los comandos y configuraciones más comunes en el trabajo con \lsc{GIT}. Cuando en un comando dice origin es lo mismo que escribir la \lsc{URL} del repo en GitHub.
 
 \noindent Otra referencia rápida que puede ser de utilidad se puede encontrar \href{https://rogerdudler.github.io/git-guide}{aquí}.
 
 \noindent Para información sobre el flujo de trabajo del repositorio ver el apartado \nameref{flujo:repositorio}.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Trabajo local}
+
 \begin{itemize}[label=-]
-	\item Configuración:
-	\begin{lstlisting}
+
+\item Ver el estado de la rama actual:
+\begin{lstlisting}
+$ git status
+\end{lstlisting}
+
+\item Cambiar a una rama:
+\begin{lstlisting}
+$ git checkout rama
+\end{lstlisting}
+
+\item Crear una nueva rama en base a la rama actual y cambiar a ella:
+\begin{lstlisting}
+$ git checkout -b nueva_rama
+\end{lstlisting}
+
+\item Agregar un archivo nuevo, editado o borrado al área de pruebas:
+\begin{lstlisting}
+$ git add archivo
+\end{lstlisting}
+
+\item Agrega todos los cambios al área de pruebas:
+\begin{lstlisting}
+$ git add -A
+\end{lstlisting}
+
+\item Agrega comentarios al commit en el área de pruebas:
+\begin{lstlisting}
+$ git commit -m "Escribir una descripcion concisa del cambio"
+\end{lstlisting}
+
+\item Borrar ramas locales ya eliminadas en origin:
+\begin{lstlisting}
+$ git fetch -p
+$ git remote prune origin
+\end{lstlisting}
+
+\item Merges de ramas:
+\begin{lstlisting}
+# Cambiamos a la rama de destino
+$ git checkout rama-destino
+# Actualizamos la rama de destino
+$ git fetch
+$ git pull
+# Con todo preparado hacemos el merge
+$ git merge rama-con-los-cambios
+\end{lstlisting}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Acciones con el repositorio remoto}
+
+\begin{itemize}[label=-]
+
+\item Actualizar el repositorio local desde origin:
+\begin{lstlisting}
+$ git fetch
+\end{lstlisting}
+
+\item Actualizar y hacer merge al repo local desde origin:
+\begin{lstlisting}
+$ git pull
+\end{lstlisting}
+
+\item Enviar la rama a origin:
+\begin{lstlisting}
+$ git push -u origin rama
+\end{lstlisting}
+
+\item Envía los cambios locales de la rama actual a Github:
+\begin{lstlisting}
+$ git push
+\end{lstlisting}
+
+\item Borrar ramas:
+\begin{lstlisting}
+# Borrar la rama local
+$ git branch -d rama
+# Borrar la rama en el repo remoto
+$ git push origin -d rama
+\end{lstlisting}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Configuración}
+
+\begin{itemize}[label=-]
+
+\item Clonar el repositorio en el espacio de trabajo local:
+\begin{lstlisting}
+$ git clone https://github.com/polirritmico/Bakumapu
+\end{lstlisting}
+
+\item Archivo de configuración de GIT:
+\begin{lstlisting}
 $ ./config/git/config
-	\end{lstlisting}
-	
-	\begin{lstlisting}
+\end{lstlisting}
+
+\begin{lstlisting}
 conf[user]
 name = USUARIO
 email = MAIL_REGISTRADO_EN_GITHUB
@@ -23,12 +126,12 @@ email = MAIL_REGISTRADO_EN_GITHUB
 helper = store
 [core]
 autocrlf = input
-	\end{lstlisting}
-	
-	\item Credentials en archivo $\sim$/.config/git/credentials (asociado al usuario y al repositorio)
-	
-	\item Archivos y directorios ignorados por \lsc{GIT} (en .gitignore dentro de Bakumapu):
-	\begin{lstlisting}
+\end{lstlisting}
+
+\item Credentials en archivo $\sim$/.config/git/credentials (asociado al usuario y al repositorio)
+
+\item Archivos y directorios ignorados por \lsc{GIT} (en .gitignore dentro de Bakumapu):
+\begin{lstlisting}
 # Godot-specific ignores
 .import/
 export/
@@ -38,16 +141,16 @@ export_presets.cfg
 # Mono-specific ignores
 .mono/
 data_*/
-	\end{lstlisting}
-	
-	\Needspace{7\baselineskip}
-	
-	\item Evitar problemas de formato de archivo entre Windows (\lsc{CRLF}) y el resto de sistemas:
-	\begin{lstlisting}
+\end{lstlisting}
+
+\Needspace{7\baselineskip}
+
+\item Evitar problemas de formato de archivo entre Windows (\lsc{CRLF}) y Linux (\lsc{LF}):
+\begin{lstlisting}
 $ .gitattributes:
-	\end{lstlisting}
-	\noindent\begin{minipage}{.45\textwidth}
-	\begin{lstlisting}
+\end{lstlisting}
+\noindent\begin{minipage}{.45\textwidth}
+\begin{lstlisting}
 # Set the default behavior, in
 # case people
 # don't have core.autocrlf set
@@ -79,10 +182,10 @@ $ .gitattributes:
 # fonts
 *.ttf binary
 *.otf binary
-	\end{lstlisting}
-	\end{minipage}\hfill
-	\begin{minipage}{.45\textwidth}
-	\begin{lstlisting}[escapechar=\%]
+\end{lstlisting}
+\end{minipage}\hfill
+\begin{minipage}{.45\textwidth}
+\begin{lstlisting}[escapechar=\%]
 # images
 
 *.png binary
@@ -114,72 +217,7 @@ $ .gitattributes:
 
 
 %
-	\end{lstlisting}
-	\end{minipage}
+\end{lstlisting}
+\end{minipage}
 
-	\item Clonar el repositorio en el espacio de trabajo local:
-	\begin{lstlisting}
-$ git clone https://github.com/polirritmico/Bakumapu
-	\end{lstlisting}
-
-	\item Ver el estado de la rama actual:
-	\begin{lstlisting}
-$ git status
-	\end{lstlisting}
-	
-	\item Cambiar a una rama (por ejemplo develop):
-	\begin{lstlisting}
-$ git checkout develop
-	\end{lstlisting}
-	
-	\item Crear una nueva rama en base a la rama actual (ejemplo “ft-01”:
-	\begin{lstlisting}
-$ git checkout -b ft-01
-	\end{lstlisting}
-	
-	\item Borrar ramas 
-	\begin{lstlisting}
-$ git branch -d rama
-$ git push origin -d rama
-	\end{lstlisting}
-	
-	\item Borrar ramas locales ya eliminadas en el repo
-	\begin{lstlisting}
-$ git fetch -p
-$ git remote prune origin
-	\end{lstlisting}
-	
-	\item Merges de ramas 
-	\begin{lstlisting}
-$ git checkout rama-destino
-$ git fetch
-$ git pull
-$ git merge rama-con-codigo-a-mergear
-	\end{lstlisting}
-	
-	\item Enviar la rama local a Github (origin es un alias de la ruta al repo en github):
-	\begin{lstlisting}
-$ git push -u origin ft-01
-	\end{lstlisting}
-	
-	\item Agrega todos los cambios al área de pruebas:
-	\begin{lstlisting}
-$ git add .
-	\end{lstlisting}
-	
-	\item Agrega comentarios al commit:
-	\begin{lstlisting}
-$ git commit -m descripcion
-	\end{lstlisting}
-	
-	\item Envía los cambios locales de la rama actual a Github:
-	\begin{lstlisting}
-$ git push
-	\end{lstlisting}
-	
-	\item Actualizar el repositorio local desde Github:
-	\begin{lstlisting}
-$ git pull
-	\end{lstlisting}
 \end{itemize}
-
