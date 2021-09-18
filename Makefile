@@ -55,7 +55,7 @@ html:
 	@mv build/export/temp-$(OUTFILE).html build/export/$(OUTFILE).html
 
 	@echo -en "Ajustando título del HTML: "
-	@sed -i 's/<title><\/title>/<title>Bakumapu doc_v$(VERSION)<\/title>/' build/export/$(OUTFILE).html
+	@sed -i 's/<title><\/title>/<title>Bakumapu v$(VERSION)<\/title>/' build/export/$(OUTFILE).html
 	@echo -en "Corrigiendo espacios a comandos con signos '\$$': "
 	@sed -i 's/$$<\/span><\/span>/$$ <\/span><\/span>/' build/export/$(OUTFILE).html
 	@echo -en "OK\nAjustando espacios: "
