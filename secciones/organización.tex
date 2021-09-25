@@ -17,7 +17,7 @@ Dado que el proyecto será manejado por personas en distintos sistemas operativo
 
 \item \textbf{locales:} Contiene todos los ficheros relativos a la i18n. Es la carpeta que utilizarán los traductores y desde donde el juego debe tomar todos los strings y los assets correspondientes (assets con texto).
 
-\item \textbf{src:} Probablemente la carpeta principal para el desarrollo técnico. Además del código fuente del programa contendrá todo lo relativo a nodos, escenas, assets, librerías y scripts. La estructura de esta carpeta será utilizada por el proyecto dentro de Godot.
+\item \textbf{src:} Probablemente la carpeta principal para el desarrollo técnico. Además del código fuente del programa contendrá todo lo relativo a nodos, escenas, assets, librerías. test y scripts. La estructura de esta carpeta será utilizada por el proyecto dentro de Godot.
 
 Una consideración importante para mantener la organización de los archivos de una forma que sea coherente con la abstracción de \textit{escenas y nodos}, es crear cada escena dentro de su propia carpeta. Aquí, además del archivo \lsc{TSCN}, deberían estar todos los assets que utiliza la escena para evitar cualquier problemas de dependencias. La idea es poder mover o copiar la carpeta de ubicación y que todo siga funcionando dentro de ella.
 
@@ -55,6 +55,8 @@ A continuación la organización preliminar de la carpeta \textbf{src}:
 	\item \textbf{items:} Todo lo relativo a ítems. A priori dividir en armors, utility y weapons.
 
 	\item \textbf{levels:} Escenas de niveles organizadas en distintas subcarpetas. Contemplar una ubicación para diversos templates.
+	
+	\item \textbf{test:} Contiene carpetas con los distintos tipos de test: unit, acceptance, etc.
 
 	\item \textbf{ui:} Todo lo relativo a las escenas de la interfaz gráfica.
 \end{itemize}
