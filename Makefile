@@ -12,7 +12,7 @@ INFILE = main
 OUTFILE = index
 
 default:
-	@echo "Utilice `make all`, `make pdf`, `make version`, `make sync` o `make clean`. "
+	@echo "Utilice `make all`, `make pdf`, `make version`, `make sync` o `make clean`."
 
 all: pdf clean html sync
 
