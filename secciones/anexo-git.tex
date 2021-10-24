@@ -43,7 +43,33 @@ $ git add -A
 
 \item Agrega comentarios al commit en el área de pruebas:
 \begin{lstlisting}
-$ git commit -m "Escribir una descripcion concisa del cambio"
+$ git commit -m "A description with my changes"
+\end{lstlisting}
+Para comentarios largos (más de 50 caracteres) usar:
+\begin{lstlisting}
+$ git commit
+\end{lstlisting}
+Esto abre \lsc{VIM} para editar el comentario. Pulsamos la tecla \textbf{i} para entrar al \textit{insert mode}, escribimos los cambios normalmente y cuando terminemos pulsamos la tecla \textbf{esc} y luego \textbf{ZZ} para guardar y salir. Por el funcionamiento de \lsc{GIT}, el mensaje deberá tener esta estructura:
+\begin{itemize}
+\item En la primera línea un \lsc{HEADER} de máx. 50 caracteres.
+\item Segunda línea en blanco.
+\item Las líneas siguientes contienen el body del mensaje con toda la explicación, detalles, listas, etc.
+\end{itemize}
+\begin{lstlisting}
+$ git commit
+<Dentro de VIM pulsamos i para ingresar al insert mode>
+First line as a HEADER of 50 char or less
+
+Some extended description of all the changes:
+- change 1
+- change 2
+- etc.
+<Al terminar el texto, pulsamos la tecla esc y luego ZZ>
+\end{lstlisting}
+
+\item Si queremos editar el mensaje del commit previo:
+\begin{lstlisting}
+$ git commit --amend
 \end{lstlisting}
 
 \item Borrar ramas locales ya eliminadas en origin:
