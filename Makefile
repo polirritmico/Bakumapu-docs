@@ -11,6 +11,9 @@ HTML_TOC_LEVEL=2
 INFILE = main
 OUTFILE = index
 
+GREEN = '\033[0;32m'
+NC = '\033[0m'
+
 default:
 	@echo "Utilice `make all`, `make pdf`, `make version`, `make sync` o `make clean`."
 
@@ -21,7 +24,7 @@ pdf: version latex2pdf_light latex2pdf
 version:
 	@echo -n "Ajustando la versión: "
 	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
-	@echo "OK"
+	@echo "${GREEN}OK${NC}"
 
 clean:
 	@mkdir -p temp
@@ -36,25 +39,25 @@ clean:
 latex2pdf:
 	@echo -n "Cambiando a esquema de color oscuro: "
 	@sed -i '/\\newif\\ifdark\\/s/darkfalse/darktrue/' $(INFILE).tex
-	@echo -en "OK\nGenerando PDF a partir de $(INFILE).tex: "
+	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de $(INFILE).tex: "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@echo -n "1/3 OK "
+	@echo -n "1/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@echo -n "2/3 OK "
+	@echo -n "2/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@echo -e "3/3 OK\n$(INFILE).pdf generado exitosamente."
+	@echo -e "3/3 ${GREEN}OK${NC}\n$(INFILE).pdf generado exitosamente."
 
 latex2pdf_light:
 	@echo -n "Cambiando a esquema de color claro: "
 	@sed -i '/\\newif\\ifdark\\/s/darktrue/darkfalse/' $(INFILE).tex
-	@echo -en "OK\nGenerando PDF a partir de $(INFILE).tex: "
+	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de $(INFILE).tex: "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@echo -n "1/3 OK "
+	@echo -n "1/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@echo -n "2/3 OK "
+	@echo -n "2/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
 	@mv $(INFILE).pdf $(INFILE)-print.pdf
-	@echo -e "3/3 OK\n$(INFILE)-print.pdf generado exitosamente."
+	@echo -e "3/3 ${GREEN}OK${NC}\n$(INFILE)-print.pdf generado exitosamente."
 
 html: html_folders html_prepare html_convert html_tidy html_custom html_clean html_ok
 
@@ -68,42 +71,42 @@ html_folders:
 html_prepare:
 	@echo -n "Ajustando subtítulo: "
 	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico}}/{Diseño\ técnico}/' <$(INFILE).tex >build/$(OUTFILE).tex
-	@echo -en "OK\nAjustando nivel de TOC a $(HTML_TOC_LEVEL) para el html: "
+	@echo -en "${GREEN}OK${NC}\nAjustando nivel de TOC a $(HTML_TOC_LEVEL) para el html: "
 	@sed -i '/\\setcounter/s/{tocdepth}{*.}/{tocdepth}{$(HTML_TOC_LEVEL)}/' build/configuración/estilos.tex
-	@echo "OK"
+	@echo "${GREEN}OK${NC}"
 
 html_convert:
 	@echo "Generando 'docs/$(OUTFILE).html' a partir de '$(INFILE).tex'"
 	@echo -e "Iniciando conversión:\n.................................................."
 	@cd build && \
 	make4ht -c custom.conf -d export/ $(OUTFILE).tex "fn-in"
-	@echo "Conversión OK"
+	@echo "Conversión ${GREEN}OK${NC}"
 
 html_tidy:
 	@echo -n "Limpiando html con tidy: "
 	@-cd build && \
 	tidy -config tidy.conf export/$(OUTFILE).html > export/temp-$(OUTFILE).html
 	@mv build/export/temp-$(OUTFILE).html build/export/$(OUTFILE).html
-	@echo "OK"
+	@echo "${GREEN}OK${NC}"
 
 html_custom:
 	@echo -n "Ajustando título del HTML: "
 	@sed -i 's/<title><\/title>/<title>Bakumapu v$(VERSION)<\/title>/' build/export/$(OUTFILE).html
 	@echo -en "Corrigiendo espacios a comandos con signos '\$$': "
 	@sed -i 's/$$<\/span><\/span>/$$ <\/span><\/span>/' build/export/$(OUTFILE).html
-	@echo -en "OK\nAjustando espacios: "
+	@echo -en "${GREEN}OK${NC}\nAjustando espacios: "
 	@sed -i '/<span/s/ / /g' build/export/$(OUTFILE).html
-	@echo -en "OK\nAjustando links a target='_blank': "
+	@echo -en "${GREEN}OK${NC}\nAjustando links a target='_blank': "
 	@sed -i -r "s/<a href='http([^>]*)'>/<a href='http\1' target='_blank'>/" build/export/$(OUTFILE).html
 	@echo -en "Ok\nAgregando espacios a figuras: "
 	@sed -i '/<span class='\''id'\''>Figura/s/<\/span>/ <\/span>/' build/export/$(OUTFILE).html
 	@sed -i 's/Figura~/Figura /' build/export/$(OUTFILE).html
-	@echo -en "OK\nAgregando fondo: "
+	@echo -en "${GREEN}OK${NC}\nAgregando fondo: "
 	@cp imágenes/fondo.jpg build/export/imágenes/
-	@echo -en "OK\nAgregando favicon: "
+	@echo -en "${GREEN}OK${NC}\nAgregando favicon: "
 	@cp imágenes/icon.svg build/export/imágenes/
 	@sed -i '/\/head/i \ \ \ \ <link rel="icon" href="imágenes\/icon.svg">' build/export/$(OUTFILE).html
-	@echo "OK"
+	@echo "${GREEN}OK${NC}"
 
 html_clean:
 	@echo -en "Limpiando archivos de compilación: "
@@ -114,7 +117,7 @@ html_clean:
 	@mv build/export/* build/
 	@rm -r build/export
 	@rm -rf docs && mv build docs
-	@echo -e "OK\n.................................................."
+	@echo -e "${GREEN}OK${NC}\n.................................................."
 
 html_ok:
 	@echo -en "HTML generado exitosamente.\nRevisar en: file://"
