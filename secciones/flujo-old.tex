@@ -67,9 +67,9 @@ Los nombres de las tareas se deben corresponder con la tarea o funcionalidad a i
 \subsection{Repositorio}\label{flujo:repositorio}
 El repositorio \lsc{GIT} de Bakumapu se encuentra alojado en la siguiente dirección: \url{https://github.com/polirritmico/Bakumapu}.
 
-La contribución de código será organizada a través del modelo de integración continua (continuous integration). Este modelo implica que \emph{solo hay una versión del código que importa, la actual}; para ello se trabajará principalmente en una única rama que mantendrá una única versión del código de desarrollo. Esto quiere decir que no podemos hacer commits solo cuando la feature esté completamente implementada, sino que debemos hacer commits continuos a medida que vamos trabajando en la implementación (idealmente cada 15-20 minutos).
+La contribución de código será organizada a través del modelo de ramas de función (feature branching) adaptada a un sistema de TDD de entrega continua (más información en el apartado \nameref{principios:principios-de-diseno}).
 
-\subsubsection{Modelo de Integración Continua}\label{flujo:modelo-de-ramas}
+\subsubsection{Modelo de Ramas de función}\label{flujo:modelo-de-ramas}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{imágenes/git.png}
@@ -79,30 +79,35 @@ La contribución de código será organizada a través del modelo de integració
 \Needspace{3\baselineskip}
 \noindent\textbf{Ramas principales.}\label{flujo:ramas-principales}
 
-\noindent Bakumapu contará con una rama principal \textbf{develop} y 2 ramas de producción \textbf{main} y \textbf{release}:
+\noindent Bakumapu contará con 3 ramas principales, \textbf{develop}, \textbf{main} y \textbf{release}:
 
 \begin{enumerate}
 	\renewcommand{\labelenumi}{\alph{enumi}.}
-	\item \textbf{develop:} Es la rama principal del desarrollo ya que todo el código se escribirá permanentemente en ella. La idea es que cada desarrollador vaya haciendo continuos commits hacia \textbf{develop} de tal forma que los cambios en el código sean visibles para el resto del equipo y la implementación de una nueva funcionalidad pase el menor tiempo posible fuera de la rama. De este modo se facilitará la prevención temprana de bugs y problemas complejos de integración.
+	\item \textbf{develop:} Esta rama contará siempre con las últimas funciones implementadas. Es la rama principal del desarrollo ya que para trabajar cada feature, se creará una rama a partir de \textbf{develop}. A medida que se avance esa implementación continuamente se harán merges de vuelta a \textbf{develop} (al menos uno al día)\footnote{Es muy importante este punto porque el tiempo que el código de la rama permanezca fuera de develop puede generar bugs desconocidos al estar aislado de los commit de otras ramas.}. De esta forma se pretende que esté siempre disponible el código completo para no perder la referencia global del proyecto. 
 	
-	\item \textbf{main:} En esta rama se tratará de mantener el código lo más estable posible. Representa la última entrega del desarrollo y por lo tanto se creará a partir de \textbf{develop} cuando el código haya completado el conjunto de features de cada etapa de implementación del proyecto. Los testers trabajarán en base a esta rama.
+	\item \textbf{main:} En esta rama se tratará de mantener el código lo más estable posible. Representa la última entrega del desarrollo y por lo tanto se creará a partir de \textbf{develop} cuando el código haya completado el conjunto de features de cada etapa de implementación del proyecto. Los testers trabajarán en base a esta rama. 
 	
 	\item \textbf{release:} Se creará a partir de \textbf{main} una vez que esta haya sido extensamente probada y depurada. Esta rama será la que pasará el código a producción por eso debe ser la más robusta (por ejemplo deploys automáticos a todas las copias instaladas y conectadas a internet).
 \end{enumerate}
 
 \paragraph{Ramas de implementación}\label{pg:ramas-de-implementacion}
-
-Pese a que la mayoría de la implementación debería ser trabajada directamente en \textbf{develop}, para contadas excepciones se podría necesitar el uso de ramas separadas:
-
 \begin{enumerate}
 	\renewcommand{\labelenumi}{\alph{enumi}.}
-	\item \textbf{Ramas de features:} Debe crearse una para cada funcionalidad que se quiera implementar a partir del estado actual de la rama \textbf{develop}. El nombre de la rama debe comenzar con “\textbf{ft-}” y corresponderse con el de su tarjeta asociada en el tablero (apartado \nameref{flujo:nombres-de-tarjetas}). Se debe tratar de acortar lo más posible la existencia de esta rama de modo que si en determinado punto es posible hacer un merge hacia develop, se realice y se termine la implementación de vuelta en la rama principal.
+	\item \textbf{Ramas de features:} Debe crearse una para cada funcionalidad que se quiera implementar a partir del estado actual de la rama \textbf{develop}. El nombre de la rama debe comenzar con “\textbf{ft-}” y corresponderse con el de su tarjeta asociada en el tablero (apartado \nameref{flujo:nombres-de-tarjetas}). La idea es desarrollar test que permitan verificar el funcionamiento de la feature y que deben ser superados antes de dar por concluido el trabajo en la rama. De esta forma se intentará hacer continuos merges hacia \textbf{develop} con la certeza de haber superado los test.
 	
-	\item \textbf{Ramas de bugs:} El nombre de la rama debe comenzar con “\textbf{bug-}” y corresponderse con el de su tarjeta asociada en el tablero (apartado \nameref{organizacion:nombres-de-ramas}). Al igual que en el caso de las ramas de features, la idea es trabajar el menor tiempo posible fuera de \textbf{develop}.
+	\item \textbf{Ramas de bugs:} Debe crearse una por cada bug encontrado. Dependiendo del bug la rama será creada a partir de \textbf{main}, \textbf{develop} o \textbf{release}. El merge del fix deberá ser hacia \textbf{develop} y si corresponde también a \textbf{release}. El nombre de la rama debe comenzar con “\textbf{bug-}” y corresponderse con el de su tarjeta asociada en el tablero (apartado \nameref{organizacion:nombres-de-ramas}).
 \end{enumerate}
 
+\subsubsection{Refactorización}
+La reescritura de features ya implementadas o cualquier parte del código, se deberá trabajar directamente sobre develop, tratando de dejar el menor tiempo posible el código en un estado inestable (sin superar los test de aceptación). Por lo mismo, se sugiere trabajar la refactorización en pasos muy pequeños de tal forma que sea trivial la detección del error.
+
 \subsubsection{Commits}
-Todos los commits deberán tener al inicio del mensaje del commit la \lsc{ID} de la tarea correspondiente (ver el apartado \nameref{organizacion:id-ramas-tarjetas}.
+Todos los commits de una rama de \textbf{features} o \textbf{bugs} y la refactorización del código que se trabaje directamente en \textbf{develop}, deberán tener al inicio del mensaje del commit la \lsc{ID} de la tarea correspondiente (ver el apartado \nameref{organizacion:id-ramas-tarjetas}.
+
+Para una información más detallada sobre el funcionamiento de \lsc{GIT} bajo el modelo de ramas de función ver el \href{https://www.atlassian.com/es/git/tutorials/comparing-workflows/feature-branch-workflow}{siguiente enlace} (no olvidar los matices con respecto al trabajo bajo TDD en el apartado \nameref{principios:vision-general-desarrollo}).
+
+\subsubsection{Alternativas al modelo de ramas de función}\label{flujo:alternativas-al-branching}
+Si el flujo bajo el sistema de ramas de función resulta demasiado tedioso o la visualización general del código se pierde con mucha facilidad ya sea por merges muy complejos o espaciados, se propone como alternativa la metodología de \href{https://es.wikipedia.org/wiki/Entrega_continua}{Entrega continua}.
 
 \subsubsection{Uso de GIT}
 Revisar el anexo \nameref{anexo-git}.
