@@ -3,16 +3,16 @@ SHELL = /bin/sh
 VERSION = 0.0.8
 
 # Define variables
-LATEX=latex
-PDFLATEX=pdflatex
-HTML_TOC_LEVEL=2
+LATEX = latex
+PDFLATEX = pdflatex
+HTML_TOC_LEVEL = 2
 
 # In/Out target names
 INFILE = main
 OUTFILE = index
 
-GREEN = '\033[0;32m'
-NC = '\033[0m'
+GREEN=\033[0;32m
+NC=\033[0m
 
 default:
 	@echo "Utilice `make all`, `make pdf`, `make version`, `make sync` o `make clean`."
@@ -24,7 +24,7 @@ pdf: version latex2pdf_light latex2pdf
 version:
 	@echo -n "Ajustando la versión: "
 	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
-	@echo "${GREEN}OK${NC}"
+	@echo -e "${GREEN}OK${NC}"
 
 clean:
 	@mkdir -p temp
@@ -41,20 +41,20 @@ latex2pdf:
 	@sed -i '/\\newif\\ifdark\\/s/darkfalse/darktrue/' $(INFILE).tex
 	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de $(INFILE).tex: "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@echo -n "1/3 ${GREEN}OK${NC} "
+	@echo -en "1/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@echo -n "2/3 ${GREEN}OK${NC} "
+	@echo -en "2/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@echo -e "3/3 ${GREEN}OK${NC}\n$(INFILE).pdf generado exitosamente."
+	@echo -ee "3/3 ${GREEN}OK${NC}\n$(INFILE).pdf generado exitosamente."
 
 latex2pdf_light:
 	@echo -n "Cambiando a esquema de color claro: "
 	@sed -i '/\\newif\\ifdark\\/s/darktrue/darkfalse/' $(INFILE).tex
 	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de $(INFILE).tex: "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@echo -n "1/3 ${GREEN}OK${NC} "
+	@echo -en "1/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@echo -n "2/3 ${GREEN}OK${NC} "
+	@echo -en "2/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
 	@mv $(INFILE).pdf $(INFILE)-print.pdf
 	@echo -e "3/3 ${GREEN}OK${NC}\n$(INFILE)-print.pdf generado exitosamente."
@@ -73,21 +73,21 @@ html_prepare:
 	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico}}/{Diseño\ técnico}/' <$(INFILE).tex >build/$(OUTFILE).tex
 	@echo -en "${GREEN}OK${NC}\nAjustando nivel de TOC a $(HTML_TOC_LEVEL) para el html: "
 	@sed -i '/\\setcounter/s/{tocdepth}{*.}/{tocdepth}{$(HTML_TOC_LEVEL)}/' build/configuración/estilos.tex
-	@echo "${GREEN}OK${NC}"
+	@echo -e "${GREEN}OK${NC}"
 
 html_convert:
 	@echo "Generando 'docs/$(OUTFILE).html' a partir de '$(INFILE).tex'"
 	@echo -e "Iniciando conversión:\n.................................................."
 	@cd build && \
 	make4ht -c custom.conf -d export/ $(OUTFILE).tex "fn-in"
-	@echo "Conversión ${GREEN}OK${NC}"
+	@echo -e "Conversión ${GREEN}OK${NC}"
 
 html_tidy:
 	@echo -n "Limpiando html con tidy: "
 	@-cd build && \
 	tidy -config tidy.conf export/$(OUTFILE).html > export/temp-$(OUTFILE).html
 	@mv build/export/temp-$(OUTFILE).html build/export/$(OUTFILE).html
-	@echo "${GREEN}OK${NC}"
+	@echo -e "${GREEN}OK${NC}"
 
 html_custom:
 	@echo -n "Ajustando título del HTML: "
@@ -106,7 +106,7 @@ html_custom:
 	@echo -en "${GREEN}OK${NC}\nAgregando favicon: "
 	@cp imágenes/icon.svg build/export/imágenes/
 	@sed -i '/\/head/i \ \ \ \ <link rel="icon" href="imágenes\/icon.svg">' build/export/$(OUTFILE).html
-	@echo "${GREEN}OK${NC}"
+	@echo -e "${GREEN}OK${NC}"
 
 html_clean:
 	@echo -en "Limpiando archivos de compilación: "
