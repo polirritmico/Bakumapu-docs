@@ -15,7 +15,8 @@ GREEN=\033[0;32m
 NC=\033[0m
 
 default:
-	@echo "Utilice `make all`, `make pdf`, `make version`, `make sync` o `make clean`."
+	@echo "Utilice 'make all', 'make pdf', 'make version', 'make sync' o 'make clean'."
+	@echo "Para subir la subversión automáticamente utilice 'make version' (no modifica el documento)."
 
 all: pdf clean html sync
 
