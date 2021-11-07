@@ -1,0 +1,19 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Trabajando
+%% La idea es ir tomando las notas acá mientras
+%% desarrollamos el código y luego traspasamos las
+%% anotaciones ese texto a la sección que corresponda.
+
+\section{Trabajando...}\label{Trabajando}
+
+\subsection{Level Manager}
+
+src/levels/template/template\_lvl.tscn Archivo de nivel base usado para el test
+
+src/test/unit/test\_level\_manager.gd Script con el test de carga
+
+src/test/unit/level\_manager/level.tscn Archivo de test creado desde el nivel base para el test unitario.
+
+El test inicia LevelManager, usa el método loadLevel() y usa los getters de LvlMng para extraer la data. Luego compara los datos obtenidos con los esperados.
+
+
