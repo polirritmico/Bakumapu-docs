@@ -1,0 +1,23 @@
+SHELL = /bin/sh
+# Actualizar con cada cambio
+VERSION = 0.0
+SUBVERSION = 15
+
+# Define variables
+LATEX = latex
+PDFLATEX = pdflatex
+HTML_TOC_LEVEL = 2
+
+# In/Out target names
+INFILE = main
+OUTFILE = index
+
+GREEN=\033[0;32m
+NC=\033[0m
+
+# awk '/SUBVERSION /{split($NF,v,[.]/); $NF=v[1]"."++v[2]"}1' test
+default:
+	@echo -en "Valor de la variable: "
+	@echo -e "$(VERSION).$(SUBVERSION)"
+	awk '/versionName /{split($$NF,v,/[.]/); $$NF=v[1]"."++v[2]"."v[3]}1' test
+	@echo

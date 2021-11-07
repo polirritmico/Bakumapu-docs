@@ -16,7 +16,6 @@ NC=\033[0m
 
 default:
 	@echo "Utilice 'make all', 'make pdf', 'make version', 'make sync' o 'make clean'."
-	@echo "Para subir la subversión automáticamente utilice 'make version' (no modifica el documento)."
 
 all: pdf clean html sync
 
@@ -96,7 +95,7 @@ html_custom:
 	@echo -en "Corrigiendo espacios a comandos con signos '\$$': "
 	@sed -i 's/$$<\/span><\/span>/$$ <\/span><\/span>/' build/export/$(OUTFILE).html
 	@echo -en "${GREEN}OK${NC}\nAjustando espacios: "
-	@sed -i '/<span/s/ / /g' build/export/$(OUTFILE).html
+	@sed -i '/<span/s/ / /g' build/export/$(OUTFILE).html
 	@echo -en "${GREEN}OK${NC}\nAjustando links a target='_blank': "
 	@sed -i -r "s/<a href='http([^>]*)'>/<a href='http\1' target='_blank'>/" build/export/$(OUTFILE).html
 	@echo -en "Ok\nAgregando espacios a figuras: "
