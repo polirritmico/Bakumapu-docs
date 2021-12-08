@@ -1,6 +1,6 @@
 # :book: Bakumapu: Repositorio de documentación
 
-Repositorio de código [aquí](https://github.com/polirritmico/Bakumapu)
+Repositorio de código [aquí](https://github.com/polirritmico/Bakumapu).
 
 La presente documentación está escrita en el formato LaTeX y exportada a HTML con [make4ht](https://ctan.org/pkg/make4ht).
 
