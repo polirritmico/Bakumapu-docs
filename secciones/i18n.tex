@@ -3,6 +3,22 @@
 
 \section{Internacionalización}\label{i18n:internacionalizacion}
 
+Primero revisaremos en términos muy generales la internacionalización y la localización.
+
+\subsection{Qué entendemos por localización (l10n)}\label{i18n:que-entendemos-l10n}
+Se entiende por l10n la adaptación del software con el objetivo de adecuarlo a las necesidades lingüísticas, culturales o incluso legales de un mercado, país o localidad en concreto.
+
+Más allá de considerar la traducción de la documentación y la interfaz de usuario, la l10n es bastante más compleja pues además implica ajustar:
+\begin{itemize}
+	\item Formatos numéricos, de fecha y de hora.
+	\item Uso de símbolos de moneda.
+	\item Uso del teclado.
+	\item Algoritmos de comparación y ordenamiento.
+	\item Símbolos, íconos y colores.
+	\item Texto y gráficos que contengan referencias a objetos, acciones o ideas que en una cultura dada puedan ser objeto de mala interpretación u ofensas.
+	\item Diferentes exigencias legales.
+\end{itemize}
+
 \subsection{Qué entendemos por internacionalización (i18n)}\label{i18n:que-entendemos-i18n}
 
 El principal sentido de la i18n es diseñar el código de tal forma que el programa sea fácil de localizar y distribuir internacionalmente. Para ello es importante considerar los siguientes aspectos:
@@ -20,20 +36,6 @@ El principal sentido de la i18n es diseñar el código de tal forma que el progr
 	\item \textbf{Separar del código los elementos localizables:}
 	De este modo podrán cargarse o seleccionarse alternativas localizadas según lo que determinen las preferencias internacionales del usuario.
 \end{enumerate}
-
-\subsection{Qué entendemos por localización (l10n)}\label{i18n:que-entendemos-l10n}
-Se entiende por l10n la adaptación del software con el objetivo de adecuarlo a las necesidades lingüísticas, culturales o incluso legales de un mercado, país o localidad en concreto.
-
-Más allá de considerar la traducción de la documentación y la interfaz de usuario, la l10n es bastante más compleja pues además implica ajustar:
-\begin{itemize}
-	\item Formatos numéricos, de fecha y de hora.
-	\item Uso de símbolos de moneda.
-	\item Uso del teclado.
-	\item Algoritmos de comparación y ordenamiento.
-	\item Símbolos, íconos y colores.
-	\item Texto y gráficos que contengan referencias a objetos, acciones o ideas que en una cultura dada puedan ser objeto de mala interpretación u ofensas.
-	\item Diferentes exigencias legales.
-\end{itemize}
 
 \subsection{Implementación}\label{i18n:implementacion}
 Tal como se ha mencionado en el apartado \nameref{principios:vision-general-desarrollo}), muchos aspectos del diseño se irán definiendo en la medida que se obtenga más información de los desafíos y los requerimientos del software.
