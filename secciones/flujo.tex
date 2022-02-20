@@ -193,17 +193,23 @@ var ejemplo = Vector2(2, 5 + PI.get(2))
 
 \subsection{Google Drive}\label{flujo:google-drive}
 Se manejará la \href{https://drive.google.com/open?id=1p8u-1UpXts8OHGRHEZLSIiQrqqx0Y4Kt}{carpeta compartida Bakumapu}, cuyo acceso será proporcionado a todos los miembros del desarrollo. En la raíz de esta carpeta se encuentran los documentos principales del diseño del juego, y las siguientes subcarpetas:
+
 \begin{itemize}
+
+	\item \textbf{Diálogos:} Contendrá planillas con datos que serán importados a Godot programáticamente, es decir se deberá desarrollar un script o programa que transforme su contenido a \lsc{XML}, \lsc{CSV} o \lsc{JSON} y este sea manejable por Godot con \emph{muy poca} o nada de intervención.
+
+	\item \textbf{Gameplay:} Contiene el árbol de decisiones del gameplay y la información de las distintas quests.
+	
 	\item \textbf{Herramientas:} Contiene los instaladores, código fuente, o links de descarga del software mencionado en el apartado \nameref{intro:software-y-herramientas} además de los scripts de desarrollo. También contiene tutoriales para los colaboradores no técnicos del proyecto.
+	
+	\item \textbf{Locaciones:} Mapas y descripciones de los distintos lugares del Bakumapu.
+	
 	\item \textbf{Referencias:} Libros, imágenes, documentos, audios, videos y todo material referenciado para el desarrollo, inspiración, discusión o diseño del juego.
-	\item \textbf{Historia:} Una especie de repositorio para la narrativa del juego. Contiene documentos sobre la historia, biografía de personajes, arcos narrativos, descripciones, locaciones, historia, trasfondos, etc.
-	\begin{itemize}
-		\item \textbf{Quest y Diálogos.}
-		
-		Dentro de la carpeta Historia hay dos subdirectorios relevantes a nivel técnico: Quest y Diálogos. Cada uno contendrá planillas con datos que serán importados a Godot programáticamente, es decir se deberá desarrollar un script o programa que transforme su contenido a \lsc{XML}, \lsc{CSV} o \lsc{JSON} y este sea manejable por Godot con \emph{muy poca} intervención.
-		
-		Más información de estas herramientas en los apartados \nameref{kit:cutscenes-y-dialogos} y \nameref{kit:quests}. Además, estos archivos deberán seguir la convención de nombres detallada en el apartado \nameref{organizacion:nombres-de-archivos}.
-	\end{itemize}
+
+	Más información de estas herramientas en los apartados \nameref{kit:cutscenes-y-dialogos} y \nameref{kit:quests}. Además, estos archivos deberán seguir la convención de nombres detallada en el apartado \nameref{organizacion:nombres-de-archivos}.
+	
+	\item \textbf{Personajes:} Fichas de personajes.
+	
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
