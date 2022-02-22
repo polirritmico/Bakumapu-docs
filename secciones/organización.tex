@@ -2,22 +2,22 @@
 % Organización del proyecto
 \section{Organización del proyecto}\label{organizacion:organizacion-del-proyecto}
 
-Dado que el proyecto será manejado por personas en distintos sistemas operativos es vital mantener una coherencia en los nombres y la estructura de los archivos y directorios del proyecto. El presente apartado contiene una propuesta base que considera el funcionamiento general del desarrollo y la estructura de los archivos dentro del repositorio.
+Dado que el proyecto será manejado por personas en distintos sistemas operativos es vital mantener una coherencia en los nombres y la estructura de los archivos y directorios del proyecto. El presente apartado contiene una propuesta base que considera el funcionamiento general del desarrollo y la estructura de los archivos en el repositorio.
 
 \subsection{Organización de carpetas}\label{organizacion:arreglo-carpetas}
 
 \begin{itemize}
-\item \textbf{Design:} Esta carpeta contiene todos los archivos del diseño de arte del juego (música, sonidos, sprites, tilesets, bocetos, dibujos, animación, etc.). Es de uso para artistas y desarrolladores y su organización muy probablemente se irá modificando en el tiempo. \emph{Ningún archivo dentro de esta carpeta debe ser referenciado por el código}, por lo mismo permite mayor libertad para ajustar nombres y ubicaciones. Más información al respecto en el apartado \nameref{organizacion:nombres-de-archivos}.
+\item \textbf{Design:} Esta carpeta contiene todos los archivos del diseño de arte del juego (música, sonidos, sprites, tilesets, bocetos, dibujos, animación, etc.). Es de uso para artistas y desarrolladores y su organización se irá modificando en el tiempo. \emph{Ningún archivo dentro de esta carpeta debe ser referenciado por el código}, por lo mismo permite mayor libertad para ajustar nombres y ubicaciones. Más información al respecto en el apartado \nameref{organizacion:nombres-de-archivos}.
 
-\item \textbf{addons:} Carpeta creada por \lsc{GUT} (unittest) y otros plugins de Godot.
+\item \textbf{addons:} Carpeta creada por \lsc{GUT} (tests) y otros plugins de Godot.
 
 \item \textbf{docs:} Contiene toda la documentación de librerías, licencias, \lsc{API}, \lsc{SDK}, manuales, ToDo, apuntes, notas de compilación y configuración relevante para el desarrollo del software.
 
-\item \textbf{export:} Contiene binarios para distintas plataformas del juego y librerías necesarias para su compilación (Por ejemplo librerías propietarias para generar los binarios de una consola).
+\item \textbf{export:} Contiene binarios para distintas plataformas del juego y librerías necesarias para su compilación (por ejemplo, librerías propietarias para generar los binarios de una consola).
 
-\item \textbf{locales:} Contiene todos los ficheros relativos a la i18n. Es la carpeta que utilizarán los traductores y desde donde el juego debe tomar todos los strings y los assets correspondientes (assets con texto).
+\item \textbf{locales:} Contiene todos los ficheros relativos a la i18n. Es la carpeta que utilizarán los traductores y desde donde el juego debe tomar todos los strings y assets correspondientes (assets con texto).
 
-\item \textbf{src:} Probablemente la carpeta principal para el desarrollo técnico. Además del código fuente del programa contendrá todo lo relativo a nodos, escenas, assets, librerías. test y scripts. La estructura de esta carpeta será utilizada por el proyecto dentro de Godot.
+\item \textbf{src:} La carpeta principal del desarrollo técnico. Además del código fuente del programa contendrá todo lo relativo a nodos, escenas, assets, librerías. test y scripts. La estructura de esta carpeta será utilizada por el proyecto dentro de Godot.
 
 Una consideración importante para mantener la organización de los archivos de una forma que sea coherente con la abstracción de \textit{escenas y nodos}, es crear cada escena dentro de su propia carpeta. Aquí, además del archivo \lsc{TSCN}, deberían estar todos los assets que utiliza la escena para evitar cualquier problemas de dependencias. La idea es poder mover o copiar la carpeta de ubicación y que todo siga funcionando dentro de ella.
 
