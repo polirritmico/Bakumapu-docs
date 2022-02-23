@@ -16,6 +16,7 @@ GREEN=\033[0;32m
 NC=\033[0m
 
 # awk '/SUBVERSION /{split($NF,v,[.]/); $NF=v[1]"."++v[2]"}1' test
+# awk '/SUBVERSION /{split($NF,v,/[.]/); $NF=++v[1]}1' Makefile
 default:
 	@echo -en "Valor de la variable: "
 	@echo -e "$(VERSION).$(SUBVERSION)"
