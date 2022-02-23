@@ -91,7 +91,7 @@ html, body, input, textarea, select, button {background: rgba(35, 36, 31, .95);}
 html, body, input, textarea, select, button {border-color: #736b5e; color: #ebebe5;}
 
 html {
-    font-size: 1.6rem;
+    font-size: 22px; /*En px por consistencia entre navegadores*/
     scroll-behavior: smooth;
 
     background: url("imágenes/fondo.jpg") no-repeat center center fixed;
