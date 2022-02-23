@@ -91,7 +91,7 @@ html, body, input, textarea, select, button {background: rgba(35, 36, 31, .95);}
 html, body, input, textarea, select, button {border-color: #736b5e; color: #ebebe5;}
 
 html {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     scroll-behavior: smooth;
 
     background: url("imágenes/fondo.jpg") no-repeat center center fixed;
@@ -148,7 +148,7 @@ div.lstlisting{white-space: normal; overflow-wrap: break-word;}
 .lstlisting span{font-family: 'Computer Modern Typewriter'; font-size: 0.85em;}
 
 /* Imágenes no estiradas */
-img {max-width: 100%; max-height: auto; width: auto; height: auto; border: solid 5px white;}
+img {max-width: 100%; max-height: auto; width: auto; height: auto;}
 
 /* Subsección sin enumerar con "*" */
 .likesubsectionHead{font-size: 1.1em; color: #27aeae; margin-top:-1.25em;}
