@@ -87,8 +87,8 @@
 /**************************************************************************/
 /******************************* GENERALES ********************************/
 /**************************************************************************/
-html, body, input, textarea, select {background: rgba(35, 36, 31, .95);}
-html, body, input, textarea, select {border-color: #736b5e; color: #ebebe5;}
+body, input, textarea, select {background: rgba(35, 36, 31, .95);}
+body, input, textarea, select {border-color: #736b5e; color: #ebebe5;}
 
 html {
     font-size: 22px; /*En px por consistencia entre navegadores*/
@@ -100,10 +100,12 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
+/* Para el fondo de la barra de desplazamiento */
+html {background-color: #23241f;}
 
 body {
     font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
-    padding: 1.5em; max-width: 1280px; margin-left: 15%; margin-right: 15%;
+    padding: 1.5em; max-width: 1280px; margin: 0 15%;
 }
 
 /* Para pantallas de menos de 720 */
@@ -112,19 +114,6 @@ body {
   div.longtable {margin-left: -1em; margin-right: -1em;}
   .tableofcontents {display: none;}
 }
-
-/* Animación de entrada */
-@keyframes slideInFromLeft {
-  0% {transform: translateX(-100%);}
-  100% {transform: translateX(0);}
-}
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to   {opacity: 1;}
-}
-
-html {animation: 1.5s ease-out 0.2s 1 fadeIn;}
-body {animation: 1s ease-out 0.2s 1 slideInFromLeft;}
 
 /* Links y tablas */
 a {color: #fd9621; transition: 0.3s;}
@@ -206,5 +195,12 @@ input[type="checkbox"] {height: 4em; width: 10em;}
 #showtoc:checked~.tocbutton {left: 4.3em; -webkit-transform: rotate(180deg);}
 #showtoc:checked~.tableofcontents {display: block;}
 #showtoc:checked~.likesectionHead {display: inline-block;}
+
+/* Chrome scrollbar */
+::-webkit-scrollbar {background: rgba(35, 36, 31, .15); width: 10px;}
+div::-webkit-scrollbar {background: transparent; width: 7px;}
+div::-webkit-scrollbar-thumb,
+   ::-webkit-scrollbar-thumb {background: #6f7471; -webkit-border-radius: 5px;}
+::-webkit-scrollbar-corner {background: transparent;}
 
 /* EOF */
