@@ -107,8 +107,9 @@ html_custom:
 	@sed -i 's/Figura~/Figura /' build/export/$(OUTFILE).html
 	@echo -en "${GREEN}OK${NC}\nAgregando fondo: "
 	@cp imágenes/fondo.jpg build/export/imágenes/
-	@echo -en "${GREEN}OK${NC}\nAgregando favicon: "
+	@echo -en "${GREEN}OK${NC}\nAgregando íconos: "
 	@cp imágenes/icon.svg build/export/imágenes/
+	@cp imágenes/flecha.svg build/export/imágenes/
 	@sed -i '/\/head/i \ \ \ \ <link rel="icon" href="imágenes\/icon.svg">' build/export/$(OUTFILE).html
 	@echo -e "${GREEN}OK${NC}"
 
