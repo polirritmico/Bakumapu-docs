@@ -87,8 +87,8 @@
 /**************************************************************************/
 /******************************* GENERALES ********************************/
 /**************************************************************************/
-body, input, textarea, select {background: rgba(35, 36, 31, .95);}
-body, input, textarea, select {border-color: #736b5e; color: #ebebe5;}
+body, input, textarea, select {background: #23241FEE;}
+body, input, textarea, select {border-color: #736B5E; color: #ebebe5;}
 
 html {
     font-size: 22px; /*En px por consistencia entre navegadores*/
@@ -101,7 +101,7 @@ html {
     background-size: cover;
 }
 /* Para el fondo de la barra de desplazamiento */
-html {background-color: #23241f;}
+html {background-color: #23241F;}
 
 body {
     font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
@@ -116,18 +116,18 @@ body {
 }
 
 /* Links y tablas */
-a {color: #fd9621; transition: 0.3s;}
-a:hover {color: #e7db74;}
+a {color: #FD9621; transition: 0.3s;}
+a:hover {color: #E7DB74;}
 .url>span {font-family: 'Computer Modern Typewriter';}/**/
 
-table {border-color: #545b5e;}
+table {border-color: #545B5E;}
 
 /* Encabezados */
 .underline {font-family: "Computer Modern Typewriter"; font-size: 1.2rem;}
 h3, h4, h5 {font-family: 'Liberation Sans', sans-serif;}
-h3 {color: #f92472; font-size: 1.6em;}
-h4 {color: #90da2b; font-size: 1.4em;}
-h5, h6 {color: #74705d; font-size: 1.1em;}
+h3 {color: #F92472; font-size: 1.6em;}
+h4 {color: #90DA2B; font-size: 1.4em;}
+h5, h6 {color: #74705D; font-size: 1.1em;}
 
 /* Listas */
 .enumerate-enumitem {margin-bottom: 0.4em;}
@@ -136,7 +136,7 @@ dt.enumerate-enumitem {float: left; clear: left;
 dd.enumerate-enumitem {margin-top:.4em;}
 
 /* Bloques de código */
-.lstlisting {border: solid 1px black; background-color: #4c4d47;}
+.lstlisting {border: solid 1px black; background-color: #4C4D47;}
 div.lstlisting {white-space: normal; overflow-wrap: break-word;}
 .lstlisting span{font-family: 'Computer Modern Typewriter'; font-size: 0.85em;}
 
@@ -144,7 +144,7 @@ div.lstlisting {white-space: normal; overflow-wrap: break-word;}
 img {max-width: 100%; width: auto; height: auto;}
 
 /* Subsección sin enumerar con "*" */
-.likesubsectionHead{font-size: 1.1em; color: #27aeae; margin-top:-1.25em;}
+.likesubsectionHead{font-size: 1.1em; color: #27AEAE; margin-top:-1.25em;}
 
 /**************************************************************************/
 /****************************** ESPECIFICOS *******************************/
@@ -153,7 +153,7 @@ img {max-width: 100%; width: auto; height: auto;}
 /* TOC */
 /* Panel lateral */
 .likesectionHead{font-size: 1.25em; position: fixed;
-                 left: 10px; top:-.5em; color: #ebebe5;}
+                 left: 10px; top:-.5em; color: #EBEBE5;}
 
 .tableofcontents {
   font-size: .7em;
@@ -175,11 +175,12 @@ img {max-width: 100%; width: auto; height: auto;}
 @media only screen and (max-width: 1200px) {
   body {margin: auto;}
   .sectionToc {width: auto;}
-  .likesectionHead {color: #f92472; font-size: 1.6em; position: unset;
+  .likesectionHead {color: #F92472; font-size: 1.6em; position: unset;
                     left: unset; top: unset;}
   .tableofcontents {font-size: 1em; z-index:1; overflow-y:unset;
                     height: unset; position: unset; text-overflow: unset;
                     top: unset; white-space: unset; width: unset;}
+  .tocbutton {position: static; left: 10px; top: .65em;}
 }
 
 /* Boton panel */
@@ -196,11 +197,17 @@ input[type="checkbox"] {height: 4em; width: 10em;}
 #showtoc:checked~.tableofcontents {display: block;}
 #showtoc:checked~.likesectionHead {display: inline-block;}
 
+@media only screen and (max-width: 1200px) {
+    .tocbutton {position: absolute; -webkit-transform: rotate(90deg);}
+    #showtoc:checked~.tocbutton {position: absolute; left: 10px;
+                                 -webkit-transform: rotate(-90deg);}
+}
+
 /* Chrome scrollbar */
 ::-webkit-scrollbar {background: rgba(35, 36, 31, .15); width: 10px;}
 div::-webkit-scrollbar {background: transparent; width: 7px;}
 div::-webkit-scrollbar-thumb,
-   ::-webkit-scrollbar-thumb {background: #6f7471; -webkit-border-radius: 5px;}
+   ::-webkit-scrollbar-thumb {background: #6F7471; -webkit-border-radius: 5px;}
 ::-webkit-scrollbar-corner {background: transparent;}
 
 /* EOF */
