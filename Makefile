@@ -87,12 +87,12 @@ html_tidy:
 	@-cd build && \
 	tidy -config tidy.conf export/$(OUTFILE).html > export/temp-$(OUTFILE).html
 	@mv build/export/temp-$(OUTFILE).html build/export/$(OUTFILE).html
-	@echo -e "${GREEN}OK${NC}"
+	@echo -e "Limpieza ${GREEN}OK${NC}"
 
 html_custom:
 	@echo -n "Ajustando título del HTML: "
 	@sed -i 's/<title><\/title>/<title>Bakumapu v$(VERSION)<\/title>/' build/export/$(OUTFILE).html
-	@echo -en "Corrigiendo espacios a comandos con signos '\$$': "
+	@echo -en "${GREEN}OK${NC}\nCorrigiendo espacios a comandos con signos '\$$': "
 	@sed -i 's/$$<\/span><\/span>/$$ <\/span><\/span>/' build/export/$(OUTFILE).html
 	@echo -en "${GREEN}OK${NC}\nAjustando espacios: "
 	@sed -i '/<span/s/ / /g' build/export/$(OUTFILE).html
