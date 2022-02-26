@@ -87,8 +87,8 @@
 /**************************************************************************/
 /******************************* GENERALES ********************************/
 /**************************************************************************/
-html, body, input, textarea, select, button {background: rgba(35, 36, 31, .95);}
-html, body, input, textarea, select, button {border-color: #736b5e; color: #ebebe5;}
+html, body, input, textarea, select {background: rgba(35, 36, 31, .95);}
+html, body, input, textarea, select {border-color: #736b5e; color: #ebebe5;}
 
 html {
     font-size: 22px; /*En px por consistencia entre navegadores*/
@@ -100,18 +100,17 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
+
 body {
     font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
-    padding: 1.5em;
-/*     margin: auto; */
-    max-width: 1280px;
-    margin-left:15%;
+    padding: 1.5em; max-width: 1280px; margin-left: 15%; margin-right: 15%;
 }
+
 /* Para pantallas de menos de 720 */
 @media only screen and (max-width: 719px) {
   html {font-size: 1.2rem;}
   div.longtable {margin-left: -1em; margin-right: -1em;}
-  .tableofcontents{display: none;}
+  .tableofcontents {display: none;}
 }
 
 /* Animación de entrada */
@@ -120,8 +119,8 @@ body {
   100% {transform: translateX(0);}
 }
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to   {opacity: 1;}
+  from {opacity: 0;}
+  to   {opacity: 1;}
 }
 
 html {animation: 1.5s ease-out 0.2s 1 fadeIn;}
@@ -130,12 +129,12 @@ body {animation: 1s ease-out 0.2s 1 slideInFromLeft;}
 /* Links y tablas */
 a {color: #fd9621; transition: 0.3s;}
 a:hover {color: #e7db74;}
-.url>span{font-family: 'Computer Modern Typewriter';}/**/
+.url>span {font-family: 'Computer Modern Typewriter';}/**/
 
 table {border-color: #545b5e;}
 
 /* Encabezados */
-.underline{font-family: "Computer Modern Typewriter";font-size: 1.2rem;}
+.underline {font-family: "Computer Modern Typewriter"; font-size: 1.2rem;}
 h3, h4, h5 {font-family: 'Liberation Sans', sans-serif;}
 h3 {color: #f92472; font-size: 1.6em;}
 h4 {color: #90da2b; font-size: 1.4em;}
@@ -143,16 +142,17 @@ h5, h6 {color: #74705d; font-size: 1.1em;}
 
 /* Listas */
 .enumerate-enumitem {margin-bottom: 0.4em;}
-dt.enumerate-enumitem{float:left; clear:left; margin-left:1em; margin-right:1em;}
-dd.enumerate-enumitem{margin-top:.4em;}
+dt.enumerate-enumitem {float: left; clear: left;
+                       margin-left: 1em; margin-right: 1em;}
+dd.enumerate-enumitem {margin-top:.4em;}
 
 /* Bloques de código */
 .lstlisting {border: solid 1px black; background-color: #4c4d47;}
-div.lstlisting{white-space: normal; overflow-wrap: break-word;}
+div.lstlisting {white-space: normal; overflow-wrap: break-word;}
 .lstlisting span{font-family: 'Computer Modern Typewriter'; font-size: 0.85em;}
 
 /* Imágenes no estiradas */
-img {max-width: 100%; max-height: auto; width: auto; height: auto;}
+img {max-width: 100%; width: auto; height: auto;}
 
 /* Subsección sin enumerar con "*" */
 .likesubsectionHead{font-size: 1.1em; color: #27aeae; margin-top:-1.25em;}
@@ -163,31 +163,48 @@ img {max-width: 100%; max-height: auto; width: auto; height: auto;}
 
 /* TOC */
 /* Panel lateral */
-.likesectionHead{font-size: 1.25em; position: fixed; left: 10px; top:-.5em; color: #ebebe5;}
+.likesectionHead{font-size: 1.25em; position: fixed;
+                 left: 10px; top:-.5em; color: #ebebe5;}
+
 .tableofcontents {
   font-size: .7em;
   height: 95%;
   left: 0;
-  overflow-y:scroll;
+  overflow-y: scroll;
   position: fixed;
-  /*text-overflow: ellipsis; /*Da problemas en FF*/
-  vertical-align: top;
   top: 4em;
   white-space: nowrap;
   width: 15%;
 }
+
 /* Espaciado entre secciones */
-.sectionToc {display: inline-block; margin-top: .25em; width: 15%;}
+.sectionToc {margin-top: .25em; width: 15%;}
 .subsectionToc {margin-left: .75em;}
 .subsubsectionToc {margin-left: 2em;}
 
 /* Quitar panel en pantallas chicas */
 @media only screen and (max-width: 1200px) {
+  body {margin: auto;}
   .sectionToc {width: auto;}
-  .likesectionHead {color: #f92472; font-size: 1.6em; position: unset; left: unset; top: unset;}
-  body {margin:auto;}
-  .tableofcontents {font-size: 1em; overflow-y:unset; height: unset; position: unset;
-                    text-overflow: unset; top: unset; white-space: unset; width: unset;}
+  .likesectionHead {color: #f92472; font-size: 1.6em; position: unset;
+                    left: unset; top: unset;}
+  .tableofcontents {font-size: 1em; z-index:1; overflow-y:unset;
+                    height: unset; position: unset; text-overflow: unset;
+                    top: unset; white-space: unset; width: unset;}
 }
+
+/* Boton panel */
+#showtoc {position: fixed; opacity:0; left: 0; top: 0; z-index:2;}
+input[type="checkbox"] {height: 4em; width: 10em;}
+.tocbutton {content:url("imágenes/flecha-der.svg"); max-height: 1.2em;
+           max-width: 1.2em; position: fixed; left: 10px; top: .65em;
+           z-index: 1; }
+
+/* default */
+.tableofcontents,.likesectionHead {display: none;}
+/* pressed */
+#showtoc:checked~.tocbutton {left: 4.3em; -webkit-transform: rotate(180deg);}
+#showtoc:checked~.tableofcontents {display: block;}
+#showtoc:checked~.likesectionHead {display: inline-block;}
 
 /* EOF */
