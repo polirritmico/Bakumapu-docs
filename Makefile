@@ -1,6 +1,6 @@
 SHELL = /bin/sh
 # Actualizar con cada cambio
-VERSION = 0.0.13
+VERSION = 0.0.14
 
 # Define variables
 LATEX = latex
