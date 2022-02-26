@@ -87,7 +87,7 @@
 /**************************************************************************/
 /******************************* GENERALES ********************************/
 /**************************************************************************/
-html, body, input, textarea, select, button {background: rgba(35, 36, 31, .95);}/*#23241f*/
+html, body, input, textarea, select, button {background: rgba(35, 36, 31, .95);}
 html, body, input, textarea, select, button {border-color: #736b5e; color: #ebebe5;}
 
 html {
@@ -103,13 +103,15 @@ html {
 body {
     font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
     padding: 1.5em;
-    margin: auto;
+/*     margin: auto; */
     max-width: 1280px;
+    margin-left:15%;
 }
 /* Para pantallas de menos de 720 */
 @media only screen and (max-width: 719px) {
   html {font-size: 1.2rem;}
   div.longtable {margin-left: -1em; margin-right: -1em;}
+  .tableofcontents{display: none;}
 }
 
 /* Animación de entrada */
@@ -141,9 +143,11 @@ h5, h6 {color: #74705d; font-size: 1.1em;}
 
 /* Listas */
 .enumerate-enumitem {margin-bottom: 0.4em;}
+dt.enumerate-enumitem{float:left; clear:left; margin-left:1em; margin-right:1em;}
+dd.enumerate-enumitem{margin-top:.4em;}
 
 /* Bloques de código */
-.lstlisting { border: solid 1px black; background-color: #4c4d47;}
+.lstlisting {border: solid 1px black; background-color: #4c4d47;}
 div.lstlisting{white-space: normal; overflow-wrap: break-word;}
 .lstlisting span{font-family: 'Computer Modern Typewriter'; font-size: 0.85em;}
 
@@ -158,8 +162,31 @@ img {max-width: 100%; max-height: auto; width: auto; height: auto;}
 /**************************************************************************/
 
 /* TOC */
-.subsectionToc {margin-left:1em;}
-.subsubsectionToc {margin-left:2em;}
+/* Panel lateral */
+.likesectionHead{font-size: 1.25em; position: fixed; left: 10px; top:-.5em; color: #ebebe5;}
+.tableofcontents {
+  font-size: .7em;
+  height: 95%;
+  left: 0;
+  overflow-y:scroll;
+  position: fixed;
+  /*text-overflow: ellipsis; /*Da problemas en FF*/
+  vertical-align: top;
+  top: 4em;
+  white-space: nowrap;
+  width: 15%;
+}
+/* Espaciado entre secciones */
+.sectionToc {display: inline-block; margin-top: .25em; width: 15%;}
+.subsectionToc {margin-left: .75em;}
+.subsubsectionToc {margin-left: 2em;}
 
+/* Quitar panel en pantallas chicas */
+@media only screen and (max-width: 1200px) {
+  .likesectionHead {color: #f92472; font-size: 1.6em; position: unset; left: unset; top: unset;}
+  body {margin:auto;}
+  .tableofcontents {font-size: 1em; overflow-y:unset; height: unset; position: unset;
+                    text-overflow: unset; top: unset; white-space: unset; width: unset;}
+}
 
 /* EOF */
