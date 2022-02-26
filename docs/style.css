@@ -196,7 +196,7 @@ img {max-width: 100%; width: auto; height: auto;}
 /* Boton panel */
 #showtoc {position: fixed; opacity:0; left: 0; top: 0; z-index:2;}
 input[type="checkbox"] {height: 4em; width: 10em;}
-.tocbutton {content:url("./imágenes/flecha.svg"); max-height: 1.2em;
+.tocbutton {content:url("imágenes/flecha.svg"); max-height: 1.2em;
            max-width: 1.2em; position: fixed; left: 10px; top: .65em;
            z-index: 1; }
 
