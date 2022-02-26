@@ -183,6 +183,7 @@ img {max-width: 100%; max-height: auto; width: auto; height: auto;}
 
 /* Quitar panel en pantallas chicas */
 @media only screen and (max-width: 1200px) {
+  .sectionToc {width: auto;}
   .likesectionHead {color: #f92472; font-size: 1.6em; position: unset; left: unset; top: unset;}
   body {margin:auto;}
   .tableofcontents {font-size: 1em; overflow-y:unset; height: unset; position: unset;
