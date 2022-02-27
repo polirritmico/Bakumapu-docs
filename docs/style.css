@@ -152,11 +152,8 @@ img {max-width: 100%; width: auto; height: auto;}
 
 /* TOC */
 /* Panel lateral */
-.likesectionHead{font-size: 1.25em; position: fixed;
-                 left: 10px; top:-.5em; color: #EBEBE5;}
-
 .tableofcontents {
-  font-size: .7em;
+  font-size: 0.7em;
   height: 95%;
   left: 0;
   overflow-y: scroll;
@@ -165,43 +162,125 @@ img {max-width: 100%; width: auto; height: auto;}
   white-space: nowrap;
   width: 15%;
 }
+/* Header Índice */
+.likesectionHead {
+  font-size: 1.25em;
+  position: fixed;
+  left: 10px;
+  top: -0.5em;
+  color: #ebebe5;
+}
 
 /* Espaciado entre secciones */
-.sectionToc {margin-top: .25em; width: 15%;}
-.subsectionToc {margin-left: .75em;}
+.sectionToc {margin-top: 0.25em; width: 15%;}
+.subsectionToc {margin-left: 0.75em;}
 .subsubsectionToc {margin-left: 2em;}
 
 /* Quitar panel en pantallas chicas */
 @media only screen and (max-width: 1200px) {
-  body {margin: auto;}
-  .sectionToc {width: auto;}
-  .likesectionHead {color: #F92472; font-size: 1.6em; position: unset;
-                    left: unset; top: unset;}
-  .tableofcontents {font-size: 1em; z-index:1; overflow-y:unset;
-                    height: unset; position: unset; text-overflow: unset;
-                    top: unset; white-space: unset; width: unset;}
-  .tocbutton {position: static; left: 10px; top: .65em;}
+  body {
+    margin: auto;
+  }
+  .sectionToc {
+    width: auto;
+  }
+  .likesectionHead {
+    color: #f92472;
+    font-size: 1.6em;
+    position: unset;
+    left: unset;
+    top: unset;
+  }
+  .tableofcontents {
+    font-size: 1em;
+    z-index: 1;
+    overflow-y: unset;
+    height: unset;
+    position: unset;
+    text-overflow: unset;
+    top: unset;
+    white-space: unset;
+    width: unset;
+  }
+  .tocbutton {
+    position: static;
+    left: 10px;
+    top: 0.65em;
+  }
 }
 
 /* Boton panel */
-#showtoc {position: fixed; opacity:0; left: 0; top: 0; z-index:2;}
-input[type="checkbox"] {height: 4em; width: 10em;}
-.tocbutton {content:url("imágenes/flecha.svg"); max-height: 1.2em;
-           max-width: 1.2em; position: fixed; left: 10px; top: .65em;
-           z-index: 1; }
+#showtoc {
+  position: fixed;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+input[type="checkbox"] {
+  height: 4em;
+  width: 10em;
+}
+.tocbutton {
+  content: url("imágenes/flecha.svg");
+  max-height: 1.2em;
+  max-width: 1.2em;
+  position: fixed;
+  left: 10px;
+  top: 0.65em;
+  z-index: 1;
+  transition: transform 0.7s, left 0.7s;
+}
 
 /* default */
-.tableofcontents,.likesectionHead {display: none;}
+.tableofcontents {
+  display: block;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.likesectionHead {
+  display: inline-block;
+  left: -4em;
+  transition: left 0.7s;
+}
 /* pressed */
-#showtoc:checked~.tocbutton {left: 4.3em; -webkit-transform: rotate(180deg);}
-#showtoc:checked~.tableofcontents {display: block;}
-#showtoc:checked~.likesectionHead {display: inline-block;}
+#showtoc:checked ~ .tocbutton {
+  left: 4.3em;
+  -webkit-transform: rotate(180deg);
+}
+#showtoc:checked ~ .tableofcontents {
+  opacity: 1;
+}
+#showtoc:checked ~ .likesectionHead {
+  left: 10px;
+}
 
 @media only screen and (max-width: 1200px) {
-    .tocbutton {position: absolute; -webkit-transform: rotate(90deg);}
-    #showtoc:checked~.tocbutton {position: absolute; left: 10px;
-                                 -webkit-transform: rotate(-90deg);}
+  .tocbutton {
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+  }
+  #showtoc:checked ~ .tocbutton {
+    position: absolute;
+    left: 10px;
+    -webkit-transform: rotate(-90deg);
+  }
+  #showtoc:checked ~ .tableofcontents {
+    display: block;
+    animation: none;
+    margin-left: 0;
+  }
+  #showtoc:checked ~ .likesectionHead {
+    display: inline-block;
+    animation: none;
+  }
+  .tableofcontents,
+  .likesectionHead {
+    display: none;
+    animation: none;
+  }
 }
+
 
 /* Chrome scrollbar */
 ::-webkit-scrollbar {background: rgba(35, 36, 31, .15); width: 10px;}
@@ -209,5 +288,57 @@ div::-webkit-scrollbar {background: transparent; width: 7px;}
 div::-webkit-scrollbar-thumb,
    ::-webkit-scrollbar-thumb {background: #6F7471; -webkit-border-radius: 5px;}
 ::-webkit-scrollbar-corner {background: transparent;}
+
+/**************************************************************************/
+/****************************** ANIMACIONES *******************************/
+/**************************************************************************/
+
+/* Animación de entrada */
+@keyframes slideInFromLeft {
+    0% {margin-left: -20%;}
+  100% {margin-left: 0;}
+}
+@keyframes slideOutToLeft {
+    0% {margin-left: 0;}
+  100% {margin-left: -20%;}
+}
+
+@keyframes slideInFromBottom {
+    0% {margin-top: 100%;}
+   80% {margin-top: -2%;}
+  100% {margin-top: 0;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+html {
+  opacity: 0;
+  animation: 1.5s ease-out 0.2s 1 fadeIn;
+  animation-fill-mode: forwards;
+}
+
+body {
+  margin-top:100%;
+  animation-name: slideInFromBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.tableofcontents {
+  margin-left: -20%;
+/*   margin-top: -60%; */
+  animation-name: slideInFromLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 
 /* EOF */
