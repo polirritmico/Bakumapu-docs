@@ -231,6 +231,8 @@ input[type="checkbox"] {
   z-index: 1;
   transition: transform 0.7s, left 0.7s;
 }
+.tocbutton + h3 {transition: color 0.3s;}
+#showtoc:hover + .tocbutton + h3 {color:#f92472;}
 
 /* default */
 .tableofcontents {
