@@ -11,8 +11,9 @@ HTML_TOC_LEVEL = 2
 INFILE = main
 OUTFILE = index
 
-GREEN=\033[0;32m
-NC=\033[0m
+# Colors codes
+GREEN = \033[0;32m
+NC = \033[0m
 
 default:
 	@echo "Utilice 'make all', 'make pdf', 'make html', 'make version', 'make sync' o 'make clean'."
@@ -59,7 +60,7 @@ latex2pdf_light:
 	@mv $(INFILE).pdf $(INFILE)-print.pdf
 	@echo -e "3/3 ${GREEN}OK${NC}\n$(INFILE)-print.pdf generado exitosamente."
 
-html: html_folders html_prepare html_convert html_tidy html_custom html_clean html_ok
+html: html_folders html_prepare html_convert html_tidy html_fix_classnames html_custom html_clean html_ok
 
 html_folders:
 	@mkdir -p build/configuración/style
@@ -88,6 +89,15 @@ html_tidy:
 	tidy -config tidy.conf export/$(OUTFILE).html > export/temp-$(OUTFILE).html
 	@mv build/export/temp-$(OUTFILE).html build/export/$(OUTFILE).html
 	@echo -e "Limpieza ${GREEN}OK${NC}"
+
+html_fix_classnames:
+	@echo -e "Leyendo nombres de clases..."
+	$(MAKE) html_write_classnames TITLE_CLASSNAME=$(shell sed -n "s/.*<span class='\(.*\)'>Bakumapu<\/span>.*/\1/p" docs/$(OUTFILE).html)
+
+html_write_classnames:
+	@echo -n "Ajustando nombres de clases: "
+	@sed -i 's/MAIN_TITLE/$(TITLE_CLASSNAME)/' build/export/style.css
+	@echo -e "${GREEN}OK${NC}"
 
 html_custom:
 	@echo -n "Ajustando título del HTML: "
