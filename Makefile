@@ -71,7 +71,7 @@ html_folders:
 
 html_prepare:
 	@echo -n "Ajustando subtítulo: "
-	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico}}/{Diseño\ técnico}/' <$(INFILE).tex >build/$(OUTFILE).tex
+	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico}}/{Diseño\ técnico}/' $(INFILE).tex > build/$(OUTFILE).tex
 	@echo -en "${GREEN}OK${NC}\nAjustando nivel de TOC a $(HTML_TOC_LEVEL) para el html: "
 	@sed -i '/\\setcounter/s/{tocdepth}{*.}/{tocdepth}{$(HTML_TOC_LEVEL)}/' build/configuración/estilos.tex
 	@echo -e "${GREEN}OK${NC}"
