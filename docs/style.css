@@ -286,7 +286,7 @@ input[type="checkbox"] {
 }
 
 /* Notas al final */
-.footnotes{
+.footnotes, div.footnotes {
   margin-right: 0;
 }
 
