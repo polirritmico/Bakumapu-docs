@@ -12,7 +12,7 @@ INFILE = main
 OUTFILE = index
 
 # Colors codes
-GREEN = \033[1;32m
+GREEN = \033[0;32m
 ORANGE = \033[0;33m
 NC = \033[0m
 
@@ -149,7 +149,7 @@ sync:
 	@git commit -m "Auto uploaded v$(VERSION)"
 	@git push
 	@echo -e "..................................................\nSincronización exitosa."
-	@echo "Version web en: ${ORANGE}https://polirritmico.github.io/Bakumapu-docs/${NC}"
+	@echo -e "Version web en: ${ORANGE}https://polirritmico.github.io/Bakumapu-docs/${NC}"
 
 reset:
 	@rm -rf build
