@@ -12,14 +12,15 @@ INFILE = main
 OUTFILE = index
 
 # Colors codes
-GREEN = \033[0;32m
-ORANGE = \033[0;33m
+GREEN = \033[1;32m
+ORANGE = \033[1;33m
 NC = \033[0m
 
 default:
 	@echo "Utilice 'make all', 'make pdf', 'make html', 'make version', 'make sync' o 'make clean'."
 
-all: pdf clean html sync
+#all: pdf clean html sync
+all: pdf clean html
 
 pdf: version latex2pdf_light latex2pdf
 
@@ -41,25 +42,25 @@ clean:
 latex2pdf:
 	@echo -n "Cambiando a esquema de color oscuro: "
 	@sed -i '/\\newif\\ifdark\\/s/darkfalse/darktrue/' $(INFILE).tex
-	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de $(INFILE).tex: "
+	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de ${ORANGE}$(INFILE).tex${NC}: "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
 	@echo -en "1/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
 	@echo -en "2/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@echo -ee "3/3 ${GREEN}OK${NC}\n$(INFILE).pdf generado exitosamente."
+	@echo -en "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE).pdf${NC} generado exitosamente."
 
 latex2pdf_light:
 	@echo -n "Cambiando a esquema de color claro: "
 	@sed -i '/\\newif\\ifdark\\/s/darktrue/darkfalse/' $(INFILE).tex
-	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de $(INFILE).tex: "
+	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de ${ORANGE}$(INFILE).tex${NC}: "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
 	@echo -en "1/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
 	@echo -en "2/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
 	@mv $(INFILE).pdf $(INFILE)-print.pdf
-	@echo -e "3/3 ${GREEN}OK${NC}\n$(INFILE)-print.pdf generado exitosamente."
+	@echo -e "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE)-print.pdf${NC} generado exitosamente."
 
 html: html_folders html_prepare html_convert html_tidy html_fix_classnames html_custom html_clean html_ok
 
@@ -73,12 +74,12 @@ html_folders:
 html_prepare:
 	@echo -n "Ajustando subtítulo: "
 	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico}}/{Diseño\ técnico}/' $(INFILE).tex > build/$(OUTFILE).tex
-	@echo -en "${GREEN}OK${NC}\nAjustando nivel de TOC a $(HTML_TOC_LEVEL) para el html: "
+	@echo -en "${GREEN}OK${NC}\nAjustando nivel de TOC a ${ORANGE}$(HTML_TOC_LEVEL)${NC} para el html: "
 	@sed -i '/\\setcounter/s/{tocdepth}{*.}/{tocdepth}{$(HTML_TOC_LEVEL)}/' build/configuración/estilos.tex
 	@echo -e "${GREEN}OK${NC}"
 
 html_convert:
-	@echo "Generando 'docs/$(OUTFILE).html' a partir de '$(INFILE).tex'"
+	@echo -e "Generando '${ORANGE}docs/$(OUTFILE).html${NC}' a partir de '${ORANGE}$(INFILE).tex${NC}'"
 	@echo -e "Iniciando conversión:\n.................................................."
 	@cd build && \
 	make4ht -c custom.conf -d export/ $(OUTFILE).tex "fn-in"
@@ -93,7 +94,7 @@ html_tidy:
 
 html_fix_classnames:
 	@echo -e "Leyendo nombres de clases..."
-	$(MAKE) html_write_classnames TITLE_CLASSNAME=$(shell sed -n "s/.*<span class='\(.*\)'>Bakumapu<\/span>.*/\1/p" docs/$(OUTFILE).html)
+	$(MAKE) html_write_classnames TITLE_CLASSNAME=$(shell sed -n "s/.*<span class='\(.*\)'>Bakumapu<\/span>.*/\1/p" build/export/$(OUTFILE).html)
 
 html_write_classnames:
 	@echo -n "Ajustando nombres de clases: "
@@ -136,7 +137,7 @@ html_clean:
 	@echo -e "${GREEN}OK${NC}\n.................................................."
 
 html_ok:
-	@echo -en "HTML generado exitosamente.\nRevisar en: ${ORANGE}file://"
+	@echo -en "HTML generado exitosamente.\nRevisar en:${ORANGE} file://"
 	@echo -n '$(PWD)' | sed -e 's/ñ/%C3%B1/' -e 's/ /%20/' -e 's/é/%C3%A9/'
 	@echo -e "/docs/index.html${NC}"
 	@echo "Usar 'make sync' para subir a GITHUB."
