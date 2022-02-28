@@ -13,14 +13,13 @@ OUTFILE = index
 
 # Colors codes
 GREEN = \033[1;32m
-ORANGE = \033[1;33m
+ORANGE = \033[0;33m
 NC = \033[0m
 
 default:
 	@echo "Utilice 'make all', 'make pdf', 'make html', 'make version', 'make sync' o 'make clean'."
 
-#all: pdf clean html sync
-all: pdf clean html
+all: pdf clean html sync
 
 pdf: version latex2pdf_light latex2pdf
 
