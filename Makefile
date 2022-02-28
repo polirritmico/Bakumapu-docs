@@ -13,6 +13,7 @@ OUTFILE = index
 
 # Colors codes
 GREEN = \033[0;32m
+ORANGE = \033[0;33m
 NC = \033[0m
 
 default:
@@ -135,9 +136,9 @@ html_clean:
 	@echo -e "${GREEN}OK${NC}\n.................................................."
 
 html_ok:
-	@echo -en "HTML generado exitosamente.\nRevisar en: file://"
+	@echo -en "HTML generado exitosamente.\nRevisar en: ${ORANGE}file://"
 	@echo -n '$(PWD)' | sed -e 's/ñ/%C3%B1/' -e 's/ /%20/' -e 's/é/%C3%A9/'
-	@echo -e "/docs/index.html"
+	@echo -e "/docs/index.html${NC}"
 	@echo "Usar 'make sync' para subir a GITHUB."
 
 sync:
@@ -148,7 +149,7 @@ sync:
 	@git commit -m "Auto uploaded v$(VERSION)"
 	@git push
 	@echo -e "..................................................\nSincronización exitosa."
-	@echo "Version web en: https://polirritmico.github.io/Bakumapu-docs/"
+	@echo "Version web en: ${ORANGE}https://polirritmico.github.io/Bakumapu-docs/${NC}"
 
 reset:
 	@rm -rf build
