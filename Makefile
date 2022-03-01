@@ -47,7 +47,7 @@ latex2pdf:
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
 	@echo -en "2/3 ${GREEN}OK${NC} "
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@echo -en "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE).pdf${NC} generado exitosamente."
+	@echo -e "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE).pdf${NC} generado exitosamente."
 
 latex2pdf_light:
 	@echo -n "Cambiando a esquema de color claro: "
