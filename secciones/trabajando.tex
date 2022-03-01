@@ -34,6 +34,8 @@ No referenciar directamente con \$ sino usar un export(NotePath) var \_nodo
 
 ¿Singleton GameEvents para desacoplar GM?
 
+Las clases interesadas en las señales se connectan en el ready hacia GameEvents. Por ejemplo, GameEvents tiene la señal "pelota\_chocando", y dentro del objeto arco en ready conectamos la señal al método pelota\_en\_arco. 
+
 \subsection{Dialogue\_manager}
 
 Dialogos en formato \textbf{.tres}
