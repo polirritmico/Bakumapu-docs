@@ -1,6 +1,6 @@
 SHELL = /bin/sh
 # Actualizar con cada cambio
-VERSION = 0.0.20
+VERSION = 0.0.21
 
 # Define variables
 LATEX = latex
@@ -15,6 +15,11 @@ OUTFILE = index
 GREEN = \033[0;32m
 ORANGE = \033[0;33m
 NC = \033[0m
+
+# Check all commands used
+DEPENDENCIES = echo sed mkdir mv rm cp pdflatex make4ht tidy perl git 
+K := $(foreach exec,$(DEPENDENCIES),\
+		 $(if $(shell which $(exec)), some string,$(error "No $(exec) in PATH")))
 
 default:
 	@echo "Utilice 'make all', 'make pdf', 'make html', 'make version', 'make sync' o 'make clean'."
