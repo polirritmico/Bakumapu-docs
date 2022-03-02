@@ -81,7 +81,7 @@ html_convert:
 	@echo -e "Generando '${ORANGE}docs/$(OUTFILE).html${NC}' a partir de '${ORANGE}$(INFILE).tex${NC}'"
 	@echo -e "Iniciando conversión:\n.................................................."
 	@cd build && \
-	make4ht -c custom.conf -d export/ $(OUTFILE).tex "fn-in"
+	make4ht -c custom.conf -d export/ $(OUTFILE).tex
 	@echo -e "Conversión ${GREEN}OK${NC}"
 
 html_tidy:
