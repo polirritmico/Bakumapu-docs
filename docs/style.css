@@ -131,6 +131,9 @@ a:hover {
 table {
   border-color: #545b5e;
 }
+.longtable td {
+    border: 1px solid black;
+}
 
 /* Encabezados */
 .underline {
