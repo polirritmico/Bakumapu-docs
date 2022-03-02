@@ -168,6 +168,7 @@ dt.enumerate-enumitem {
 }
 dd.enumerate-enumitem {
   margin-top:.4em;
+  padding-left: 1em;
 }
 
 /* Bloques de código */
@@ -192,10 +193,17 @@ img {
 }
 
 /* Subsecciones sin enumerar (con "*" en el .TEX) */
-.likesubsectionHead{
-  font-size: 1.1em;
+.likesubsectionHead {
   color: #27aeae;
+  font-size: 1.1em;
   margin-top:-1.25em;
+}
+/* Paragraphs sin enumerar */
+.likeparagraphHead {
+  color: #90da2b;
+  display: inline-block;
+  font-size: 1.1em;
+  margin-top: 0.75em;
 }
 
 
@@ -323,7 +331,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-.MAIN_TITLE {
+.ecbx-2488 {
   text-shadow: 0 0 0 #fd9621ff;
   animation-name: title-pulse;
   animation-duration: 7.5s;
