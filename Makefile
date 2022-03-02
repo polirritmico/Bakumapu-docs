@@ -61,7 +61,8 @@ latex2pdf_light:
 	@mv $(INFILE).pdf $(INFILE)-print.pdf
 	@echo -e "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE)-print.pdf${NC} generado exitosamente."
 
-html: html_folders html_prepare html_convert html_tidy html_fix_classnames html_custom html_clean html_ok
+html: html_folders html_prepare html_convert html_tidy html_longtable_clean \
+      html_fix_classnames html_custom html_clean html_ok
 
 html_folders:
 	@mkdir -p build/configuración/style
@@ -90,6 +91,15 @@ html_tidy:
 	tidy -config tidy.conf export/$(OUTFILE).html > export/temp-$(OUTFILE).html
 	@mv build/export/temp-$(OUTFILE).html build/export/$(OUTFILE).html
 	@echo -e "Limpieza ${GREEN}OK${NC}"
+
+html_longtable_clean:
+	@echo -n "Quitando comentarios html: "
+	@perl -0777 -pi -e 's/\s*<!-- .*? -->\s*//g' build/export/$(OUTFILE).html
+	@echo -en "${GREEN}OK${NC}\nLimpiando longtable: "
+	@perl -0777 -pi -e 's/\s*<p.*><\/p>\s*//g' build/export/$(OUTFILE).html
+	@perl -0777 -pi -e 's/\s*<td.*>(\s*)?<\/td>\s*//g' build/export/$(OUTFILE).html
+	@perl -0777 -pi -e 's/[ \t]*<tr.*>\s*<\/tr>[ \t]*\n//g' build/export/$(OUTFILE).html
+	@echo -e "${GREEN}OK${NC}"
 
 html_fix_classnames:
 	@echo -e "Leyendo nombres de clases..."
