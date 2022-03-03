@@ -3,18 +3,18 @@
   <head>
     <title>Bakumapu v0.0.22</title>
     <meta charset='utf-8'>
-    <meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator'>
-    <meta content='width=device-width,initial-scale=1' name='viewport'>
-    <link href='index.css' rel='stylesheet' type='text/css'>
-    <meta content='index.tex' name='src'>
-    <link href='style.css' rel='stylesheet' type='text/css'>
+    <meta name='generator' content='TeX4ht (https://tug.org/tex4ht/)'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='index.css'>
+    <meta name='src' content='index.tex'>
+    <link rel='stylesheet' type='text/css' href='style.css'>
     <link rel="icon" href="imágenes/icon.svg">
   </head>
   <body><div class='flushright'><p class='noindent'>
         <span class='underline'><span class='ecbx-2488'>Bakumapu</span></span><br>
         <span id='textcolor1'><span class='ecrm-1440'>Diseño técnico</span></span>
       </p><p class='noindent'>
-        Estudio 6/8 - 2022.3.2_v0.0.22
+        Estudio 6/8 - 2022.3.3_v0.0.22
       </p>
     </div>
     <input type="checkbox" id="showtoc" checked><div class="tocbutton"></div>
@@ -22,60 +22,60 @@
       <a id='x1-1000'></a>Índice
     </h3>
     <div class='tableofcontents'>
-       <span class='sectionToc'>1 <a href='#x1-20001' id='QQ2-1-2'>Introducción</a></span><br>
-        <span class='subsectionToc'>1.1 <a href='#x1-30001' id='QQ2-1-3'>Cómo usar este documento</a></span><br>
-        <span class='subsectionToc'>1.2 <a href='#x1-40002' id='QQ2-1-4'>Información importante.</a></span><br>
-        <span class='subsectionToc'>1.3 <a href='#x1-60003' id='QQ2-1-6'>Lista de requerimientos</a></span><br>
-        <span class='subsectionToc'>1.4 <a href='#x1-70004' id='QQ2-1-7'>Listado de software y herramientas de producción</a></span><br>
-       <span class='sectionToc'>2 <a href='#x1-210002' id='QQ2-1-21'>Visión general del desarrollo y principios del diseño técnico</a></span><br>
-        <span class='subsectionToc'>2.1 <a href='#x1-220001' id='QQ2-1-22'>Principios de diseño</a></span><br>
-        <span class='subsectionToc'>2.2 <a href='#x1-230002' id='QQ2-1-23'>Desarrollo dirigido por tests (TDD)</a></span><br>
-        <span class='subsectionToc'>2.3 <a href='#x1-250003' id='QQ2-1-26'>Refactorización: Rendimiento y limpieza</a></span><br>
-        <span class='subsectionToc'>2.4 <a href='#x1-260004' id='QQ2-1-27'>El documento de diseño técnico: una herramienta de diseño</a></span><br>
-       <span class='sectionToc'>3 <a href='#x1-270003' id='QQ2-1-28'>Flujo de trabajo y control de versiones</a></span><br>
-        <span class='subsectionToc'>3.1 <a href='#x1-280001' id='QQ2-1-29'>Metodología Kanban</a></span><br>
-        <span class='subsectionToc'>3.2 <a href='#x1-340002' id='QQ2-1-37'>Repositorio</a></span><br>
-        <span class='subsectionToc'>3.3 <a href='#x1-390003' id='QQ2-1-43'>Documentación</a></span><br>
-        <span class='subsectionToc'>3.4 <a href='#x1-470004' id='QQ2-1-51'>Formato y documentación dentro del código</a></span><br>
-        <span class='subsectionToc'>3.5 <a href='#x1-480005' id='QQ2-1-52'>Google Drive</a></span><br>
-        <span class='subsectionToc'>3.6 <a href='#x1-490006' id='QQ2-1-53'>LaTeX</a></span><br>
-       <span class='sectionToc'>4 <a href='#x1-500004' id='QQ2-1-54'>Internacionalización</a></span><br>
-        <span class='subsectionToc'>4.1 <a href='#x1-510001' id='QQ2-1-55'>Qué entendemos por localización (l10n)</a></span><br>
-        <span class='subsectionToc'>4.2 <a href='#x1-520002' id='QQ2-1-56'>Qué entendemos por internacionalización (i18n)</a></span><br>
-        <span class='subsectionToc'>4.3 <a href='#x1-530003' id='QQ2-1-57'>Implementación</a></span><br>
-       <span class='sectionToc'>5 <a href='#x1-620005' id='QQ2-1-67'>Modelado del software</a></span><br>
-        <span class='subsectionToc'>5.1 <a href='#x1-630001' id='QQ2-1-68'>Arquitectura</a></span><br>
-        <span class='subsectionToc'>5.2 <a href='#x1-640002' id='QQ2-1-70'>Funcionamiento general</a></span><br>
-        <span class='subsectionToc'>5.3 <a href='#x1-660003' id='QQ2-1-72'>Diagrama del sistema</a></span><br>
-        <span class='subsectionToc'>5.4 <a href='#x1-670004' id='QQ2-1-73'>Funcionamiento del sistema de managers</a></span><br>
-        <span class='subsectionToc'>5.5 <a href='#x1-780005' id='QQ2-1-84'>Otras consideraciones</a></span><br>
-       <span class='sectionToc'>6 <a href='#x1-800006' id='QQ2-1-86'>Input/Output</a></span><br>
-        <span class='subsectionToc'>6.1 <a href='#x1-810001' id='QQ2-1-87'>Inputs</a></span><br>
-        <span class='subsectionToc'>6.2 <a href='#x1-850002' id='QQ2-1-91'>Outputs</a></span><br>
-        <span class='subsectionToc'>6.3 <a href='#x1-920003' id='QQ2-1-98'>DRM</a></span><br>
-       <span class='sectionToc'>7 <a href='#x1-930007' id='QQ2-1-99'>Organización del proyecto</a></span><br>
-        <span class='subsectionToc'>7.1 <a href='#x1-940001' id='QQ2-1-100'>Organización de carpetas</a></span><br>
-        <span class='subsectionToc'>7.2 <a href='#x1-960002' id='QQ2-1-102'>Nombres de archivos</a></span><br>
-        <span class='subsectionToc'>7.3 <a href='#x1-970003' id='QQ2-1-103'>Nombres de ramas y tarjetas</a></span><br>
-        <span class='subsectionToc'>7.4 <a href='#x1-1010004' id='QQ2-1-107'>Godot</a></span><br>
-       <span class='sectionToc'>8 <a href='#x1-1020008' id='QQ2-1-108'>Kit de desarrollo de software</a></span><br>
-        <span class='subsectionToc'>8.1 <a href='#x1-1030001' id='QQ2-1-109'>Elementos narrativos</a></span><br>
-        <span class='subsectionToc'>8.2 <a href='#x1-1080002' id='QQ2-1-114'>Elementos de mecánicas de jugabilidad</a></span><br>
-        <span class='subsectionToc'>8.3 <a href='#x1-1130003' id='QQ2-1-119'>Traducción</a></span><br>
-        <span class='subsectionToc'>8.4 <a href='#x1-1170004' id='QQ2-1-123'>Lineamientos generales para el software del Kit</a></span><br>
-       <span class='sectionToc'>9 <a href='#x1-1180009' id='QQ2-1-124'>Optimización</a></span><br>
-        <span class='subsectionToc'>9.1 <a href='#x1-1190001' id='QQ2-1-125'>¿Qué optimizar?</a></span><br>
-        <span class='subsectionToc'>9.2 <a href='#x1-1200002' id='QQ2-1-126'>Referencias</a></span><br>
-       <span class='sectionToc'>A <a href='#x1-1210001' id='QQ2-1-127'>Comandos de GIT</a></span><br>
-        <span class='subsectionToc'>A.1 <a href='#x1-1220001' id='QQ2-1-128'>Trabajo local</a></span><br>
-        <span class='subsectionToc'>A.2 <a href='#x1-1230002' id='QQ2-1-129'>Acciones con el repositorio remoto</a></span><br>
-        <span class='subsectionToc'>A.3 <a href='#x1-1240003' id='QQ2-1-130'>Configuración</a></span><br>
-       <span class='sectionToc'>B <a href='#x1-1250002' id='QQ2-1-131'>Comandos L<span class='ecrm-0800'>A</span>TE X</a></span><br>
-       <span class='sectionToc'>C <a href='#x1-1260003' id='QQ2-1-132'>Trabajando...</a></span><br>
-        <span class='subsectionToc'>C.1 <a href='#x1-1270001' id='QQ2-1-133'>Level Manager</a></span><br>
-        <span class='subsectionToc'>C.2 <a href='#x1-1280002' id='QQ2-1-134'>Documentación</a></span><br>
-        <span class='subsectionToc'>C.3 <a href='#x1-1290003' id='QQ2-1-135'>Modelación UI</a></span><br>
-        <span class='subsectionToc'>C.4 <a href='#x1-1300004' id='QQ2-1-136'>Dialogue_manager</a></span>
+       <span class='sectionToc'>1 <a id='QQ2-1-2' href='#x1-20001'>Introducción</a></span><br>
+        <span class='subsectionToc'>1.1 <a id='QQ2-1-3' href='#x1-30001'>Cómo usar este documento</a></span><br>
+        <span class='subsectionToc'>1.2 <a id='QQ2-1-4' href='#x1-40002'>Información importante.</a></span><br>
+        <span class='subsectionToc'>1.3 <a id='QQ2-1-6' href='#x1-60003'>Lista de requerimientos</a></span><br>
+        <span class='subsectionToc'>1.4 <a id='QQ2-1-7' href='#x1-70004'>Listado de software y herramientas de producción</a></span><br>
+       <span class='sectionToc'>2 <a id='QQ2-1-21' href='#x1-210002'>Visión general del desarrollo y principios del diseño técnico</a></span><br>
+        <span class='subsectionToc'>2.1 <a id='QQ2-1-22' href='#x1-220001'>Principios de diseño</a></span><br>
+        <span class='subsectionToc'>2.2 <a id='QQ2-1-23' href='#x1-230002'>Desarrollo dirigido por tests (TDD)</a></span><br>
+        <span class='subsectionToc'>2.3 <a id='QQ2-1-26' href='#x1-250003'>Refactorización: Rendimiento y limpieza</a></span><br>
+        <span class='subsectionToc'>2.4 <a id='QQ2-1-27' href='#x1-260004'>El documento de diseño técnico: una herramienta de diseño</a></span><br>
+       <span class='sectionToc'>3 <a id='QQ2-1-28' href='#x1-270003'>Flujo de trabajo y control de versiones</a></span><br>
+        <span class='subsectionToc'>3.1 <a id='QQ2-1-29' href='#x1-280001'>Metodología Kanban</a></span><br>
+        <span class='subsectionToc'>3.2 <a id='QQ2-1-37' href='#x1-340002'>Repositorio</a></span><br>
+        <span class='subsectionToc'>3.3 <a id='QQ2-1-43' href='#x1-390003'>Documentación</a></span><br>
+        <span class='subsectionToc'>3.4 <a id='QQ2-1-51' href='#x1-470004'>Formato y documentación dentro del código</a></span><br>
+        <span class='subsectionToc'>3.5 <a id='QQ2-1-52' href='#x1-480005'>Google Drive</a></span><br>
+        <span class='subsectionToc'>3.6 <a id='QQ2-1-53' href='#x1-490006'>LaTeX</a></span><br>
+       <span class='sectionToc'>4 <a id='QQ2-1-54' href='#x1-500004'>Internacionalización</a></span><br>
+        <span class='subsectionToc'>4.1 <a id='QQ2-1-55' href='#x1-510001'>Qué entendemos por localización (l10n)</a></span><br>
+        <span class='subsectionToc'>4.2 <a id='QQ2-1-56' href='#x1-520002'>Qué entendemos por internacionalización (i18n)</a></span><br>
+        <span class='subsectionToc'>4.3 <a id='QQ2-1-57' href='#x1-530003'>Implementación</a></span><br>
+       <span class='sectionToc'>5 <a id='QQ2-1-67' href='#x1-620005'>Modelado del software</a></span><br>
+        <span class='subsectionToc'>5.1 <a id='QQ2-1-68' href='#x1-630001'>Arquitectura</a></span><br>
+        <span class='subsectionToc'>5.2 <a id='QQ2-1-70' href='#x1-640002'>Funcionamiento general</a></span><br>
+        <span class='subsectionToc'>5.3 <a id='QQ2-1-72' href='#x1-660003'>Diagrama del sistema</a></span><br>
+        <span class='subsectionToc'>5.4 <a id='QQ2-1-73' href='#x1-670004'>Funcionamiento del sistema de managers</a></span><br>
+        <span class='subsectionToc'>5.5 <a id='QQ2-1-84' href='#x1-780005'>Otras consideraciones</a></span><br>
+       <span class='sectionToc'>6 <a id='QQ2-1-86' href='#x1-800006'>Input/Output</a></span><br>
+        <span class='subsectionToc'>6.1 <a id='QQ2-1-87' href='#x1-810001'>Inputs</a></span><br>
+        <span class='subsectionToc'>6.2 <a id='QQ2-1-91' href='#x1-850002'>Outputs</a></span><br>
+        <span class='subsectionToc'>6.3 <a id='QQ2-1-98' href='#x1-920003'>DRM</a></span><br>
+       <span class='sectionToc'>7 <a id='QQ2-1-99' href='#x1-930007'>Organización del proyecto</a></span><br>
+        <span class='subsectionToc'>7.1 <a id='QQ2-1-100' href='#x1-940001'>Organización de carpetas</a></span><br>
+        <span class='subsectionToc'>7.2 <a id='QQ2-1-102' href='#x1-960002'>Nombres de archivos</a></span><br>
+        <span class='subsectionToc'>7.3 <a id='QQ2-1-103' href='#x1-970003'>Nombres de ramas y tarjetas</a></span><br>
+        <span class='subsectionToc'>7.4 <a id='QQ2-1-107' href='#x1-1010004'>Godot</a></span><br>
+       <span class='sectionToc'>8 <a id='QQ2-1-108' href='#x1-1020008'>Kit de desarrollo de software</a></span><br>
+        <span class='subsectionToc'>8.1 <a id='QQ2-1-109' href='#x1-1030001'>Elementos narrativos</a></span><br>
+        <span class='subsectionToc'>8.2 <a id='QQ2-1-114' href='#x1-1080002'>Elementos de mecánicas de jugabilidad</a></span><br>
+        <span class='subsectionToc'>8.3 <a id='QQ2-1-119' href='#x1-1130003'>Traducción</a></span><br>
+        <span class='subsectionToc'>8.4 <a id='QQ2-1-123' href='#x1-1170004'>Lineamientos generales para el software del Kit</a></span><br>
+       <span class='sectionToc'>9 <a id='QQ2-1-124' href='#x1-1180009'>Optimización</a></span><br>
+        <span class='subsectionToc'>9.1 <a id='QQ2-1-125' href='#x1-1190001'>¿Qué optimizar?</a></span><br>
+        <span class='subsectionToc'>9.2 <a id='QQ2-1-126' href='#x1-1200002'>Referencias</a></span><br>
+       <span class='sectionToc'>A <a id='QQ2-1-127' href='#x1-1210001'>Comandos de GIT</a></span><br>
+        <span class='subsectionToc'>A.1 <a id='QQ2-1-128' href='#x1-1220001'>Trabajo local</a></span><br>
+        <span class='subsectionToc'>A.2 <a id='QQ2-1-129' href='#x1-1230002'>Acciones con el repositorio remoto</a></span><br>
+        <span class='subsectionToc'>A.3 <a id='QQ2-1-130' href='#x1-1240003'>Configuración</a></span><br>
+       <span class='sectionToc'>B <a id='QQ2-1-131' href='#x1-1250002'>Comandos L<span class='ecrm-0800'>A</span>TE X</a></span><br>
+       <span class='sectionToc'>C <a id='QQ2-1-132' href='#x1-1260003'>Trabajando...</a></span><br>
+        <span class='subsectionToc'>C.1 <a id='QQ2-1-133' href='#x1-1270001'>Level Manager</a></span><br>
+        <span class='subsectionToc'>C.2 <a id='QQ2-1-134' href='#x1-1280002'>Documentación</a></span><br>
+        <span class='subsectionToc'>C.3 <a id='QQ2-1-135' href='#x1-1290003'>Modelación UI</a></span><br>
+        <span class='subsectionToc'>C.4 <a id='QQ2-1-136' href='#x1-1300004'>Dialogue_manager</a></span>
     </div>
     <p>
       <a id='x1-1001r1'></a>
@@ -421,7 +421,7 @@
     <h5 class='subsubsectionHead'>
       <span class='titlemark'>1.4.3.</span> <a id='x1-110003'></a>GIT y Github
     </h5><p class='noindent'>
-      El código estará alojado en un repositorio <span class='eccc1095-'><span class='small-caps'>git</span></span> en <span class='ecbx-1095'>Github</span> en la siguiente dirección: <a href='https://github.com/polirritmico/Bakumapu' class='url' target='_blank'><span class='ectt-1095'>https://github.com/polirritmico/Bakumapu</span></a>. Todos los participantes deben tener una cuenta con permisos.
+      El código estará alojado en un repositorio <span class='eccc1095-'><span class='small-caps'>git</span></span> en <span class='ecbx-1095'>Github</span> en la siguiente dirección: <a class='url' href='https://github.com/polirritmico/Bakumapu'><span class='ectt-1095'>https://github.com/polirritmico/Bakumapu</span></a>. Todos los participantes deben tener una cuenta con permisos.
     </p><p class='indent'>
       El control de versiones se explicará en detalle en el apartado <a href='#x1-340002'>Repositorio</a>. <a id='x1-11001r11'></a>
     </p>
@@ -466,7 +466,7 @@
       <span class='titlemark'>1.4.11.</span> <a id='x1-1900011'></a>FFmpeg
     </h5><p class='noindent'>
       El formato para los archivos de música, sonido ambiente y efectos será el <span class='eccc1095-'><span class='small-caps'>ogg</span></span>. Para su conversión se utilizará <a href='http://ffmpeg.org/' target='_blank'>FFmpeg</a> en su última versión estable (actualmente la 4.4) con el encoder <span class='ectt-1095'>libvorvis</span>. Los <span class='eccc1095-'><span class='small-caps'>ogg</span></span> deberán ser de 192 kbps a 44 khz:
-    </p><div id='listing-1' class='lstlisting'>
+    </p><div class='lstlisting' id='listing-1'>
       <span class='label'><a id='x1-19001r1'></a></span><span id='textcolor2'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>ffmpeg -i ARCHIVO.wav -acodec libvorbis -q:a 6 ARCHIVO.ogg</span>
     </div>
     <p>
@@ -486,7 +486,7 @@
     <h4 class='subsectionHead'>
       <span class='titlemark'>2.1.</span> <a id='x1-220001'></a>Principios de diseño
     </h4><p class='noindent'>
-      Se pretende generar un código sólido, flexible y eficiente, pero el énfasis en esta primera etapa de desarrollo será hacia la <span class='ecti-1095'>flexibilidad</span>. En principio, la idea original de diseño es solo eso, una idea; a medida que se vaya obteniendo más información y <span class='ecti-1095'>aprendamos más del proceso de</span> <span class='ecti-1095'>desarrollo y los requerimientos del diseño</span>, deberemos ir refactorizando el código<span class='footnote-mark'><a href='#fn1x0' id='fn1x0-bk'><sup class='textsuperscript'>1</sup></a></span><a id='x1-22001f1'></a> para obtener unidades más definidas, mejor alineadas a los requerimientos y particularmente, que sean unidades fáciles de mantener.
+      Se pretende generar un código sólido, flexible y eficiente, pero el énfasis en esta primera etapa de desarrollo será hacia la <span class='ecti-1095'>flexibilidad</span>. En principio, la idea original de diseño es solo eso, una idea; a medida que se vaya obteniendo más información y <span class='ecti-1095'>aprendamos más del proceso de</span> <span class='ecti-1095'>desarrollo y los requerimientos del diseño</span>, deberemos ir refactorizando el código<span class='footnote-mark'><a id='fn1x0-bk' href='#fn1x0'><sup class='textsuperscript'>1</sup></a></span><a id='x1-22001f1'></a> para obtener unidades más definidas, mejor alineadas a los requerimientos y particularmente, que sean unidades fáciles de mantener.
     </p><p class='indent'>
       Para ello, se deberá implementar un sistema de pruebas por cada feature que se trabaje. Esto implica invertir el proceso de desarrollo escribiendo primero el test, dejar que falle y a continuación implementar la funcionalidad. El principio es concentrarse en las pruebas no en el debugging; aunque es ineludible, <span class='ecti-1095'>no</span> <span class='ecti-1095'>queremos estar arreglando bugs, sino que queremos evitarlos</span>.
     </p><p class='indent'>
@@ -500,7 +500,7 @@
     </h4>
     <figure class='figure'>
       <a id='x1-24001r1'></a><p class='noindent'>
-        <img width='270' src='im%C3%A1genes/tdd.png' height='270' alt='PIC'>
+        <img height='270' src='im%C3%A1genes/tdd.png' alt='PIC' width='270'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 1: </span><span class='content'>Flujo de desarrollo TDD.</span>
@@ -554,7 +554,7 @@
     </p>
     <figure class='figure'>
       <a id='x1-29001r2'></a><p class='noindent'>
-        <img width='360' src='im%C3%A1genes/tablero01.png' height='360' alt='PIC'>
+        <img height='360' src='im%C3%A1genes/tablero01.png' alt='PIC' width='360'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 2: </span><span class='content'>Tablero Kanban en Trello.</span>
@@ -575,7 +575,7 @@
       <a id='x1-30001r3'></a>
       <figcaption class='caption'>
         <span class='id'>Figura 3: </span><span class='content'>Límites de trabajo en Trello.</span>
-      </figcaption><img width='360' src='im%C3%A1genes/tablero02.png' height='360' alt='PIC'>
+      </figcaption><img height='360' src='im%C3%A1genes/tablero02.png' alt='PIC' width='360'>
     </figure><p class='indent'>
       Respetar los límites de cada columna, facilitará la distribución de trabajo en un modelo de entrega continua y nos permitirá tomar decisiones más acertadas y realistas al momento de la planificación. <a id='x1-30002r32'></a>
     </p>
@@ -656,7 +656,7 @@
     <h4 class='subsectionHead'>
       <span class='titlemark'>3.2.</span> <a id='x1-340002'></a>Repositorio
     </h4><p class='noindent'>
-      El repositorio <span class='eccc1095-'><span class='small-caps'>git</span></span> de Bakumapu se encuentra alojado en la siguiente dirección: <a href='https://github.com/polirritmico/Bakumapu' class='url' target='_blank'><span class='ectt-1095'>https://github.com/polirritmico/Bakumapu</span></a>.
+      El repositorio <span class='eccc1095-'><span class='small-caps'>git</span></span> de Bakumapu se encuentra alojado en la siguiente dirección: <a class='url' href='https://github.com/polirritmico/Bakumapu'><span class='ectt-1095'>https://github.com/polirritmico/Bakumapu</span></a>.
     </p><p class='indent'>
       La contribución de código será organizada a través del modelo de integración continua (continuous integration). Este modelo implica que <span class='ecti-1095'>solo hay</span> <span class='ecti-1095'>una versión del código que importa: la actual</span>. Para ello se trabajará principalmente en una única rama que mantendrá una única versión del código de desarrollo. Esto quiere decir que no podemos hacer commits solo cuando la feature esté completamente implementada, sino que debemos hacer commits continuos a medida que vamos trabajando en la implementación (idealmente cada 15-20 minutos). <a id='x1-34001r36'></a>
     </p>
@@ -665,7 +665,7 @@
     </h5>
     <figure class='figure'>
       <a id='x1-35001r4'></a><p class='noindent'>
-        <img width='360' src='im%C3%A1genes/git.png' height='360' alt='PIC'>
+        <img height='360' src='im%C3%A1genes/git.png' alt='PIC' width='360'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 4: </span><span class='content'>Ramas en <span class='eccc1095-'><span class='small-caps'>git</span></span>.</span>
@@ -782,9 +782,9 @@
     <div class='center'><p class='noindent'>
         <span class='ectt-1095'>Versión actual: v0.0.22.</span>
       </p>
-    </div><div id='listing-2' class='lstlisting'>
+    </div><div class='lstlisting' id='listing-2'>
       <span class='label'><a id='x1-44001r1'></a></span><span class='ectt-1000'>Bakumapu-docs </span><span id='textcolor3'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>vim Makefile</span>
-    </div><div id='listing-3' class='lstlisting'>
+    </div><div class='lstlisting' id='listing-3'>
       <span class='label'><a id='x1-44002r1'></a></span><span class='ectt-1000'>SHELL = /bin/sh </span><br>
       <span class='label'><a id='x1-44003r2'></a></span><span class='ectt-1000'># Actualizar con cada cambio </span><br>
       <span class='label'><a id='x1-44004r3'></a></span><span class='ectt-1000'>VERSION = 0.0.1</span>
@@ -796,7 +796,7 @@
       <span class='titlemark'>3.3.4.</span> <a id='x1-450004'></a>Exportar a HTML
     </h5><p class='noindent'>
       Para exportar a <span class='eccc1095-'><span class='small-caps'>html</span></span> bastará con usar el paquete <span class='ecbx-1095'>make4ht</span> (utiliza pdflatex y htlatex). Las instrucciones de compilación están configuradas en el fichero Makefile, por lo que la conversión se automatiza con el comando:
-    </p><div id='listing-4' class='lstlisting'>
+    </p><div class='lstlisting' id='listing-4'>
       <span class='label'><a id='x1-45001r1'></a></span><span class='ectt-1000'>Bakumapu-docs </span><span id='textcolor4'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>make html</span>
     </div><p class='indent'>
       Esto generará la página <span class='eccc1095-'><span class='small-caps'>html</span></span> con todos los archivos <span class='eccc1095-'><span class='small-caps'>css</span></span>, de fuentes y de imágenes relevantes en la carpeta <span class='ecbx-1095'>/docs</span>. Luego restaría simplemente actualizar el repositorio. <a id='x1-45002r49'></a>
@@ -804,10 +804,10 @@
     <h5 class='subsubsectionHead'>
       <span class='titlemark'>3.3.5.</span> <a id='x1-460005'></a>Repositorio de documentación
     </h5><p class='noindent'>
-      Un simple repositorio <span class='eccc1095-'><span class='small-caps'>git</span></span> en Gitbub, ubicado en: <a href='https://github.com/polirritmico/Bakumapu-docs' class='url' target='_blank'><span class='ectt-1095'>https://github.com/polirritmico/Bakumapu-docs</span></a>. Desde aquí solo se puede revisar el código fuente del <span class='eccc1095-'><span class='small-caps'>html</span></span>, para acceder a una versión renderizada está la siguiente <span class='eccc1095-'><span class='small-caps'>url</span></span>: <a href='https://polirritmico.github.io/Bakumapu-docs/' class='url'><span class='ectt-1095'>https://polirritmico.github.io/Bakumapu-docs/</span></a>.
+      Un simple repositorio <span class='eccc1095-'><span class='small-caps'>git</span></span> en Gitbub, ubicado en: <a class='url' href='https://github.com/polirritmico/Bakumapu-docs'><span class='ectt-1095'>https://github.com/polirritmico/Bakumapu-docs</span></a>. Desde aquí solo se puede revisar el código fuente del <span class='eccc1095-'><span class='small-caps'>html</span></span>, para acceder a una versión renderizada está la siguiente <span class='eccc1095-'><span class='small-caps'>url</span></span>: <a class='url' href='https://polirritmico.github.io/Bakumapu-docs/'><span class='ectt-1095'>https://polirritmico.github.io/Bakumapu-docs/</span></a>.
     </p><p class='indent'>
       Para sincronizar el servidor además de los comandos <span class='eccc1095-'><span class='small-caps'>git</span></span> habituales, el archivo <span class='ecbx-1095'>Makefile</span> tiene las instrucciones para automatizar el proceso:
-    </p><div id='listing-5' class='lstlisting'>
+    </p><div class='lstlisting' id='listing-5'>
       <span class='label'><a id='x1-46001r1'></a></span><span class='ectt-1000'>Bakumapu-docs </span><span id='textcolor5'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>make sync</span>
     </div>
     <p>
@@ -835,7 +835,7 @@
       </li>
       <li class='itemize'><p class='noindent'>
           Operadores y variables separados por un espacio:
-        </p><div id='listing-6' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-6'>
           <span class='label'><a id='x1-47001r1'></a></span><span class='ectt-1000'>var ejemplo = Vector2(2, 5 + PI.get(2))</span>
         </div>
       </li>
@@ -1095,11 +1095,11 @@
       La principal decisión de diseño es construir una arquitectura que permita modificarse a lo largo del desarrollo, para ello se dividirá la funcionalidad del software en Unidades Manager. Estas unidades además de delimitar scopes, irán construyendo en conjunto un lenguaje común de funciones y variables, acorde a la lógica de funcionamiento del sistema. Es decir, el nombre de las funciones y variables de cada manager tendrán coherencia externa generando idealmente una “narración” del funcionamiento del código.
     </p><p class='indent'>
       Por ejemplo, <span class='ectt-1095'>tyanka.gd</span> podría reimplementar funciones de PlayerMng:
-    </p><div id='listing-7' class='lstlisting'>
+    </p><div class='lstlisting' id='listing-7'>
       <span class='label'><a id='x1-63001r1'></a></span><span class='ectt-1000'>@@ src/characters/player/tyanka.gd </span><br>
       <span class='label'><a id='x1-63002r2'></a></span><span class='ectt-1000'>PlayerMng.storeItem(Tyanka.item_bag, GM.getRewardFromCurrentQuest(\ </span><br>
       <span class='label'><a id='x1-63003r3'></a></span><span class='ectt-1000'>                 PlayerMng.currentQuest.getPath()))</span>
-    </div><div id='listing-8' class='lstlisting'>
+    </div><div class='lstlisting' id='listing-8'>
       <span class='label'><a id='x1-63004r1'></a></span><span class='ectt-1000'>@@ src/game/game_manager.gd </span><br>
       <span class='label'><a id='x1-63005r2'></a></span><span class='ectt-1000'>def getRewardFromCurrentQuest(path) -&gt; item: </span><br>
       <span class='label'><a id='x1-63006r3'></a></span><span class='ectt-1000'>   quest = QuestMng.getQuestFromPath(path) </span><br>
@@ -1111,7 +1111,7 @@
     </p>
     <figure class='figure'>
       <a id='x1-63008r6'></a><p class='noindent'>
-        <img width='216' src='im%C3%A1genes/arquitectura.png' height='216' alt='PIC'>
+        <img height='216' src='im%C3%A1genes/arquitectura.png' alt='PIC' width='216'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 6: </span><span class='content'>Ejemplo de sistema de managers ajustable.</span>
@@ -1140,108 +1140,108 @@
           <colgroup id='TBL-1-2g'>
             <col id='TBL-1-2'>
           </colgroup>
-          <tr style='vertical-align:baseline;' id='TBL-1-9-'>
-            <td style='white-space:nowrap; text-align:left;' colspan='2' class='td11' id='TBL-1-9-1'>
-              <div style='white-space:nowrap; text-align:left;' class='multicolumn'>
+          <tr id='TBL-1-9-' style='vertical-align:baseline;'>
+            <td id='TBL-1-9-1' class='td11' style='white-space:nowrap; text-align:left;' colspan='2'>
+              <div class='multicolumn' style='white-space:nowrap; text-align:left;'>
                 <span class='ecbx-1095'>GameManager</span>
               </div>
             </td>
           </tr>
-          <tr style='vertical-align:baseline;' id='TBL-1-16-'>
-            <td style='white-space:normal; text-align:left;' colspan='2' class='td11' id='TBL-1-16-1'>
-              <div style='white-space:normal; text-align:left;' class='multicolumn'>
+          <tr id='TBL-1-16-' style='vertical-align:baseline;'>
+            <td id='TBL-1-16-1' class='td11' style='white-space:normal; text-align:left;' colspan='2'>
+              <div class='multicolumn' style='white-space:normal; text-align:left;'>
                 Manager principal a nivel de ejecución cuya función además de iniciar el juego será la de instanciar al resto de SubManagers. <span class='eccc1095-'><span class='small-caps'>gm</span></span> tendrá una clara tendencia a crecer en complejidad por lo que es muy importante que opere delegando funciones más que implementándolas. En esta misma línea si la interacción entre managers termina siendo demasiado compleja entonces será un síntoma de que es necesario un rediseño en cuanto a los in/outs de los submanagers implicados.
               </div>
             </td>
           </tr>
-          <tr style='vertical-align:baseline;' id='TBL-1-23-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-23-1'><p class='noindent'>
+          <tr id='TBL-1-23-' style='vertical-align:baseline;'>
+            <td id='TBL-1-23-1' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 <span class='ecbx-1095'>SubManager</span>
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-23-2'><p class='noindent'>
+            <td id='TBL-1-23-2' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 <span class='ecbx-1095'>Dimensión</span>
               </p>
             </td>
           </tr>
-          <tr style='vertical-align:baseline;' id='TBL-1-30-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-30-1'><p class='noindent'>
+          <tr id='TBL-1-30-' style='vertical-align:baseline;'>
+            <td id='TBL-1-30-1' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 LevelManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-30-2'><p class='noindent'>
+            <td id='TBL-1-30-2' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 Todo lo relativo a los niveles. Por ejemplo, el conjunto de métodos que se encargan de toda la lógica relevante del nivel, una interfaz para que <span class='eccc1095-'><span class='small-caps'>gm</span></span> pueda conectar los distintos requerimientos del nivel, carga de locaciones, ubicación e inicio de subrutinas de Player y <span class='eccc1095-'><span class='small-caps'>npc</span></span>, señales de áreas para CutsceneManager, <span class='eccc1095-'><span class='small-caps'>ui</span></span> específicas, etc. Al igual que <span class='eccc1095-'><span class='small-caps'>gm</span></span> posiblemente tenderá a complejizarse por lo que es importante estar pendiente de posibles desacoplamientos.
               </p>
             </td>
           </tr>
-          <tr style='vertical-align:baseline;' id='TBL-1-37-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-37-1'><p class='noindent'>
+          <tr id='TBL-1-37-' style='vertical-align:baseline;'>
+            <td id='TBL-1-37-1' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 QuestManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-37-2'><p class='noindent'>
+            <td id='TBL-1-37-2' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 Todo lo relevante a las misiones: requerimientos, objetivos, experiencia, ítems, cutscenes, niveles, etc.
               </p>
             </td>
           </tr>
-          <tr style='vertical-align:baseline;' id='TBL-1-44-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-44-1'><p class='noindent'>
+          <tr id='TBL-1-44-' style='vertical-align:baseline;'>
+            <td id='TBL-1-44-1' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 Cutscene<br class='newline'>
                 Manager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-44-2'><p class='noindent'>
+            <td id='TBL-1-44-2' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 Todo lo relativo a los momentos en el que el jugador no está interactuando con la <span class='eccc1095-'><span class='small-caps'>ui</span></span> ni tiene control del personaje, es decir animaciones dentro y fuera del gameplay. Incluye diálogos pero estudiar si es conveniente una separación.
               </p>
             </td>
           </tr>
-          <tr style='vertical-align:baseline;' id='TBL-1-51-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-51-1'><p class='noindent'>
+          <tr id='TBL-1-51-' style='vertical-align:baseline;'>
+            <td id='TBL-1-51-1' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 PlayerManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-51-2'><p class='noindent'>
+            <td id='TBL-1-51-2' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 Todo lo relativo al jugador: estados, ítems, exp, estadísticas, estados de misiones, controles, path del árbol de decisiones, etc. Implementar una state machine.
               </p>
             </td>
           </tr>
-          <tr style='vertical-align:baseline;' id='TBL-1-58-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-58-1'><p class='noindent'>
+          <tr id='TBL-1-58-' style='vertical-align:baseline;'>
+            <td id='TBL-1-58-1' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 IAManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-58-2'><p class='noindent'>
+            <td id='TBL-1-58-2' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 Todo lo referente a IA: Rutas de <span class='eccc1095-'><span class='small-caps'>npc</span></span>, combate de <span class='eccc1095-'><span class='small-caps'>npc</span></span> aliados y enemigos y si compete, la generación procedural de niveles.
               </p>
             </td>
           </tr>
-          <tr style='vertical-align:baseline;' id='TBL-1-65-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-65-1'><p class='noindent'>
+          <tr id='TBL-1-65-' style='vertical-align:baseline;'>
+            <td id='TBL-1-65-1' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 UIManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-65-2'><p class='noindent'>
+            <td id='TBL-1-65-2' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 Todo lo relativo a la interfaz gráfica: Barras de vida, visualización del mapa, menús, inventario, árbol de habilidades e interfaz de diálogo.
               </p>
             </td>
           </tr>
-          <tr style='vertical-align:baseline;' id='TBL-1-72-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-72-1'><p class='noindent'>
+          <tr id='TBL-1-72-' style='vertical-align:baseline;'>
+            <td id='TBL-1-72-1' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 AudioManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-72-2'><p class='noindent'>
+            <td id='TBL-1-72-2' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 Control de la música, transiciones, volumen, etc.; y los sonidos de los distintos objetos, su paneo, volumen, efectos, etc.
               </p>
             </td>
           </tr>
-          <tr style='vertical-align:baseline;' id='TBL-1-79-'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-79-1'><p class='noindent'>
+          <tr id='TBL-1-79-' style='vertical-align:baseline;'>
+            <td id='TBL-1-79-1' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 Debug<br class='newline'>
                 Manager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-79-2'><p class='noindent'>
+            <td id='TBL-1-79-2' style='white-space:normal; text-align:left;' class='td11'><p class='noindent'>
                 Interfaz de debug que obtenga información relevante para el desarrollo sobre el funcionamiento de los distintos managers y objetos instanciados.
               </p>
             </td>
@@ -1748,7 +1748,7 @@
     </p>
     <ul class='itemize1'>
       <li class='itemize'><p class='noindent'>
-          Formato: <span class='ecxc-1095'>ogg</span> vorbis<span class='footnote-mark'><a href='#fn2x0' id='fn2x0-bk'><sup class='textsuperscript'>2</sup></a></span><a id='x1-88001f2'></a>.
+          Formato: <span class='ecxc-1095'>ogg</span> vorbis<span class='footnote-mark'><a id='fn2x0-bk' href='#fn2x0'><sup class='textsuperscript'>2</sup></a></span><a id='x1-88001f2'></a>.
         </p>
       </li>
       <li class='itemize'><p class='noindent'>
@@ -1797,7 +1797,7 @@
         <br>
       </dt>
       <dd class='description'><p class='noindent'>
-          Probablemente a medida que avance el desarrollo aparezcan nuevos archivos que sea conveniente generar. Por ejemplo: logs, informes de estadísticas del gameplay o algún tipo de telemetría<span class='footnote-mark'><a href='#fn3x0' id='fn3x0-bk'><sup class='textsuperscript'>3</sup></a></span><a id='x1-89001f3'></a>. A medida que estos archivos sean definidos deberían agregarse en este apartado.
+          Probablemente a medida que avance el desarrollo aparezcan nuevos archivos que sea conveniente generar. Por ejemplo: logs, informes de estadísticas del gameplay o algún tipo de telemetría<span class='footnote-mark'><a id='fn3x0-bk' href='#fn3x0'><sup class='textsuperscript'>3</sup></a></span><a id='x1-89001f3'></a>. A medida que estos archivos sean definidos deberían agregarse en este apartado.
         </p>
       </dd>
     </dl>
@@ -1902,7 +1902,7 @@
           <span class='ecbx-1095'>src:</span> La carpeta principal del desarrollo técnico. Además del código fuente del programa contendrá todo lo relativo a nodos, escenas, assets, librerías. test y scripts. La estructura de esta carpeta será utilizada por el proyecto dentro de Godot.
         </p><p class='noindent'>
           Una consideración importante para mantener la organización de los archivos de una forma que sea coherente con la abstracción de <span class='ecti-1095'>escenas</span> <span class='ecti-1095'>y nodos</span>, es crear cada escena dentro de su propia carpeta. Aquí, además del archivo <span class='eccc1095-'><span class='small-caps'>tscn</span></span>, deberían estar todos los assets que utiliza la escena para evitar cualquier problemas de dependencias. La idea es poder mover o copiar la carpeta de ubicación y que todo siga funcionando dentro de ella.
-        </p><div id='listing-9' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-9'>
           <span class='label'><a id='x1-94001r1'></a></span><span id='textcolor6'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>ls src/characters/player/tyanka/ </span><br>
           <span class='label'><a id='x1-94002r2'></a></span><span class='ectt-1000'>animations/ </span><br>
           <span class='label'><a id='x1-94003r3'></a></span><span class='ectt-1000'>   tyanka_walk_01.png </span><br>
@@ -1963,7 +1963,7 @@
       <a id='x1-950001'></a>Diagrama del árbol de directorios.
     </h5>
     <figure class='figure'><p class='noindent'>
-        <img width='503' src='im%C3%A1genes/arbol_proyecto.png' height='503' alt='PIC'>
+        <img height='503' src='im%C3%A1genes/arbol_proyecto.png' alt='PIC' width='503'>
       </p>
     </figure>
     <p>
@@ -2179,7 +2179,7 @@
     </h4><p class='noindent'>
       Para todas estas herramientas se propone utilizar Python, por su similitud con <span class='eccc1095-'><span class='small-caps'>gds</span></span>cript y por compatibilidad multiplataforma. Para la mayoría de programas solo será necesario una batería de scripts; no obstante, para los que use directamente el equipo de traducción se propone el uso de una <span class='eccc1095-'><span class='small-caps'>gui</span></span> en Qt5 (PyQt5) por su versatilidad, facilidad de uso y licenciamiento.
     </p><p class='indent'>
-      Es relevante recordar que todos los textos de contenidos deben estar codificados en UTF-8.<span class='footnote-mark'><a href='#fn4x0' id='fn4x0-bk'><sup class='textsuperscript'>4</sup></a></span><a id='x1-117001f4'></a> <a id='x1-117002r108'></a>
+      Es relevante recordar que todos los textos de contenidos deben estar codificados en UTF-8.<span class='footnote-mark'><a id='fn4x0-bk' href='#fn4x0'><sup class='textsuperscript'>4</sup></a></span><a id='x1-117001f4'></a> <a id='x1-117002r108'></a>
     </p>
     <h3 class='sectionHead'>
       <span class='titlemark'>9.</span> <a id='x1-1180009'></a>Optimización
@@ -2226,41 +2226,41 @@
     <ul class='itemize1'>
       <li class='itemize'><p class='noindent'>
           Ver el estado de la rama actual:
-        </p><div id='listing-10' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-10'>
           <span class='label'><a id='x1-122001r1'></a></span><span id='textcolor7'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git status</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Cambiar a una rama:
-        </p><div id='listing-11' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-11'>
           <span class='label'><a id='x1-122002r1'></a></span><span id='textcolor8'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git checkout rama</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Crear una nueva rama en base a la rama actual y cambiar a ella:
-        </p><div id='listing-12' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-12'>
           <span class='label'><a id='x1-122003r1'></a></span><span id='textcolor9'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git checkout -b nueva_rama</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Agregar un archivo nuevo, editado o borrado al área de pruebas:
-        </p><div id='listing-13' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-13'>
           <span class='label'><a id='x1-122004r1'></a></span><span id='textcolor10'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git add archivo</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Agrega todos los cambios al área de pruebas:
-        </p><div id='listing-14' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-14'>
           <span class='label'><a id='x1-122005r1'></a></span><span id='textcolor11'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git add -A</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Agrega comentarios al commit en el área de pruebas:
-        </p><div id='listing-15' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-15'>
           <span class='label'><a id='x1-122006r1'></a></span><span id='textcolor12'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git commit -m "A description with my changes"</span>
         </div><p class='noindent'>
           Para comentarios largos (más de 50 caracteres) usar:
-        </p><div id='listing-16' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-16'>
           <span class='label'><a id='x1-122007r1'></a></span><span id='textcolor13'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git commit</span>
         </div><p class='noindent'>
           Esto abre <span class='eccc1095-'><span class='small-caps'>vim</span></span> en <span class='ecti-1095'>normal mode</span> para editar el comentario. Pulsamos la tecla <span class='ecbx-1095'>i</span> para entrar al <span class='ecti-1095'>insert mode</span>, escribimos los cambios normalmente y cuando terminemos pulsamos la tecla <span class='ecbx-1095'>esc</span> para volver al <span class='ecti-1095'>normal mode</span> y luego <span class='ecbx-1095'>ZZ</span> para guardar y salir. Por el funcionamiento de <span class='eccc1095-'><span class='small-caps'>git</span></span>, el mensaje deberá tener esta estructura:
@@ -2278,7 +2278,7 @@
               Las líneas siguientes contienen el body del mensaje con toda la explicación, detalles, listas, etc.
             </p>
           </li>
-        </ul><div id='listing-17' class='lstlisting'>
+        </ul><div class='lstlisting' id='listing-17'>
           <span class='label'><a id='x1-122008r1'></a></span><span id='textcolor14'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git commit </span><br>
           <span class='label'><a id='x1-122009r2'></a></span><span class='ectt-1000'>&lt;Dentro de VIM pulsamos i para ingresar al insert mode&gt; </span><br>
           <span class='label'><a id='x1-122010r3'></a></span><span class='ectt-1000'>First line as a HEADER of 50 char or less </span><br>
@@ -2292,32 +2292,32 @@
       </li>
       <li class='itemize'><p class='noindent'>
           Si queremos editar el mensaje del commit previo:
-        </p><div id='listing-18' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-18'>
           <span class='label'><a id='x1-122017r1'></a></span><span id='textcolor15'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git commit --amend</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Mostrar diff de archivos en el área de staging:
-        </p><div id='listing-19' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-19'>
           <span class='label'><a id='x1-122018r1'></a></span><span id='textcolor16'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git diff --staged</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Deshacer todos los cambios en base al último commit:
-        </p><div id='listing-20' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-20'>
           <span class='label'><a id='x1-122019r1'></a></span><span id='textcolor17'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git restore .</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Borrar ramas locales ya eliminadas en origin:
-        </p><div id='listing-21' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-21'>
           <span class='label'><a id='x1-122020r1'></a></span><span id='textcolor18'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git fetch -p </span><br>
           <span class='label'><a id='x1-122021r2'></a></span><span id='textcolor19'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git remote prune origin</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Merges de ramas:
-        </p><div id='listing-22' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-22'>
           <span class='label'><a id='x1-122022r1'></a></span><span class='ectt-1000'># Cambiamos a la rama de destino </span><br>
           <span class='label'><a id='x1-122023r2'></a></span><span id='textcolor20'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git checkout rama-destino </span><br>
           <span class='label'><a id='x1-122024r3'></a></span><span class='ectt-1000'># Actualizamos la rama de destino </span><br>
@@ -2337,31 +2337,31 @@
     <ul class='itemize1'>
       <li class='itemize'><p class='noindent'>
           Actualizar el repositorio local desde origin:
-        </p><div id='listing-23' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-23'>
           <span class='label'><a id='x1-123001r1'></a></span><span id='textcolor24'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git fetch</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Actualizar y hacer merge al repo local desde origin:
-        </p><div id='listing-24' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-24'>
           <span class='label'><a id='x1-123002r1'></a></span><span id='textcolor25'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git pull</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Enviar la rama a origin:
-        </p><div id='listing-25' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-25'>
           <span class='label'><a id='x1-123003r1'></a></span><span id='textcolor26'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git push -u origin rama</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Envía los cambios locales de la rama actual a Github:
-        </p><div id='listing-26' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-26'>
           <span class='label'><a id='x1-123004r1'></a></span><span id='textcolor27'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git push</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Borrar ramas:
-        </p><div id='listing-27' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-27'>
           <span class='label'><a id='x1-123005r1'></a></span><span class='ectt-1000'># Borrar la rama local </span><br>
           <span class='label'><a id='x1-123006r2'></a></span><span id='textcolor28'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git branch -d rama </span><br>
           <span class='label'><a id='x1-123007r3'></a></span><span class='ectt-1000'># Borrar la rama en el repo remoto </span><br>
@@ -2378,15 +2378,15 @@
     <ul class='itemize1'>
       <li class='itemize'><p class='noindent'>
           Clonar el repositorio en el espacio de trabajo local:
-        </p><div id='listing-28' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-28'>
           <span class='label'><a id='x1-124001r1'></a></span><span id='textcolor30'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>git clone https://github.com/polirritmico/Bakumapu</span>
         </div>
       </li>
       <li class='itemize'><p class='noindent'>
           Archivo de configuración de GIT:
-        </p><div id='listing-29' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-29'>
           <span class='label'><a id='x1-124002r1'></a></span><span id='textcolor31'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>./config/git/config</span>
-        </div><div id='listing-30' class='lstlisting'>
+        </div><div class='lstlisting' id='listing-30'>
           <span class='label'><a id='x1-124003r1'></a></span><span class='ectt-1000'>conf[user] </span><br>
           <span class='label'><a id='x1-124004r2'></a></span><span class='ectt-1000'>name = USUARIO </span><br>
           <span class='label'><a id='x1-124005r3'></a></span><span class='ectt-1000'>email = MAIL_REGISTRADO_EN_GITHUB </span><br>
@@ -2402,7 +2402,7 @@
       </li>
       <li class='itemize'><p class='noindent'>
           Archivos y directorios ignorados por <span class='eccc1095-'><span class='small-caps'>git</span></span> (en .gitignore dentro de Bakumapu):
-        </p><div id='listing-31' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-31'>
           <span class='label'><a id='x1-124010r1'></a></span><span class='ectt-1000'># Godot-specific ignores </span><br>
           <span class='label'><a id='x1-124011r2'></a></span><span class='ectt-1000'>.import/ </span><br>
           <span class='label'><a id='x1-124012r3'></a></span><span class='ectt-1000'>export/ </span><br>
@@ -2416,9 +2416,9 @@
       </li>
       <li class='itemize'><p class='noindent'>
           Evitar problemas de formato de archivo entre Windows (<span class='eccc1095-'><span class='small-caps'>crlf</span></span>) y Linux (<span class='eccc1095-'><span class='small-caps'>lf</span></span>):
-        </p><div id='listing-32' class='lstlisting'>
+        </p><div class='lstlisting' id='listing-32'>
           <span class='label'><a id='x1-124019r1'></a></span><span id='textcolor32'><span class='ectt-1000'>$ </span></span><span class='ectt-1000'>.gitattributes:</span>
-        </div><div class='minipage'><div id='listing-33' class='lstlisting'>
+        </div><div class='minipage'><div class='lstlisting' id='listing-33'>
             <span class='label'><a id='x1-124020r1'></a></span><span class='ectt-1000'># Set the default behavior, in </span><br>
             <span class='label'><a id='x1-124021r2'></a></span><span class='ectt-1000'># case people </span><br>
             <span class='label'><a id='x1-124022r3'></a></span><span class='ectt-1000'># don’t have core.autocrlf set </span><br>
@@ -2452,7 +2452,7 @@
             <span class='label'><a id='x1-124050r31'></a></span><span class='ectt-1000'>*.otf binary</span>
           </div>
         </div>
-        <div class='minipage'><div id='listing-34' class='lstlisting'>
+        <div class='minipage'><div class='lstlisting' id='listing-34'>
             <span class='label'><a id='x1-124051r1'></a></span><span class='ectt-1000'># images </span><br>
             <span class='label'><a id='x1-124052r2'></a></span><span class='ectt-1000'> </span><br>
             <span class='label'><a id='x1-124053r3'></a></span><span class='ectt-1000'>*.png binary </span><br>
@@ -2505,7 +2505,7 @@
         1.
       </dt>
       <dd class='enumerate-enumitem'>
-        Comentarios:<div id='listing-35' class='lstlisting'>
+        Comentarios:<div class='lstlisting' id='listing-35'>
           <span class='label'><a id='x1-125002r1'></a></span><span class='ectt-1000'>Esto es un texto normal. </span><br>
           <span class='label'><a id='x1-125003r2'></a></span><span class='ectt-1000'>% Esto es un comentario. No se compila. </span><br>
           <span class='label'><a id='x1-125004r3'></a></span><span class='ectt-1000'>Texto % Comentario.</span>
@@ -2515,7 +2515,7 @@
         2.
       </dt>
       <dd class='enumerate-enumitem'>
-        Escapar símbolos:<div id='listing-36' class='lstlisting'>
+        Escapar símbolos:<div class='lstlisting' id='listing-36'>
           <span class='label'><a id='x1-125006r1'></a></span><span class='ectt-1000'>Necesito escribir una linea \_ y un porcentaje \% </span><br>
           <span class='label'><a id='x1-125007r2'></a></span><span class='ectt-1000'>El signo \ funciona con este comando: \textbackslash.</span>
         </div>
@@ -2524,7 +2524,7 @@
         3.
       </dt>
       <dd class='enumerate-enumitem'>
-        Secciones (en orden descendente):<div id='listing-37' class='lstlisting'>
+        Secciones (en orden descendente):<div class='lstlisting' id='listing-37'>
           <span class='label'><a id='x1-125009r1'></a></span><span class='ectt-1000'>\section{Titulo de seccion} </span><br>
           <span class='label'><a id='x1-125010r2'></a></span><span class='ectt-1000'>\subsection{Titulo de subseccion} </span><br>
           <span class='label'><a id='x1-125011r3'></a></span><span class='ectt-1000'>\subsection*{Titulo.} % Asterisco para no ennumerar. </span><br>
@@ -2536,7 +2536,7 @@
         4.
       </dt>
       <dd class='enumerate-enumitem'>
-        Ajustes tipográficos:<div id='listing-38' class='lstlisting'>
+        Ajustes tipográficos:<div class='lstlisting' id='listing-38'>
           <span class='label'><a id='x1-125015r1'></a></span><span class='ectt-1000'>Negrita: Texto a \textbf{negrita}. </span><br>
           <span class='label'><a id='x1-125016r2'></a></span><span class='ectt-1000'>Enfasis: Texto a \emph{enfasis} </span><br>
           <span class='label'><a id='x1-125017r3'></a></span><span class='ectt-1000'>Cursiva: Texto a \textit{cursiva}. </span><br>
@@ -2553,7 +2553,7 @@
             <span class='ecti-1095'>a</span>)
           </dt>
           <dd class='enumerate-enumitem'>
-            Alineación:<div id='listing-39' class='lstlisting'>
+            Alineación:<div class='lstlisting' id='listing-39'>
               <span class='label'><a id='x1-125021r1'></a></span><span class='ectt-1000'>\begin{centering} % alternativas: flushleft, flushright </span><br>
               <span class='label'><a id='x1-125022r2'></a></span><span class='ectt-1000'>Texto alineado en base al valor en begin. </span><br>
               <span class='label'><a id='x1-125023r3'></a></span><span class='ectt-1000'>\end{centering}</span>
@@ -2563,7 +2563,7 @@
             <span class='ecti-1095'>b</span>)
           </dt>
           <dd class='enumerate-enumitem'>
-            Saltos de línea:<div id='listing-40' class='lstlisting'>
+            Saltos de línea:<div class='lstlisting' id='listing-40'>
               <span class='label'><a id='x1-125025r1'></a></span><span class='ectt-1000'>Los saltos necesitan este comando\\ </span><br>
               <span class='label'><a id='x1-125026r2'></a></span><span class='ectt-1000'>sino se encadenan en una misma linea. </span><br>
               <span class='label'><a id='x1-125027r3'></a></span><span class='ectt-1000'> </span><br>
@@ -2574,7 +2574,7 @@
             <span class='ecti-1095'>c</span>)
           </dt>
           <dd class='enumerate-enumitem'>
-            Quitar sangría:<div id='listing-41' class='lstlisting'>
+            Quitar sangría:<div class='lstlisting' id='listing-41'>
               <span class='label'><a id='x1-125030r1'></a></span><span class='ectt-1000'>\noindent Primera linea sin sangria.</span>
             </div>
           </dd>
@@ -2584,7 +2584,7 @@
         6.
       </dt>
       <dd class='enumerate-enumitem'>
-        Referencias:<div id='listing-42' class='lstlisting'>
+        Referencias:<div class='lstlisting' id='listing-42'>
           <span class='label'><a id='x1-125032r1'></a></span><span class='ectt-1000'>% Lo que queremos referenciar: </span><br>
           <span class='label'><a id='x1-125033r2'></a></span><span class='ectt-1000'>\subsection{Titulo subseccion} </span><br>
           <span class='label'><a id='x1-125034r3'></a></span><span class='ectt-1000'>% Le agregamos label. Ojala usar {nombre_archivo:descripcion} </span><br>
@@ -2600,7 +2600,7 @@
         7.
       </dt>
       <dd class='enumerate-enumitem'>
-        Listas:<div id='listing-43' class='lstlisting'>
+        Listas:<div class='lstlisting' id='listing-43'>
           <span class='label'><a id='x1-125042r1'></a></span><span class='ectt-1000'>\begin{enumerate} % Para listas no numeradas usar itemize. </span><br>
           <span class='label'><a id='x1-125043r2'></a></span><span class='ectt-1000'>   \item Primer item numerado. </span><br>
           <span class='label'><a id='x1-125044r3'></a></span><span class='ectt-1000'>   \item Segundo item numerado. </span><br>
@@ -2611,7 +2611,7 @@
         8.
       </dt>
       <dd class='enumerate-enumitem'>
-        Imágenes:<div id='listing-44' class='lstlisting'>
+        Imágenes:<div class='lstlisting' id='listing-44'>
           <span class='label'><a id='x1-125047r1'></a></span><span class='ectt-1000'>\begin{figure}[h] % h de here, t top, b bottom o nada. </span><br>
           <span class='label'><a id='x1-125048r2'></a></span><span class='ectt-1000'>   \centering </span><br>
           <span class='label'><a id='x1-125049r3'></a></span><span class='ectt-1000'>   \includegraphics[]{ruta/al/archivo} </span><br>
@@ -2624,7 +2624,7 @@
         9.
       </dt>
       <dd class='enumerate-enumitem'>
-        Código:<div id='listing-45' class='lstlisting'>
+        Código:<div class='lstlisting' id='listing-45'>
           <span class='label'><a id='x1-125054r1'></a></span><span class='ectt-1000'>\begin{lstlisting*} % sin el asterisco </span><br>
           <span class='label'><a id='x1-125055r2'></a></span><span class='ectt-1000'>% Dentro de lstlisting solo ASCII basico sin tildes ni enies </span><br>
           <span class='label'><a id='x1-125056r3'></a></span><span class='ectt-1000'>var test = Clase.llamado(ejemplo.datos, objeto.pos()) </span><br>
@@ -2642,7 +2642,7 @@
             <span class='ecti-1095'>a</span>)
           </dt>
           <dd class='enumerate-enumitem'>
-            Mover a la siguiente página si no hay espacio disponible:<div id='listing-46' class='lstlisting'>
+            Mover a la siguiente página si no hay espacio disponible:<div class='lstlisting' id='listing-46'>
               <span class='label'><a id='x1-125061r1'></a></span><span class='ectt-1000'>% el 2\baselineskip es para obtener el alto de 2 lineas </span><br>
               <span class='label'><a id='x1-125062r2'></a></span><span class='ectt-1000'>\Needspace{2\baselineskip}</span>
             </div>
@@ -2651,7 +2651,7 @@
             <span class='ecti-1095'>b</span>)
           </dt>
           <dd class='enumerate-enumitem'>
-            Salto de página:<div id='listing-47' class='lstlisting'>
+            Salto de página:<div class='lstlisting' id='listing-47'>
               <span class='label'><a id='x1-125064r1'></a></span><span class='ectt-1000'>\pagebreak</span>
             </div>
           </dd>
@@ -2659,7 +2659,7 @@
             <span class='ecti-1095'>c</span>)
           </dt>
           <dd class='enumerate-enumitem'>
-            Espacios indivisible (non-breaking space):<div id='listing-48' class='lstlisting'>
+            Espacios indivisible (non-breaking space):<div class='lstlisting' id='listing-48'>
               <span class='label'><a id='x1-125066r1'></a></span><span class='ectt-1000'>60~hz, 50~km, siglo~\lsc{XVI}.</span>
             </div>
           </dd>
@@ -2712,13 +2712,13 @@
       Dialogos en formato <span class='ecbx-1095'>.tres</span>
     </p>
     <div class='footnotes'><p class='indent'>
-        <span class='footnote-mark'><a href='#fn1x0-bk' id='fn1x0'><sup class='textsuperscript'>1</sup></a></span><span class='ecrm-0900'>Reestructurar su estructura interna sin alterar su comportamiento externo.</span>
+        <span class='footnote-mark'><a id='fn1x0' href='#fn1x0-bk'><sup class='textsuperscript'>1</sup></a></span><span class='ecrm-0900'>Reestructurar su estructura interna sin alterar su comportamiento externo.</span>
       </p><p class='noindent'>
-        <span class='footnote-mark'><a href='#fn2x0-bk' id='fn2x0'><sup class='textsuperscript'>2</sup></a></span><span class='ecrm-0900'>En comparación al</span> <span class='eccc0900-'><span class='small-caps'>mp</span></span><span class='ecrm-0600'>3</span><span class='ecrm-0900'>, el</span> <span class='eccc0900-'><span class='small-caps'>ogg</span></span> <span class='ecrm-0900'>ocupa menos espacio y tiene mejor calidad a igual</span> <span class='ecrm-0900'>bitrate. En comparación el uso de</span> <span class='eccc0900-'><span class='small-caps'>cpu</span></span> <span class='ecrm-0900'>es marginalmente mayor, pero en una máquina</span> <span class='ecrm-0900'>moderna (más de 300 </span><span class='eccc0900-'><span class='small-caps'>mh</span></span><span class='ecrm-0900'>z) no debería suponer ningún problema.</span>
+        <span class='footnote-mark'><a id='fn2x0' href='#fn2x0-bk'><sup class='textsuperscript'>2</sup></a></span><span class='ecrm-0900'>En comparación al</span> <span class='eccc0900-'><span class='small-caps'>mp</span></span><span class='ecrm-0600'>3</span><span class='ecrm-0900'>, el</span> <span class='eccc0900-'><span class='small-caps'>ogg</span></span> <span class='ecrm-0900'>ocupa menos espacio y tiene mejor calidad a igual</span> <span class='ecrm-0900'>bitrate. En comparación el uso de</span> <span class='eccc0900-'><span class='small-caps'>cpu</span></span> <span class='ecrm-0900'>es marginalmente mayor, pero en una máquina</span> <span class='ecrm-0900'>moderna (más de 300 </span><span class='eccc0900-'><span class='small-caps'>mh</span></span><span class='ecrm-0900'>z) no debería suponer ningún problema.</span>
       </p><p class='noindent'>
-        <span class='footnote-mark'><a href='#fn3x0-bk' id='fn3x0'><sup class='textsuperscript'>3</sup></a></span><span class='ecrm-0900'>Importante: Cualquier tipo de data del usuario debería ser enviada bajo su</span> <span class='ecrm-0900'>conocimiento y consentimiento. Revisar implicaciones legales.</span>
+        <span class='footnote-mark'><a id='fn3x0' href='#fn3x0-bk'><sup class='textsuperscript'>3</sup></a></span><span class='ecrm-0900'>Importante: Cualquier tipo de data del usuario debería ser enviada bajo su</span> <span class='ecrm-0900'>conocimiento y consentimiento. Revisar implicaciones legales.</span>
       </p><p class='indent'>
-        <span class='footnote-mark'><a href='#fn4x0-bk' id='fn4x0'><sup class='textsuperscript'>4</sup></a></span><span class='ecrm-0900'>Al parecer la codificación de los archivos</span> <span class='eccc0900-'><span class='small-caps'>tscn</span></span> <span class='ecrm-0900'>debe ser</span> <span class='eccc0900-'><span class='small-caps'>us</span></span><span class='ecrm-0900'>-</span><span class='eccc0900-'><span class='small-caps'>ascii</span></span><span class='ecrm-0900'>. Investigar y testear</span> <span class='ecrm-0900'>antes de implementar la exportación a estos archivos</span> <a href='https://docs.godotengine.org/en/stable/development/file_formats/tscn.html' target='_blank'><span class='ecrm-0900'>TSCN file format</span></a><span class='ecrm-0900'>.</span>
+        <span class='footnote-mark'><a id='fn4x0' href='#fn4x0-bk'><sup class='textsuperscript'>4</sup></a></span><span class='ecrm-0900'>Al parecer la codificación de los archivos</span> <span class='eccc0900-'><span class='small-caps'>tscn</span></span> <span class='ecrm-0900'>debe ser</span> <span class='eccc0900-'><span class='small-caps'>us</span></span><span class='ecrm-0900'>-</span><span class='eccc0900-'><span class='small-caps'>ascii</span></span><span class='ecrm-0900'>. Investigar y testear</span> <span class='ecrm-0900'>antes de implementar la exportación a estos archivos</span> <a href='https://docs.godotengine.org/en/stable/development/file_formats/tscn.html' target='_blank'><span class='ecrm-0900'>TSCN file format</span></a><span class='ecrm-0900'>.</span>
       </p>
     </div>
   </body>
