@@ -22,9 +22,11 @@ K := $(foreach exec,$(DEPENDENCIES),\
 		 $(if $(shell which $(exec)), some string,$(error "No $(exec) in PATH")))
 
 default:
-	@echo "Utilice 'make all', 'make pdf', 'make html', 'make version', 'make sync' o 'make clean'."
+	@echo "Utilice 'make all', 'make local', 'make pdf', 'make html', 'make sync' o 'make clean'."
 
 all: pdf clean html sync
+
+local: pdf clean html
 
 pdf: version latex2pdf_light latex2pdf
 
