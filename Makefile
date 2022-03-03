@@ -116,7 +116,7 @@ html_custom:
 	@echo -en "${GREEN}OK${NC}\nAjustando links a target='_blank': "
 	@sed -i -r "s/<a href='http([^>]*)'>/<a href='http\1' target='_blank'>/" build/export/$(OUTFILE).html
 	@echo -en "${GREEN}OK${NC}\nAñadiendo botón al panel: "
-	@sed -i "/<h3 class='likesectionHead'>/i \ \ \ \ <input type=\"checkbox\" id=\"showtoc\" checked><div class=\"tocbutton\"></div>" build/export/$(OUTFILE).html
+	@sed -i "/<h3 class='likesectionHead'.*>/i \ \ \ \ <input type=\"checkbox\" id=\"showtoc\" checked><div class=\"tocbutton\"></div>" build/export/$(OUTFILE).html
 	@echo -en "${GREEN}OK${NC}\nAjustando fracción: "
 	@sed -i -r "s/Estudio <span class='(.+?)'>6<\/span><span class='(.+?)'>\/<\/span><span class='(.+?)'>8<\/span>/Estudio 6\/8/" build/export/$(OUTFILE).html
 	@echo -en "${GREEN}Ok${NC}\nAgregando espacios a figuras: "
