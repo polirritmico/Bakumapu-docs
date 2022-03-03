@@ -153,8 +153,8 @@ html_clean:
 	@echo -e "${GREEN}OK${NC}\n.................................................."
 
 html_ok:
-	@echo -en "HTML generado exitosamente.\nRevisar en:${ORANGE} file://"
-	@echo -n '$(PWD)' | sed -e 's/ñ/%C3%B1/' -e 's/ /%20/' -e 's/é/%C3%A9/'
+	@echo -en "HTML generado exitosamente.\nRevisar en: ${ORANGE}"
+	@echo -n '$(PWD)' | perl -MURI::file -e 'print URI::file->new(<>)'
 	@echo -e "/docs/index.html${NC}"
 	@echo "Usar 'make sync' para subir a GITHUB."
 
@@ -169,8 +169,8 @@ sync:
 	@echo -e "Version web en: ${ORANGE}https://polirritmico.github.io/Bakumapu-docs/${NC}"
 
 get_local_link:
-	@echo -en "HTML local en :${ORANGE} file://"
-	@echo -n '$(PWD)' | sed -e 's/ñ/%C3%B1/' -e 's/ /%20/' -e 's/é/%C3%A9/'
+	@echo -en "HTML local en: ${ORANGE}"
+	@echo -n '$(PWD)' | perl -MURI::file -e 'print URI::file->new(<>)'
 	@echo -e "/docs/index.html${NC}"
 
 reset:
