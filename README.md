@@ -1,15 +1,18 @@
 # :book: Bakumapu: Repositorio de documentación
 
-## Documentación
+## Documento de Diseño técnico:
 
-La documentación está escrita en formato LaTeX. disponible para lectura en los siguientes enlaces:
+El texto está escrito en formato LaTeX y disponible para su lectura en los
+siguientes enlaces:
 - **HTML**: https://polirritmico.github.io/Bakumapu-docs/
 - **PDF**: https://github.com/polirritmico/Bakumapu-docs/raw/main/main.pdf
+- **PDF-light**: https://raw.githubusercontent.com/polirritmico/Bakumapu-docs/main/main-print.pdf
 
-Dentro del documento se encuentra la información relavante al formato, compilación y conversión.
+Dentro del documento hay un apartado sobre los detalles de su funcionamiento y
+su proceso de compilación y conversión.
 
 ## Organización del proyecto (ToDo) y código:
 
 * Tablero Kanban: https://trello.com/b/FuJ8jQH5
-* Repositorio de código: https://trello.com/b/6GoO9YKV		
+* Repositorio de código: https://github.com/polirritmico/Bakumapu
 
