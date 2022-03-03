@@ -1,14 +1,15 @@
 # :book: Bakumapu: Repositorio de documentación
 
-Repositorio de código [aquí](https://github.com/polirritmico/Bakumapu).
+## Documentación
 
-La presente documentación está escrita en el formato LaTeX y exportada a HTML con [make4ht](https://ctan.org/pkg/make4ht).
+La documentación está escrita en formato LaTeX. disponible para lectura en los siguientes enlaces:
+- **HTML**: https://polirritmico.github.io/Bakumapu-docs/
+- **PDF**: https://github.com/polirritmico/Bakumapu-docs/raw/main/main.pdf
 
-Para su lectura seguir el siguiente enlace:
-- https://polirritmico.github.io/Bakumapu-docs/
+Dentro del documento se encuentra la información relavante al formato, compilación y conversión.
 
-También está disponible el documento original en PDF [aquí](https://github.com/polirritmico/Bakumapu-docs/raw/main/main.pdf).
+## Organización del proyecto (ToDo) y código:
 
----
+* Tablero Kanban: https://trello.com/b/FuJ8jQH5
+* Repositorio de código: https://trello.com/b/6GoO9YKV		
 
-Toda la información relevante del proyecto dentro del documento.
