@@ -166,6 +166,11 @@ sync:
 	@echo -e "..................................................\nSincronización exitosa."
 	@echo -e "Version web en: ${ORANGE}https://polirritmico.github.io/Bakumapu-docs/${NC}"
 
+get_local_link:
+	@echo -en "HTML local en :${ORANGE} file://"
+	@echo -n '$(PWD)' | sed -e 's/ñ/%C3%B1/' -e 's/ /%20/' -e 's/é/%C3%A9/'
+	@echo -e "/docs/index.html${NC}"
+
 reset:
 	@rm -rf build
 	@mkdir -p temp
