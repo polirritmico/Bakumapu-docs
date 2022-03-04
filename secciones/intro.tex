@@ -3,16 +3,16 @@
 
 \section{Introducción}\label{intro:introduccion}
 
-Este documento busca ser una herramienta de diseño que guíe el flujo de trabajo del desarrollo y al mismo tiempo la implementación del código en el motor de juegos \textbf{Godot}. También pretende ser una referencia de ayuda o consulta para detalles específicos y para dar una visión general del funcionamiento interno del juego.
+Este documento busca ser una herramienta de diseño que guíe tanto el flujo de trabajo del desarrollo como la implementación del código en el motor de juegos \textbf{Godot}, además de ser una referencia de consulta para detalles concretos y obtener una visión general del funcionamiento interno del juego.
 
-Para facilitar el acceso a la información relevante se agrupan los contenidos en secciones afines, y se añade un completo índice de contenidos junto a referencias cruzadas a las distintas secciones relevantes dentro del mismo texto.
+Para facilitar el acceso a la información se agrupan los contenidos en secciones afines y se añade un completo índice de contenidos junto a referencias cruzadas a las distintas secciones relevantes dentro del mismo texto.
 
 En concreto, el documento incluye información con respecto al flujo de trabajo (\nameref{flujo:metodologia-kanban}, \nameref{flujo:modelo-de-ramas}), a la propuesta de diseño o arquitectura (\nameref{modelado:modelado-del-software}), al uso de sistemas de control \lsc{GIT} (\nameref{flujo:modelo-de-ramas}), a consideraciones de \nameref{i18n:internacionalizacion} y a muchos otros detalles relevantes para un software de esta magnitud y complejidad.
 
 \subsection{Cómo usar este documento}\label{intro:como-usar-el-documento}
-Lo ideal es una lectura completa para tener una noción general del funcionamiento del software y los objetivos del diseño. Luego, la idea es que sirva de referencia o mapa de ruta antes y durante la implementación del código.
+En primer lugar, lo ideal es una lectura completa para tener una noción general del funcionamiento del software y los objetivos del diseño. Luego, la idea es utilizarlo a modo de referencia o mapa de ruta mientras se implementa el código actualizando y editando su contenido continuamente.
 
-El texto estará disponible para su modificación en el formato \lsc{TEX} en el \href{https://github.com/polirritmico/Bakumapu-docs}{repositorio de documentación del proyecto} y además estará disponible para su lectura en \href{https://polirritmico.github.io/Bakumapu-docs/}{\lsc{HTML}} y en \href{https://github.com/polirritmico/Bakumapu-docs/blob/main/main.pdf}{\lsc{PDF}}.
+El texto estará disponible para su modificación en el formato \lsc{TEX} dentro del \href{https://github.com/polirritmico/Bakumapu-docs}{repositorio de documentación del proyecto} y disponible para su lectura en \href{https://polirritmico.github.io/Bakumapu-docs/}{\lsc{HTML}} y en \href{https://github.com/polirritmico/Bakumapu-docs/blob/main/main.pdf}{\lsc{PDF}}.
 
 El manejo del documento se abordará con más detalle en el apartado \nameref{flujo:documento-de-diseno}.
 
@@ -85,8 +85,8 @@ A continuación se presenta una lista inicial de requerimientos o consideracione
 
 \subsection{Listado de software y herramientas de producción}\label{intro:software-y-herramientas}
 
-\subsubsection{Godot v3.4}
-Se utilizará como herramienta principal de desarrollo el motor de videojuegos multiplataforma open source \textbf{Godot} en su rama 3.4 estable. Ante el lanzamiento de la versión 4.0 se estudiará la migración del proyecto.
+\subsubsection{Godot v3.x}
+Se utilizará como herramienta principal de desarrollo el motor de videojuegos multiplataforma open source \textbf{Godot} en su rama 3.x estable (3.4 actualmente). Ante el lanzamiento de la versión 4.0 se estudiará la migración del proyecto.
 
 \subsubsection*{\small GUT 7.2.0.}
 Plugin de \textbf{Godot} para escribir y controlar las pruebas de los scripts. Instalable desde la propia interfaz de Godot (tutorial \href{https://www.youtube.com/watch?v=5DrhMiuLRl0}{aquí}). Más información en el apartado \nameref{principios:TDD}.
