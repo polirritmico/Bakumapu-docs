@@ -168,10 +168,11 @@ sync:
 	@echo -e "..................................................\nSincronización exitosa."
 	@echo -e "Version web en: ${ORANGE}https://polirritmico.github.io/Bakumapu-docs/${NC}"
 
-get_local_link:
+links:
 	@echo -en "HTML local en: ${ORANGE}"
 	@echo -n '$(PWD)' | perl -MURI::file -e 'print URI::file->new(<>)'
 	@echo -e "/docs/index.html${NC}"
+	@echo -e "Version web en: ${ORANGE}https://polirritmico.github.io/Bakumapu-docs/${NC}"
 
 reset:
 	@rm -rf build
