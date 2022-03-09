@@ -17,9 +17,11 @@ ORANGE = \033[0;33m
 NC = \033[0m
 
 # Check all commands used
+# Missing check: <perl URI::file> (perl MURI::file -e 1)
 DEPENDENCIES = echo sed mkdir mv rm cp pdflatex make4ht tidy perl git 
 K := $(foreach exec,$(DEPENDENCIES),\
-		 $(if $(shell which $(exec)), some string,$(error "No $(exec) in PATH")))
+		 $(if $(shell which $(exec)), OK, $(error "No $(exec) in PATH")))
+
 
 default:
 	@echo "Utilice 'make all', 'make local', 'make pdf', 'make html', 'make sync' o 'make clean'."
