@@ -18,7 +18,7 @@ La idea es anotar cada tarea del proyecto en una tarjeta y agregarla a la column
 \subsubsection{Límites de trabajo y columnas asociadas}\label{flujo:limites-de-trabajo}
 Cada columna tiene asociado un límite máximo de tareas simultáneas (\lsc{WIP}), por lo que si el límite ha sido alcanzado no se podrán incorporar nuevas tareas a la columna hasta haber avanzado una de sus tarjetas a la columna siguiente. Este límite se puede ver en el número dentro de llaves [~].
 
-Al mismo tiempo cada columna tendrá una división vertical, dejando a la izquierda las tareas en proceso y a la derecha las tareas que ya han completado la etapa. El límite es compartido por ambas secciones por lo que independiente de la sección en la que se encuentre la tarjeta, no puede haber más tarjetas que el límite establecido en la columna. Ver \autoref{flujo:figura-col}.
+Al mismo tiempo cada columna tendrá una división vertical, dejando a la izquierda las tareas en proceso y a la derecha las tareas que ya han completado la etapa. El límite es compartido por ambas secciones, por lo que independiente de la sección en la que se encuentre la tarjeta no puede haber más tarjetas que el límite establecido en la columna. Ver \autoref{flujo:figura-col}.
 
 \begin{figure}[H]
 	\centering
@@ -27,7 +27,7 @@ Al mismo tiempo cada columna tendrá una división vertical, dejando a la izquie
 	\includegraphics[width=0.75\textwidth]{imágenes/tablero_col.png}
 \end{figure}
 
-Lamentablemente la plataforma Trello no permite dividir una misma columna en dos secciones, por lo que se utilizarán dos columnas distintas para un mismo proceso que llamaremos columnas asociadas. Para identificarlas se enumerarán todas las columnas y las asociadas mantendrán el mismo número. Por ejemplo en la \autoref{flujo:figura-wip}, la columna “[5] Trabajando” ha sido dividida en las columnas “2. [5] Trabajando” y “2. Terminadas”. Ya que ambas comienzan con “2.” sabemos que se refieren al mismo proceso y que sumando el total de tareas entre ambas no debemos superar las [5] (4 + 1 en este caso).
+Lamentablemente la plataforma Trello no permite dividir una misma columna en dos secciones, por lo que se utilizarán dos columnas distintas para un mismo proceso que llamaremos columnas asociadas. Para identificarlas se enumerarán todas las columnas y las asociadas mantendrán el mismo número. Por ejemplo en la \autoref{flujo:figura-wip}, la columna “[5] Trabajando” ha sido dividida en las columnas “2. [5] Trabajando” y “2. Terminadas”. Ya que ambas comienzan con “2.” sabemos que se refieren al mismo proceso y que sumando el total de tareas entre ambas no debemos superar las [5] (en este caso 4 en Trabajando + 1 en Terminadas; o sea ya hay 5).
 
 \begin{figure}[h]
 	\centering
@@ -46,7 +46,7 @@ A continuación las columnas del tablero en orden de izquierda a derecha:
 	
 	\item \textbf{1. Desglose de tareas:} Las tareas que entran a esta columna se analizan y dividen en tareas acotadas. Es \textit{muy importante} que las tareas sean descompuestas en tareas sencillas para que no tomen más de unos cuantos días en completarse.
 	
-	\item \textbf{1. Ajuste de tarjeta:} A cada tarjeta en esta columna habrá que asignarle una ID (revisar \nameref{flujo:nombres-de-tarjetas}, ajustar su nombre y descripción de modo que quede perfectamente claro de qué se trata. Si es necesario, añadimos información relevante en la tarjeta.
+    \item \textbf{1. Ajuste de tarjeta:} A cada tarjeta en esta columna habrá que asignarle una ID (revisar \nameref{flujo:nombres-de-tarjetas}), ajustar su nombre y descripción de modo que quede perfectamente claro de qué se trata. Si es necesario, añadimos información relevante en la tarjeta.
 
 	\item \textbf{1. Asignación:} Aquí la tarea ya ajustada espera a que alguien la tome y se asigne a ella. Este encargado será responsable de completar la tarea hasta la columna \textbf{Implementadas}.
 	
