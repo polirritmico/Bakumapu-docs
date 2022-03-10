@@ -46,13 +46,13 @@ A continuación las columnas del tablero en orden de izquierda a derecha:
 	
 	\item \textbf{1. Desglose de tareas:} Las tareas que entran a esta columna se analizan y dividen en tareas acotadas. Es \textit{muy importante} que las tareas sean descompuestas en tareas sencillas para que no tomen más de unos cuantos días en completarse.
 	
-    \item \textbf{1. Ajuste de tarjeta:} A cada tarjeta en esta columna habrá que asignarle una ID (revisar \nameref{flujo:nombres-de-tarjetas}), ajustar su nombre y descripción de modo que quede perfectamente claro de qué se trata. Si es necesario, añadimos información relevante en la tarjeta.
+    \item \textbf{1. Ajuste de tarjeta:} A cada tarjeta en esta columna habrá que asignarle una ID (revisar \nameref{flujo:nombres-de-tarjetas}), ajustar su nombre y su descripción de modo que quede perfectamente claro de qué se trata. Si es necesario, añadimos información relevante en la tarjeta.
 
 	\item \textbf{1. Asignación:} Aquí la tarea ya ajustada espera a que alguien la tome y se asigne a ella. Este encargado será responsable de completar la tarea hasta la columna \textbf{Implementadas}.
 	
 	\item \textbf{2. Trabajando - Test:} En esta etapa escribimos el test y verificamos que falle (más información en el apartado \nameref{principios:TDD}).
 	
-	\item \textbf{2. Trabajando - Código:} En esta etapa se implementa la funcionalidad hasta que se hayan pasado todos los test correspondientes y haya concluido el ciclo de refactorización con los test aprobados. Una vez hecho el merge hacia develop se pasa la tarjeta a la siguiente columna.
+	\item \textbf{2. Trabajando - Código:} En esta etapa se implementa la funcionalidad hasta que se hayan pasado todos los test correspondientes y haya concluido el ciclo de refactorización con los test aprobados. Una vez hecho el merge hacia develop en el repositorio central se pasa la tarjeta a la siguiente columna.
 	
 	\item \textbf{2. Implementadas:} Acá quedan las tarjetas con tareas terminadas esperando (idealmente) la revisión de otro desarrollador, quien se deberá asignar a la tarjeta antes de moverla a la siguiente etapa.
 	
@@ -62,7 +62,7 @@ A continuación las columnas del tablero en orden de izquierda a derecha:
 \end{enumerate}
 
 \subsubsection{Flexibilidad del tablero}\label{flujo:flexibilidad}
-El tablero es una herramienta que permite visualizar las distintas áreas del proyecto, identificar cuellos de botella y contribuir a la gestión mediante límites de trabajo; no obstante, no se debe olvidar que \emph{es solo una guía}. Si el flujo de trabajo cambia o el tablero entorpece en algo, se debe ajustar rápidamente.
+El tablero es una herramienta que permite visualizar las distintas áreas del proyecto, identificar cuellos de botella y contribuir a la gestión mediante límites de trabajo; no obstante, no se debe olvidar que \emph{es solo una guía}. Si el flujo de trabajo cambia o el tablero entorpece algo, se debe ajustar rápidamente.
 
 \subsubsection{Nombres de Tarjetas e ID}\label{flujo:nombres-de-tarjetas}
 Los nombres de las tareas se deben corresponder con la tarea o funcionalidad a implementar y a su rama asociada en \lsc{GIT}. Más detalles en el apartado \nameref{organizacion:nombres-de-ramas}.
@@ -74,10 +74,10 @@ Los nombres de las tareas se deben corresponder con la tarea o funcionalidad a i
 \subsection{Repositorio}\label{flujo:repositorio}
 El repositorio \lsc{GIT} de Bakumapu se encuentra alojado en la siguiente dirección: \url{https://github.com/polirritmico/Bakumapu}. Todos los participantes deberán contar con una cuenta con permisos de acceso y contribución.
 
-\subsubsection{Modelo de Integración Continua}\label{flujo:modelo-de-ramas}
-La contribución y el despliegue del código será organizada a través del modelo de Integración continua (\href{https://en.wikipedia.org/wiki/Continuous_integration}{Continuous Integration}). Este modelo implica que \emph{solo hay una versión del código que importa: la actual}. Para ello se trabajará principalmente en una misma rama que mantendrá una única versión del código de desarrollo. Esto implica que no podemos hacer commits solo cuando la feature esté completamente implementada, sino que debemos hacer commits continuos a medida que vamos trabajando en la implementación (idealmente varios commits en la misma jornada de trabajo). De ahí la importancia de tener un sistema robusto de test unitarios, de modo que todo commit haya pasado todos los test locales.
+\subsubsection{Modelo de Integración continua}\label{flujo:modelo-de-ic}
+La contribución y el despliegue del código será organizada a través del modelo de Integración continua (\href{https://en.wikipedia.org/wiki/Continuous_integration}{Continuous Integration}). Este modelo implica que \emph{solo hay una versión del código que importa: la actual}. Para ello se trabajará principalmente en una misma rama que mantendrá una única versión del código de desarrollo. Esto implica que no podemos hacer commits solo cuando la feature esté completamente implementada, sino que debemos hacer commits continuos a medida que trabajamos en la implementación (idealmente varios commits en la misma jornada de trabajo). De ahí la importancia de tener un sistema robusto de test unitarios, de modo que cada commit haya superado todos los test locales.
 
-Más información al respecto se puede encontrar en el apartado \ref{despliegue:despliegue-del-codigo}.
+Más información al respecto se puede encontrar en el apartado \ref{cd:entrega-continua}.
 
 \begin{figure}[H]
 	\centering
