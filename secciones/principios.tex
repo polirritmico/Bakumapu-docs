@@ -6,7 +6,7 @@
 \subsection{Principios de diseño}\label{principios:principios-de-diseno}
 Se pretende generar un código sólido, flexible y eficiente, pero el énfasis en la primera etapa de desarrollo estará en la \emph{flexibilidad}. En principio, la idea original de diseño es solo eso, una idea; a medida que se vaya obteniendo más información y \emph{aprendamos más del proceso de desarrollo y los requerimientos del diseño} deberemos ir refactorizando el código\footnote{Reestructurar su estructura interna sin alterar su comportamiento externo.} para obtener unidades más definidas, mejor alineadas a los requerimientos y sobre todo unidades fáciles de mantener.
 
-Para ello se deberá implementar un sistema de pruebas por cada feature que se trabaje. Esto implica invertir el proceso de desarrollo escribiendo primero el test, dejar que falle y a continuación implementar la funcionalidad. El principio es concentrarse en las pruebas no en el \foreignlanguage{english}{debugging}; aunque es ineludible, \emph{no queremos estar arreglando bugs, sino que queremos evitarlos}.
+Para ello se deberá implementar un sistema de pruebas por cada feature que se trabaje. Esto implica invertir el proceso de desarrollo escribiendo primero el test, dejar que falle y a continuación implementar la funcionalidad. El principio es concentrarse en las pruebas no en el \foreignlanguage{english}{debugging}; aunque es ineludible, \emph{no queremos estar arreglando bugs, sino evitarlos}.
 
 Se simplifica el diseño para agilizar el desarrollo y facilitar el mantenimiento.
 
@@ -19,11 +19,11 @@ Se simplifica el diseño para agilizar el desarrollo y facilitar el mantenimient
 	\caption{Flujo de desarrollo TDD.}
 \end{figure}
 
-Se comienza a trabajar por la fase roja escribiendo un test que supervise la implementación de la nueva funcionalidad. \emph{No queremos probar cómo funciona el código, sino probar que se comporte de la forma que esperamos}. Dado que aún el código no ha sido implementado este test fallará. Es importante no saltarse este paso y dejar que el test falle (para asegurarnos que está funcionando).
+Se comienza a trabajar por la fase roja escribiendo un test que supervise la implementación de la nueva funcionalidad. \emph{La idea no es probar cómo funciona el código, sino verificar que se comporte de la forma que esperamos}. Dado que aún el código no ha sido implementado este test fallará. Es importante no saltarse este paso y dejar que el test falle (el test solo es útil en cuanto efectivamente pueda fallar).
 
 A continuación en la fase verde, se trabaja en la implementación del código tratando de superar el test de la forma más directa y rápida posible; \textit{no importa que el código sea sucio, débil o ineficiente}.
 
-Habiendo superado el test sabemos que contamos con un código que funciona, pasamos entonces a la fase azul donde refactorizamos este código ahora en búsqueda de eficiencia y limpieza. Ya que contamos con nuestros test unitarios, podremos saber en todo momento cuando nuestra refactorización es correcta o genera problemas.
+Habiendo superado el test sabemos que contamos con un código funcional, pasamos entonces a la fase azul donde refactorizamos este código ahora en búsqueda de eficiencia y limpieza. Ya que contamos con nuestros test unitarios, podremos saber en todo momento cuando nuestra refactorización es correcta o genera problemas.
 
 Repetimos el ciclo hasta alcanzar nuestras metas de implementación.
 

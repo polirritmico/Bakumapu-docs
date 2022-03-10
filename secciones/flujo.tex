@@ -16,18 +16,18 @@ La idea es anotar cada tarea del proyecto en una tarjeta y agregarla a la column
 \end{figure}
 
 \subsubsection{Límites de trabajo y columnas asociadas}\label{flujo:limites-de-trabajo}
-Cada columna tiene asociado un límite máximo de tareas simultáneas (\lsc{WIP}) por lo que si el límite ha sido alcanzado no se podrán incorporar nuevas tareas a la columna hasta haber avanzado una de sus tarjetas a la columna siguiente. Este límite se puede ver en el número dentro de llaves [~].
+Cada columna tiene asociado un límite máximo de tareas simultáneas (\lsc{WIP}), por lo que si el límite ha sido alcanzado no se podrán incorporar nuevas tareas a la columna hasta haber avanzado una de sus tarjetas a la columna siguiente. Este límite se puede ver en el número dentro de llaves [~].
 
-Al mismo tiempo, cada columna tendrá una división vertical, dejando a la izquierda las tareas en proceso y a la derecha las tareas que ya han completado la etapa. El límite es compartido por ambas secciones, por lo que independiente de la sección en la que se encuentre la tarjeta, no puede haber más tarjetas que el límite establecido en la columna. Ver \autoref{flujo:figura-col}.
+Al mismo tiempo cada columna tendrá una división vertical, dejando a la izquierda las tareas en proceso y a la derecha las tareas que ya han completado la etapa. El límite es compartido por ambas secciones, por lo que independiente de la sección en la que se encuentre la tarjeta, no puede haber más tarjetas que el límite establecido en la columna. Ver \autoref{flujo:figura-col}.
 
 \begin{figure}[H]
 	\centering
 	\caption{WIP y división de columnas.}
 	\label{flujo:figura-col}
-	\includegraphics[width=0.8\textwidth]{imágenes/tablero_col.png}
+	\includegraphics[width=0.75\textwidth]{imágenes/tablero_col.png}
 \end{figure}
 
-Lamentablemente la plataforma Trello no permite dividir una misma columna en dos secciones, por lo que se añadirá una enumeración al nombre de cada columna que se repetirá en los casos de columnas asociadas. Por ejemplo en la \autoref{flujo:figura-wip}, sumando las tareas de la columna “2. [5] Trabajando” y las de la columna “2. Terminadas” solo puede haber 5 tareas simultáneas por lo que no deberemos añadir una sexta.
+Lamentablemente la plataforma Trello no permite dividir una misma columna en dos secciones, por lo que se utilizarán dos columnas distintas para un mismo proceso que llamaremos columnas asociadas. Para identificarlas se enumerarán todas las columnas y las asociadas mantendrán el mismo número. Por ejemplo en la \autoref{flujo:figura-wip}, la columna “[5] Trabajando” ha sido dividida en las columnas “2. [5] Trabajando” y “2. Terminadas”. Ya que ambas comienzan con “2.” sabemos que se refieren al mismo proceso y que sumando el total de tareas entre ambas no debemos superar las [5] (4 + 1 en este caso).
 
 \begin{figure}[h]
 	\centering
@@ -36,32 +36,32 @@ Lamentablemente la plataforma Trello no permite dividir una misma columna en dos
 	\includegraphics[width=\textwidth]{imágenes/tablero02.png}
 \end{figure}
 
-Respetar los límites de cada columna facilitará la distribución de trabajo en un modelo de entrega continua y nos permitirá tomar decisiones más acertadas y realistas al momento de planificar.
+Respetar los límites de cada columna facilitará la distribución de trabajo y nos permitirá tomar decisiones más acertadas y realistas al planificar.
 
 \subsubsection{Descripción de las columnas del tablero}\label{flujo:descripcion-de-columnas}
 A continuación las columnas del tablero en orden de izquierda a derecha:
 
 \begin{enumerate}
-	\item \textbf{Columna Tareas:} Primera columna; acá dejamos las tareas en sus tarjetas y las ordenamos según prioridad (arriba las más urgentes). Solo se debería empezar a trabajar en la tarea superior. La prioridad de las tareas será determinada por el equipo.
+	\item \textbf{0. Tareas:} Primera columna; acá dejamos las tareas en sus tarjetas y las ordenamos según prioridad (arriba las más urgentes). Solo se debería empezar a trabajar en la tarea superior. La prioridad de las tareas será determinada por el equipo.
 	
-	\item \textbf{Columna Desglose de tareas:} Es \textit{muy importante} que las tareas sean descompuestas en tareas sencillas para que no tomen más de unos cuantos días en completarse. Las tareas que entran a esta columna se analizan y dividen en tareas acotadas.
+	\item \textbf{1. Desglose de tareas:} Las tareas que entran a esta columna se analizan y dividen en tareas acotadas. Es \textit{muy importante} que las tareas sean descompuestas en tareas sencillas para que no tomen más de unos cuantos días en completarse.
 	
-	\item \textbf{Columna Ajuste de tarjeta:} A cada tarjeta en esta columna habrá que asignarle una ID (revisar \nameref{flujo:nombres-de-tarjetas}, ajustar su nombre y descripción de modo que quede perfectamente claro de qué se trata. Si es necesario, añadir información relevante en la tarjeta.
+	\item \textbf{1. Ajuste de tarjeta:} A cada tarjeta en esta columna habrá que asignarle una ID (revisar \nameref{flujo:nombres-de-tarjetas}, ajustar su nombre y descripción de modo que quede perfectamente claro de qué se trata. Si es necesario, añadimos información relevante en la tarjeta.
 
-	\item \textbf{Columna Asignación:} Aquí la tarea ya ajustada espera a que alguien la tome y se asigne a ella. Este encargado será responsable de completar la tarea hasta la columna \textbf{Implementadas}.
+	\item \textbf{1. Asignación:} Aquí la tarea ya ajustada espera a que alguien la tome y se asigne a ella. Este encargado será responsable de completar la tarea hasta la columna \textbf{Implementadas}.
 	
-	\item \textbf{Columna Trabajando - Test:} En esta etapa lo primero es crear la rama correspondiente, luego escribir el test y verificar que falle (más información en el apartado \nameref{principios:TDD}).
+	\item \textbf{2. Trabajando - Test:} En esta etapa escribimos el test y verificamos que falle (más información en el apartado \nameref{principios:TDD}).
 	
-	\item \textbf{Columna Trabajando - Código:} En esta etapa se implementa la funcionalidad hasta que se hayan pasado todos los test correspondientes y haya concluido el ciclo de refactorización con los test aprobados. Una vez hecho el merge hacia develop se pasa la tarjeta a la siguiente columna.
+	\item \textbf{2. Trabajando - Código:} En esta etapa se implementa la funcionalidad hasta que se hayan pasado todos los test correspondientes y haya concluido el ciclo de refactorización con los test aprobados. Una vez hecho el merge hacia develop se pasa la tarjeta a la siguiente columna.
 	
-	\item \textbf{Columna Implementadas:} Acá quedan las tarjetas con tareas terminadas esperando (idealmente) la revisión de otro desarrollador, quien se deberá asignar a la tarjeta antes de moverla a la siguiente etapa.
+	\item \textbf{2. Implementadas:} Acá quedan las tarjetas con tareas terminadas esperando (idealmente) la revisión de otro desarrollador, quien se deberá asignar a la tarjeta antes de moverla a la siguiente etapa.
 	
-	\item \textbf{Columna En revisión:} Acá van las tareas que se estén revisando. Si tienen problemas o bugs pequeños se resuelven aquí mismo, si tuviera bugs o un problema más grande podría volver a analizarse el desglose con alta prioridad.
+	\item \textbf{3. En revisión:} Acá van las tareas que se estén revisando. Si tienen problemas o bugs pequeños se resuelven aquí mismo, si tuviera bugs o un problema más grande podría volver a analizarse el desglose con alta prioridad (Columna 1. Desglose de tareas).
 	
-	\item \textbf{Columna Finalizadas:} Aquí van las tareas terminadas. Se archivan al hacer el merge de un conjunto de features completo a main (cuando sube la versión).
+	\item \textbf{3. Finalizadas:} Aquí van las tareas terminadas. Se archivan al hacer el merge de un conjunto de features completo a main (cuando sube la versión).
 \end{enumerate}
 
-\subsubsection{Flexibilidad}\label{flujo:flexibilidad}
+\subsubsection{Flexibilidad del tablero}\label{flujo:flexibilidad}
 El tablero es una herramienta que permite visualizar las distintas áreas del proyecto, identificar cuellos de botella y contribuir a la gestión mediante límites de trabajo; no obstante, no se debe olvidar que \emph{es solo una guía}. Si el flujo de trabajo cambia o el tablero entorpece en algo, se debe ajustar rápidamente.
 
 \subsubsection{Nombres de Tarjetas e ID}\label{flujo:nombres-de-tarjetas}
@@ -72,18 +72,22 @@ Los nombres de las tareas se deben corresponder con la tarea o funcionalidad a i
 
 %\pagebreak
 \subsection{Repositorio}\label{flujo:repositorio}
-El repositorio \lsc{GIT} de Bakumapu se encuentra alojado en la siguiente dirección: \url{https://github.com/polirritmico/Bakumapu}.
-
-La contribución de código será organizada a través del modelo de integración continua (continuous integration). Este modelo implica que \emph{solo hay una versión del código que importa: la actual}. Para ello se trabajará principalmente en una única rama que mantendrá una única versión del código de desarrollo. Esto quiere decir que no podemos hacer commits solo cuando la feature esté completamente implementada, sino que debemos hacer commits continuos a medida que vamos trabajando en la implementación (idealmente cada 15-20 minutos).
+El repositorio \lsc{GIT} de Bakumapu se encuentra alojado en la siguiente dirección: \url{https://github.com/polirritmico/Bakumapu}. Todos los participantes deberán contar con una cuenta con permisos de acceso y contribución.
 
 \subsubsection{Modelo de Integración Continua}\label{flujo:modelo-de-ramas}
+La contribución de código será organizada a través del modelo de Integración continua (\href{https://en.wikipedia.org/wiki/Continuous_integration}{Continuous Integration}). Este modelo implica que \emph{solo hay una versión del código que importa: la actual}. Para ello se trabajará principalmente en una única rama que mantendrá una única versión del código de desarrollo. Esto implica que no podemos hacer commits solo cuando la feature esté completamente implementada, sino que debemos hacer commits continuos a medida que vamos trabajando en la implementación (idealmente varios commits en la misma jornada de trabajo). De ahí la importancia de tener un sistema robusto de test unitarios, de modo que todo commit haya pasado todos los test locales.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{imágenes/git.png}
 	\caption{Ramas en \lsc{GIT}.}
 \end{figure}
 
-\Needspace{3\baselineskip}
+\subsection{Despliegue de código y automatización del proceso}
+
+\subsection{Testing}
+
+%\Needspace{3\baselineskip}
 \noindent\textbf{Ramas principales.}\label{flujo:ramas-principales}
 
 \noindent Bakumapu contará con una rama principal \textbf{develop} y 2 ramas de producción \textbf{main} y \textbf{release}:
