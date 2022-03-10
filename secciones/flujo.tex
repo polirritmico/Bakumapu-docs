@@ -75,17 +75,15 @@ Los nombres de las tareas se deben corresponder con la tarea o funcionalidad a i
 El repositorio \lsc{GIT} de Bakumapu se encuentra alojado en la siguiente dirección: \url{https://github.com/polirritmico/Bakumapu}. Todos los participantes deberán contar con una cuenta con permisos de acceso y contribución.
 
 \subsubsection{Modelo de Integración Continua}\label{flujo:modelo-de-ramas}
-La contribución de código será organizada a través del modelo de Integración continua (\href{https://en.wikipedia.org/wiki/Continuous_integration}{Continuous Integration}). Este modelo implica que \emph{solo hay una versión del código que importa: la actual}. Para ello se trabajará principalmente en una única rama que mantendrá una única versión del código de desarrollo. Esto implica que no podemos hacer commits solo cuando la feature esté completamente implementada, sino que debemos hacer commits continuos a medida que vamos trabajando en la implementación (idealmente varios commits en la misma jornada de trabajo). De ahí la importancia de tener un sistema robusto de test unitarios, de modo que todo commit haya pasado todos los test locales.
+La contribución y el despliegue del código será organizada a través del modelo de Integración continua (\href{https://en.wikipedia.org/wiki/Continuous_integration}{Continuous Integration}). Este modelo implica que \emph{solo hay una versión del código que importa: la actual}. Para ello se trabajará principalmente en una misma rama que mantendrá una única versión del código de desarrollo. Esto implica que no podemos hacer commits solo cuando la feature esté completamente implementada, sino que debemos hacer commits continuos a medida que vamos trabajando en la implementación (idealmente varios commits en la misma jornada de trabajo). De ahí la importancia de tener un sistema robusto de test unitarios, de modo que todo commit haya pasado todos los test locales.
+
+Más información al respecto se puede encontrar en el apartado \ref{despliegue:despliegue-del-codigo}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{imágenes/git.png}
 	\caption{Ramas en \lsc{GIT}.}
 \end{figure}
-
-\subsection{Despliegue de código y automatización del proceso}
-
-\subsection{Testing}
 
 %\Needspace{3\baselineskip}
 \noindent\textbf{Ramas principales.}\label{flujo:ramas-principales}
