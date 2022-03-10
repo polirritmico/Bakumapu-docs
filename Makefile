@@ -1,6 +1,6 @@
 SHELL = /bin/sh
 # Actualizar con cada cambio
-VERSION = 0.0.24
+VERSION = 0.0.25
 
 # Define variables
 LATEX = latex
@@ -24,11 +24,9 @@ K := $(foreach exec,$(DEPENDENCIES),\
 
 
 default:
-	@echo "Utilice 'make all', 'make local', 'make pdf', 'make html', 'make sync' o 'make clean'."
+	@echo "Utilice 'make all', 'make pdf', 'make html', 'make sync' o 'make clean'."
 
 all: pdf clean html sync
-
-local: pdf clean html
 
 pdf: version latex2pdf_light latex2pdf
 
