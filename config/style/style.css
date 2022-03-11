@@ -93,7 +93,7 @@
 html {
   font-size: 22px; /*En px por consistencia entre navegadores*/
   scroll-behavior: smooth;
-  background: url("imágenes/fondo.jpg") no-repeat center center fixed;
+  background: url("images/fondo.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -255,7 +255,7 @@ input[type="checkbox"] {
   width: 10em;
 }
 .tocbutton {
-  content: url("imágenes/flecha.svg");
+  content: url("images/flecha.svg");
   max-height: 1.2em;
   max-width: 1.2em;
   position: fixed;
