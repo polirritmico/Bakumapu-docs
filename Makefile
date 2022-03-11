@@ -1,6 +1,6 @@
 SHELL = /bin/sh
 # Actualizar con cada cambio
-VERSION = 0.0.29
+VERSION = 0.0.30
 
 # Config
 LATEX = latex
@@ -44,6 +44,7 @@ clean:
 	@mv $(INFILE).pdf temp/
 	-@mv $(INFILE)-print.pdf temp/
 	-@mv $(INFILE).synctex.gz temp/
+	-@mv $(INFILE)_build.fdb_latexmk temp/
 	-@rm $(INFILE).*
 	-@rm $(INFILE)_build.*
 	@mv temp/* ./
@@ -64,17 +65,6 @@ links:
 	@echo -n '$(PWD)' | perl -MURI::file -e 'print URI::file->new(<>)'
 	@echo -e "/docs/index.html${NC}"
 	@echo -e "Version web en: ${ORANGE}https://polirritmico.github.io/Bakumapu-docs/${NC}"
-
-reset:
-	@rm -rf build
-	@mkdir -p temp
-	@mv $(INFILE).tex temp/
-	@mv $(INFILE).pdf temp/
-	-@mv $(INFILE).synctex.gz temp/
-	-@rm $(INFILE).*
-	@mv temp/* ./
-	@rm -r temp
-	@rm -r docs
 
 
 # =============================================================================
