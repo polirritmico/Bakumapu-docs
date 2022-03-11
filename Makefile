@@ -2,7 +2,7 @@ SHELL = /bin/sh
 # Actualizar con cada cambio
 VERSION = 0.0.28
 
-# Define variables
+# Config
 LATEX = latex
 PDFLATEX = pdflatex
 HTML_TOC_LEVEL = 2
@@ -16,6 +16,8 @@ GREEN = \033[0;32m
 ORANGE = \033[0;33m
 NC = \033[0m
 
+# =============================================================================
+
 # Check all commands used
 # Missing check: <perl URI::file> (perl MURI::file -e 1)
 DEPENDENCIES = echo sed mkdir mv rm cp pdflatex make4ht tidy perl git 
@@ -23,12 +25,17 @@ K := $(foreach exec,$(DEPENDENCIES),\
 		 $(if $(shell which $(exec)), OK, $(error "No $(exec) in PATH")))
 
 
+# =============================================================================
+
 default:
 	@echo "Utilice 'make all', 'make pdf', 'make html', 'make sync' o 'make clean'."
 
 all: pdf clean html sync
 
 pdf: version latex2pdf_light latex2pdf
+
+
+# =============================================================================
 
 version:
 	@echo -n "Ajustando la versión: "
@@ -44,6 +51,36 @@ clean:
 	-@rm $(INFILE).*
 	@mv temp/* ./
 	@rm -r temp
+
+sync:
+	@echo "Sincronizando GITHUB con la última versión de la documentación..."
+	@git add .
+	@git status
+	@echo -e "..................................................\nSubiendo el commit:"
+	@git commit -m "Auto uploaded v$(VERSION)"
+	@git push
+	@echo -e "..................................................\nSincronización exitosa."
+	@echo -e "Version web en: ${ORANGE}https://polirritmico.github.io/Bakumapu-docs/${NC}"
+
+links:
+	@echo -en "HTML local en: ${ORANGE}"
+	@echo -n '$(PWD)' | perl -MURI::file -e 'print URI::file->new(<>)'
+	@echo -e "/docs/index.html${NC}"
+	@echo -e "Version web en: ${ORANGE}https://polirritmico.github.io/Bakumapu-docs/${NC}"
+
+reset:
+	@rm -rf build
+	@mkdir -p temp
+	@mv $(INFILE).tex temp/
+	@mv $(INFILE).pdf temp/
+	-@mv $(INFILE).synctex.gz temp/
+	-@rm $(INFILE).*
+	@mv temp/* ./
+	@rm -r temp
+	@rm -r docs
+
+
+# =============================================================================
 
 latex2pdf:
 	@echo -n "Cambiando a esquema de color oscuro: "
@@ -67,6 +104,9 @@ latex2pdf_light:
 	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
 	@mv $(INFILE).pdf $(INFILE)-print.pdf
 	@echo -e "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE)-print.pdf${NC} generado exitosamente."
+
+
+# =============================================================================
 
 html: html_folders html_prepare html_convert html_tidy html_fix_classnames \
 	  html_custom html_longtable_clean html_clean html_ok
@@ -158,32 +198,8 @@ html_ok:
 	@echo -e "/docs/index.html${NC}"
 	@echo "Usar 'make sync' para subir a GITHUB."
 
-sync:
-	@echo "Sincronizando GITHUB con la última versión de la documentación..."
-	@git add .
-	@git status
-	@echo -e "..................................................\nSubiendo el commit:"
-	@git commit -m "Auto uploaded v$(VERSION)"
-	@git push
-	@echo -e "..................................................\nSincronización exitosa."
-	@echo -e "Version web en: ${ORANGE}https://polirritmico.github.io/Bakumapu-docs/${NC}"
 
-links:
-	@echo -en "HTML local en: ${ORANGE}"
-	@echo -n '$(PWD)' | perl -MURI::file -e 'print URI::file->new(<>)'
-	@echo -e "/docs/index.html${NC}"
-	@echo -e "Version web en: ${ORANGE}https://polirritmico.github.io/Bakumapu-docs/${NC}"
-
-reset:
-	@rm -rf build
-	@mkdir -p temp
-	@mv $(INFILE).tex temp/
-	@mv $(INFILE).pdf temp/
-	-@mv $(INFILE).synctex.gz temp/
-	-@rm $(INFILE).*
-	@mv temp/* ./
-	@rm -r temp
-	@rm -r docs
+# =============================================================================
 
 # @: Evita mostrar la llamada del comando en la salida.
 # -@: Ignora los comandos que retornan non-successful status.
