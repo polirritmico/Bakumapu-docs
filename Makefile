@@ -33,7 +33,7 @@ default:
 
 all: pdf clean html sync
 
-pdf: version latex_prepare latex2pdf_light latex_prepare latex2pdf latex_clean
+pdf: version latex_prepare latex2pdf_light latex_prepare latex2pdf
 
 
 # =============================================================================
@@ -45,6 +45,7 @@ clean:
 	-@mv $(INFILE)-print.pdf temp/
 	-@mv $(INFILE).synctex.gz temp/
 	-@rm $(INFILE).*
+	-@rm $(INFILE)_temp.*
 	@mv temp/* ./
 	@rm -r temp
 
@@ -112,10 +113,6 @@ latex2pdf_light:
 	@mv $(INFILE)_temp.pdf $(INFILE)-print.pdf
 	@echo -e "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE)-print.pdf${NC} generado exitosamente."
 
-latex_clean:
-	@echo -n "Limpiando copia de $(INFILE): "
-	@rm $(INFILE)_temp.tex
-	@echo -e "${GREEN}OK${NC}"
 
 # =============================================================================
 
