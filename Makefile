@@ -21,7 +21,7 @@ NC = \033[0m
 
 # Check all commands used
 # Missing check: <perl URI::file> (perl MURI::file -e 1)
-DEPENDENCIES = echo sed mkdir mv rm cp pdflatex make4ht tidy perl git 
+DEPENDENCIES = echo sed mkdir mv rm cp pdflatex make4ht latexmk tidy perl git 
 K := $(foreach exec,$(DEPENDENCIES),\
 		 $(if $(shell which $(exec)), OK, $(error "No $(exec) in PATH")))
 
@@ -93,25 +93,17 @@ latex2pdf:
 	@echo -n "Cambiando a esquema de color oscuro: "
 	@sed -i '/\\newif\\ifdark\\/s/darkfalse/darktrue/' $(INFILE)_build.tex
 	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de ${ORANGE}$(INFILE).tex${NC}: "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_build.tex 2>&1 > /dev/null
-	@echo -en "1/3 ${GREEN}OK${NC} "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_build.tex 2>&1 > /dev/null
-	@echo -en "2/3 ${GREEN}OK${NC} "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_build.tex 2>&1 > /dev/null
+	@latexmk -pdf -silent $(INFILE)_build.tex 2>&1 > /dev/null
 	@mv $(INFILE)_build.pdf $(INFILE).pdf
-	@echo -e "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE).pdf${NC} generado exitosamente."
+	@echo -e "${GREEN}OK${NC}\n${ORANGE}$(INFILE).pdf${NC} generado exitosamente."
 
 latex2pdf_light:
 	@echo -n "Cambiando a esquema de color claro: "
 	@sed -i '/\\newif\\ifdark\\/s/darktrue/darkfalse/' $(INFILE)_build.tex
 	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de ${ORANGE}$(INFILE).tex${NC}: "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_build.tex 2>&1 > /dev/null
-	@echo -en "1/3 ${GREEN}OK${NC} "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_build.tex 2>&1 > /dev/null
-	@echo -en "2/3 ${GREEN}OK${NC} "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_build.tex 2>&1 > /dev/null
+	@latexmk -pdf -silent $(INFILE)_build.tex 2>&1 > /dev/null
 	@mv $(INFILE)_build.pdf $(INFILE)-print.pdf
-	@echo -e "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE)-print.pdf${NC} generado exitosamente."
+	@echo -e "${GREEN}OK${NC}\n${ORANGE}$(INFILE)-print.pdf${NC} generado exitosamente."
 
 
 # =============================================================================
