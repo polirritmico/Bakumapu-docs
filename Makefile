@@ -123,17 +123,17 @@ html: html_folders html_prepare html_convert html_tidy html_fix_classnames \
 	  html_custom html_longtable_clean html_clean html_ok
 
 html_folders:
-	@mkdir -p build/configuración/style
-	@cp -r configuración/style/* build
-	@cp configuración/*.tex build/configuración/
-	@cp -r imágenes build/
+	@mkdir -p build/config/style
+	@cp -r config/style/* build
+	@cp config/*.tex build/config/
+	@cp -r images build/
 	@cp -r secciones build/
 
 html_prepare:
 	@echo -n "Ajustando subtítulo: "
 	@sed '/colorsubtitulo/s/{\\textsc{Diseño\ técnico}}/{Diseño\ técnico}/' $(INFILE).tex > build/$(OUTFILE).tex
 	@echo -en "${GREEN}OK${NC}\nAjustando nivel de TOC a ${ORANGE}$(HTML_TOC_LEVEL)${NC} para el html: "
-	@sed -i '/\\setcounter/s/{tocdepth}{*.}/{tocdepth}{$(HTML_TOC_LEVEL)}/' build/configuración/estilos.tex
+	@sed -i '/\\setcounter/s/{tocdepth}{*.}/{tocdepth}{$(HTML_TOC_LEVEL)}/' build/config/estilos.tex
 	@echo -e "${GREEN}OK${NC}"
 
 html_convert:
@@ -176,11 +176,11 @@ html_custom:
 	@sed -i '/<span class='\''id'\''>Figura/s/<\/span>/ <\/span>/' build/export/$(OUTFILE).html
 	@sed -i 's/Figura~/Figura /' build/export/$(OUTFILE).html
 	@echo -en "${GREEN}OK${NC}\nAgregando fondo: "
-	@cp imágenes/fondo.jpg build/export/imágenes/
+	@cp images/fondo.jpg build/export/images/
 	@echo -en "${GREEN}OK${NC}\nAgregando íconos: "
-	@cp imágenes/icon.svg build/export/imágenes/
-	@cp imágenes/flecha.svg build/export/imágenes/
-	@sed -i '/\/head/i \ \ \ \ <link rel="icon" href="imágenes\/icon.svg">' build/export/$(OUTFILE).html
+	@cp images/icon.svg build/export/images/
+	@cp images/flecha.svg build/export/images/
+	@sed -i '/\/head/i \ \ \ \ <link rel="icon" href="images\/icon.svg">' build/export/$(OUTFILE).html
 	@echo -e "${GREEN}OK${NC}"
 
 html_longtable_clean:
@@ -195,7 +195,7 @@ html_longtable_clean:
 html_clean:
 	@echo -en "Limpiando archivos de compilación: "
 	@cd build && \
-	rm -rf configuración imágenes secciones
+	rm -rf config images secciones
 	@rm build/custom.conf build/tidy.conf build/$(OUTFILE).tex
 	@rm build/$(OUTFILE).*
 	@mv build/export/* build/
