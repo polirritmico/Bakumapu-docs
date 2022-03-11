@@ -9,7 +9,7 @@ Trello será la herramienta principal para mantener la coordinación del flujo d
 
 La idea es anotar cada tarea del proyecto en una tarjeta y agregarla a la columna de la izquierda. Mientras se trabaja en la tarea, su tarjeta va avanzando de izquierda a derecha hasta llegar a la última columna.  
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=\textwidth]{imágenes/tablero01.png}
 	\caption{Tablero Kanban en Trello.}
@@ -79,29 +79,31 @@ La contribución y el despliegue del código será organizada a través del mode
 
 Más información al respecto se puede encontrar en el apartado \nameref{cd:entrega-continua}.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{imágenes/git.png}
-	\caption{Ramas en \lsc{GIT}.}
-\end{figure}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=\textwidth]{imágenes/git.png}
+%	\caption{Ramas en \lsc{GIT}.}
+%\end{figure}
 
 %\Needspace{3\baselineskip}
 \noindent\textbf{Ramas principales.}\label{flujo:ramas-principales}
 
-\noindent Bakumapu contará con una rama principal \textbf{develop} y 2 ramas de producción \textbf{main} y \textbf{release}:
+\noindent Bakumapu contará con una rama principal \textbf{develop} y una rama de \textbf{release}:
 
 \begin{enumerate}
 	\renewcommand{\labelenumi}{\alph{enumi}.}
 	\item \textbf{develop:} Es la rama principal del desarrollo ya que todo el código se escribirá permanentemente en ella. La idea es que cada desarrollador vaya haciendo continuos commits hacia \textbf{develop} de tal forma que los cambios en el código sean visibles para el resto del equipo y la implementación de una nueva funcionalidad pase el menor tiempo posible fuera de la rama. De este modo se facilitará la prevención temprana de bugs y problemas complejos de integración.
 	
-	\item \textbf{main:} En esta rama se tratará de mantener el código lo más estable posible. Representa la última entrega del desarrollo y por lo tanto se creará a partir de \textbf{develop} cuando el código haya completado el conjunto de features de cada etapa de implementación del proyecto. Los testers trabajarán en base a esta rama.
+	Cada commit deberá incluir un comentario que comience con el \lsc{ID} de la tarea asociada al tablero. De esta forma se podrá organizar de manera mucho más certera el flujo del desarrollo y su optimización.
 	
-	\item \textbf{release:} Se creará a partir de \textbf{main} una vez que esta haya sido extensamente probada y depurada. Esta rama será la que pasará el código a producción por eso debe ser la más robusta (por ejemplo deploys automáticos a todas las copias instaladas y conectadas a internet).
+	\item \textbf{deploy:} Se creará de forma automática a partir de \textbf{develop} a través de las herramientas de automatización de test (de integración, aceptación, rendimiento, etc.) junto a los sistemas de integración de librerías y todo lo relacionado a la empaquetación del programa.
+	
+	\item \textbf{release:} Generada desde \textbf{deploy} cuando se requiera lanzar la nueva versión del programa de manera pública. Desde los ejecutables de esta rama se actualizarán las copias de los usuarios a través de internet hacia los distintos sistemas soportados (Steam, Google Play, etc.).
 \end{enumerate}
 
 \paragraph{Ramas de implementación}\label{pg:ramas-de-implementacion}
 
-Pese a que la mayoría de la implementación debería ser trabajada directamente en \textbf{develop}, para contadas excepciones se podría necesitar el uso de ramas separadas:
+Pese a que la mayor parte de la implementación debería ser trabajada directamente en \textbf{develop}, para contadas excepciones se podría necesitar el uso de ramas separadas:
 
 \begin{enumerate}
 	\renewcommand{\labelenumi}{\alph{enumi}.}
