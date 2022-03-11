@@ -9,6 +9,7 @@ HTML_TOC_LEVEL = 2
 
 # In/Out target names
 INFILE = main
+# html outfile
 OUTFILE = index
 
 # Colors codes
@@ -32,15 +33,10 @@ default:
 
 all: pdf clean html sync
 
-pdf: version latex2pdf_light latex2pdf
+pdf: latex_prepare version latex2pdf_light latex_prepare latex2pdf latex_clean
 
 
 # =============================================================================
-
-version:
-	@echo -n "Ajustando la versión: "
-	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
-	@echo -e "${GREEN}OK${NC}"
 
 clean:
 	@mkdir -p temp
@@ -82,29 +78,40 @@ reset:
 
 # =============================================================================
 
+latex_prepare:
+	@cp $(INFILE).tex $(INFILE)_temp.tex
+
+version:
+	@echo -n "Ajustando la versión: "
+	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE)_temp.tex
+	@echo -e "${GREEN}OK${NC}"
+
 latex2pdf:
 	@echo -n "Cambiando a esquema de color oscuro: "
-	@sed -i '/\\newif\\ifdark\\/s/darkfalse/darktrue/' $(INFILE).tex
+	@sed -i '/\\newif\\ifdark\\/s/darkfalse/darktrue/' $(INFILE)_temp.tex
 	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de ${ORANGE}$(INFILE).tex${NC}: "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_temp.tex 2>&1 > /dev/null
 	@echo -en "1/3 ${GREEN}OK${NC} "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_temp.tex 2>&1 > /dev/null
 	@echo -en "2/3 ${GREEN}OK${NC} "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_temp.tex 2>&1 > /dev/null
+	@mv $(INFILE)_temp.pdf $(INFILE).pdf
 	@echo -e "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE).pdf${NC} generado exitosamente."
 
 latex2pdf_light:
 	@echo -n "Cambiando a esquema de color claro: "
-	@sed -i '/\\newif\\ifdark\\/s/darktrue/darkfalse/' $(INFILE).tex
+	@sed -i '/\\newif\\ifdark\\/s/darktrue/darkfalse/' $(INFILE)_temp.tex
 	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de ${ORANGE}$(INFILE).tex${NC}: "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_temp.tex 2>&1 > /dev/null
 	@echo -en "1/3 ${GREEN}OK${NC} "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_temp.tex 2>&1 > /dev/null
 	@echo -en "2/3 ${GREEN}OK${NC} "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE).tex 2>&1 > /dev/null
-	@mv $(INFILE).pdf $(INFILE)-print.pdf
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_temp.tex 2>&1 > /dev/null
+	@mv $(INFILE)_temp.pdf $(INFILE)-print.pdf
 	@echo -e "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE)-print.pdf${NC} generado exitosamente."
 
+latex_clean:
+	@rm $(INFILE)_temp.tex
 
 # =============================================================================
 
