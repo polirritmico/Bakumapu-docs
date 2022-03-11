@@ -79,7 +79,9 @@ reset:
 # =============================================================================
 
 latex_prepare:
+	@echo -n "Preparando copia de $(INFILE): "
 	@cp $(INFILE).tex $(INFILE)_temp.tex
+	@echo -e "${GREEN}OK${NC}"
 
 version:
 	@echo -n "Ajustando la versión: "
@@ -111,7 +113,9 @@ latex2pdf_light:
 	@echo -e "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE)-print.pdf${NC} generado exitosamente."
 
 latex_clean:
+	@echo -n "Limpiando copia de $(INFILE): "
 	@rm $(INFILE)_temp.tex
+	@echo -e "${GREEN}OK${NC}"
 
 # =============================================================================
 
