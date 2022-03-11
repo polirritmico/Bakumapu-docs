@@ -45,8 +45,10 @@ clean:
 	-@mv $(INFILE)-print.pdf temp/
 	-@mv $(INFILE).synctex.gz temp/
 	-@mv $(INFILE)_build.fdb_latexmk temp/
+	-@mv $(INFILE)-print_build.fdb_latexmk temp/
 	-@rm $(INFILE).*
 	-@rm $(INFILE)_build.*
+	-@rm $(INFILE)-print_build.*
 	@mv temp/* ./
 	@rm -r temp
 
@@ -80,19 +82,18 @@ version:
 	@echo -e "${GREEN}OK${NC}"
 
 latex2pdf:
-	@echo -n "Cambiando a esquema de color oscuro: "
-	@sed -i '/\\newif\\ifdark\\/s/darkfalse/darktrue/' $(INFILE)_build.tex
-	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de ${ORANGE}$(INFILE).tex${NC}: "
-	@latexmk -pdf -silent $(INFILE)_build.tex 2>&1 > /dev/null
+	@echo -e "Generando PDF a partir de ${ORANGE}$(INFILE).tex${NC}: "
+	@latexmk -pdf -silent $(INFILE)_build.tex > /dev/null 2>$1
 	@mv $(INFILE)_build.pdf $(INFILE).pdf
 	@echo -e "${GREEN}OK${NC}\n${ORANGE}$(INFILE).pdf${NC} generado exitosamente."
 
 latex2pdf_light:
+	@cp ${INFILE}.tex ${INFILE}-print_build.tex
 	@echo -n "Cambiando a esquema de color claro: "
-	@sed -i '/\\newif\\ifdark\\/s/darktrue/darkfalse/' $(INFILE)_build.tex
-	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de ${ORANGE}$(INFILE).tex${NC}: "
-	@latexmk -pdf -silent $(INFILE)_build.tex 2>&1 > /dev/null
-	@mv $(INFILE)_build.pdf $(INFILE)-print.pdf
+	@sed -i '/\\newif\\ifdark\\/s/darktrue/darkfalse/' $(INFILE)-print_build.tex
+	@echo -en "${GREEN}OK${NC}\nGenerando PDF-light a partir de ${ORANGE}$(INFILE).tex${NC}: "
+	@latexmk -pdf -silent "$(INFILE)-print_build.tex" > /dev/null 2>$1
+	@mv $(INFILE)-print_build.pdf $(INFILE)-print.pdf
 	@echo -e "${GREEN}OK${NC}\n${ORANGE}$(INFILE)-print.pdf${NC} generado exitosamente."
 
 
