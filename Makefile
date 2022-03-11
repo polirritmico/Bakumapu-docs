@@ -33,7 +33,7 @@ default:
 
 all: pdf clean html sync
 
-pdf: latex_prepare version latex2pdf_light latex_prepare latex2pdf latex_clean
+pdf: version latex_prepare latex2pdf_light latex_prepare latex2pdf latex_clean
 
 
 # =============================================================================
