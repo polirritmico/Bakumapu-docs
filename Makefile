@@ -79,7 +79,7 @@ reset:
 # =============================================================================
 
 latex_prepare:
-	@echo -n "Preparando copia de $(INFILE): "
+	@echo -n "Preparando copia de $(INFILE).tex: "
 	@cp $(INFILE).tex $(INFILE)_temp.tex
 	@echo -e "${GREEN}OK${NC}"
 
