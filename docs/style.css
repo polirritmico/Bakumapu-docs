@@ -1,0 +1,448 @@
+/*
+   ______   ______   __  __   __  __   __    __   ______   ______  __  __
+  /\  == \ /\  __ \ /\ \/ /  /\ \/\ \ /\ "-./  \ /\  __ \ /\  == \/\ \/\ \
+  \ \  __< \ \  __ \\ \  _"-.\ \ \_\ \\ \ \-./\ \\ \  __ \\ \  _-/\ \ \_\ \
+   \ \_____\\ \_\ \_\\ \_\ \_\\ \_____\\ \_\ \ \_\\ \_\ \_\\ \_\   \ \_____\
+    \/_____/ \/_/\/_/ \/_/\/_/ \/_____/ \/_/  \/_/ \/_/\/_/ \/_/    \/_____/
+
+   ┌───────────────────────────────────────────────────────────────────────┐
+   │      E     S     T     U     D     I     O         6    /    8        │
+   └───────────────────────────────────────────────────────────────────────┘
+
+
+/****************************************************************************/
+/********************************* FUENTES **********************************/
+/****************************************************************************/
+
+@font-face {
+  font-family: 'Liberation Sans', Helvetica, sans-serif;
+  src: url('fonts/lsb.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Computer Modern Typewriter';
+  src: url('fonts/cmuntt.eot');
+  src: url('fonts/cmuntt.eot?#iefix') format('embedded-opentype'),
+       url('fonts/cmuntt.woff') format('woff'),
+       url('fonts/cmuntt.ttf') format('truetype'),
+       url('fonts/cmuntt.svg#cmuntt') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Computer Modern Typewriter';
+  src: url('fonts/cmuntb.eot');
+  src: url('fonts/cmuntb.eot?#iefix') format('embedded-opentype'),
+       url('fonts/cmuntb.woff') format('woff'),
+       url('fonts/cmuntb.ttf') format('truetype'),
+       url('fonts/cmuntb.svg#cmuntb') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Computer Modern Typewriter';
+  src: url('fonts/cmunit.eot');
+  src: url('fonts/cmunit.eot?#iefix') format('embedded-opentype'),
+       url('fonts/cmunit.woff') format('woff'),
+       url('fonts/cmunit.ttf') format('truetype'),
+       url('fonts/cmunit.svg#cmunit') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Computer Modern Typewriter';
+  src: url('fonts/cmuntx.eot');
+  src: url('fonts/cmuntx.eot?#iefix') format('embedded-opentype'),
+       url('fonts/cmuntx.woff') format('woff'),
+       url('fonts/cmuntx.ttf') format('truetype'),
+       url('fonts/cmuntx.svg#cmuntx') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Computer Modern Typewriter Variable';
+  src: url('fonts/cmunvt.eot');
+  src: url('fonts/cmunvt.eot?#iefix') format('embedded-opentype'),
+       url('fonts/cmunvt.woff') format('woff'),
+       url('fonts/cmunvt.ttf') format('truetype'),
+       url('fonts/cmunvt.svg#cmuntt') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Computer Modern Typewriter Variable';
+  src: url('fonts/cmunvi.eot');
+  src: url('fonts/cmunvi.eot?#iefix') format('embedded-opentype'),
+       url('fonts/cmunvi.woff') format('woff'),
+       url('fonts/cmunvi.ttf') format('truetype'),
+       url('fonts/cmunvi.svg#cmunvi') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+/****************************************************************************/
+/******************************** GENERALES *********************************/
+/****************************************************************************/
+
+html {
+  font-size: 22px; /*En px por consistencia entre navegadores*/
+  scroll-behavior: smooth;
+  background: url("images/fondo.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #23241f;
+}
+
+body, input, textarea, select {
+  background: #23241fee;
+}
+body, input, textarea, select {
+  border-color: #736b5e;
+  color: #ebebe5;
+}
+
+body {
+  font-family: "Computer Modern Typewriter Variable", Helvetica, sans-serif;
+  padding: 1.5em;
+  max-width: 1280px;
+  margin: 0 15%;
+}
+
+/* Links y tablas */
+a {
+  color: #fd9621;
+  transition: 0.3s;
+}
+a:hover {
+  color: #e7db74;
+}
+.url>span {
+  font-family: 'Computer Modern Typewriter';
+}
+
+table {
+  border-color: #545b5e;
+}
+.longtable td {
+    border: 1px solid black;
+}
+
+/* Encabezados */
+.underline {
+  font-family: "Computer Modern Typewriter";
+  font-size: 1.2rem;
+}
+h3, h4, h5 {
+  font-family: 'Liberation Sans', sans-serif;
+}
+h3 {
+  color: #f92472;
+  font-size: 1.6em;
+}
+h4 {
+  color: #90da2b;
+  font-size: 1.4em;
+}
+h5, h6 {
+  color: #74705d;
+  font-size: 1.1em;
+}
+
+/* Listas */
+.enumerate-enumitem {
+  margin-bottom: 0.4em;
+}
+dt.enumerate-enumitem {
+  float: left;
+  clear: left;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+dd.enumerate-enumitem {
+  margin-top:.4em;
+  padding-left: 1em;
+}
+
+/* Bloques de código */
+.lstlisting {
+  border: solid 1px black;
+  background-color: #4c4d47;
+}
+div.lstlisting {
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+.lstlisting span{
+  font-family: 'Computer Modern Typewriter';
+  font-size: 0.85em;
+}
+
+/* Imágenes no estiradas */
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* Subsecciones sin enumerar (con "*" en el .TEX) */
+.likesubsectionHead {
+  color: #27aeae;
+  font-size: 1.1em;
+  margin-top:-1.25em;
+}
+/* Paragraphs sin enumerar */
+.likeparagraphHead {
+  color: #90da2b;
+  display: inline-block;
+  font-size: 1.1em;
+  margin-top: 0.75em;
+}
+
+
+/****************************************************************************/
+/******************************* ESPECIFICOS ********************************/
+/****************************************************************************/
+
+/* TOC */
+/* Panel lateral */
+.tableofcontents {
+  font-size: 0.7em;
+  height: 95%;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 4em;
+  white-space: nowrap;
+  width: 15%;
+}
+/* Header Índice */
+.likesectionHead {
+  font-size: 1.25em;
+  position: fixed;
+  left: 10px;
+  top: -0.5em;
+  color: #ebebe5;
+}
+/* Espaciado entre secciones */
+.sectionToc {
+  margin-top: 0.25em;
+  width: 15%;
+}
+.subsectionToc {
+  margin-left: 0.75em;
+}
+.subsubsectionToc {
+  margin-left: 2em;
+}
+/* Boton panel */
+#showtoc {
+  position: fixed;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+input[type="checkbox"] {
+  height: 4em;
+  width: 10em;
+}
+.tocbutton {
+  content: url("images/flecha.svg");
+  max-height: 1.2em;
+  max-width: 1.2em;
+  position: fixed;
+  left: 10px;
+  top: 0.65em;
+  z-index: 1;
+  transition: transform 0.7s, left 0.7s;
+}
+.tocbutton + h3 {
+  transition: color 0.3s;
+}
+#showtoc:hover + .tocbutton + h3 {
+  color:#f92472;
+}
+
+/* default */
+.tableofcontents {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s, visibility 1s;
+}
+.likesectionHead {
+  display: inline-block;
+  left: -4em;
+  transition: left 0.7s;
+}
+/* pressed */
+#showtoc:checked ~ .tocbutton {
+  left: 4.3em;
+  -webkit-transform: rotate(180deg);
+}
+#showtoc:checked ~ .tableofcontents {
+  opacity: 1;
+  visibility: visible;
+}
+#showtoc:checked ~ .likesectionHead {
+  left: 10px;
+}
+
+/* Notas al final */
+.footnotes, div.footnotes {
+  margin-right: 0;
+}
+
+/****************************************************************************/
+/******************************* ANIMACIONES ********************************/
+/****************************************************************************/
+
+html {
+  opacity: 0;
+  animation: 1.5s ease-out 0.2s 1 fadeIn;
+  animation-fill-mode: forwards;
+}
+
+body {
+  margin-top:100%;
+  animation-name: slideInFromBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.tableofcontents {
+  margin-left: -20%;
+  animation-name: slideInFromLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.ecbx-2488 {
+  text-shadow: 0 0 0 #fd9621ff;
+  animation-name: title-pulse;
+  animation-duration: 7.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Animación de entrada */
+@keyframes slideInFromLeft {
+    0% {margin-left: -20%;}
+  100% {margin-left: 0;}
+}
+
+@keyframes slideInFromBottom {
+    0% {margin-top: 100%;}
+   80% {margin-top: -2%;}
+  100% {margin-top: 0;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes title-pulse {
+  33% {text-shadow: 0 0 0 #fd9621ff;}
+  58% {text-shadow: 0 0 100px #fd962100;}
+  67% {text-shadow: 0 0 0 #fd962100;}
+  100% {text-shadow: 0 0 0 #fd9621ff;}
+}
+
+
+/****************************************************************************/
+/*************************** AJUSTES DISPOSITIVOS ***************************/
+/****************************************************************************/
+
+@media only screen and (max-width: 1200px) {
+  body {
+    margin: auto;
+  }
+  .sectionToc {
+    width: auto;
+  }
+  .likesectionHead {
+    color: #f92472;
+    font-size: 1.6em;
+    position: unset;
+    left: unset;
+    top: unset;
+  }
+  .tableofcontents {
+    font-size: 1em;
+    z-index: 1;
+    overflow-y: unset;
+    height: unset;
+    position: unset;
+    text-overflow: unset;
+    top: unset;
+    white-space: unset;
+    width: unset;
+  }
+  .tocbutton {
+    left: 10px;
+    top: 0.65em;
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+  }
+  #showtoc:checked ~ .tocbutton {
+    position: absolute;
+    left: 10px;
+    -webkit-transform: rotate(-90deg);
+  }
+  #showtoc:checked ~ .tableofcontents {
+    display: block;
+    animation: none;
+    margin-left: 0;
+  }
+  #showtoc:checked ~ .likesectionHead {
+    display: inline-block;
+    animation: none;
+  }
+  .tableofcontents,
+  .likesectionHead {
+    display: none;
+    animation: none;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  html {
+    font-size: 17px;
+  }
+  body {
+    padding: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  div.longtable {
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+  .tableofcontents {
+    display: none;
+  }
+}
+
+/* Chrome scrollbar */
+::-webkit-scrollbar {background: rgba(35, 36, 31, .15); width: 10px;}
+div::-webkit-scrollbar {background: transparent; width: 7px;}
+div::-webkit-scrollbar-thumb,::-webkit-scrollbar-thumb {
+  background: #6f7471; -webkit-border-radius: 5px;}
+::-webkit-scrollbar-corner {background: transparent;}
+
+/* EOF */
