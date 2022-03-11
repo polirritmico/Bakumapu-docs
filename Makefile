@@ -83,7 +83,7 @@ latex_prepare:
 
 version:
 	@echo -n "Ajustando la versión: "
-	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE)_temp.tex
+	@sed -i '/\\newcommand{\\docversion}/s/{\\docversion}{\+.\+.\+}/{\\docversion}{$(VERSION)}/' $(INFILE).tex
 	@echo -e "${GREEN}OK${NC}"
 
 latex2pdf:
