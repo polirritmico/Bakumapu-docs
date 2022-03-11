@@ -83,7 +83,7 @@ version:
 
 latex2pdf:
 	@echo -e "Generando PDF a partir de ${ORANGE}$(INFILE).tex${NC}: "
-	@latexmk -pdf -silent $(INFILE)_build.tex > /dev/null 2>$1
+	@latexmk -pdf -silent $(INFILE)_build.tex > /dev/null 2>\$1
 	@mv $(INFILE)_build.pdf $(INFILE).pdf
 	@echo -e "${GREEN}OK${NC}\n${ORANGE}$(INFILE).pdf${NC} generado exitosamente."
 
@@ -92,7 +92,7 @@ latex2pdf_light:
 	@echo -n "Cambiando a esquema de color claro: "
 	@sed -i '/\\newif\\ifdark\\/s/darktrue/darkfalse/' $(INFILE)-print_build.tex
 	@echo -en "${GREEN}OK${NC}\nGenerando PDF-light a partir de ${ORANGE}$(INFILE).tex${NC}: "
-	@latexmk -pdf -silent "$(INFILE)-print_build.tex" > /dev/null 2>$1
+	@latexmk -pdf -silent "$(INFILE)-print_build.tex" > /dev/null 2>\$1
 	@mv $(INFILE)-print_build.pdf $(INFILE)-print.pdf
 	@echo -e "${GREEN}OK${NC}\n${ORANGE}$(INFILE)-print.pdf${NC} generado exitosamente."
 
