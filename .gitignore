@@ -23,5 +23,10 @@
 *.out
 *.synctex.gz
 *.log
+
+## latexmk
+*.fdb_latexmk
+*.fls
+
 ## easy-todo file
 *.lod
