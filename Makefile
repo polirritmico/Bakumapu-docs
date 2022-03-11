@@ -45,7 +45,7 @@ clean:
 	-@mv $(INFILE)-print.pdf temp/
 	-@mv $(INFILE).synctex.gz temp/
 	-@rm $(INFILE).*
-	-@rm $(INFILE)_temp.*
+	-@rm $(INFILE)_build.*
 	@mv temp/* ./
 	@rm -r temp
 
@@ -81,7 +81,7 @@ reset:
 
 latex_prepare:
 	@echo -n "Preparando copia de $(INFILE).tex: "
-	@cp $(INFILE).tex $(INFILE)_temp.tex
+	@cp $(INFILE).tex $(INFILE)_build.tex
 	@echo -e "${GREEN}OK${NC}"
 
 version:
@@ -91,26 +91,26 @@ version:
 
 latex2pdf:
 	@echo -n "Cambiando a esquema de color oscuro: "
-	@sed -i '/\\newif\\ifdark\\/s/darkfalse/darktrue/' $(INFILE)_temp.tex
+	@sed -i '/\\newif\\ifdark\\/s/darkfalse/darktrue/' $(INFILE)_build.tex
 	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de ${ORANGE}$(INFILE).tex${NC}: "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_temp.tex 2>&1 > /dev/null
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_build.tex 2>&1 > /dev/null
 	@echo -en "1/3 ${GREEN}OK${NC} "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_temp.tex 2>&1 > /dev/null
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_build.tex 2>&1 > /dev/null
 	@echo -en "2/3 ${GREEN}OK${NC} "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_temp.tex 2>&1 > /dev/null
-	@mv $(INFILE)_temp.pdf $(INFILE).pdf
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_build.tex 2>&1 > /dev/null
+	@mv $(INFILE)_build.pdf $(INFILE).pdf
 	@echo -e "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE).pdf${NC} generado exitosamente."
 
 latex2pdf_light:
 	@echo -n "Cambiando a esquema de color claro: "
-	@sed -i '/\\newif\\ifdark\\/s/darktrue/darkfalse/' $(INFILE)_temp.tex
+	@sed -i '/\\newif\\ifdark\\/s/darktrue/darkfalse/' $(INFILE)_build.tex
 	@echo -en "${GREEN}OK${NC}\nGenerando PDF a partir de ${ORANGE}$(INFILE).tex${NC}: "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_temp.tex 2>&1 > /dev/null
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_build.tex 2>&1 > /dev/null
 	@echo -en "1/3 ${GREEN}OK${NC} "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_temp.tex 2>&1 > /dev/null
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_build.tex 2>&1 > /dev/null
 	@echo -en "2/3 ${GREEN}OK${NC} "
-	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_temp.tex 2>&1 > /dev/null
-	@mv $(INFILE)_temp.pdf $(INFILE)-print.pdf
+	@pdflatex -synctex=1 -interaction=nonstopmode $(INFILE)_build.tex 2>&1 > /dev/null
+	@mv $(INFILE)_build.pdf $(INFILE)-print.pdf
 	@echo -e "3/3 ${GREEN}OK${NC}\n${ORANGE}$(INFILE)-print.pdf${NC} generado exitosamente."
 
 
