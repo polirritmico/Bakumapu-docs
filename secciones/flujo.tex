@@ -144,16 +144,29 @@ No se debe confundir la documentación de este texto con los comentarios o expli
 Es muy relevante dejar en claro que el objetivo no es escribir una explicación \emph{línea a línea} de cómo funciona el código, sino una \emph{noción general} de ámbitos o lógicas más globales. Con señalar el sentido de estas entidades dentro del sistema y su interacción con el resto será suficiente.
 
 \subsubsection{Modificando el documento}\label{flujo:modificando-el-documento}
-Para modificar el documento, basta con utilizar un editor de textos sencillos y seguir la nomenclatura del sistema \LaTeX. En el apartado \nameref{flujo:latex} se proporcionará una breve guía con un listado de los comandos relevantes. En cualquier caso, considerando que el grueso del documento ya está definido, simplemente es cosa de usar los mismos apartados del documento como ejemplo.
+Para modificar el documento, basta con utilizar un editor de textos sencillos y seguir la nomenclatura del sistema \LaTeX. En el apartado \nameref{flujo:latex} se proporcionará una breve guía con un listado de los comandos relevantes. En cualquier caso y dado que el grueso del documento ya está escrito, se recomienda usar el mismo texto cómo referencia.
 
 Dado que en ciertos contextos la instalación de \LaTeX\ puede ser bastante engorrosa (la instalación manual de muchísimos paquetes), no es necesario compilar una nueva versión con cada cambio sino simplemente mantener los archivos \lsc{TEX} y la versión dentro de \textbf{Makefile} actualizados.
+
+\subsubsection{Compilación del documento}
+Para la compilación se ha automatizado el proceso con la herramienta \lsc{GNU} make. Las instrucciones de compilación se encuentran en el archivo \textbf{Makefile}. El siguiente comando compilará la versión \lsc{PDF}, \lsc{HTML} y sincronizará el repositorio de forma automática:
+
+\begin{lstlisting}
+Bakumapu-docs $ make all
+\end{lstlisting}
+
+Si solo queremos compilar las versiones \lsc{PDF} (color oscuro y para imprimir) podemos utilizar el siguiente comando:
+
+\begin{lstlisting}
+Bakumapu-docs $ make pdf
+\end{lstlisting}
 
 \subsubsection{Versionado del documento}\label{flujo:versionado-del-documento}
 Cada modificación a este documento deberá aumentar la numeración de la subversión en 1 (v0.0\textbf{.1} a v0.0\textbf{.2}). Los primeros 2 índices (v\textbf{0.0.}1) estarán en línea con la última rama \textbf{main} del repositorio. Cada vez que se suba una nueva versión de la rama, se deberá chequear que el documento contenga los cambios relevantes a esa versión e incorporarlos. Con cada cambio de versión menor, la subversión debe volver a cero (v0.\textbf{5.36} a v0.\textbf{6.0}). El versionado de las ramas se discutirá en el apartado \nameref{organizacion:ramas-principales}.
 
 Para ajustar la versión del documento solo hay que editar el archivo \textbf{Makefile}, que se encargará automáticamente de hacer todos los ajustes durante la recompilación:
 \begin{center}
-\texttt{Versión actual: v\docversion.}
+\texttt{Versión actual: v\docversion}
 \end{center}
 
 \Needspace{3\baselineskip}
