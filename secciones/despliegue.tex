@@ -1,9 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Flujo de despliegue
 
-\section{Entrega continua}\label{cd:entrega-continua}
+\section{Entrega y Distribución continua (CD/CI)}\label{cdci:entrega-continua}
 
-\subsection{Pipeline o Flujo de entrega}\label{cd:flujo-de-entrega}
+\subsection{Pipeline o Flujo de entrega}\label{cdci:flujo-de-entrega}
 
 La idea de una pipeline (tubería) es simplemente el conjunto de herramientas y
 procedimientos necesarios para transformar un commit a un output publicable.
@@ -16,17 +16,20 @@ de test de rendimiento (fps mínimos por ejemplo).
 El sistema nos permite determinar desde el primer momento los criterios de
 lanzamiento y organizar todo el flujo de trabajo en pos de esos criterios.
 
-\subsection{Tipos de Test}
+\subsection{Tipos de Test}\label{cdci:tipos-de-test}
 
-- Unit Test
-- Acceptance Test
-- Performance Test
-- Static Analysis
-- Sign-Offs: Regulaciones
-- Security Test
-- Scalability Test
+\begin{itemize}
+  \item \textbf{Unit Test:} Test sencillos y específicos hechos para probar funciones o partes puntuales del código. Deberían correr en memoria y no llamar entidades externas como bases de datos, sistema de archivos, acceder a redes, etc. Lo importante es probar la unidad de código y no sus dependencias.
+  \item \textbf{Integration Test:} Test que combinan secciones unitarias de código para comprobar que la interacción de sus distintos métodos funcionan correctamente.
+  \item \textbf{Acceptance Test:} Se prueba el software y el sistema al completo desde el punto de vista de un agente externo al desarrollo revisando que el programa satisface todas las especificaciones del usuario.
+  \item \textbf{Performance Test:} Se revisa que el software cumpla tiempos de respuesta, estabilidad y \lsc{FPS}.
+  \item \textbf{Static Analysis:} 
+  \item \textbf{Sign-Offs: Regulaciones:} 
+  \item \textbf{Security Test:} 
+  \item \textbf{Scalability Test:} 
+\end{itemize}
 
-\subsection{Eficiencia}
+\subsection{Eficiencia}\label{cdci:eficiencia}
 
 Un concepto importante con respecto a nuestro pipeline es la eficiencia del
 sistema, lo que queremos lograr es ir desde los commits a un resultado lanzable
@@ -36,12 +39,51 @@ los criterios que queremos que conciernan a nuestro pipeline.
 
 Un buen punto de partida es intentar lograr un ciclo completo del flujo de entrega en menos de 1 hora, para mantener margen suficiente para corregir cualquier problema que ocasione un commit.
 
-\subsection{Punto de Partida}
+\subsection{Punto de Partida}\label{cdci:punto-de-partida}
 
 Un buen punto de partida es mantener todo el código en un único repositorio para evitar problemas de gestión de dependencias.
 
 Despliegues unitarios, es decir entregar todo lo necesario en un único paso.
 
 
+\subsection{Automatización}\label{cdci:automatizacion}
 
+\begin{enumerate}
+  \item Pre-commits hacia rama \textbf{develop}.
+  \begin{enumerate}
+    \item Test unitarios
+    \item Compilación de binarios (Android, Windows, Linux)
+  \end{enumerate}
+  \item Merge de develop hacia deploy
+  \item Test
+  \item Deploy a las plataformas de distribución.
+\end{enumerate}
 
+\subsection{Pipeline}
+
+\begin{enumerate}
+  \item Merge hacia la rama \textbf{deploy}.
+  \item Test unitarios, de integración y static analysis.
+  \item Builds Windows, Android y Linux.
+  \item Test de rendimiento
+  \item Test de aceptación
+  \item Test de sistema (instalación y ejecución)
+  \item Deploy a las plataformas de distribución.
+\end{enumerate}
+
+Exportar a Linux, Windows y Android:
+
+Linux:
+\begin{lstlisting}
+$ godot --no-window --export-debug "Linux" export/linux/Bakumapu.x86_64
+\end{lstlisting}
+
+Windows:
+\begin{lstlisting}
+$ godot --no-window --export-debug "Windows" export/windows/Bakumapu.exe
+\end{lstlisting}
+
+Android:
+\begin{lstlisting}
+$ godot --no-window --export-debug "Android" export/android/Bakumapu.apk
+\end{lstlisting}
