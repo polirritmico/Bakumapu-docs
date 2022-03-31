@@ -3,7 +3,7 @@
 
 \section{Integración y Distribución continua (CD/CI)}\label{pipeline:entrega-continua}
 
-\subsection{Pipeline o Flujo de entrega}\label{pipeline:flujo-de-entrega}
+\subsection{Acerca del Pipeline o Flujo de entrega}
 
 Entendemos como pipeline (tubería) el conjunto de herramientas y procedimientos
 necesarios para transformar un commit de código a un output ejecutable
@@ -11,23 +11,23 @@ completamente preparado para su publicación. Es una cadena de producción
 automatizada que determina en base a criterios preestablecidos si el software
 se encuentra o no preparado para un lanzamiento, ajusta y empaqueta todas las
 dependencias necesarias del proyecto y empaqueta los binarios para su
-distribución a usuarios.
+distribución a los usuarios.
 
 En esta cadena se ejecutarán de forma automática test unitarios, de
 integración, de rendimiento y todos los necesarios para determinar el estado
-actual del código del repositorio. Por ejemplo, para comprobar mínimos de
+actual del código en el repositorio. Por ejemplo, para comprobar mínimos de
 rendimiento se podría incorporar a nuestra pipeline un test de estrés para
-validar \lsc{fps} mínimos.
+validar \lsc{FPS} mínimos.
 
 Además de las pruebas, el sistema integrará todas las dependencias necesarias y
 empaquetará los binarios y cualquier recurso necesario para la distribución del
 programa a los sistemas de los clientes (win64, linux, osx).
 
-A nivel de gestión el sistema nos permite determinar desde el primer momento
+A nivel de gestión la pipeline nos permite determinar desde el primer momento
 los criterios de lanzamiento y organizar todo el flujo de trabajo en esa
-dirección.
+dirección evitando sorpresas y problemas de integración innecesarios.
 
-\subsection{Eficiencia}\label{pipeline:eficiencia}
+\subsubsection{Eficiencia}\label{pipeline:eficiencia}
 
 Un factor muy importante con respecto a nuestro pipeline es la eficiencia total
 del sistema. Ya que queremos ser capaces de ejecutar el proceso múltiples veces
@@ -38,7 +38,7 @@ Este criterio de 1 hora otorgará márgen suficiente para que se puede corregir 
 revertir cualquier commit que genere problemas; o al menos nos dará la
 información necesaria para su revisión o estudio.
 
-\subsection{Repositorio de artefactos}
+\subsubsection{Repositorio de artefactos}
 
 Entendemos como artefactos
 
@@ -51,17 +51,6 @@ Despliegues unitarios, es decir entregar todo lo necesario en un único paso.
 
 
 
-
-\begin{enumerate}
-  \item Pre-commits hacia rama \textbf{develop}.
-  \begin{enumerate}
-    \item Test unitarios
-    \item Compilación de binarios (Android, Windows, Linux)
-  \end{enumerate}
-  \item Merge de develop hacia deploy
-  \item Test
-  \item Deploy a las plataformas de distribución.
-\end{enumerate}
 
 \subsection{Pipeline}
 
