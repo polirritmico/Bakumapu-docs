@@ -5,47 +5,52 @@
 
 \subsection{Pipeline o Flujo de entrega}\label{pipeline:flujo-de-entrega}
 
-Entendemos como pipeline (tubería) el conjunto de herramientas y procedimientos necesarios para transformar un commit a un output publicable. Es una cadena de producción automatizada que determina en base a criterios configurados si el software se encuentra o no preparado para un lanzamiento.
+Entendemos como pipeline (tubería) el conjunto de herramientas y procedimientos
+necesarios para transformar un commit de código a un output ejecutable
+completamente preparado para su publicación. Es una cadena de producción
+automatizada que determina en base a criterios preestablecidos si el software
+se encuentra o no preparado para un lanzamiento, ajusta y empaqueta todas las
+dependencias necesarias del proyecto y empaqueta los binarios para su
+distribución a usuarios.
 
-Su trabajo es determinar si el software se encuentra según nuestros criterios
-en un estado publicable o no. Si el software necesita ciertos mínimos de
-rendimiento, entonces nuestro flujo de entrega deberá incluir automatizaciones
-de test de rendimiento (fps mínimos por ejemplo).
+En esta cadena se ejecutarán de forma automática test unitarios, de
+integración, de rendimiento y todos los necesarios para determinar el estado
+actual del código del repositorio. Por ejemplo, para comprobar mínimos de
+rendimiento se podría incorporar a nuestra pipeline un test de estrés para
+validar \lsc{fps} mínimos.
 
-El sistema nos permite determinar desde el primer momento los criterios de
-lanzamiento y organizar todo el flujo de trabajo en pos de esos criterios.
+Además de las pruebas, el sistema integrará todas las dependencias necesarias y
+empaquetará los binarios y cualquier recurso necesario para la distribución del
+programa a los sistemas de los clientes (win64, linux, osx).
 
-\subsection{Tipos de Test}\label{pipeline:tipos-de-test}
-
-\begin{itemize}
-  \item \textbf{Unit Test:} Test sencillos y específicos hechos para probar funciones o partes puntuales del código. Deberían correr en memoria y no llamar entidades externas como bases de datos, sistema de archivos, acceder a redes, etc. Lo importante es probar la unidad de código y no sus dependencias.
-  \item \textbf{Integration Test:} Test que combinan secciones unitarias de código para comprobar que la interacción de sus distintos métodos funcionan correctamente.
-  \item \textbf{Acceptance Test:} Se prueba el software y el sistema al completo desde el punto de vista de un agente externo al desarrollo revisando que el programa satisface todas las especificaciones del usuario.
-  \item \textbf{Performance Test:} Se revisa que el software cumpla tiempos de respuesta, estabilidad y \lsc{FPS}.
-  \item \textbf{Static Analysis:} 
-  \item \textbf{Sign-Offs: Regulaciones:} 
-  \item \textbf{Security Test:} 
-  \item \textbf{Scalability Test:} 
-\end{itemize}
+A nivel de gestión el sistema nos permite determinar desde el primer momento
+los criterios de lanzamiento y organizar todo el flujo de trabajo en esa
+dirección.
 
 \subsection{Eficiencia}\label{pipeline:eficiencia}
 
-Un concepto importante con respecto a nuestro pipeline es la eficiencia del
-sistema, lo que queremos lograr es ir desde los commits a un resultado lanzable
-múltiples veces al día. Por lo mismo es muy importante resolver el cómo
-optimizar el proceso y todas las validaciones necesarias para corresponder a
-los criterios que queremos que conciernan a nuestro pipeline.
+Un factor muy importante con respecto a nuestro pipeline es la eficiencia total
+del sistema. Ya que queremos ser capaces de ejecutar el proceso múltiples veces
+al día, es necesario \emph{optimizar el sistema para que no tarde más de 1
+hora} de principio a fin (de commit a deploy).
 
-Un buen punto de partida es intentar lograr un ciclo completo del flujo de entrega en menos de 1 hora, para mantener margen suficiente para corregir cualquier problema que ocasione un commit.
+Este criterio de 1 hora otorgará márgen suficiente para que se puede corregir o
+revertir cualquier commit que genere problemas; o al menos nos dará la
+información necesaria para su revisión o estudio.
 
-\subsection{Punto de Partida}\label{pipeline:punto-de-partida}
+\subsection{Repositorio de artefactos}
 
-Un buen punto de partida es mantener todo el código en un único repositorio para evitar problemas de gestión de dependencias.
+Entendemos como artefactos
+
+Un buen punto de partida es mantener todo el código en un único repositorio
+para evitar problemas de gestión de dependencias.
 
 Despliegues unitarios, es decir entregar todo lo necesario en un único paso.
 
+\subsection{Etapas de la pipeline}
 
-\subsection{Automatización}\label{pipeline:automatizacion}
+
+
 
 \begin{enumerate}
   \item Pre-commits hacia rama \textbf{develop}.
@@ -69,6 +74,31 @@ Despliegues unitarios, es decir entregar todo lo necesario en un único paso.
   \item Test de sistema (instalación y ejecución)
   \item Deploy a las plataformas de distribución.
 \end{enumerate}
+
+
+% =============================================================================
+
+\subsection{Tipos de Test}\label{pipeline:tipos-de-test}
+
+\begin{itemize}
+  \item \textbf{Unit Test:} Test sencillos y específicos hechos para probar
+      funciones o partes puntuales del código. Deberían correr en memoria y no
+      llamar entidades externas como bases de datos, sistema de archivos,
+      acceder a redes, etc. Lo importante es probar la unidad de código y no
+      sus dependencias. \item \textbf{Integration Test:} Test que combinan
+      secciones unitarias de código para comprobar que la interacción de sus
+      distintos métodos funcionan correctamente.
+  \item \textbf{Acceptance Test:} Se prueba el software y el sistema al
+      completo desde el punto de vista de un agente externo al desarrollo
+      revisando que el programa satisface todas las especificaciones del
+      usuario. \item \textbf{Performance Test:} Se revisa que el software
+      cumpla tiempos de respuesta, estabilidad y \lsc{FPS}.
+  \item \textbf{Static Analysis:} 
+  \item \textbf{Sign-Offs: Regulaciones:} 
+  \item \textbf{Security Test:} 
+  \item \textbf{Scalability Test:} 
+\end{itemize}
+
 
 Exportar a Linux, Windows y Android:
 
