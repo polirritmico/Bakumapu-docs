@@ -3,18 +3,18 @@
   <head>
     <title>Bakumapu v0.0.31</title>
     <meta charset='utf-8'>
-    <meta name='generator' content='TeX4ht (https://tug.org/tex4ht/)'>
-    <meta name='viewport' content='width=device-width,initial-scale=1'>
-    <link rel='stylesheet' href='index.css' type='text/css'>
-    <meta name='src' content='index.tex'>
-    <link rel='stylesheet' href='style.css' type='text/css'>
+    <meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator'>
+    <meta content='width=device-width,initial-scale=1' name='viewport'>
+    <link rel='stylesheet' type='text/css' href='index.css'>
+    <meta content='index.tex' name='src'>
+    <link rel='stylesheet' type='text/css' href='style.css'>
     <link rel="icon" href="images/icon.svg">
   </head>
   <body><div class='flushright'><p class='noindent'>
         <span class='underline'><span class='ecbx-2488'>Bakumapu</span></span><br>
         <span id='textcolor1'><span class='ecrm-1440'>Diseño técnico</span></span>
       </p><p class='noindent'>
-        Estudio 6/8 - 2022-3-31_v0.0.31
+        Estudio 6/8 - 2022-4-1_v0.0.31
       </p>
     </div>
     <input type="checkbox" id="showtoc" checked><div class="tocbutton"></div>
@@ -507,7 +507,7 @@
     </h4>
     <figure class='figure'>
       <a id='x1-24001r1'></a><p class='noindent'>
-        <img alt='PIC' src='images/tdd.png' width='270' height='270'>
+        <img width='270' alt='PIC' src='images/tdd.png' height='270'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 1: </span><span class='content'>Flujo de desarrollo TDD.</span>
@@ -561,7 +561,7 @@
     </p>
     <figure class='figure'>
       <a id='x1-29001r2'></a><p class='noindent'>
-        <img alt='PIC' src='images/tablero01.png' width='360' height='360'>
+        <img width='360' alt='PIC' src='images/tablero01.png' height='360'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 2: </span><span class='content'>Tablero Kanban en Trello.</span>
@@ -580,7 +580,7 @@
       <a id='x1-30001r3'></a>
       <figcaption class='caption'>
         <span class='id'>Figura 3: </span><span class='content'>WIP y división de columnas.</span>
-      </figcaption><img alt='PIC' src='images/tablero_col.png' width='270' height='270'>
+      </figcaption><img width='270' alt='PIC' src='images/tablero_col.png' height='270'>
     </figure><p class='indent'>
       Lamentablemente la plataforma Trello no permite dividir una misma columna en dos secciones, por lo que se utilizarán dos columnas distintas para un mismo proceso que llamaremos columnas asociadas. Para identificarlas se enumerarán todas las columnas y las asociadas mantendrán el mismo número. Por ejemplo en la <a href='#x1-30002r4'>Figura 4</a>, la columna “[5] Trabajando” ha sido dividida en las columnas “2. [5] Trabajando” y “2. Terminadas”. Ya que ambas comienzan con “2.” sabemos que se refieren al mismo proceso y que sumando el total de tareas entre ambas no debemos superar las [5] (en este caso 4 en Trabajando + 1 en Terminadas; o sea ya hay 5).
     </p>
@@ -588,7 +588,7 @@
       <a id='x1-30002r4'></a>
       <figcaption class='caption'>
         <span class='id'>Figura 4: </span><span class='content'>Límites de trabajo en Trello.</span>
-      </figcaption><img alt='PIC' src='images/tablero02.png' width='360' height='360'>
+      </figcaption><img width='360' alt='PIC' src='images/tablero02.png' height='360'>
     </figure><p class='indent'>
       Respetar los límites de cada columna facilitará la distribución de trabajo y nos permitirá tomar decisiones más acertadas y realistas al planificar. <a id='x1-30003r32'></a>
     </p>
@@ -921,7 +921,7 @@
     <h4 class='subsectionHead'>
       <span class='titlemark'>4.1.</span> <a id='x1-520001'></a>Acerca del Pipeline o Flujo de entrega
     </h4><p class='noindent'>
-      Entendemos como pipeline (tubería) el conjunto de herramientas y procedimientos necesarios para transformar un commit de código a un output ejecutable completamente preparado para su publicación. Es una cadena de producción automatizada que determina en base a criterios preestablecidos si el software se encuentra o no preparado para un lanzamiento, ajusta y empaqueta todas las dependencias necesarias del proyecto y empaqueta los binarios para su distribución a los usuarios.
+      Entendemos como pipeline (tubería) el conjunto de herramientas y procedimientos necesarios para transformar un commit de código a un output ejecutable que cumpla todos nuestros criterios de publicación. Es una cadena de producción automatizada —como la de una fábrica— que determina si el software se encuentra o no preparado para un lanzamiento, ajusta y empaqueta todas las dependencias necesarias del proyecto y empaqueta los binarios para su distribución a los usuarios.
     </p><p class='indent'>
       En esta cadena se ejecutarán de forma automática test unitarios, de integración, de rendimiento y todos los necesarios para determinar el estado actual del código en el repositorio. Por ejemplo, para comprobar mínimos de rendimiento se podría incorporar a nuestra pipeline un test de estrés para validar <span class='eccc1095-'><span class='small-caps'>fps</span></span> mínimos.
     </p><p class='indent'>
@@ -932,7 +932,7 @@
     <h5 class='subsubsectionHead'>
       <span class='titlemark'>4.1.1.</span> <a id='x1-530001'></a>Eficiencia
     </h5><p class='noindent'>
-      Un factor muy importante con respecto a nuestro pipeline es la eficiencia total del sistema. Ya que queremos ser capaces de ejecutar el proceso múltiples veces al día, es necesario <span class='ecti-1095'>optimizar el sistema para que no tarde más de 1 hora</span> de principio a fin (de commit a deploy).
+      Un factor muy importante con respecto al pipeline es la eficiencia total del sistema. Ya que queremos ser capaces de ejecutar el proceso múltiples veces al día, es necesario <span class='ecti-1095'>optimizar el sistema para que no tarde más de 1 hora</span> de principio a fin (de commit a deploy).
     </p><p class='indent'>
       Este criterio de 1 hora otorgará márgen suficiente para que se puede corregir o revertir cualquier commit que genere problemas; o al menos nos dará la información necesaria para su revisión o estudio. <a id='x1-53001r57'></a>
     </p>
@@ -1161,7 +1161,7 @@
     </h5>
     <figure class='figure'>
       <a id='x1-65001r5'></a><p class='noindent'>
-        <img alt='PIC' src='images/arbol_i18n.png'>
+        <img src='images/arbol_i18n.png' alt='PIC'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 5: </span><span class='content'>Organización de archivos de i18n.</span>
@@ -1574,7 +1574,7 @@
     </p>
     <figure class='figure'>
       <a id='x1-84008r6'></a><p class='noindent'>
-        <img alt='PIC' src='images/arquitectura.png' width='216' height='216'>
+        <img width='216' alt='PIC' src='images/arquitectura.png' height='216'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 6: </span><span class='content'>Ejemplo de sistema de managers ajustable.</span>
@@ -1603,108 +1603,108 @@
           <colgroup id='TBL-1-2g'>
             <col id='TBL-1-2'>
           </colgroup>
-          <tr id='TBL-1-9-' style='vertical-align:baseline;'>
-            <td colspan='2' id='TBL-1-9-1' style='white-space:nowrap; text-align:left;' class='td11'>
+          <tr style='vertical-align:baseline;' id='TBL-1-9-'>
+            <td style='white-space:nowrap; text-align:left;' colspan='2' id='TBL-1-9-1' class='td11'>
               <div class='multicolumn' style='white-space:nowrap; text-align:left;'>
                 <span class='ecbx-1095'>GameManager</span>
               </div>
             </td>
           </tr>
-          <tr id='TBL-1-16-' style='vertical-align:baseline;'>
-            <td colspan='2' id='TBL-1-16-1' style='white-space:normal; text-align:left;' class='td11'>
+          <tr style='vertical-align:baseline;' id='TBL-1-16-'>
+            <td style='white-space:normal; text-align:left;' colspan='2' id='TBL-1-16-1' class='td11'>
               <div class='multicolumn' style='white-space:normal; text-align:left;'>
                 Manager principal a nivel de ejecución cuya función además de iniciar el juego será la de instanciar al resto de SubManagers. <span class='eccc1095-'><span class='small-caps'>gm</span></span> tendrá una clara tendencia a crecer en complejidad por lo que es muy importante que opere delegando funciones más que implementándolas. En esta misma línea si la interacción entre managers termina siendo demasiado compleja entonces será un síntoma de que es necesario un rediseño en cuanto a los in/outs de los submanagers implicados.
               </div>
             </td>
           </tr>
-          <tr id='TBL-1-23-' style='vertical-align:baseline;'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-23-1'><p class='noindent'>
+          <tr style='vertical-align:baseline;' id='TBL-1-23-'>
+            <td class='td11' id='TBL-1-23-1' style='white-space:normal; text-align:left;'><p class='noindent'>
                 <span class='ecbx-1095'>SubManager</span>
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-23-2'><p class='noindent'>
+            <td class='td11' id='TBL-1-23-2' style='white-space:normal; text-align:left;'><p class='noindent'>
                 <span class='ecbx-1095'>Dimensión</span>
               </p>
             </td>
           </tr>
-          <tr id='TBL-1-30-' style='vertical-align:baseline;'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-30-1'><p class='noindent'>
+          <tr style='vertical-align:baseline;' id='TBL-1-30-'>
+            <td class='td11' id='TBL-1-30-1' style='white-space:normal; text-align:left;'><p class='noindent'>
                 LevelManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-30-2'><p class='noindent'>
+            <td class='td11' id='TBL-1-30-2' style='white-space:normal; text-align:left;'><p class='noindent'>
                 Todo lo relativo a los niveles. Por ejemplo, el conjunto de métodos que se encargan de toda la lógica relevante del nivel, una interfaz para que <span class='eccc1095-'><span class='small-caps'>gm</span></span> pueda conectar los distintos requerimientos del nivel, carga de locaciones, ubicación e inicio de subrutinas de Player y <span class='eccc1095-'><span class='small-caps'>npc</span></span>, señales de áreas para CutsceneManager, <span class='eccc1095-'><span class='small-caps'>ui</span></span> específicas, etc. Al igual que <span class='eccc1095-'><span class='small-caps'>gm</span></span> posiblemente tenderá a complejizarse por lo que es importante estar pendiente de posibles desacoplamientos.
               </p>
             </td>
           </tr>
-          <tr id='TBL-1-37-' style='vertical-align:baseline;'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-37-1'><p class='noindent'>
+          <tr style='vertical-align:baseline;' id='TBL-1-37-'>
+            <td class='td11' id='TBL-1-37-1' style='white-space:normal; text-align:left;'><p class='noindent'>
                 QuestManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-37-2'><p class='noindent'>
+            <td class='td11' id='TBL-1-37-2' style='white-space:normal; text-align:left;'><p class='noindent'>
                 Todo lo relevante a las misiones: requerimientos, objetivos, experiencia, ítems, cutscenes, niveles, etc.
               </p>
             </td>
           </tr>
-          <tr id='TBL-1-44-' style='vertical-align:baseline;'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-44-1'><p class='noindent'>
+          <tr style='vertical-align:baseline;' id='TBL-1-44-'>
+            <td class='td11' id='TBL-1-44-1' style='white-space:normal; text-align:left;'><p class='noindent'>
                 Cutscene<br class='newline'>
                 Manager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-44-2'><p class='noindent'>
+            <td class='td11' id='TBL-1-44-2' style='white-space:normal; text-align:left;'><p class='noindent'>
                 Todo lo relativo a los momentos en el que el jugador no está interactuando con la <span class='eccc1095-'><span class='small-caps'>ui</span></span> ni tiene control del personaje, es decir animaciones dentro y fuera del gameplay. Incluye diálogos pero estudiar si es conveniente una separación.
               </p>
             </td>
           </tr>
-          <tr id='TBL-1-51-' style='vertical-align:baseline;'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-51-1'><p class='noindent'>
+          <tr style='vertical-align:baseline;' id='TBL-1-51-'>
+            <td class='td11' id='TBL-1-51-1' style='white-space:normal; text-align:left;'><p class='noindent'>
                 PlayerManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-51-2'><p class='noindent'>
+            <td class='td11' id='TBL-1-51-2' style='white-space:normal; text-align:left;'><p class='noindent'>
                 Todo lo relativo al jugador: estados, ítems, exp, estadísticas, estados de misiones, controles, path del árbol de decisiones, etc. Implementar una state machine.
               </p>
             </td>
           </tr>
-          <tr id='TBL-1-58-' style='vertical-align:baseline;'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-58-1'><p class='noindent'>
+          <tr style='vertical-align:baseline;' id='TBL-1-58-'>
+            <td class='td11' id='TBL-1-58-1' style='white-space:normal; text-align:left;'><p class='noindent'>
                 IAManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-58-2'><p class='noindent'>
+            <td class='td11' id='TBL-1-58-2' style='white-space:normal; text-align:left;'><p class='noindent'>
                 Todo lo referente a IA: Rutas de <span class='eccc1095-'><span class='small-caps'>npc</span></span>, combate de <span class='eccc1095-'><span class='small-caps'>npc</span></span> aliados y enemigos y si compete, la generación procedural de niveles.
               </p>
             </td>
           </tr>
-          <tr id='TBL-1-65-' style='vertical-align:baseline;'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-65-1'><p class='noindent'>
+          <tr style='vertical-align:baseline;' id='TBL-1-65-'>
+            <td class='td11' id='TBL-1-65-1' style='white-space:normal; text-align:left;'><p class='noindent'>
                 UIManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-65-2'><p class='noindent'>
+            <td class='td11' id='TBL-1-65-2' style='white-space:normal; text-align:left;'><p class='noindent'>
                 Todo lo relativo a la interfaz gráfica: Barras de vida, visualización del mapa, menús, inventario, árbol de habilidades e interfaz de diálogo.
               </p>
             </td>
           </tr>
-          <tr id='TBL-1-72-' style='vertical-align:baseline;'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-72-1'><p class='noindent'>
+          <tr style='vertical-align:baseline;' id='TBL-1-72-'>
+            <td class='td11' id='TBL-1-72-1' style='white-space:normal; text-align:left;'><p class='noindent'>
                 AudioManager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-72-2'><p class='noindent'>
+            <td class='td11' id='TBL-1-72-2' style='white-space:normal; text-align:left;'><p class='noindent'>
                 Control de la música, transiciones, volumen, etc.; y los sonidos de los distintos objetos, su paneo, volumen, efectos, etc.
               </p>
             </td>
           </tr>
-          <tr id='TBL-1-79-' style='vertical-align:baseline;'>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-79-1'><p class='noindent'>
+          <tr style='vertical-align:baseline;' id='TBL-1-79-'>
+            <td class='td11' id='TBL-1-79-1' style='white-space:normal; text-align:left;'><p class='noindent'>
                 Debug<br class='newline'>
                 Manager
               </p>
             </td>
-            <td class='td11' style='white-space:normal; text-align:left;' id='TBL-1-79-2'><p class='noindent'>
+            <td class='td11' id='TBL-1-79-2' style='white-space:normal; text-align:left;'><p class='noindent'>
                 Interfaz de debug que obtenga información relevante para el desarrollo sobre el funcionamiento de los distintos managers y objetos instanciados.
               </p>
             </td>
@@ -2130,7 +2130,7 @@
       <a id='x1-1030001'></a>Diagrama del árbol de directorios.
     </h5>
     <figure class='figure'><p class='noindent'>
-        <img alt='PIC' src='images/arbol_proyecto.png' width='503' height='503'>
+        <img width='503' alt='PIC' src='images/arbol_proyecto.png' height='503'>
       </p>
     </figure>
     <p>
