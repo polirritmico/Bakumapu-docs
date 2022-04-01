@@ -5,45 +5,25 @@
 
 \subsection{Acerca del Pipeline o Flujo de entrega}
 
-Entendemos como pipeline (tubería) el conjunto de herramientas y procedimientos
-necesarios para transformar un commit de código a un output ejecutable
-completamente preparado para su publicación. Es una cadena de producción
-automatizada que determina en base a criterios preestablecidos si el software
-se encuentra o no preparado para un lanzamiento, ajusta y empaqueta todas las
-dependencias necesarias del proyecto y empaqueta los binarios para su
-distribución a los usuarios.
+Entendemos como pipeline (tubería) el conjunto de herramientas y procedimientos necesarios para transformar un commit de código a un output ejecutable que cumpla todos nuestros criterios de publicación. Es una cadena de producción automatizada que determina en base a criterios preestablecidos si el software se encuentra o no preparado para un lanzamiento, ajusta y empaqueta todas las dependencias necesarias del proyecto y empaqueta los binarios para su distribución a los usuarios.
 
-En esta cadena se ejecutarán de forma automática test unitarios, de
-integración, de rendimiento y todos los necesarios para determinar el estado
-actual del código en el repositorio. Por ejemplo, para comprobar mínimos de
-rendimiento se podría incorporar a nuestra pipeline un test de estrés para
-validar \lsc{FPS} mínimos.
+En esta cadena se ejecutarán de forma automática test unitarios, de integración, de rendimiento y todos los necesarios para determinar el estado actual del código en el repositorio. Por ejemplo, para comprobar mínimos de rendimiento se podría incorporar a nuestra pipeline un test de estrés para validar \lsc{FPS} mínimos.
 
-Además de las pruebas, el sistema integrará todas las dependencias necesarias y
-empaquetará los binarios y cualquier recurso necesario para la distribución del
-programa a los sistemas de los clientes (win64, linux, osx).
+Además de las pruebas, el sistema integrará todas las dependencias necesarias y empaquetará los binarios y cualquier recurso necesario para la distribución del programa a los sistemas de los clientes (win64, linux, osx).
 
-A nivel de gestión la pipeline nos permite determinar desde el primer momento
-los criterios de lanzamiento y organizar todo el flujo de trabajo en esa
-dirección evitando sorpresas y problemas de integración innecesarios.
+A nivel de gestión la pipeline nos permite determinar desde el primer momento los criterios de lanzamiento y organizar todo el flujo de trabajo en esa dirección evitando sorpresas y problemas de integración innecesarios.
 
 \subsubsection{Eficiencia}\label{pipeline:eficiencia}
 
-Un factor muy importante con respecto a nuestro pipeline es la eficiencia total
-del sistema. Ya que queremos ser capaces de ejecutar el proceso múltiples veces
-al día, es necesario \emph{optimizar el sistema para que no tarde más de 1
-hora} de principio a fin (de commit a deploy).
+Un factor muy importante con respecto al pipeline es la eficiencia total del sistema. Ya que queremos ser capaces de ejecutar el proceso múltiples veces al día, es necesario \emph{optimizar el sistema para que no tarde más de 1 hora} de principio a fin (de commit a deploy).
 
-Este criterio de 1 hora otorgará márgen suficiente para que se puede corregir o
-revertir cualquier commit que genere problemas; o al menos nos dará la
-información necesaria para su revisión o estudio.
+Este criterio de 1 hora otorgará márgen suficiente para que se puede corregir o revertir cualquier commit que genere problemas; o al menos nos dará la información necesaria para su revisión o estudio.
 
 \subsubsection{Repositorio de artefactos}
 
 Entendemos como artefactos
 
-Un buen punto de partida es mantener todo el código en un único repositorio
-para evitar problemas de gestión de dependencias.
+Un buen punto de partida es mantener todo el código en un único repositorio para evitar problemas de gestión de dependencias.
 
 Despliegues unitarios, es decir entregar todo lo necesario en un único paso.
 
