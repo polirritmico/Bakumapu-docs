@@ -35,6 +35,10 @@ all: pdf clean html sync
 
 pdf: version latex_prepare latex2pdf_light latex_prepare latex2pdf
 
+html: html_folders html_prepare html_convert html_tidy html_fix_classnames \
+	  html_custom html_longtable_clean html_clean html_ok
+
+local: pdf clean html
 
 # =============================================================================
 
@@ -98,9 +102,6 @@ latex2pdf_light:
 
 
 # =============================================================================
-
-html: html_folders html_prepare html_convert html_tidy html_fix_classnames \
-	  html_custom html_longtable_clean html_clean html_ok
 
 html_folders:
 	@mkdir -p build/config/style
