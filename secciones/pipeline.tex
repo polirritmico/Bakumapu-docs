@@ -15,57 +15,48 @@ A nivel de gestión la pipeline nos permite determinar desde el primer momento l
 
 \subsubsection{Eficiencia}\label{pipeline:eficiencia}
 
-Un factor muy importante con respecto al pipeline es la eficiencia total del sistema. Ya que queremos ser capaces de ejecutar el proceso múltiples veces al día es necesario \emph{optimizar el sistema para que no tarde más de 1 hora} de principio a fin (de commit a deploy). Este criterio de 1 hora otorgará márgen suficiente para que se pueda corregir o revertir cualquier commit que genere problemas; o al menos nos dará la información necesaria para su revisión o estudio.
+Un factor muy importante con respecto al pipeline es la eficiencia total del proceso. Ya que queremos ser capaces de ejecutarlo múltiples veces al día se hace necesario \emph{optimizar el sistema para que no tarde más de 1 hora} de principio a fin (de commit a deploy). Este criterio de 1 hora otorgará márgen suficiente para que se pueda corregir o revertir cualquier commit que genere problemas; o al menos nos dará la información necesaria para su revisión o estudio.
 
 \subsubsection{Repositorio de artefactos}
 
 Entendemos como artefactos todos los binarios, librerías, resources y archivos necesarios para ejecutar correctamente el programa en un sistema operativo específico.
 
-Dado que el uso de \lsc{GIT} trae complicaciones innecesarias de manera temporal se utilizará una carpeta compartida de Google Drive de manera temporal mientras no sea necesaria una solución más robusta.
+Dado que el uso de \lsc{GIT} para el control de binarios grandes trae complicaciones innecesarias se utilizará temporalmente una carpeta compartida de Google Drive mientras no sea necesario implementar una solución más robusta.
 
-\href{https://drive.google.com/drive/folders/15OtN9fs-UASOKTRcWGbR-knWMSmQGyO_?usp=sharing}
+La carpeta compartida estará alojada en la siguiente dirección: \href{https://drive.google.com/drive/folders/15OtN9fs-UASOKTRcWGbR-knWMSmQGyO_?usp=sharing}. Será aquí donde se realizarán todos los deploy finales.
 
 \subsection{Etapas de la pipeline}
 
+Todo el proceso de la pipeline incluidos los test y compilación no debería tomar de 5 minutos. Pasado ese tiempo el sistema debería arrojar error y se deben tomar medidas apropiadas para aumentar la eficiencia del proceso.
 
-
-
-\subsection{Pipeline}
+La pipeline contará con las siguientes etapas:
 
 \begin{enumerate}
-  \item Merge hacia la rama \textbf{deploy}.
-  \item Test unitarios, de integración y static analysis.
-  \item Builds Windows, Android y Linux.
-  \item Test de rendimiento
-  \item Test de aceptación
-  \item Test de sistema (instalación y ejecución)
-  \item Deploy a las plataformas de distribución.
+    \item Detectar nuevos commit en la rama \textbf{deploy}
+    \item Iniciar batería de pruebas (unitarios, integración y análisis estático).
+    \item Aprobados los test comienza la compilación para las distintas plataformas.
+    \item Se hacen las pruebas restantes sobre los binarios (rendimiento, sistema)
+    \item Deploy al repositorio de artefactos.
 \end{enumerate}
 
+
+\subsection{Jenkins}
+
+Para coordinar los scripts de automatización seutilizará jenkins
 
 % =============================================================================
 
 \subsection{Tipos de Test}\label{pipeline:tipos-de-test}
 
 \begin{itemize}
-  \item \textbf{Unit Test:} Test sencillos y específicos hechos para probar
-      funciones o partes puntuales del código. Deberían correr en memoria y no
-      llamar entidades externas como bases de datos, sistema de archivos,
-      acceder a redes, etc. Lo importante es probar la unidad de código y no
-      sus dependencias. \item \textbf{Integration Test:} Test que combinan
-      secciones unitarias de código para comprobar que la interacción de sus
-      distintos métodos funcionan correctamente.
-  \item \textbf{Acceptance Test:} Se prueba el software y el sistema al
-      completo desde el punto de vista de un agente externo al desarrollo
-      revisando que el programa satisface todas las especificaciones del
-      usuario. \item \textbf{Performance Test:} Se revisa que el software
-      cumpla tiempos de respuesta, estabilidad y \lsc{FPS}.
+  \item \textbf{Unit Test:} Test sencillos y específicos hechos para probar       funciones o partes puntuales del código. Deberían correr en memoria y no llamar entidades externas como bases de datos, sistema de archivos, acceder a redes, etc. Lo importante es probar la unidad de código y no sus dependencias. \item \textbf{Integration Test:} Test que combinan secciones unitarias de código para comprobar que la interacción de sus distintos métodos funcionan correctamente.
+  \item \textbf{Acceptance Test:} Se prueba el software y el sistema al completo desde el punto de vista de un agente externo al desarrollo revisando que el programa satisfaga todas las especificaciones del usuario.
+  \item \textbf{Performance Test:} Se revisa que el software cumpla tiempos de respuesta, estabilidad y \lsc{FPS}.
   \item \textbf{Static Analysis:} 
   \item \textbf{Sign-Offs: Regulaciones:} 
   \item \textbf{Security Test:} 
   \item \textbf{Scalability Test:} 
 \end{itemize}
-
 
 Exportar a Linux, Windows y Android:
 
