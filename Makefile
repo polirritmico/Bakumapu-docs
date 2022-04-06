@@ -31,7 +31,7 @@ K := $(foreach exec,$(DEPENDENCIES),\
 default:
 	@echo "Utilice 'make all', 'make pdf', 'make html', 'make sync' o 'make clean'."
 
-all: pdf clean html sync
+all: logo pdf clean html sync
 
 pdf: version latex_prepare latex2pdf_light latex_prepare latex2pdf
 
