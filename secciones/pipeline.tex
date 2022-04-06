@@ -27,7 +27,7 @@ La carpeta compartida estará alojada en la siguiente dirección: \href{https://
 
 \subsection{Etapas de la pipeline}
 
-Todo el proceso de la pipeline incluidos los test y compilación no debería tomar de 5 minutos. Pasado ese tiempo el sistema debería arrojar error y se deben tomar medidas apropiadas para aumentar la eficiencia del proceso.
+Todo el proceso de la pipeline incluidos los test y compilación no debería tomar más de 5 minutos. Pasado ese tiempo el sistema debería arrojar error y se deben tomar medidas apropiadas para aumentar la eficiencia de sus procesos.
 
 La pipeline contará con las siguientes etapas:
 
@@ -42,14 +42,15 @@ La pipeline contará con las siguientes etapas:
 
 \subsection{Jenkins}
 
-Para coordinar los scripts de automatización seutilizará jenkins
+Para coordinar los scripts de automatización se utilizará Jenkins.
 
 % =============================================================================
 
 \subsection{Tipos de Test}\label{pipeline:tipos-de-test}
 
 \begin{itemize}
-  \item \textbf{Unit Test:} Test sencillos y específicos hechos para probar       funciones o partes puntuales del código. Deberían correr en memoria y no llamar entidades externas como bases de datos, sistema de archivos, acceder a redes, etc. Lo importante es probar la unidad de código y no sus dependencias. \item \textbf{Integration Test:} Test que combinan secciones unitarias de código para comprobar que la interacción de sus distintos métodos funcionan correctamente.
+  \item \textbf{Unit Test:} Test sencillos y específicos hechos para probar funciones o partes puntuales del código. Deberían correr en memoria y no llamar entidades externas como bases de datos, sistema de archivos, acceder a redes, etc. Lo importante es probar la unidad de código y no sus dependencias.
+  \item \textbf{Integration Test:} Test que combinan secciones unitarias de código para comprobar que la interacción de sus distintos métodos funcionan correctamente.
   \item \textbf{Acceptance Test:} Se prueba el software y el sistema al completo desde el punto de vista de un agente externo al desarrollo revisando que el programa satisfaga todas las especificaciones del usuario.
   \item \textbf{Performance Test:} Se revisa que el software cumpla tiempos de respuesta, estabilidad y \lsc{FPS}.
   \item \textbf{Static Analysis:} 
