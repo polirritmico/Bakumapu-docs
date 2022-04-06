@@ -9,9 +9,9 @@ Entendemos como pipeline (tubería) el conjunto de herramientas y procedimientos
 
 En esta cadena se ejecutarán de forma automática test unitarios, de integración, de rendimiento y todos los necesarios para determinar el estado actual del código en el repositorio. Por ejemplo, para comprobar mínimos de rendimiento se podría incorporar a nuestra pipeline un test de estrés para validar \lsc{FPS} mínimos.
 
-Además de las pruebas, el sistema integrará todas las dependencias necesarias y empaquetará los binarios y cualquier recurso necesario para la distribución del programa a los sistemas de los clientes (win64, linux, osx).
+Además de las pruebas, el sistema integrará todas las dependencias necesarias y empaquetará los binarios y cualquier recurso necesario para la distribución del programa a los sistemas de los clientes (win64, linux, android).
 
-A nivel de gestión la pipeline nos permite determinar desde el primer momento los criterios de lanzamiento y organizar todo el flujo de trabajo en esa dirección evitando sorpresas y problemas de integración innecesarios.
+A nivel de gestión la pipeline nos permite determinar desde el primer momento los criterios de lanzamiento y organizar todo el flujo de trabajo en esa dirección evitando sorpresas y problemas de integración innecesarios. El tener un set herramientas y procedimientos para asegurar lanzamientos estables y funcionales desde el principio del proyecto es un activo fundamental para Bakumapu.
 
 \subsubsection{Eficiencia}\label{pipeline:eficiencia}
 
@@ -19,11 +19,11 @@ Un factor muy importante con respecto al pipeline es la eficiencia total del sis
 
 \subsubsection{Repositorio de artefactos}
 
-Entendemos como artefactos todos los binarios
+Entendemos como artefactos todos los binarios, librerías, resources y archivos necesarios para ejecutar correctamente el programa en un sistema operativo específico.
 
-Un buen punto de partida es mantener todo el código en un único repositorio para evitar problemas de gestión de dependencias.
+Dado que el uso de \lsc{GIT} trae complicaciones innecesarias de manera temporal se utilizará una carpeta compartida de Google Drive de manera temporal mientras no sea necesaria una solución más robusta.
 
-Despliegues unitarios, es decir entregar todo lo necesario en un único paso.
+\href{https://drive.google.com/drive/folders/15OtN9fs-UASOKTRcWGbR-knWMSmQGyO_?usp=sharing}
 
 \subsection{Etapas de la pipeline}
 
