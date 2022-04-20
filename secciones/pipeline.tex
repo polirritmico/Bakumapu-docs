@@ -17,7 +17,7 @@ A nivel de gestión la pipeline nos permite determinar desde el primer momento l
 
 Un factor muy importante con respecto al pipeline es la eficiencia total del proceso. Ya que queremos ser capaces de ejecutarlo múltiples veces al día se hace necesario \emph{optimizar el sistema para que no tarde más de 1 hora} de principio a fin (de commit a deploy). Este criterio de 1 hora otorgará márgen suficiente para que se pueda corregir o revertir cualquier commit que genere problemas; o al menos nos dará la información necesaria para su revisión o estudio.
 
-\subsubsection{Repositorio de artefactos}
+\subsubsection{Repositorio de artefactos}\label{pipeline:repositorio-de-artefactos}
 
 Entendemos como artefactos todos los binarios, librerías, resources y archivos necesarios para ejecutar correctamente el programa en un sistema operativo específico.
 
@@ -25,7 +25,7 @@ Dado que el uso de \lsc{GIT} para el control de binarios grandes trae complicaci
 
 La carpeta compartida estará alojada en la siguiente dirección: \href{https://drive.google.com/drive/folders/15OtN9fs-UASOKTRcWGbR-knWMSmQGyO_?usp=sharing}. Será aquí donde se realizarán todos los deploy finales.
 
-\subsection{Etapas de la pipeline}
+\subsection{Etapas de la pipeline}\label{pipeline:etapas-pipeline}
 
 Todo el proceso de la pipeline incluidos los test y compilación no debería tomar más de 5 minutos. Pasado ese tiempo el sistema debería arrojar error y se deben tomar medidas apropiadas para aumentar la eficiencia de sus procesos.
 
@@ -40,6 +40,8 @@ La pipeline contará con las siguientes etapas:
     \item El sistema permite merges de \textbf{deploy} a \textbf{release} solo si todos los test han sido superados exitosamente.
     \item Al detectar merges a \textbf{release} automáticamente subir los artefactos a los servidores públicos correspondientes (Steam, Play Store, etc.) para su distribución a clientes.
 \end{enumerate}
+
+\subsubsection{Diagrama de la pipeline}\label{pipeline:diagrama-pipeline}
 
 \begin{figure}[ht]
 	\centering
