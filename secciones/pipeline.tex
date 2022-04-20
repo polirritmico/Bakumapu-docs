@@ -33,10 +33,12 @@ La pipeline contará con las siguientes etapas:
 
 \begin{enumerate}
     \item Detectar nuevos commit en la rama \textbf{deploy}
-    \item Iniciar batería de pruebas (unitarios, integración y análisis estático).
-    \item Aprobados los test comienza la compilación para las distintas plataformas.
-    \item Se hacen las pruebas restantes sobre los binarios (rendimiento, sistema)
+    \item Comienza la compilación para las distintas plataformas.
     \item Deploy al repositorio de artefactos.
+    \item Iniciar batería de test (unitarios, integración, análisis estático y rendimiento).
+    \item En caso de error detener inmediatamente el sistema y generar log.
+    \item El sistema permite merges de \textbf{deploy} a \textbf{release} solo si todos los test han sido superados exitosamente.
+    \item Al detectar merges a \textbf{release} automáticamente subir los artefactos a los servidores públicos correspondientes (Steam, Play Store, etc.) para su distribución a clientes.
 \end{enumerate}
 
 \begin{figure}[ht]
