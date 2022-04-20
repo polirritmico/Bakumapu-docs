@@ -5,9 +5,9 @@
     <meta charset='utf-8'>
     <meta name='generator' content='TeX4ht (https://tug.org/tex4ht/)'>
     <meta name='viewport' content='width=device-width,initial-scale=1'>
-    <link href='index.css' type='text/css' rel='stylesheet'>
+    <link href='index.css' rel='stylesheet' type='text/css'>
     <meta name='src' content='index.tex'>
-    <link href='style.css' type='text/css' rel='stylesheet'>
+    <link href='style.css' rel='stylesheet' type='text/css'>
     <link rel="icon" href="images/icon.svg">
   </head>
   <body><div class='flushright'><p class='noindent'>
@@ -507,7 +507,7 @@
     </h4>
     <figure class='figure'>
       <a id='x1-24001r1'></a><p class='noindent'>
-        <img width='270' height='270' alt='PIC' src='images/tdd.png'>
+        <img src='images/tdd.png' width='270' height='270' alt='PIC'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 1: </span><span class='content'>Flujo de desarrollo TDD.</span>
@@ -561,7 +561,7 @@
     </p>
     <figure class='figure'>
       <a id='x1-29001r2'></a><p class='noindent'>
-        <img width='360' height='360' alt='PIC' src='images/tablero01.png'>
+        <img src='images/tablero01.png' width='360' height='360' alt='PIC'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 2: </span><span class='content'>Tablero Kanban en Trello.</span>
@@ -580,7 +580,7 @@
       <a id='x1-30001r3'></a>
       <figcaption class='caption'>
         <span class='id'>Figura 3: </span><span class='content'>WIP y división de columnas.</span>
-      </figcaption><img width='270' height='270' alt='PIC' src='images/tablero_col.png'>
+      </figcaption><img src='images/tablero_col.png' width='270' height='270' alt='PIC'>
     </figure><p class='indent'>
       Lamentablemente la plataforma Trello no permite dividir una misma columna en dos secciones, por lo que se utilizarán dos columnas distintas para un mismo proceso que llamaremos columnas asociadas. Para identificarlas se enumerarán todas las columnas y las asociadas mantendrán el mismo número. Por ejemplo en la <a href='#x1-30002r4'>Figura 4</a>, la columna “[5] Trabajando” ha sido dividida en las columnas “2. [5] Trabajando” y “2. Terminadas”. Ya que ambas comienzan con “2.” sabemos que se refieren al mismo proceso y que sumando el total de tareas entre ambas no debemos superar las [5] (en este caso 4 en Trabajando + 1 en Terminadas; o sea ya hay 5).
     </p>
@@ -588,7 +588,7 @@
       <a id='x1-30002r4'></a>
       <figcaption class='caption'>
         <span class='id'>Figura 4: </span><span class='content'>Límites de trabajo en Trello.</span>
-      </figcaption><img width='360' height='360' alt='PIC' src='images/tablero02.png'>
+      </figcaption><img src='images/tablero02.png' width='360' height='360' alt='PIC'>
     </figure><p class='indent'>
       Respetar los límites de cada columna facilitará la distribución de trabajo y nos permitirá tomar decisiones más acertadas y realistas al planificar. <a id='x1-30003r32'></a>
     </p>
@@ -984,7 +984,7 @@
     </dl>
     <figure class='figure'>
       <a id='x1-55006r5'></a><p class='noindent'>
-        <img width='360' height='360' alt='PIC' src='images/pipeline.png'>
+        <img src='images/pipeline.png' width='360' height='360' alt='PIC'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 5: </span><span class='content'>Deploy Pipeline.</span>
@@ -1570,7 +1570,7 @@
     </p>
     <figure class='figure'>
       <a id='x1-84008r7'></a><p class='noindent'>
-        <img width='216' height='216' alt='PIC' src='images/arquitectura.png'>
+        <img src='images/arquitectura.png' width='216' height='216' alt='PIC'>
       </p>
       <figcaption class='caption'>
         <span class='id'>Figura 7: </span><span class='content'>Ejemplo de sistema de managers ajustable.</span>
@@ -1592,7 +1592,7 @@
     <div class='center'><p class='noindent'>
         <a id='x1-86001r1'></a>
       </p><div class='longtable'>
-        <table class='longtable' id='TBL-1'>
+        <table id='TBL-1' class='longtable'>
           <colgroup id='TBL-1-1g'>
             <col id='TBL-1-1'>
           </colgroup>
@@ -1600,14 +1600,14 @@
             <col id='TBL-1-2'>
           </colgroup>
           <tr style='vertical-align:baseline;' id='TBL-1-9-'>
-            <td style='white-space:nowrap; text-align:left;' id='TBL-1-9-1' class='td11' colspan='2'>
+            <td style='white-space:nowrap; text-align:left;' colspan='2' id='TBL-1-9-1' class='td11'>
               <div style='white-space:nowrap; text-align:left;' class='multicolumn'>
                 <span class='ecbx-1095'>GameManager</span>
               </div>
             </td>
           </tr>
           <tr style='vertical-align:baseline;' id='TBL-1-16-'>
-            <td style='white-space:normal; text-align:left;' id='TBL-1-16-1' class='td11' colspan='2'>
+            <td style='white-space:normal; text-align:left;' colspan='2' id='TBL-1-16-1' class='td11'>
               <div style='white-space:normal; text-align:left;' class='multicolumn'>
                 Manager principal a nivel de ejecución cuya función además de iniciar el juego será la de instanciar al resto de SubManagers. <span class='eccc1095-'><span class='small-caps'>gm</span></span> tendrá una clara tendencia a crecer en complejidad por lo que es muy importante que opere delegando funciones más que implementándolas. En esta misma línea si la interacción entre managers termina siendo demasiado compleja entonces será un síntoma de que es necesario un rediseño en cuanto a los in/outs de los submanagers implicados.
               </div>
@@ -2126,7 +2126,7 @@
       <a id='x1-1030001'></a>Diagrama del árbol de directorios.
     </h5>
     <figure class='figure'><p class='noindent'>
-        <img width='503' height='503' alt='PIC' src='images/arbol_proyecto.png'>
+        <img src='images/arbol_proyecto.png' width='503' height='503' alt='PIC'>
       </p>
     </figure>
     <p>
