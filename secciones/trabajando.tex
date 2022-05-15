@@ -12,9 +12,12 @@ src/levels/template/template\_lvl.tscn Archivo de nivel base usado para el test
 
 src/test/unit/test\_level\_manager.gd Script con el test de carga
 
-src/test/unit/level\_manager/level.tscn Archivo de test creado desde el nivel base para el test unitario.
+src/test/unit/level\_manager/level.tscn Archivo de test creado desde el nivel
+base para el test unitario.
 
-El test inicia LevelManager, usa el método loadLevel() y usa los getters de LvlMng para extraer la data. Luego compara los datos obtenidos con los esperados.
+El test inicia LevelManager, usa el método loadLevel() y usa los getters de
+LvlMng para extraer la data. Luego compara los datos obtenidos con los
+esperados.
 
 %%\begin{center}***\end{center}
 
@@ -36,7 +39,9 @@ No referenciar directamente con \$ sino usar un export(NotePath) var \_nodo
 
 ¿Singleton GameEvents para desacoplar GM?
 
-Las clases interesadas en las señales se connectan en el ready hacia GameEvents. Por ejemplo, GameEvents tiene la señal "pelota\_chocando", y dentro del objeto arco en ready conectamos la señal al método pelota\_en\_arco. 
+Las clases interesadas en las señales se connectan en el ready hacia
+GameEvents. Por ejemplo, GameEvents tiene la señal "pelota\_chocando", y dentro
+del objeto arco en ready conectamos la señal al método pelota\_en\_arco. 
 
 \subsection{Dialogue\_manager}
 
@@ -49,3 +54,4 @@ Ajustar export name a version
 \subsection{nombres de funciones y variables}
 
 Quizás sería interesante usar vocabulario de cine para armar todos los componentes (SCUMM).
+
